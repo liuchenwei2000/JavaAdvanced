@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding='gb2312'?>
+<docs>
+   <doc name="币种" module="UAP" ui="nc.ui.bd.basedata.CurrTypeUI"></doc>
+   <doc name="部门档案" module="UAP" ui="nc.ui.bd.DeptdocUI"></doc>
+</docs>

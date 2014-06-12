@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2009-07-01T10:30:26</date>
+  <millis>1246415426448</millis>
+  <sequence>0</sequence>
+  <logger>FileHandlerDemo</logger>
+  <level>INFO</level>
+  <class>log.handler.FileHandlerDemo</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>A message logged to the file</message>
+</record>
+<record>
+  <date>2009-07-01T10:30:26</date>
+  <millis>1246415426526</millis>
+  <sequence>1</sequence>
+  <logger>FileHandlerDemo</logger>
+  <level>INFO</level>
+  <class>log.handler.FileHandlerDemo</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>Wed Jul 01 10:30:26 CST 2009</message>
+</record>
+<record>
+  <date>2009-07-01T10:30:26</date>
+  <millis>1246415426526</millis>
+  <sequence>2</sequence>
+  <logger>FileHandlerDemo</logger>
+  <level>INFO</level>
+  <class>log.handler.FileHandlerDemo</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>A message logged to the file</message>
+</record>
+<record>
+  <date>2009-07-01T10:30:26</date>
+  <millis>1246415426526</millis>
+  <sequence>3</sequence>
+  <logger>FileHandlerDemo</logger>
+  <level>INFO</level>
+  <class>log.handler.FileHandlerDemo</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>Wed Jul 01 10:30:26 CST 2009</message>
+</record>
+</log>

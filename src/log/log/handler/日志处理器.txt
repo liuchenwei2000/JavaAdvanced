@@ -1,0 +1,17 @@
+                                                                                                   日 志 处 理 器
+
+
+每个Logger对象可以有一到多个与之相关联的Handler(处理器)对象
+用于将Logger对象传递来的LogRecord发布出去(如控制台、内存、文件、网络等等)
+每个Handler对象提供一种用于发布日志消息的策略，该消息包含在LogRecord对象中
+为了创建一种新类型的Handler，只需从Handler类继承并覆盖其publish()方法
+(连同flush()和e()一起，来处理在Handler中可能使用到的所有流)
+根日志记录器缺省地总是与一个处理器相关联，将输出发送到控制台
+
+Java预置的处理器：
+
+StreamHandler        将格式化的记录写到OutputStream中
+ConsoleHandler       将格式化的记录写到System.err中
+FileHandler          将格式化的日志记录写到一个单一文件，或者一个交替的记录文件集合中
+SocketHandler        将格式化的日志记录写到远程TCP端口中
+MemoryHandler        在内存中缓存日志记录

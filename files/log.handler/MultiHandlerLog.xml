@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2009-07-01T10:30:04</date>
+  <millis>1246415404479</millis>
+  <sequence>0</sequence>
+  <logger>MultiHandlerDemo</logger>
+  <level>WARNING</level>
+  <class>log.handler.MultiHandlerDemo</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>Output to multiple handlers</message>
+</record>
+</log>
