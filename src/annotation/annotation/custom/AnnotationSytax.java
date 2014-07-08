@@ -1,7 +1,7 @@
 /**
  * 
  */
-package annotation;
+package annotation.custom;
 
 /**
  * 注解接口语法示例

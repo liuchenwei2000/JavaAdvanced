@@ -1,7 +1,7 @@
 /**
  * 
  */
-package annotation;
+package annotation.custom;
 
 import java.lang.reflect.Method;
 
