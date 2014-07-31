@@ -15,6 +15,9 @@ import java.util.Scanner;
 /**
  * 服务器端示例
  * <p>
+ * JDK提供了相应的开发接口————java.net包就是为此准备的，常用的接口和类包括：ServerSocket、Socket、URL等。
+ * TCP一般用于C/S模式的应用程序，它们都会存在客户端和服务器端两部分。
+ * <p>
  * 通过ServerSocket建立一个能接受客户端请求的服务器。<p>
  * 每一个服务器程序，比如一个HTTP Web服务器，都不间断地执行下面的循环操作：</br>
  * <li>1，通过输入数据流从客户端接收到一个命令
@@ -25,7 +28,7 @@ import java.util.Scanner;
  *
  * 创建日期：2009-1-21
  */
-public class Server {
+public class ServerSocketTest {
 
 	/**
 	 * @param args
