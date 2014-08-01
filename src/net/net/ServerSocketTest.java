@@ -3,13 +3,11 @@
  */
 package net;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
@@ -45,7 +43,7 @@ public class ServerSocketTest {
 			// 等待连接。该方法阻塞当前线程直到建立连接为止，返回一个表示连接已经建立的Socket对象
 			Socket client = server.accept();
 			try {
-				/**
+				/*
 				 * 服务器和客户端通过流进行通信：
 				 * 服务器输出流的所有信息都会成为客户端程序的输入
 				 * 同时来自客户端程序的所有输出都会被包含在服务器输入流中
@@ -70,9 +68,7 @@ public class ServerSocketTest {
 			} finally {
 				client.close();
 			}
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

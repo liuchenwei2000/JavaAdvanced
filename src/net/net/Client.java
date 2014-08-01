@@ -6,7 +6,6 @@ package net;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
@@ -24,23 +23,41 @@ public class Client {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		try {
-			// 打开一个套接字(Socket)建立和服务器的连接
-			Socket socket = new Socket("localhost", 8189);
+		int number = 5;
+		for (int i = 0; i < number; i++) {
+			new Thread(new ClientTask()).start();
 			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private static class ClientTask implements Runnable {
+
+		public void run() {
+			Socket socket = null;
+			try {
+				// 打开一个套接字(Socket)建立和服务器的连接
+				socket = new Socket("localhost", 8189);
 				// 获取服务器的输入流
 				InputStream stream = socket.getInputStream();
 				Scanner scanner = new Scanner(stream);
 				while (scanner.hasNextLine()) {
 					System.out.println(scanner.nextLine());
 				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			} finally {
-				socket.close();// 关闭连接
+				if (socket != null) {
+					try {
+						socket.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
 			}
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 }
