@@ -12,19 +12,19 @@ import javax.swing.SwingUtilities;
  * <li>invokeLater方法的意思是：在EDT上执行其Runnable任务，此方法是异步执行的，调用后会立即返回。
  * <li>invokeAndWait方法是阻塞执行的，它在EDT上执行Runnable任务，直到任务执行完了，该方法才返回调用线程。
  * <p>
- * 这两个方法都是在事件派发队列中的所有事件都处理完之后才执行它们的Runnable任务，
- * 也就是说，这两个方法将Runnable任务放在事件队列的末尾。
+ * 这两个方法都是在事件队列(EventQueue)中的所有事件都处理完之后才执行它们的Runnable任务，
+ * 也就是说，这两个方法将Runnable任务放在事件队列的末尾，在EDT线程中执行，没有新的线程被创建。
  * <p>
  * 警告：虽然可以在其他线程上调用invokeLater，也可以在EDT上调用，
  * 但是千万不要在EDT上调用invokeAndWait， 以免造成线程竞争，陷入死锁。
  * <p>
- * SwingUtilities存在的意义：如果想在非EDT线程上访问UI组件，则必须通过该类的invoke方法。
+ * SwingUtilities存在的意义：如果想在非EDT线程上访问UI组件，则必须通过该类的invokeXXX方法。
  * 
  * @author 刘晨伟
  * 
  * 创建日期：2011-3-29
  */
-public class SwingUtilitiesDemo {
+public class SwingUtilitiesTest {
 
 	/**
 	 * @param args

@@ -13,7 +13,7 @@ import javax.swing.SwingUtilities;
  * 
  * 创建日期：2011-3-29
  */
-public class InitialThreadDemo {
+public class InitialThreadTest {
 
 	/**
 	 * @param args
