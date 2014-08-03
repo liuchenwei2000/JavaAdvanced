@@ -1,4 +1,4 @@
-package swing.inside.swingworker;
+package swing.inside.swingworker.action;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

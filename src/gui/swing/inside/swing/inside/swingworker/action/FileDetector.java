@@ -1,4 +1,4 @@
-package swing.inside.swingworker;
+package swing.inside.swingworker.action;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,8 +13,9 @@ import javax.swing.SwingWorker;
  * 文件探测器
  * <p>
  * SwingWorker的子类可能既会生成最终结果也会产生中间结果，
- * 线程在doInBackgroud方法结束时才产生最后结果，但任务线程也可以产生和公布中间数据。
+ * 线程在doInBackgroud方法结束时才产生最后结果，但任务线程也可以产生和公布中间结果。
  * 实现SwingWorker子类时，在类声明处要指定最终和中间结果的类型。
+ * SwingWorker<T, V>产生类型为T的结果以及类型为V的中间结果。
  * 
  * @author 刘晨伟
  * 
@@ -41,6 +42,7 @@ public class FileDetector extends SwingWorker<List<File>, File> {
 	 */
 	private List<File> listAllFiles(File file) {
 		if(!file.exists()) return null;
+		// 用来存放结果
 		List<File> files = new ArrayList<File>();
 		listAllFiles(file, files);
 		return files;
@@ -74,7 +76,7 @@ public class FileDetector extends SwingWorker<List<File>, File> {
 
 	/**
 	 * 如果SwingWorker子类发布了一些数据，那么也应该实现process方法来处理这些中间结果。
-	 * 任务对象的父类会在EDT线程上激活process方法，因此在此方法中程序可以安全的更新UI组件。
+	 * SwingWork会在EDT线程上激活process方法，因此在此方法中程序可以安全的更新UI组件。
 	 * <p>
 	 * 当从任务线程调用publish方法时，SwingWorker类调度process方法。
 	 * 有意思的是process方法是在EDT上面执行的，这意味着可以同Swing组件和其模型直接交互。

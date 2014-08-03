@@ -1,4 +1,4 @@
-package swing.inside.swingworker;
+package swing.inside.swingworker.action;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -8,8 +8,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+
+import util.Displayer;
 
 /**
  * ÎÄ¼þÌ½²âÆ÷UI
@@ -107,5 +110,18 @@ public class FileDetectorUI extends JPanel {
 			fileDetector = new FileDetector(getTable(), getLabel(), getTextField().getText());
 			fileDetector.execute();
 		}
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+
+			@Override
+			public void run() {
+				Displayer.createAndShowGUI("Everything", new FileDetectorUI());
+			}
+		});
 	}
 }

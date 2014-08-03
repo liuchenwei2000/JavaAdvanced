@@ -8,6 +8,9 @@ import javax.swing.SwingUtilities;
 
 /**
  * 初始化线程演示
+ * <p>
+ * 每一个Java应用程序都开始于主线程中的main方法。
+ * 在Swing程序中，主线程的生命周期是很短的，它启动EDT线程构造用户界面后就退出了。
  * 
  * @author 刘晨伟
  * 

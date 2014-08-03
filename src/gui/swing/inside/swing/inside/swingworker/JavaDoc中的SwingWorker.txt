@@ -1,33 +1,23 @@
-                                                                  JavaDoc中的SwingWorker
-
-SwingWorker是在专用线程中执行长时间 GUI交互任务的抽象类。 
-
-使用 Swing编写多线程应用程序时，要记住两个约束条件： 
-1，不应该在事件指派线程上运行耗时任务，否则应用程序将无响应。 (SwingWorker类存在的意义，它负责管理任务线程)
-2，只能在事件指派线程上访问 Swing组件。 (SwingUtilities.invoke方法存在的意义)
-
-这些约束意味着需要时间密集计算操作的 GUI应用程序至少需要以下两个线程：
-1，执行长时间任务的线程，
-2，所有 GUI相关活动的事件指派线程(EDT)。
 
 SwingWorker设计用于需要在后台线程中运行长时间运行任务的情况，并可在完成后或者在处理过程中向 UI提供更新。
-SwingWorker的子类必须实现 doInBackground()方法，以执行后台计算。 
+
+SwingWorker是在专用线程中执行长时间 GUI交互任务的抽象类，它的子类必须实现 doInBackground()方法，以执行后台计算。 
 
 
 SwingWorker的生命周期中包含三个线程： 
 1，当前线程
-在此线程上调用 execute()方法。
-它调度 SwingWorker以在任务线程上执行并立即返回。可以使用 get方法等待 SwingWorker完成。 
-2，任务线程
+在此线程上调用 execute()方法。它调度 SwingWorker以在任务线程上执行并立即返回。可以使用 get方法等待 SwingWorker完成。 
+2，工作线程
 在此线程上调用 doInBackground()方法。
 所有后台活动都应该在此线程上发生。要通知 PropertyChangeListeners有关属性的更改，请使用 firePropertyChange和 getPropertyChangeSupport()方法。
 默认情况下，有两个可用的绑定属性：state和 progress。 
 3，事件派发线程
-所有与 Swing有关的活动都在此线程上发生。SwingWorker调用 process和 done()方法，并通知此线程的所有PropertyChangeListener。 
+所有与 Swing有关的活动都在此线程上发生。
+在此线程上，SwingWorker调用 process和 done()方法，并通知此线程的所有PropertyChangeListener。 
 
 通常，当前线程就是事件派发线程。 
 
-在任务线程上调用 doInBackground方法之前，SwingWorker通知所有 PropertyChangeListener有关对 StateValue.STARTED的 state属性更改。
+在工作线程上调用 doInBackground方法之前，SwingWorker通知所有 PropertyChangeListener有关对 StateValue.STARTED的 state属性更改。
 doInBackground方法完成后，执行done方法。然后SwingWorker通知所有 PropertyChangeListener有关对StateValue.DONE的state属性更改。 
 
 SwingWorker被设计为只执行一次。多次执行SwingWorker将不会调用两次doInBackground方法。 
