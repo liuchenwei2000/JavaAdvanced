@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net;
+package net.multithread;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -47,6 +47,7 @@ public class Client {
 				while (scanner.hasNextLine()) {
 					System.out.println(scanner.nextLine());
 				}
+				scanner.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

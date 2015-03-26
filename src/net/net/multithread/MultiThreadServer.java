@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net;
+package net.multithread;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,13 +29,14 @@ public class MultiThreadServer {
 	/**
 	 * @param args
 	 */
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		try {
 			ServerSocket server = new ServerSocket(8189);
 			int i = 1;
 			
 			/*
-			 * 每当程序建立一个新的套接字连接，也就是说当accept被成功调用的时候将创建
+			 * 每当程序建立一个新的套接字连接，也就是说当 accept 被成功调用的时候将创建
 			 * 一个新的线程来处理服务器和该客户端之间的连接，主程序将立即返回并等待下一个连接。
 			 */
 			while (true) {
@@ -89,7 +90,9 @@ public class MultiThreadServer {
 						done = true;
 					}
 				}
+				
 				writer.close();
+				scanner.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {

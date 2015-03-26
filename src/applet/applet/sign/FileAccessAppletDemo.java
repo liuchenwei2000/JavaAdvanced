@@ -18,8 +18,7 @@ import javax.swing.JTextField;
  * 访问文件系统的Applet演示类
  * <p>
  * 由于Java沙盒安全模型的限制，网页中的Applet是不被允许访问文件系统的。
- * 本例作为演示类，查看本例效果要运行FileAccessAppletDemo.html。
- * 在网页中这个applet不能打开和关闭客户机系统上的文件。
+ * 本例作为演示类，查看本例效果要运行 FileAccessAppletDemo.html，在网页中这个 applet 不能打开和关闭客户机系统上的文件。
  * <p>
  * 当本例单独作为Applet在开发环境中运行时是不会受沙盒安全模型限制的。
  * 

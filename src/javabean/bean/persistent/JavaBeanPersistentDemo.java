@@ -39,6 +39,7 @@ public class JavaBeanPersistentDemo {
 	 * 持久化一个JavaBean对象到XML文件
 	 */
 	private static void writeJavaBean(String filePath, JavaBean bean) {
+		XMLEncoder encoder = null;
 		try {
 			/**
 			 * 只有那些与默认值不同的属性会被保存下来。
@@ -46,12 +47,14 @@ public class JavaBeanPersistentDemo {
 			 * 只有那些与默认值不同的属性，才会生成属性设置语句，这个过程叫做消除冗余。
 			 * 结果是，存储下来的东西通常比序列化的结果要小。
 			 */
-			XMLEncoder encoder = new XMLEncoder(new FileOutputStream(new File(
-					filePath)));
+			encoder = new XMLEncoder(new FileOutputStream(new File(filePath)));
 			encoder.writeObject(bean);
-			encoder.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			if(encoder != null){
+				encoder.close();
+			}
 		}
 	}
 	
@@ -59,14 +62,18 @@ public class JavaBeanPersistentDemo {
 	 * 从XML文件中读取一个JavaBean对象
 	 */
 	private static JavaBean readJavaBean(String filePath) {
+		XMLDecoder decoder = null;
 		JavaBean newBean = null;
 		try {
-			XMLDecoder decoder = new XMLDecoder(new FileInputStream(new File(
+			decoder = new XMLDecoder(new FileInputStream(new File(
 					filePath)));
 			newBean = (JavaBean) decoder.readObject();
-			decoder.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			if(decoder != null) {
+				decoder.close();
+			}
 		}
 		return newBean;
 	}

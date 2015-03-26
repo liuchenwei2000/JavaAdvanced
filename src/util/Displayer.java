@@ -17,8 +17,8 @@ import swing.frame.BasicFrame;
 
 /**
  * 显示器
- * 
- * 用于直接以JFrame形式展现JPanel
+ * <p>
+ * 用于直接以JFrame形式展现JPanel。
  * 
  * @author 刘晨伟
  * 

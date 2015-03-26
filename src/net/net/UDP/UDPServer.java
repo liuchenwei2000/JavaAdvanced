@@ -11,6 +11,10 @@ import java.net.SocketException;
 /**
  * UDP接收端示例
  * <p>
+ * UDP协议（User Datagram Protocol）与TCP协议同处于TCP/IP的传输层，
+ * 它们都是用于数据传输的，只不过它没有提供像TCP那样的可靠机制。
+ * 但是，它具有更小的消耗和更快的速度，适用于一些点对点传输的，并且安全性要求不高的网络应用程序。
+ * <p>
  * Java的UDP网络应用程序需要分为接收端和发送端两部分。
  * 
  * @author 刘晨伟

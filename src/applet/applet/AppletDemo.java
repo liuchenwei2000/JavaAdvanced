@@ -31,21 +31,19 @@ public class AppletDemo extends JApplet {
 	}
 
 	/**
-	 * 每当applet进入Web浏览器视野的时候，此方法被调用。
-	 * 使得applet能开启它的常规功能(尤其是被stop()关闭的功能)，它在init()之后被调用，
-	 * 当用户从其他页面返回到包含applet的页面时，也会调用该方法。
+	 * 每当 applet 进入 Web 浏览器视野的时候，此方法被调用，使得 applet 能开启它的常规功能（尤其是被stop()关闭的功能），
+	 * 它在init()之后被调用，当用户从其他页面返回到包含 applet 的页面时，也会调用该方法。
 	 * 这就意味着可能会多次调用start方法，而init方法只能调用一次。
 	 * 由于这个原因，可以把希望只执行一次的代码放置到init方法中，而不是放在start中。
-	 * start方法经常为applet重新启动一个线程。
-	 * 如果applet在用户离开当前页面时没有什么需要挂起的，就没有必要实现该方法(或者stop方法)。
+	 * start 方法经常为 applet 重新启动一个线程。
+	 * 如果applet在用户离开当前页面时没有什么需要挂起的，就没有必要实现该方法（或者stop方法）。
 	 */
 	public void start() {
 		super.start();
 	}
 	
 	/**
-	 * 每当applet离开Web浏览器视野的时候，此方法被调用。
-	 * 使得applet能关闭它的"昂贵"操作(如视频音频播放)。
+	 * 每当applet离开Web浏览器视野的时候，此方法被调用，使得 applet 能关闭它的"昂贵"操作（如视频音频播放）。
 	 * 它也在destroy()之前被调用。
 	 */
 	public void stop(){
@@ -53,14 +51,14 @@ public class AppletDemo extends JApplet {
 	}
 
 	/**
-	 * 当applet不再被使用、要从网页中卸载applet以最终释放资源的时候，此方法被调用。
+	 * 当 applet不再被使用、要从网页中卸载 applet 以最终释放资源的时候，此方法被调用。
 	 */
 	public void destroy() {
 		super.destroy();
 	}
 	
 	/**
-	 * 在Applet中加入了main方法之后使得，它可以同时作为应用程序和applet运行。
+	 * 在Applet中加入了main方法之后使得，它可以同时作为应用程序和 applet 运行。
 	 */
 	public static void main(String[] args) {
 		JApplet applet = new AppletDemo();

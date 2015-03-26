@@ -3,6 +3,9 @@
  */
 package security;
 
+import java.io.File;
+import java.io.IOException;
+
 /**
  * 消息摘要演示类
  * 
@@ -10,7 +13,7 @@ package security;
  * 
  * 创建日期：2009-2-19
  */
-public class MessageDigestUtilDemo {
+public class MessageDigestUtilTest {
 
 	/**
 	 * @param args
@@ -20,6 +23,14 @@ public class MessageDigestUtilDemo {
 		String content2 = "this is content2.";
 		printMessageDigest(content1);
 		printMessageDigest(content2);
+		
+		String filePath = "files/security/cross.png";
+		try {
+			System.out.println(filePath + " MD5:");
+			System.out.println(MessageDigestUtil.getMd5ByFile(new File(filePath)));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

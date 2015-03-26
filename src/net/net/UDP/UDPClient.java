@@ -11,7 +11,6 @@ import java.net.SocketException;
 
 /**
  * UDP·¢ËÍ¶ËÊ¾Àı
- * <p>
  * 
  * @author Áõ³¿Î°
  * 

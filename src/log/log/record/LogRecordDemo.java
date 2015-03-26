@@ -22,15 +22,14 @@ public class LogRecordDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		PrintableLogRecord logRecord = new PrintableLogRecord(Level.FINEST,
-				"Simple Log Record");
+		PrintableLogRecord logRecord = new PrintableLogRecord(Level.FINEST, "Simple Log Record");
 		System.out.println(logRecord);
 	}
 }
 
 class PrintableLogRecord extends LogRecord {
 
-	private static final long serialVersionUID = 0L;
+	private static final long serialVersionUID = 1L;
 
 	public PrintableLogRecord(Level level, String str) {
 		super(level, str);

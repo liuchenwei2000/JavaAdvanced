@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<java version="1.6.0_45" class="java.beans.XMLDecoder"> 
- <object class="bean.persistent.JavaBean"> 
-  <void property="name1"> 
-   <string>Tom</string> 
-  </void> 
-  <void property="number"> 
-   <int>10</int> 
-  </void> 
- </object> 
-</java> 
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.7.0_60" class="java.beans.XMLDecoder">
+ <object class="bean.persistent.JavaBean">
+  <void property="name1">
+   <string>Tom</string>
+  </void>
+  <void property="number">
+   <int>10</int>
+  </void>
+ </object>
+</java>

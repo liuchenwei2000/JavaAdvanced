@@ -41,7 +41,7 @@ public class MyClassLoader extends ClassLoader {
 		} catch (IOException e) {
 			throw new ClassNotFoundException(name);
 		}
-		/**
+		/*
 		 * defineClass(String name,byte[] data,int offset,int length)
 		 * <p>
 		 * 将一个新的类添加到虚拟机中
@@ -49,7 +49,7 @@ public class MyClassLoader extends ClassLoader {
 		 * data 用于存放该类字节码的数组
 		 * offset 数组中字解码的起始位置
 		 * length 数组中字解码的长度
-		 * */
+		 */
 		Class<?> clazz = defineClass(name, classBytes, 0, classBytes.length);
 		if (clazz == null)
 			throw new ClassNotFoundException(name);
@@ -66,18 +66,20 @@ public class MyClassLoader extends ClassLoader {
 		// 对应的加密后的class文件
 		String fileName = "files/security.classloader/" + name + ".key.class";
 		System.out.println("loading " + fileName);
-		FileInputStream in = new FileInputStream(fileName);
+		FileInputStream in = null;
 		try {
+			in = new FileInputStream(fileName);
 			ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 			int ch;
 			while ((ch = in.read()) != -1) {
 				// 解密操作
 				buffer.write((byte) (ch - KEY));
 			}
-			in.close();
 			return buffer.toByteArray();
 		} finally {
-			in.close();
+			if (in != null) {
+				in.close();
+			}
 		}
 	}
 }

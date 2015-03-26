@@ -45,8 +45,7 @@ public class ServerSocketTest {
 			try {
 				/*
 				 * 服务器和客户端通过流进行通信：
-				 * 服务器输出流的所有信息都会成为客户端程序的输入
-				 * 同时来自客户端程序的所有输出都会被包含在服务器输入流中
+				 * 服务器输出流的所有信息都会成为客户端程序的输入，同时来自客户端程序的所有输出都会被包含在服务器输入流中。
 				 */
 				OutputStream out = client.getOutputStream();
 				InputStream in = client.getInputStream();
@@ -65,9 +64,12 @@ public class ServerSocketTest {
 						done = true;
 					}
 				}
+				
+				scanner.close();
 			} finally {
 				client.close();
 			}
+			server.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

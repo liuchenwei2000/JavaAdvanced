@@ -15,7 +15,7 @@ import java.util.Map;
  * <p>
  * 演示用Java的网络API访问Web站点。
  * URL（Uniform Resource Locator，统一资源定位符），也被称为网页地址，
- * 是因特网上标准的资源地质，它唯一标示了网络上的一个资源。
+ * 是因特网上标准的资源地址，它唯一标示了网络上的一个资源。
  * 
  * @author 刘晨伟
  * 
@@ -29,7 +29,7 @@ public class HttpConnectionTest {
 	public static void main(String[] args) {
 		try {
 			// java.net.URL类来支持它，可以通过它来访问网络资源。
-			URL url = new URL("http://www.baidu.com/");
+			URL url = new URL("http://www.baidu.com");
 			/*
 			 * HttpURLConnection是表示HTTP网络连接的类，由下面的方式获得。
 			 * <p>
@@ -44,7 +44,6 @@ public class HttpConnectionTest {
 			for (String key : headerFields.keySet()) {
 				System.out.println(key + "=" + headerFields.get(key));
 			}
-			
 			
 			// 打印相应内容
 			BufferedReader br = new BufferedReader(new InputStreamReader(

@@ -13,7 +13,7 @@ import java.util.Locale;
  * <p>
  * Locale 是一种标识所要获取的对象种类的机制：
  * 将Locale对象传给依赖Locale的那些方法，这些方法将根据不同的地域产生不同形式的文本。
- * 但locale只是一种标识对象的机制，不是对象本身的容器。 
+ * 但Locale只是一种标识对象的机制，不是对象本身的容器。 
  * 
  * @author 刘晨伟
  *
@@ -30,10 +30,10 @@ public class LocaleDemo {
 		print(locale);
 		
 		// 根据语言和国家构造一个语言环境
-		// 语言参数是一个有效的 ISO 语言代码,这些代码是由 ISO-639 定义的小写两字母代码
-		// 国家参数是一个有效的 ISO 国家代码,这些代码是由 ISO-3166 定义的大写两字母代码
-		Locale usa = new Locale("en","US");
-		// 为此Java虚拟机实例设置默认语言环境,这不会影响主机的语言环境 
+		// 语言参数是一个有效的 ISO 语言代码，这些代码是由 ISO-639 定义的小写两字母代码
+		// 国家参数是一个有效的 ISO 国家代码，这些代码是由 ISO-3166 定义的大写两字母代码
+		Locale usa = new Locale("en", "US");
+		// 为此Java虚拟机实例设置默认语言环境，这不会影响主机的语言环境 
 		Locale.setDefault(usa);
 		print(usa);
 		

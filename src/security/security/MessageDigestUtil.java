@@ -3,6 +3,12 @@
  */
 package security;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 
 /**
@@ -77,7 +83,7 @@ public class MessageDigestUtil {
 	 *            内容
 	 */
 	public static String computeDigestStringBySHA(String content) {
-		return computeDigestString(Algorithm.SHA, content);
+		return toHexString(computeDigestBySHA(content));
 	}
 
 	/**
@@ -87,28 +93,38 @@ public class MessageDigestUtil {
 	 *            内容
 	 */
 	public static String computeDigestStringByMD5(String content) {
-		return computeDigestString(Algorithm.MD5, content);
+		return toHexString(computeDigestByMD5(content));
 	}
 
 	/**
-	 * 根据参数算法计算参数内容的消息摘要字符串
-	 * 
-	 * @param algorithm
-	 *            消息摘要算法
-	 * @param content
-	 *            内容
+	 * 将 byte 数组转换成十六进制数字形式的字符串
 	 */
-	private static String computeDigestString(Algorithm algorithm,
-			String content) {
-		byte[] hash = computeDigest(algorithm, content);
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < hash.length; i++) {
-			int v = hash[i] & 0xFF;
-			if (v < 16)
-				sb.append("0");
-			sb.append(Integer.toString(v, 16).toUpperCase());
-			sb.append(" ");
+	private static String toHexString(byte[] hash) {
+		BigInteger bi = new BigInteger(1, hash);
+		return bi.toString(16).toUpperCase();
+	}
+	
+	/**
+	 * 获取指定文件的MD5值
+	 */
+	public static String getMd5ByFile(File file) throws IOException {
+		FileInputStream in = null;
+		try {
+			in = new FileInputStream(file);
+			MappedByteBuffer byteBuffer = in.getChannel().map(
+					FileChannel.MapMode.READ_ONLY, 0, file.length());
+			
+			MessageDigest md5 = getMessageDigest(Algorithm.MD5);
+			md5.update(byteBuffer);
+			
+			return toHexString(md5.digest());
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			if (in != null) {
+				in.close();
+			}
 		}
-		return sb.toString();
 	}
 }

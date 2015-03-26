@@ -1,11 +1,18 @@
                                                             将应用程序(Application)转换成小程序(Applet)
 
-1，创建一个HTML页面，并用适当的标记加载applet代码。
-2，创建一个JApplet的子类，将该子类标记为public。
-3，删除应用程序中的main方法，不要为应用程序构造框架窗口，应用程序将显示在浏览器中。
-4，将所有初始化代码从框架窗口的构造器中移到applet的init方法中，
-不需要明确地构造applet对象，浏览器负责实例化并调用init方法。
-5，删除对setSize的调用，对于applet来说，确定大小是通过HTML中的width和height参数完成的。
-6，删除setDefaultCloseOperation的调用，applet不能被关闭，当浏览器退出时，它将终止运行。
-7，删除setTitle的调用，applet没有标题栏，可以在HTML的title标记中来为网页设置标题。
+
+1，创建一个 HTML 页面，并用适当的标记加载 applet 代码。
+
+2，创建一个 JApplet 的子类，将该子类标记为 public。
+
+3，删除应用程序中的 main 方法，不要为应用程序构造框架窗口，应用程序将显示在浏览器中。
+
+4，将所有初始化代码从框架窗口的构造器中移到 applet 的 init 方法中，不需要明确地构造applet对象，浏览器负责实例化并调用init方法。
+
+5，删除对 setSize 的调用，对于 applet 来说，确定大小是通过 HTML 中的 width 和 height 参数完成的。
+
+6，删除 setDefaultCloseOperation 的调用，applet 不能被关闭，当浏览器退出时，它将终止运行。
+
+7，删除 setTitle 的调用，applet 没有标题栏，可以在 HTML 的 title 标记中来为网页设置标题。
+
 8，不要调用setVisible方法，applet会自动显示。

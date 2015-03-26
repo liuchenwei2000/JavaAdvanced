@@ -33,8 +33,7 @@ public class MyHandlerDemo {
  * 自定义日志处理器
  * <p>
  * 通过继承 Handler 类，可以很容易地编写定制的处理器。
- * 不但要实现 publish()方法(它执行实际上的报送)，还要实现 flush()和 close()，
- * 它们确保用于报送的流被完全清空。
+ * 不但要实现 publish()方法（它执行实际上的报送），还要实现 flush()和 close()，它们确保用于报送的流被完全清空。
  */
 class MyHandler extends Handler {
 

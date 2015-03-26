@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net;
+package net.multithread;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -33,6 +33,7 @@ public class WebServer {
 	/**
 	 * @param args
 	 */
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		try {
 			ServerSocket server = new ServerSocket(8080);

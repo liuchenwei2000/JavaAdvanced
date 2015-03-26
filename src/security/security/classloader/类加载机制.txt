@@ -1,15 +1,17 @@
-Àà¼ÓÔØ»úÖÆ
+										Àà¼ÓÔØ»úÖÆ
 
                                                                                                          
-Java±àÒëÆ÷ÄÜ¹»½«Ô´³ÌÐò×ª»¯Îª¼ÙÏë»úÆ÷µÄ»úÆ÷ÓïÑÔ£¬ÕâÖÖ¼ÙÏë»úÆ÷³ÆÎªÐéÄâ»ú£¨JVM£©¡£ÐéÄâ»ú´úÂë´æ´¢ÔÚÒÔ.classÎªÀ©Õ¹ÃûµÄÀàÎÄ¼þÖÐ¡£Ã¿¸öÀàÎÄ¼þ¶¼°üº¬Ä³¸öÀà»òÕß½Ó¿ÚµÄ¶¨Òå¼°´úÂëÊµÏÖ¡£ÕâÐ©ÀàÎÄ¼þ±ØÐëÓÉÒ»¸ö½âÊÍÆ÷½øÐÐ½âÊÍ£¬¸Ã½âÊÍÆ÷ÄÜ¹»½«ÐéÄâ»úµÄÖ¸Áî¼¯·­Òë³ÉÄ¿±ê»úÆ÷µÄ»úÆ÷ÓïÑÔ¡£
+Java±àÒëÆ÷ÄÜ¹»½«Ô´³ÌÐò×ª»¯Îª¼ÙÏë»úÆ÷µÄ»úÆ÷ÓïÑÔ£¬ÕâÖÖ¼ÙÏë»úÆ÷³ÆÎªÐéÄâ»ú£¨JVM£©¡£ÐéÄâ»ú´úÂë´æ´¢ÔÚÒÔ.classÎªÀ©Õ¹ÃûµÄÀàÎÄ¼þÖÐ¡£
+Ã¿¸öÀàÎÄ¼þ¶¼°üº¬Ä³¸öÀà»òÕß½Ó¿ÚµÄ¶¨Òå¼°´úÂëÊµÏÖ¡£ÕâÐ©ÀàÎÄ¼þ±ØÐëÓÉÒ»¸ö½âÊÍÆ÷½øÐÐ½âÊÍ£¬¸Ã½âÊÍÆ÷ÄÜ¹»½«ÐéÄâ»úµÄÖ¸Áî¼¯·­Òë³ÉÄ¿±ê»úÆ÷µÄ»úÆ÷ÓïÑÔ¡£
     
 ÐéÄâ»úÖ»¼ÓÔØ³ÌÐòÖ´ÐÐÊ±ËùÐèÒªµÄÀàÎÄ¼þ¡£¼ÙÉè³ÌÐò´ÓA.class¿ªÊ¼ÔËÐÐ£¬ÏÂÃæÊÇÐéÄâ»úÖ´ÐÐµÄ²½Öè£º
-1£¬ÐéÄâ»úÓÉÒ»¸öÓÃÓÚ¼ÓÔØÀàÎÄ¼þµÄ»úÖÆ£¬¿É´Ó´ÅÅÌÉÏ¶ÁÈ¡ÎÄ¼þ»òÕßÇëÇówebÉÏµÄÎÄ¼þ£¬ËüÊ¹ÓÃ¸Ã»úÖÆÀ´¼ÓÔØAÀàÎÄ¼þÖÐµÄÄÚÈÝ¡£
+1£¬ÐéÄâ»úÓÐÒ»¸öÓÃÓÚ¼ÓÔØÀàÎÄ¼þµÄ»úÖÆ£¬¿É´Ó´ÅÅÌÉÏ¶ÁÈ¡ÎÄ¼þ»òÕßÇëÇówebÉÏµÄÎÄ¼þ£¬ËüÊ¹ÓÃ¸Ã»úÖÆÀ´¼ÓÔØAÀàÎÄ¼þÖÐµÄÄÚÈÝ¡£
 2£¬Èç¹ûAÀàÓµÓÐÀàÐÍÎªÁíÒ»¸öÀàµÄÊµÀý±äÁ¿£¬»òÕßÊÇÓµÓÐ³¬Àà£¬ÄÇÃ´ÕâÐ©ÀàÎÄ¼þÒ²»á±»¼ÓÔØ¡££¨¼ÓÔØÄ³¸öÀàËùÒÀÀµµÄËùÓÐÀàµÄ¹ý³Ì³ÆÎªÀàµÄ½âÎö£©
 3£¬ÐéÄâ»úÖ´ÐÐAÀàÖÐµÄmain·½·¨¡££¨ËüÊÇ¾²Ì¬µÄ£¬²»ÐèÒª´´½¨ÀàµÄÊµÀý£©
 4£¬Èç¹ûmain·½·¨»òÕßmainµ÷ÓÃµÄ·½·¨ÒªÓÃµ½¸ü¶àµÄÀà£¬ÄÇÃ´½ÓÏÂÀ´¾Í»á¼ÓÔØÕâÐ©Àà¡£
     
-Èç¹ûÔÚ³ÌÐòÖÐÍ¨¹ýµ÷ÓÃClass.forName½øÐÐÀàµÄ¼ÓÔØ£¬ÄÇÃ´Õâ¸öÐÂÀà½«Í¨¹ýÄ³Ò»Àà¼ÓÔØÆ÷½øÐÐ¼ÓÔØ£¬¶ø´Ë¼ÓÔØÆ÷Óëµ÷ÓÃClass.forNameµÄÄÇ¶Î´úÂëµÄÀà¼ÓÔØÆ÷ÏàÍ¬¡£Ò»°ãÇé¿öÏÂÕâ²»»áÓÐÊ²Ã´ÎÊÌâ£¬µ«ÊÇÓöµ½ÏÂÃæµÄÇé¿ö¾Í²»Í¬ÁË£º
+Èç¹ûÔÚ³ÌÐòÖÐÍ¨¹ýµ÷ÓÃClass.forName½øÐÐÀàµÄ¼ÓÔØ£¬ÄÇÃ´Õâ¸öÐÂÀà½«Í¨¹ýÄ³Ò»Àà¼ÓÔØÆ÷½øÐÐ¼ÓÔØ£¬¶ø´Ë¼ÓÔØÆ÷Óëµ÷ÓÃClass.forNameµÄÄÇ¶Î´úÂëµÄÀà¼ÓÔØÆ÷ÏàÍ¬¡£
+Ò»°ãÇé¿öÏÂÕâ²»»áÓÐÊ²Ã´ÎÊÌâ£¬µ«ÊÇÓöµ½ÏÂÃæµÄÇé¿ö¾Í²»Í¬ÁË£º
 1£¬Ê¹ÓÃÒ»¸öµÚÈý·½¿âÀà£¬¸ÃÀàÓÐÒ»¸öµ÷ÓÃClass.forNameµÄ·½·¨¡£
 2£¬¸Ã·½·¨±»Ò»¸öÓ¦ÓÃÀàµ÷ÓÃ£¬¼ÓÔØ¸ÃÓ¦ÓÃÀàµÄÀà¼ÓÔØÆ÷Óë¼ÓÔØ¿âÀàµÄÀà¼ÓÔØÆ÷²»Í¬¡£
 3£¬¼ÓÔØºóµÄÓ¦ÓÃÀà¶Ô¼ÓÔØ¿âÀàµÄÀà¼ÓÔØÆ÷ÊÇ²»¿É¼ûµÄ¡£
@@ -20,7 +22,7 @@ Java±àÒëÆ÷ÄÜ¹»½«Ô´³ÌÐò×ª»¯Îª¼ÙÏë»úÆ÷µÄ»úÆ÷ÓïÑÔ£¬ÕâÖÖ¼ÙÏë»úÆ÷³ÆÎªÐéÄâ»ú£¨JVM£©¡£Ð
     ClassLoader loader = t.getContextClassLoader();
     Class cl = loader.loadClass(className);
     
-getContextClassLoader·½·¨ÓÃÓÚ»ñÈ¡Àà¼ÓÔØÆ÷£¬¸ÃÏß³ÌµÄ´´½¨Õß½«ÆäÖ¸¶¨ÎªÖ´ÐÐ¸ÃÏß³ÌÊ±×îÊÊºÏÊ¹ÓÃµÄÀà¼ÓÔØÆ÷¡£
+getContextClassLoader() ·½·¨ÓÃÓÚ»ñÈ¡Àà¼ÓÔØÆ÷£¬¸ÃÏß³ÌµÄ´´½¨Õß½«ÆäÖ¸¶¨ÎªÖ´ÐÐ¸ÃÏß³ÌÊ±×îÊÊºÏÊ¹ÓÃµÄÀà¼ÓÔØÆ÷¡£
 
 
 ½«Àà¼ÓÔØÆ÷×÷ÎªÃû³Æ¿Õ¼ä

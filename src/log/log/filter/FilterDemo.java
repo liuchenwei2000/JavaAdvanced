@@ -25,18 +25,20 @@ public class FilterDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		System.out.println("Log use no filter.");
 		Handler handler = new ConsoleHandler();
 		logger.setUseParentHandlers(false);
 		logger.addHandler(handler);
 		sendLogMessages();
+		
+		System.out.println("Log use Logger/Handler filter.");
 		logger.setFilter(new LoggerFilter());
 		handler.setFilter(new HandlerFilter());
-		logger.info("After setting filter：");
 		sendLogMessages();
 	}
 	
 	private static void sendLogMessages() {
-		// 第三个参数是传递给LogRecord的参数(parameter)
+		// 第三个参数是传递给 LogRecord 的参数(parameter)
 		logger.log(Level.WARNING, "I am a man!", new Man());
 		logger.log(Level.WARNING, "I am a woman!", new Woman());
 		logger.log(Level.WARNING, "I am a kid!", new Kid());

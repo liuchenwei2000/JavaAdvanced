@@ -38,6 +38,7 @@ public class SocketTest {
 			socket = new Socket(url, port);
 			// 从服务器返回一个流对象，可以通过它读取服务器信息
 			InputStream is = socket.getInputStream();
+			
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			String s = null;
 			while ((s = br.readLine()) != null) {
