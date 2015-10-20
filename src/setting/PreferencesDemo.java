@@ -10,7 +10,7 @@ import java.util.prefs.Preferences;
 /**
  * Preferences演示类
  * <p>
- * 其中usageCount程序每运行一次都会+1，这个信息会被作为用户的偏好保存在系统中。
+ * 其中usageCount程序每运行一次都会+1，这个信息会被作为用户的偏好保存在系统中。 
  * 
  * @author 刘晨伟
  * 
