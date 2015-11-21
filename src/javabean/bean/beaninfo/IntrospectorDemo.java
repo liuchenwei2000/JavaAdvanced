@@ -12,18 +12,18 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 
 /**
- * ÄÚÊ¡Æ÷IntrospectorÊ¾Àı
+ * å†…çœå™¨Introspectorç¤ºä¾‹
  * <p>
- * JavaBeanÄ£ĞÍ×î¹Ø¼ü²¿·ÖÖ®Ò»£¬±íÏÖÔÚµ±Äã´ÓÑ¡ÓÃÇøÍÏ¶¯Ò»¸öBean(¿ÉÊÓ»¯Bean)£¬È»ºó°ÑËü·ÅÖÃµ½´°ÌåÉÏµÄÊ±ºò¡£
- * Ó¦ÓÃ³ÌĞò¹¹½¨¹¤¾ß±ØĞëÄÜ¹»´´½¨Õâ¸öBean(ĞèÒªÎŞ²Î¹¹ÔìÆ÷)£¬È»ºóÔÚ²»·ÃÎÊBeanÔ´´úÂëµÄÇé¿öÏÂ³éÈ¡³öËùÓĞ±ØÒªĞÅÏ¢£¬ÒÔ´´½¨ÊôĞÔºÍÊÂ¼ş´¦ÀíÆ÷µÄÁĞ±í¡£
+ * JavaBeanæ¨¡å‹æœ€å…³é”®éƒ¨åˆ†ä¹‹ä¸€ï¼Œè¡¨ç°åœ¨å½“ä½ ä»é€‰ç”¨åŒºæ‹–åŠ¨ä¸€ä¸ªBean(å¯è§†åŒ–Bean)ï¼Œç„¶åæŠŠå®ƒæ”¾ç½®åˆ°çª—ä½“ä¸Šçš„æ—¶å€™ã€‚
+ * åº”ç”¨ç¨‹åºæ„å»ºå·¥å…·å¿…é¡»èƒ½å¤Ÿåˆ›å»ºè¿™ä¸ªBean(éœ€è¦æ— å‚æ„é€ å™¨)ï¼Œç„¶ååœ¨ä¸è®¿é—®Beanæºä»£ç çš„æƒ…å†µä¸‹æŠ½å–å‡ºæ‰€æœ‰å¿…è¦ä¿¡æ¯ï¼Œä»¥åˆ›å»ºå±æ€§å’Œäº‹ä»¶å¤„ç†å™¨çš„åˆ—è¡¨ã€‚
  * <p>
- * JavaµÄ·´Éä»úÖÆÄÜ·¢ÏÖÎ´ÖªÀàµÄËùÓĞ·½·¨¡£
- * ¶ÔÓÚ½â¾öJavaBeanµÄÕâ¸öÎÊÌâ£¬ÕâÊÇ¸öÍêÃÀµÄ·½°¸£¬Äã²»ÓÃÏñÆäËü¿ÉÊÓ»¯±à³ÌÓïÑÔÄÇÑùÊ¹ÓÃÈÎºÎÓïÑÔ¸½¼ÓµÄ¹Ø¼ü×Ö¡£
- * Êµ¼ÊÉÏ£¬JavaÓïÑÔÀï¼ÓÈë·´Éä»úÖÆµÄÖ÷ÒªÔ­ÒòÖ®Ò»¾ÍÊÇÎªÁËÖ§³ÖJavaBean(¾¡¹Ü·´ÉäÒ²Ö§³Ö¶ÔÏóĞòÁĞ»¯ºÍÔ¶³Ì·½·¨µ÷ÓÃ)¡£
+ * Javaçš„åå°„æœºåˆ¶èƒ½å‘ç°æœªçŸ¥ç±»çš„æ‰€æœ‰æ–¹æ³•ã€‚
+ * å¯¹äºè§£å†³JavaBeançš„è¿™ä¸ªé—®é¢˜ï¼Œè¿™æ˜¯ä¸ªå®Œç¾çš„æ–¹æ¡ˆï¼Œä½ ä¸ç”¨åƒå…¶å®ƒå¯è§†åŒ–ç¼–ç¨‹è¯­è¨€é‚£æ ·ä½¿ç”¨ä»»ä½•è¯­è¨€é™„åŠ çš„å…³é”®å­—ã€‚
+ * å®é™…ä¸Šï¼ŒJavaè¯­è¨€é‡ŒåŠ å…¥åå°„æœºåˆ¶çš„ä¸»è¦åŸå› ä¹‹ä¸€å°±æ˜¯ä¸ºäº†æ”¯æŒJavaBean(å°½ç®¡åå°„ä¹Ÿæ”¯æŒå¯¹è±¡åºåˆ—åŒ–å’Œè¿œç¨‹æ–¹æ³•è°ƒç”¨)ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-17
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-17
  */
 public class IntrospectorDemo {
 
@@ -39,19 +39,19 @@ public class IntrospectorDemo {
 	}
 	
 	/**
-	 * Ê¹ÓÃÄÚÊ¡Æ÷³éÈ¡BeanInfo
+	 * ä½¿ç”¨å†…çœå™¨æŠ½å–BeanInfo
 	 * <p>
-	 * JavaµÄÉè¼ÆÕßÏ£ÍûÌá¹©Ò»¸ö±ê×¼¹¤¾ß£¬²»½öÒªÊ¹BeanÓÃÆğÀ´¼òµ¥£¬¶øÇÒ¶ÔÓÚ´´½¨¸ü¸´ÔÓµÄBean£¬ÄÜ¹»Ìá¹©Ò»¸ö±ê×¼·½·¨¡£
-	 * Õâ¸ö¹¤¾ß¾ÍÊÇIntrospector(ÄÚÊ¡Æ÷)Àà£¬Õâ¸öÀà×îÖØÒªµÄ¾ÍÊÇ¾²Ì¬µÄgetBeanInfo()·½·¨¡£
-	 * ÏòÕâ¸ö·½·¨´«µİÒ»¸öClass¶ÔÏóÒıÓÃ£¬ËüÄÜ¹»ÍêÈ«Õì²âÕâ¸öÀà£¬È»ºó·µ»ØÒ»¸öBeanInfo¶ÔÏó£¬¿ÉÒÔÍ¨¹ıÕâ¸ö¶ÔÏóµÃµ½BeanµÄÊôĞÔ¡¢·½·¨ºÍÊÂ¼ş¡£
+	 * Javaçš„è®¾è®¡è€…å¸Œæœ›æä¾›ä¸€ä¸ªæ ‡å‡†å·¥å…·ï¼Œä¸ä»…è¦ä½¿Beanç”¨èµ·æ¥ç®€å•ï¼Œè€Œä¸”å¯¹äºåˆ›å»ºæ›´å¤æ‚çš„Beanï¼Œèƒ½å¤Ÿæä¾›ä¸€ä¸ªæ ‡å‡†æ–¹æ³•ã€‚
+	 * è¿™ä¸ªå·¥å…·å°±æ˜¯Introspector(å†…çœå™¨)ç±»ï¼Œè¿™ä¸ªç±»æœ€é‡è¦çš„å°±æ˜¯é™æ€çš„getBeanInfo()æ–¹æ³•ã€‚
+	 * å‘è¿™ä¸ªæ–¹æ³•ä¼ é€’ä¸€ä¸ªClasså¯¹è±¡å¼•ç”¨ï¼Œå®ƒèƒ½å¤Ÿå®Œå…¨ä¾¦æµ‹è¿™ä¸ªç±»ï¼Œç„¶åè¿”å›ä¸€ä¸ªBeanInfoå¯¹è±¡ï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªå¯¹è±¡å¾—åˆ°Beançš„å±æ€§ã€æ–¹æ³•å’Œäº‹ä»¶ã€‚
 	 */
 	private static void introspect(Class<?> bean) {
 		BeanInfo bi = null;
 		try {
 			/**
-			 * ÔÚ¸ø¶¨µÄ"¶Ï"µãÖ®ÏÂ£¬¶ÔJavaBean(bean¶ÔÏó)½øĞĞÄÚÊ¡£¬ÁË½âÆäËùÓĞÊôĞÔºÍ¹«¿ªµÄ·½·¨¡£
+			 * åœ¨ç»™å®šçš„"æ–­"ç‚¹ä¹‹ä¸‹ï¼Œå¯¹JavaBean(beanå¯¹è±¡)è¿›è¡Œå†…çœï¼Œäº†è§£å…¶æ‰€æœ‰å±æ€§å’Œå…¬å¼€çš„æ–¹æ³•ã€‚
 			 * <p> 
-			 * µÚ¶ş¸ö²ÎÊıÓÃÀ´Ö¸¶¨¶Ïµã,ÒòÎª²»¹ØĞÄÀ´×ÔObjectµÄ·½·¨£¬ËùÒÔÔÚ½âÎöÀ´×ÔObjectµÄËùÓĞ·½·¨Ö®Ç°Í£Ö¹²éÑ¯¡£
+			 * ç¬¬äºŒä¸ªå‚æ•°ç”¨æ¥æŒ‡å®šæ–­ç‚¹,å› ä¸ºä¸å…³å¿ƒæ¥è‡ªObjectçš„æ–¹æ³•ï¼Œæ‰€ä»¥åœ¨è§£ææ¥è‡ªObjectçš„æ‰€æœ‰æ–¹æ³•ä¹‹å‰åœæ­¢æŸ¥è¯¢ã€‚
 			 */
 			bi = Introspector.getBeanInfo(bean, Object.class);
 		} catch (IntrospectionException e) {
@@ -64,21 +64,21 @@ public class IntrospectorDemo {
 	}
 
 	private static void introspectProperties(BeanInfo bi) {
-		// »ñÈ¡BeanµÄËùÓĞÊôĞÔ
+		// è·å–Beançš„æ‰€æœ‰å±æ€§
 		PropertyDescriptor[] properties = bi.getPropertyDescriptors();
 		for (int i = 0; i < properties.length; i++) {
 			Class<?> p = properties[i].getPropertyType();
 			if (p == null)
 				continue;
 			System.out.println("Property type:\n" + p.getSimpleName());
-			// ·µ»ØÊôĞÔµÄ±ğÃû(´Ó·½·¨ÖĞ³éÈ¡µÄ)
+			// è¿”å›å±æ€§çš„åˆ«å(ä»æ–¹æ³•ä¸­æŠ½å–çš„)
 			System.out.println("Property name:\n" + properties[i].getName());
-			// ·µ»ØÊôĞÔµÄ¶Á·½·¨
+			// è¿”å›å±æ€§çš„è¯»æ–¹æ³•
 			Method readMethod = properties[i].getReadMethod();
 			if (readMethod != null) {
 				System.out.println("Read method:\n" + readMethod);
 			}
-			// ·µ»ØÊôĞÔµÄĞ´·½·¨
+			// è¿”å›å±æ€§çš„å†™æ–¹æ³•
 			Method writeMethod = properties[i].getWriteMethod();
 			if (writeMethod != null) {
 				System.out.println("Write method:\n" + writeMethod);
@@ -89,7 +89,7 @@ public class IntrospectorDemo {
 
 	private static void introspectMethods(BeanInfo bi) {
 		System.out.println("Public methods:");
-		// »ñÈ¡BeanËùÓĞµÄ¹«¹²·½·¨(°üÀ¨ÊôĞÔ·½·¨)
+		// è·å–Beanæ‰€æœ‰çš„å…¬å…±æ–¹æ³•(åŒ…æ‹¬å±æ€§æ–¹æ³•)
 		MethodDescriptor[] methods = bi.getMethodDescriptors();
 		for (int i = 0; i < methods.length; i++) {
 			System.out.println(methods[i].getMethod().toString());
@@ -99,7 +99,7 @@ public class IntrospectorDemo {
 	}
 
 	private static void introspectEventListeners(BeanInfo bi) {
-		// »ñÈ¡BeanËùÖ§³ÖµÄÊÂ¼ş¼¯ºÏ
+		// è·å–Beanæ‰€æ”¯æŒçš„äº‹ä»¶é›†åˆ
 		EventSetDescriptor[] events = bi.getEventSetDescriptors();
 		for (int i = 0; i < events.length; i++) {
 			System.out.println("Listener type:\n"
@@ -113,10 +113,10 @@ public class IntrospectorDemo {
 				System.out
 						.println("Method descriptor:\n" + lmd[j].getMethod());
 			}
-			// ·µ»ØÌí¼Ó´ËÊÂ¼ş¼àÌıÆ÷µÄ·½·¨
+			// è¿”å›æ·»åŠ æ­¤äº‹ä»¶ç›‘å¬å™¨çš„æ–¹æ³•
 			Method addListener = events[i].getAddListenerMethod();
 			System.out.println("Add Listener Method:\n" + addListener);
-			// ·µ»ØÒÆ³ı´ËÊÂ¼ş¼àÌıÆ÷µÄ·½·¨
+			// è¿”å›ç§»é™¤æ­¤äº‹ä»¶ç›‘å¬å™¨çš„æ–¹æ³•
 			Method removeListener = events[i].getRemoveListenerMethod();
 			System.out.println("Remove Listener Method:\n" + removeListener);
 			System.out.println("====================");

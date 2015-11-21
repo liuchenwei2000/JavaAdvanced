@@ -7,14 +7,14 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
 /**
- * LogRecordÑİÊ¾Àà
+ * LogRecordæ¼”ç¤ºç±»
  * <p>
- * LogRecordÊÇÒ»¸öĞÅÊ¹(Messenger)¶ÔÏó£¬ËüµÄÈÎÎñ½ö½öÊÇ½«ĞÅÏ¢´ÓÒ»¸öµØ·½´«ËÍµ½ÁíÒ»¸öµØ·½¡£
- * LogRecordÖĞµÄËùÓĞ·½·¨¶¼ÊÇ»ñÈ¡Æ÷(getter)ºÍÉèÖÃÆ÷(setter)¡£
+ * LogRecordæ˜¯ä¸€ä¸ªä¿¡ä½¿(Messenger)å¯¹è±¡ï¼Œå®ƒçš„ä»»åŠ¡ä»…ä»…æ˜¯å°†ä¿¡æ¯ä»ä¸€ä¸ªåœ°æ–¹ä¼ é€åˆ°å¦ä¸€ä¸ªåœ°æ–¹ã€‚
+ * LogRecordä¸­çš„æ‰€æœ‰æ–¹æ³•éƒ½æ˜¯è·å–å™¨(getter)å’Œè®¾ç½®å™¨(setter)ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class LogRecordDemo {
 
@@ -39,7 +39,7 @@ class PrintableLogRecord extends LogRecord {
 		String result = "Level<" + getLevel() + ">\n" + "LoggerName<"
 				+ getLoggerName() + ">\n" + "Message<" + getMessage() + ">\n"
 				+ "CurrentMillis<" + getMillis() + ">\n" + "Params";
-		Object[] objParams = getParameters();// »ñÈ¡ÈÕÖ¾ÏûÏ¢µÄ²ÎÊı
+		Object[] objParams = getParameters();// è·å–æ—¥å¿—æ¶ˆæ¯çš„å‚æ•°
 		if (objParams == null) {
 			result += "<null>\n";
 		} else {

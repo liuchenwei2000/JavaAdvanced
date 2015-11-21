@@ -8,18 +8,18 @@ import javax.swing.JFrame;
 import util.Displayer;
 
 /**
- * ����Frame
+ * 基本Frame
  * <p>
- * JFrame�ĳ��÷�����
+ * JFrame的常用方法：
  * <p>
- * <li>dispose�������ڹرմ��ڣ������մ���������ʹ�õ�ȫ��ϵͳ��Դ��
- * <li>setIconImage�������ڽ�������С��ʱ��ͼ������Ϊָ����image����
- * <li>setResizable��������һ��booleanֵȷ����ܵĴ�С�Ƿ������û��ı䡣
- * <li>setLocation���������ض�λ�����λ�á�
+ * <li>dispose方法用于关闭窗口，并回收创建窗口所使用的全部系统资源。
+ * <li>setIconImage方法用于将窗口最小化时的图标设置为指定的image对象。
+ * <li>setResizable方法利用一个boolean值确定框架的大小是否允许用户改变。
+ * <li>setLocation方法可以重定位组件的位置。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2009-2-25
+ * 创建日期：2009-2-25
  */
 public class BasicFrame extends JFrame {
 
@@ -43,7 +43,7 @@ public class BasicFrame extends JFrame {
 	}
 
 	/**
-	 * Ĭ��Ϊ������ʾ
+	 * 默认为居中显示
 	 */
 	public void setVisible(boolean b) {
 		pack();

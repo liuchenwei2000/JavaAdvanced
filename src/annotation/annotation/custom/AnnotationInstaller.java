@@ -6,14 +6,14 @@ package annotation.custom;
 import java.lang.reflect.Method;
 
 /**
- * ×¢½â°²×°Æ÷Ê¾Àı
+ * æ³¨è§£å®‰è£…å™¨ç¤ºä¾‹
  * <p>
- * ×¢½â±¾Éí²»»á×öÈÎºÎÊÂÇé£¬ËüÃÇÖ»ÊÇ´æÔÚÓÚÔ´ÎÄ¼şÖĞ¡£±àÒëÆ÷½«ËüÃÇÖÃÓÚÀàÎÄ¼şÖĞ£¬²¢ÇÒĞéÄâ»ú»á½«ËüÃÇÔØÈë¡£
- * ÏÖÔÚĞèÒªÒ»¸ö·ÖÎö×¢½âÒÔ¼°°²×°ĞĞÎª¼àÌıÆ÷µÄ»úÖÆ£¬Õâ¾ÍÊÇ±¾ÀàµÄÖ°ÔğËùÔÚ¡£
+ * æ³¨è§£æœ¬èº«ä¸ä¼šåšä»»ä½•äº‹æƒ…ï¼Œå®ƒä»¬åªæ˜¯å­˜åœ¨äºæºæ–‡ä»¶ä¸­ã€‚ç¼–è¯‘å™¨å°†å®ƒä»¬ç½®äºç±»æ–‡ä»¶ä¸­ï¼Œå¹¶ä¸”è™šæ‹Ÿæœºä¼šå°†å®ƒä»¬è½½å…¥ã€‚
+ * ç°åœ¨éœ€è¦ä¸€ä¸ªåˆ†ææ³¨è§£ä»¥åŠå®‰è£…è¡Œä¸ºç›‘å¬å™¨çš„æœºåˆ¶ï¼Œè¿™å°±æ˜¯æœ¬ç±»çš„èŒè´£æ‰€åœ¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-7
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-7
  */
 public class AnnotationInstaller {
 
@@ -26,13 +26,13 @@ public class AnnotationInstaller {
 	}
 
 	/**
-	 * ´¦Àí²ÎÊı¶ÔÏóÖĞµÄ×¢½â
+	 * å¤„ç†å‚æ•°å¯¹è±¡ä¸­çš„æ³¨è§£
 	 */
 	public static void processAnnotations(Object object) {
 		Class<? extends Object> clazz = object.getClass();
 		Method[] declaredMethods = clazz.getDeclaredMethods();
 		for (Method method : declaredMethods) {
-			// »ñµÃÖ¸¶¨ÀàĞÍµÄ×¢½â£¬Èç¹ûÃ»ÓĞÔò·µ»Ønull
+			// è·å¾—æŒ‡å®šç±»å‹çš„æ³¨è§£ï¼Œå¦‚æœæ²¡æœ‰åˆ™è¿”å›null
 			AnnotationTest at = method.getAnnotation(AnnotationTest.class);
 			if (at != null) {
 				try {

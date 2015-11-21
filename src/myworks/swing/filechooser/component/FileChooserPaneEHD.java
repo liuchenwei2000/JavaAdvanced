@@ -11,21 +11,21 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileFilter;
 
 /**
- * ÎÄ¼ş´ò¿ª¿Ø¼şÊÂ¼ş´¦ÀíÀà
+ * æ–‡ä»¶æ‰“å¼€æ§ä»¶äº‹ä»¶å¤„ç†ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-13
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-13
  */
 public class FileChooserPaneEHD implements ActionListener {
 
-	private FileChooserPane chooserPane;// ¹ØÁªµÄÎÄ¼şÑ¡Ôñ¿Ø¼ş
+	private FileChooserPane chooserPane;// å…³è”çš„æ–‡ä»¶é€‰æ‹©æ§ä»¶
 
-	private JFileChooser chooser;// ÎÄ¼şÑ¡ÔñÆ÷¶ÔÏó
+	private JFileChooser chooser;// æ–‡ä»¶é€‰æ‹©å™¨å¯¹è±¡
 
 	/**
 	 * @param chooserPane
-	 *            ¹ØÁªµÄÎÄ¼şÑ¡Ôñ¿Ø¼ş
+	 *            å…³è”çš„æ–‡ä»¶é€‰æ‹©æ§ä»¶
 	 */
 	public FileChooserPaneEHD(FileChooserPane chooserPane) {
 		this.chooserPane = chooserPane;
@@ -50,23 +50,23 @@ public class FileChooserPaneEHD implements ActionListener {
 	}
 	
 	/**
-	 * ÉèÖÃÎÄ¼şÑ¡ÔñÆ÷µÄÑ¡ÔñÄ£Ê½ 
+	 * è®¾ç½®æ–‡ä»¶é€‰æ‹©å™¨çš„é€‰æ‹©æ¨¡å¼ 
 	 * <p>
-	 * ÔÊĞíÓÃ»§Ö»Ñ¡ÔñÎÄ¼ş¡¢Ö»Ñ¡ÔñÄ¿Â¼£¬»òÕß¿ÉÑ¡ÔñÎÄ¼şºÍÄ¿Â¼ ¡£
-	 * Ä¬ÈÏÑ¡ÔñÄ£Ê½ÎªÎÄ¼ş¼ĞºÍÎÄ¼ş¶¼¿ÉÑ¡Ôñ¡£
+	 * å…è®¸ç”¨æˆ·åªé€‰æ‹©æ–‡ä»¶ã€åªé€‰æ‹©ç›®å½•ï¼Œæˆ–è€…å¯é€‰æ‹©æ–‡ä»¶å’Œç›®å½• ã€‚
+	 * é»˜è®¤é€‰æ‹©æ¨¡å¼ä¸ºæ–‡ä»¶å¤¹å’Œæ–‡ä»¶éƒ½å¯é€‰æ‹©ã€‚
 	 * 
 	 * @param mode
-	 *            Ñ¡ÔñÄ£Ê½
+	 *            é€‰æ‹©æ¨¡å¼
 	 */
 	protected void setFileSelectionMode(int mode) {
 		getChooser().setFileSelectionMode(mode);
 	}
 	
 	/**
-	 * ÉèÖÃÎÄ¼şÑ¡ÔñÆ÷µÄfilter
+	 * è®¾ç½®æ–‡ä»¶é€‰æ‹©å™¨çš„filter
 	 * 
 	 * @param fileFilter
-	 *            ÎÄ¼ş¹ıÂËÆ÷
+	 *            æ–‡ä»¶è¿‡æ»¤å™¨
 	 */
 	protected void setFileFilter(FileFilter fileFilter) {
 		getChooser().setFileFilter(fileFilter);

@@ -16,15 +16,15 @@ import javax.swing.event.ChangeListener;
 import util.Displayer;
 
 /**
- * JColorChooserÑİÊ¾Àà
+ * JColorChooseræ¼”ç¤ºç±»
  * <p>
- * JColorChooserÊÇÒ»¸ö×é¼ş¶ø²»ÊÇÒ»¸ö¶Ô»°¿ò¡£
+ * JColorChooseræ˜¯ä¸€ä¸ªç»„ä»¶è€Œä¸æ˜¯ä¸€ä¸ªå¯¹è¯æ¡†ã€‚
  * <p>
- * ±¾ÀıÌá¹©ÁËÈıÖÖÊ¹ÓÃJColorChooser´´½¨¶Ô»°¿òµÄ·½Ê½¡£
+ * æœ¬ä¾‹æä¾›äº†ä¸‰ç§ä½¿ç”¨JColorChooseråˆ›å»ºå¯¹è¯æ¡†çš„æ–¹å¼ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-3
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-3
  */
 public class JColorChooserDemo {
 
@@ -77,13 +77,13 @@ class JColorChooserPanel extends JPanel {
 	}
 	
 	/**
-	 * ´´½¨Ò»¸öÄ£Ì¬(modal)µÄÑÕÉ«Ñ¡ÔñÆ÷
+	 * åˆ›å»ºä¸€ä¸ªæ¨¡æ€(modal)çš„é¢œè‰²é€‰æ‹©å™¨
 	 */
 	private class ModalListener implements ActionListener {
 		
 		public void actionPerformed(ActionEvent event) {
 			Color defaultColor = getBackground();
-			// ÏÔÊ¾ÓĞÄ£Ê½µÄÑÕÉ«Ñ¡È¡Æ÷¶Ô»°¿ò
+			// æ˜¾ç¤ºæœ‰æ¨¡å¼çš„é¢œè‰²é€‰å–å™¨å¯¹è¯æ¡†
 			Color selected = JColorChooser.showDialog(JColorChooserPanel.this,
 					"Set background", defaultColor);
 			setBackground(selected);
@@ -91,7 +91,7 @@ class JColorChooserPanel extends JPanel {
 	}
 
 	/**
-	 * ´´½¨Ò»¸ö·ÇÄ£Ì¬(modeless)µÄÑÕÉ«Ñ¡ÔñÆ÷
+	 * åˆ›å»ºä¸€ä¸ªéæ¨¡æ€(modeless)çš„é¢œè‰²é€‰æ‹©å™¨
 	 */
 	private class ModelessListener implements ActionListener {
 
@@ -105,20 +105,20 @@ class JColorChooserPanel extends JPanel {
 		private JDialog getDialog() {
 			if (dialog == null) {
 				/*
-				 * ´´½¨²¢·µ»Ø°üº¬Ö¸¶¨ JColorChooser ´°¸ñ¼° "OK"¡¢"Cancel"¡¢"Reset" °´Å¥µÄĞÂ¶Ô»°¿ò
-				 * Èç¹û°´ÏÂ "OK" »ò "Cancel" °´Å¥£¬Ôò¶Ô»°¿ò×Ô¶¯Òş²Ø(µ«Î´ÊÍ·Å)
-				 * Èç¹û°´ÏÂ "Reset" °´Å¥£¬Ôò½«ÑÕÉ«Ñ¡È¡Æ÷µÄÑÕÉ«ÖØÖÃÎªÉÏÒ»´ÎÔÚ¶Ô»°¿òÉÏ
-				 * µ÷ÓÃ setVisible Ê±ÉèÖÃµÄÑÕÉ«£¬²¢ÇÒ¶Ô»°¿òÈÔÈ»ÏÔÊ¾
+				 * åˆ›å»ºå¹¶è¿”å›åŒ…å«æŒ‡å®š JColorChooser çª—æ ¼åŠ "OK"ã€"Cancel"ã€"Reset" æŒ‰é’®çš„æ–°å¯¹è¯æ¡†
+				 * å¦‚æœæŒ‰ä¸‹ "OK" æˆ– "Cancel" æŒ‰é’®ï¼Œåˆ™å¯¹è¯æ¡†è‡ªåŠ¨éšè—(ä½†æœªé‡Šæ”¾)
+				 * å¦‚æœæŒ‰ä¸‹ "Reset" æŒ‰é’®ï¼Œåˆ™å°†é¢œè‰²é€‰å–å™¨çš„é¢œè‰²é‡ç½®ä¸ºä¸Šä¸€æ¬¡åœ¨å¯¹è¯æ¡†ä¸Š
+				 * è°ƒç”¨ setVisible æ—¶è®¾ç½®çš„é¢œè‰²ï¼Œå¹¶ä¸”å¯¹è¯æ¡†ä»ç„¶æ˜¾ç¤º
 				 * 
 				 */
 				dialog = JColorChooser.createDialog(JColorChooserPanel.this,
-						"Background Color", false /* ÉèÖÃÎª·ÇÄ£Ì¬ */,
-						getChooser(), new ActionListener() // OK °´Å¥¼àÌıÆ÷
+						"Background Color", false /* è®¾ç½®ä¸ºéæ¨¡æ€ */,
+						getChooser(), new ActionListener() // OK æŒ‰é’®ç›‘å¬å™¨
 						{
 							public void actionPerformed(ActionEvent event) {
 								setBackground(getChooser().getColor());
 							}
-						}, null /* Cancel °´Å¥¼àÌıÆ÷ */);
+						}, null /* Cancel æŒ‰é’®ç›‘å¬å™¨ */);
 			}
 			return dialog;
 		}
@@ -131,14 +131,14 @@ class JColorChooserPanel extends JPanel {
 		}
 
 		public void actionPerformed(ActionEvent event) {
-			// ÉèÖÃÑÕÉ«Ñ¡ÔñÆ÷µÄµ±Ç°ÑÕÉ«
+			// è®¾ç½®é¢œè‰²é€‰æ‹©å™¨çš„å½“å‰é¢œè‰²
 			getChooser().setColor(getBackground());
 			getDialog().setVisible(true);
 		}
 	}
 
 	/**
-	 * µ±JColorChooserÉÏ½øĞĞ²Ù×÷Ê±£¬Ò»µ©Ñ¡Ôñ±ä¸ü¾Í»á×ö³öÁ¢¼´·´Ó¦
+	 * å½“JColorChooserä¸Šè¿›è¡Œæ“ä½œæ—¶ï¼Œä¸€æ—¦é€‰æ‹©å˜æ›´å°±ä¼šåšå‡ºç«‹å³ååº”
 	 */
 	private class ImmediateListener implements ActionListener {
 
@@ -151,7 +151,7 @@ class JColorChooserPanel extends JPanel {
 
 		private JDialog getDialog() {
 			if (dialog == null) {
-				dialog = new JDialog((Frame) null, false /* ·ÇÄ£Ì¬ */);
+				dialog = new JDialog((Frame) null, false /* éæ¨¡æ€ */);
 				dialog.getContentPane().add(getChooser());
 				dialog.pack();
 			}
@@ -161,7 +161,7 @@ class JColorChooserPanel extends JPanel {
 		private JColorChooser getChooser() {
 			if (chooser == null) {
 				chooser = new JColorChooser();
-				// ÎªÑ¡ÔñÆ÷µÄÑ¡ÔñÄ£ĞÍÌí¼Ó¼àÌıÆ÷
+				// ä¸ºé€‰æ‹©å™¨çš„é€‰æ‹©æ¨¡å‹æ·»åŠ ç›‘å¬å™¨
 				chooser.getSelectionModel().addChangeListener(
 						new ChangeListener() {
 

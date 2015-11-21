@@ -16,13 +16,13 @@ import javax.swing.plaf.basic.BasicArrowButton;
 import util.Displayer;
 
 /**
- * °´Å¥ÑİÊ¾
+ * æŒ‰é’®æ¼”ç¤º
  * <p>
- * SwingÌá¹©ÁËºÜ¶àÀàĞÍµÄ°´Å¥£¬°üÀ¨¸´Ñ¡¿ò¡¢µ¥Ñ¡°´Å¥¡¢²Ëµ¥ÏîµÈ¡£
+ * Swingæä¾›äº†å¾ˆå¤šç±»å‹çš„æŒ‰é’®ï¼ŒåŒ…æ‹¬å¤é€‰æ¡†ã€å•é€‰æŒ‰é’®ã€èœå•é¡¹ç­‰ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-16
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-16
  */
 public class JButtonDemo {
 
@@ -38,16 +38,16 @@ class JButtonPanel extends JPanel {
 
 	private static final long serialVersionUID = 5961288201474212404L;
 
-	// »ù±¾µÄÆÕÍ¨°´Å¥
+	// åŸºæœ¬çš„æ™®é€šæŒ‰é’®
 	private JButton jb = new JButton("JButton");
-	// ¾ßÓĞÁ½¸ö×´Ì¬(°´ÏÂ»òÕßµ¯³ö)µÄ°´Å¥£¬JToggleButton×ÓÀàÓĞJCheckBox¡¢JRadioButton
+	// å…·æœ‰ä¸¤ä¸ªçŠ¶æ€(æŒ‰ä¸‹æˆ–è€…å¼¹å‡º)çš„æŒ‰é’®ï¼ŒJToggleButtonå­ç±»æœ‰JCheckBoxã€JRadioButton
 	private JToggleButton jt = new JToggleButton("JToggleButton");
-	// ¸´Ñ¡¿òÊÇÒ»¸ö¿ÉÒÔ±»Ñ¡¶¨ºÍÈ¡ÏûÑ¡¶¨µÄÏî£¬Ëü½«Æä×´Ì¬ÏÔÊ¾¸øÓÃ»§
+	// å¤é€‰æ¡†æ˜¯ä¸€ä¸ªå¯ä»¥è¢«é€‰å®šå’Œå–æ¶ˆé€‰å®šçš„é¡¹ï¼Œå®ƒå°†å…¶çŠ¶æ€æ˜¾ç¤ºç»™ç”¨æˆ·
 	private JCheckBox jc = new JCheckBox("JButton");
-	// µ¥Ñ¡°´Å¥£¬´Ë°´Å¥Ïî¿É±»Ñ¡Ôñ»òÈ¡ÏûÑ¡Ôñ£¬²¢¿ÉÎªÓÃ»§ÏÔÊ¾Æä×´Ì¬
+	// å•é€‰æŒ‰é’®ï¼Œæ­¤æŒ‰é’®é¡¹å¯è¢«é€‰æ‹©æˆ–å–æ¶ˆé€‰æ‹©ï¼Œå¹¶å¯ä¸ºç”¨æˆ·æ˜¾ç¤ºå…¶çŠ¶æ€
 	private JRadioButton jr = new JRadioButton("JButton");
 
-	// JButton¶ÔÏó£¬Ëü»æÖÆ³¯Ä³¸ö»ù±¾·½ÏòµÄËõ·Å¼ıÍ·
+	// JButtonå¯¹è±¡ï¼Œå®ƒç»˜åˆ¶æœæŸä¸ªåŸºæœ¬æ–¹å‘çš„ç¼©æ”¾ç®­å¤´
 	private BasicArrowButton up = new BasicArrowButton(BasicArrowButton.NORTH);
 	private BasicArrowButton down = new BasicArrowButton(BasicArrowButton.SOUTH);
 	private BasicArrowButton right = new BasicArrowButton(BasicArrowButton.EAST);

@@ -8,25 +8,25 @@ import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
 /**
- * UIµÄÊÂ¼ş´¦ÀíÀà
+ * UIçš„äº‹ä»¶å¤„ç†ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-24
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-24
  */
 public class UIEventHandler {
 
-	// ÊµÀı±äÁ¿Îª¹ØÁªµÄUI
+	// å®ä¾‹å˜é‡ä¸ºå…³è”çš„UI
 	private UI ui;
 
 	/**
-	 * ¹¹Ôìº¯ÊıÒÔUIÀà¶ÔÏóÊµÀı½øĞĞÍ¨ĞÅ
+	 * æ„é€ å‡½æ•°ä»¥UIç±»å¯¹è±¡å®ä¾‹è¿›è¡Œé€šä¿¡
 	 */
 	public UIEventHandler(UI ui) {
 		this.ui = ui;
 	}
 
 	public void doButtonAction(ActionEvent e) {
-		JOptionPane.showMessageDialog(ui, "²âÊÔ³É¹¦");
+		JOptionPane.showMessageDialog(ui, "æµ‹è¯•æˆåŠŸ");
 	}
 }

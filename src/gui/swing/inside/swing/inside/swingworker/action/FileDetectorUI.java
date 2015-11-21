@@ -15,11 +15,11 @@ import javax.swing.event.DocumentListener;
 import util.Displayer;
 
 /**
- * ÎÄ¼şÌ½²âÆ÷UI
+ * æ–‡ä»¶æ¢æµ‹å™¨UI
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2011-1-21
  */
 public class FileDetectorUI extends JPanel {
 
@@ -86,14 +86,14 @@ public class FileDetectorUI extends JPanel {
 		}
 
 		/**
-		 * ÎÄµµÖ´ĞĞÁË²åÈë²Ù×÷µÄÍ¨Öª
+		 * æ–‡æ¡£æ‰§è¡Œäº†æ’å…¥æ“ä½œçš„é€šçŸ¥
 		 */
 		public void insertUpdate(DocumentEvent e) {
 			update();
 		}
 
 		/**
-		 * ÒÆ³ıÁËÒ»²¿·ÖÎÄµµµÄÍ¨Öª
+		 * ç§»é™¤äº†ä¸€éƒ¨åˆ†æ–‡æ¡£çš„é€šçŸ¥
 		 */
 		public void removeUpdate(DocumentEvent e) {
 			update();
@@ -102,11 +102,11 @@ public class FileDetectorUI extends JPanel {
 		private void update() {
 			if(fileDetector != null){
 				if(!fileDetector.isCancelled()){
-					// ¿Éµ÷ÓÃcancel·½·¨È¡ÏûSwingWorkerÏß³Ì£¬Èç¹ûÈÎÎñÕıÔÚÔËĞĞÔòµ÷ÓÃcancelÈ¡ÏûÖ®¡£
+					// å¯è°ƒç”¨cancelæ–¹æ³•å–æ¶ˆSwingWorkerçº¿ç¨‹ï¼Œå¦‚æœä»»åŠ¡æ­£åœ¨è¿è¡Œåˆ™è°ƒç”¨cancelå–æ¶ˆä¹‹ã€‚
 					fileDetector.cancel(true);
 				}
 			}
-			// µ±µ÷ÓÃcancel·½·¨Ê±£¬´úÂë²úÉúĞÂµÄÈÎÎñÊµÀı£¬Ã¿Ò»¸öĞÂµÄËÑË÷ĞèÒª×Ô¼ºµÄÈÎÎñÊµÀı
+			// å½“è°ƒç”¨cancelæ–¹æ³•æ—¶ï¼Œä»£ç äº§ç”Ÿæ–°çš„ä»»åŠ¡å®ä¾‹ï¼Œæ¯ä¸€ä¸ªæ–°çš„æœç´¢éœ€è¦è‡ªå·±çš„ä»»åŠ¡å®ä¾‹
 			fileDetector = new FileDetector(getTable(), getLabel(), getTextField().getText());
 			fileDetector.execute();
 		}

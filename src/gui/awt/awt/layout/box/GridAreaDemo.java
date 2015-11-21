@@ -13,11 +13,11 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * ¹Ì¶¨ÇøÑİÊ¾Àà
+ * å›ºå®šåŒºæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-15
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-15
  */
 public class GridAreaDemo {
 
@@ -30,7 +30,7 @@ public class GridAreaDemo {
 }
 
 /**
- * Ö§¼ÜÖ»ÔÚÒ»¸ö·½ÏòÉÏÆğĞ§¹û£¬µ«¹Ì¶¨Çø(rigid area)¿ÉÒÔÔÚÁ½¸ö·½ÏòÉÏ¹Ì¶¨×é¼şÖ®¼äµÄ¿ÕÏ¶¡£
+ * æ”¯æ¶åªåœ¨ä¸€ä¸ªæ–¹å‘ä¸Šèµ·æ•ˆæœï¼Œä½†å›ºå®šåŒº(rigid area)å¯ä»¥åœ¨ä¸¤ä¸ªæ–¹å‘ä¸Šå›ºå®šç»„ä»¶ä¹‹é—´çš„ç©ºéš™ã€‚
  */
 class GridAreaPanel extends JPanel {
 
@@ -39,7 +39,7 @@ class GridAreaPanel extends JPanel {
 	public GridAreaPanel() {
 		Box bv = Box.createVerticalBox(); 
 	    bv.add(new JButton("Top")); 
-	    // ¹Ì¶¨ÇøÊÇÓĞĞ©ÕùÒéµÄ£¬ÒòÎªËüÊ¹ÓÃÁË¾ø¶ÔÖµ
+	    // å›ºå®šåŒºæ˜¯æœ‰äº›äº‰è®®çš„ï¼Œå› ä¸ºå®ƒä½¿ç”¨äº†ç»å¯¹å€¼
 	    bv.add(Box.createRigidArea(new Dimension(120, 90))); 
 	    bv.add(new JButton("Bottom")); 
 	    

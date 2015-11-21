@@ -11,11 +11,11 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 /**
- * ÈÕÖ¾¹ıÂËÆ÷ÑİÊ¾Àà
+ * æ—¥å¿—è¿‡æ»¤å™¨æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-19
  */
 public class FilterDemo {
 
@@ -38,16 +38,16 @@ public class FilterDemo {
 	}
 	
 	private static void sendLogMessages() {
-		// µÚÈı¸ö²ÎÊıÊÇ´«µİ¸ø LogRecord µÄ²ÎÊı(parameter)
+		// ç¬¬ä¸‰ä¸ªå‚æ•°æ˜¯ä¼ é€’ç»™ LogRecord çš„å‚æ•°(parameter)
 		logger.log(Level.WARNING, "I am a man!", new Man());
 		logger.log(Level.WARNING, "I am a woman!", new Woman());
 		logger.log(Level.WARNING, "I am a kid!", new Kid());
 	}
 }
 /** 
- * LoggerÊ¹ÓÃµÄ¹ıÂËÆ÷ 
+ * Loggerä½¿ç”¨çš„è¿‡æ»¤å™¨ 
  * <p>
- * ¾ö¶¨ÈÕÖ¾ÊÇ·ñÖµµÃ±¨ËÍ£¬ÕâÀïÖ»ÓĞ²ÎÊıÊÇMan¶ÔÏóºÍWoman¶ÔÏóÊ±²Å»á±¨ËÍ¡£
+ * å†³å®šæ—¥å¿—æ˜¯å¦å€¼å¾—æŠ¥é€ï¼Œè¿™é‡Œåªæœ‰å‚æ•°æ˜¯Manå¯¹è±¡å’ŒWomanå¯¹è±¡æ—¶æ‰ä¼šæŠ¥é€ã€‚
  */
 class LoggerFilter implements Filter {
 
@@ -63,9 +63,9 @@ class LoggerFilter implements Filter {
 	}
 } 
 /**
- * HandlerÊ¹ÓÃµÄ¹ıÂËÆ÷ 
+ * Handlerä½¿ç”¨çš„è¿‡æ»¤å™¨ 
  * <p>
- * ¾ö¶¨ÈÕÖ¾ÊÇ·ñÖµµÃ·¢²¼£¬ÕâÀïÖ»ÓĞ²ÎÊıÊÇMan¶ÔÏóºÍKid¶ÔÏóÊ±²Å»á±¨ËÍ¡£
+ * å†³å®šæ—¥å¿—æ˜¯å¦å€¼å¾—å‘å¸ƒï¼Œè¿™é‡Œåªæœ‰å‚æ•°æ˜¯Manå¯¹è±¡å’ŒKidå¯¹è±¡æ—¶æ‰ä¼šæŠ¥é€ã€‚
  */
 class HandlerFilter implements Filter {
 	

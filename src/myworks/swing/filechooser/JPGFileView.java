@@ -10,11 +10,11 @@ import javax.swing.ImageIcon;
 import javax.swing.filechooser.FileView;
 
 /**
- * JPGÎÄ¼şÄ¬ÈÏÊÓÍ¼(ÔÚJFileChooserÖĞÏÔÊ¾µÄĞ¡Í¼±ê)
+ * JPGæ–‡ä»¶é»˜è®¤è§†å›¾(åœ¨JFileChooserä¸­æ˜¾ç¤ºçš„å°å›¾æ ‡)
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class JPGFileView extends FileView {
 

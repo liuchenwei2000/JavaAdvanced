@@ -11,14 +11,14 @@ import javax.swing.event.DocumentListener;
 import util.Displayer;
 
 /**
- * ÎÄµµ¼àÌıÆ÷ÑİÊ¾Àà
+ * æ–‡æ¡£ç›‘å¬å™¨æ¼”ç¤ºç±»
  * <p>
- * JTextComponentµÄ×ÓÀà¶¼¿ÉÒÔ×¢²áÎÄµµ¼àÌıÆ÷ÒÔ¼àÌıÎÄ±¾ÄÚÈİµÄ±ä¸ü¡£
- * DocumentÊÇÄ£ĞÍ£¬¶øJTextComponentÊÇÊÓÍ¼£¬Ö±½Ó¼àÌıÄ£ĞÍµÄ±ä¸ü¡£
+ * JTextComponentçš„å­ç±»éƒ½å¯ä»¥æ³¨å†Œæ–‡æ¡£ç›‘å¬å™¨ä»¥ç›‘å¬æ–‡æœ¬å†…å®¹çš„å˜æ›´ã€‚
+ * Documentæ˜¯æ¨¡å‹ï¼Œè€ŒJTextComponentæ˜¯è§†å›¾ï¼Œç›´æ¥ç›‘å¬æ¨¡å‹çš„å˜æ›´ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-27
  */
 public class DocumentListenerDemo {
 	
@@ -47,17 +47,17 @@ class DocumentListenerPanel extends JPanel {
 	private JTextField getTextField() {
 		if (tf == null) {
 			tf = new JTextField(20);
-			// ÎªÎÄ±¾ÓòµÄDocumentÄ£ĞÍÌí¼Ó¼àÌıÆ÷
+			// ä¸ºæ–‡æœ¬åŸŸçš„Documentæ¨¡å‹æ·»åŠ ç›‘å¬å™¨
 			tf.getDocument().addDocumentListener(new DocumentListener() {
-				// Ò»°ãÎŞĞèÊµÏÖ¸Ã·½·¨(Ö»ÓĞµ±ÀàËÆÎÄ±¾¸ñÊ½·¢Éú±ä»¯Ê±²Å´¦·£)
+				// ä¸€èˆ¬æ— éœ€å®ç°è¯¥æ–¹æ³•(åªæœ‰å½“ç±»ä¼¼æ–‡æœ¬æ ¼å¼å‘ç”Ÿå˜åŒ–æ—¶æ‰å¤„ç½š)
 				public void changedUpdate(DocumentEvent e) {
 					// do nothing
 				}
-				// ÎÄµµÖ´ĞĞÁË²åÈë²Ù×÷µÄÍ¨Öª
+				// æ–‡æ¡£æ‰§è¡Œäº†æ’å…¥æ“ä½œçš„é€šçŸ¥
 				public void insertUpdate(DocumentEvent e) {
 					updateLabel();
 				}
-				// ÒÆ³ıÁËÒ»²¿·ÖÎÄµµµÄÍ¨Öª
+				// ç§»é™¤äº†ä¸€éƒ¨åˆ†æ–‡æ¡£çš„é€šçŸ¥
 				public void removeUpdate(DocumentEvent e) {
 					updateLabel();
 				}
@@ -74,7 +74,7 @@ class DocumentListenerPanel extends JPanel {
 	}
 
 	/**
-	 * ¸üĞÂJLabelµÄÏÔÊ¾ÄÚÈİ£¬Ê¹ÆäºÍÎÄ±¾Óò±£³ÖÍ¬²½
+	 * æ›´æ–°JLabelçš„æ˜¾ç¤ºå†…å®¹ï¼Œä½¿å…¶å’Œæ–‡æœ¬åŸŸä¿æŒåŒæ­¥
 	 */
 	private void updateLabel() {
 		getLabel().setText(getTextField().getText());

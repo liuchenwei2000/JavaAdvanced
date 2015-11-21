@@ -8,11 +8,11 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 /**
- * ×Ô¶¨ÒåÈÕÖ¾´¦ÀíÆ÷ÑİÊ¾Àà
+ * è‡ªå®šä¹‰æ—¥å¿—å¤„ç†å™¨æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class MyHandlerDemo {
 
@@ -30,15 +30,15 @@ public class MyHandlerDemo {
 }
 
 /**
- * ×Ô¶¨ÒåÈÕÖ¾´¦ÀíÆ÷
+ * è‡ªå®šä¹‰æ—¥å¿—å¤„ç†å™¨
  * <p>
- * Í¨¹ı¼Ì³Ğ Handler Àà£¬¿ÉÒÔºÜÈİÒ×µØ±àĞ´¶¨ÖÆµÄ´¦ÀíÆ÷¡£
- * ²»µ«ÒªÊµÏÖ publish()·½·¨£¨ËüÖ´ĞĞÊµ¼ÊÉÏµÄ±¨ËÍ£©£¬»¹ÒªÊµÏÖ flush()ºÍ close()£¬ËüÃÇÈ·±£ÓÃÓÚ±¨ËÍµÄÁ÷±»ÍêÈ«Çå¿Õ¡£
+ * é€šè¿‡ç»§æ‰¿ Handler ç±»ï¼Œå¯ä»¥å¾ˆå®¹æ˜“åœ°ç¼–å†™å®šåˆ¶çš„å¤„ç†å™¨ã€‚
+ * ä¸ä½†è¦å®ç° publish()æ–¹æ³•ï¼ˆå®ƒæ‰§è¡Œå®é™…ä¸Šçš„æŠ¥é€ï¼‰ï¼Œè¿˜è¦å®ç° flush()å’Œ close()ï¼Œå®ƒä»¬ç¡®ä¿ç”¨äºæŠ¥é€çš„æµè¢«å®Œå…¨æ¸…ç©ºã€‚
  */
 class MyHandler extends Handler {
 
 	/**
-	 * ·¢²¼ÈÕÖ¾ĞÅÏ¢
+	 * å‘å¸ƒæ—¥å¿—ä¿¡æ¯
 	 */
 	public void publish(LogRecord logRecord) {
 		StringBuilder buffer = new StringBuilder();

@@ -6,18 +6,18 @@ package i18n;
 import java.util.Locale;
 
 /**
- * LocaleÑÝÊ¾Àà
+ * Localeæ¼”ç¤ºç±»
  * <p>
- * Locale¶ÔÏó±íÊ¾ÁËÌØ¶¨µÄµØÀí¡¢ÕþÖÎºÍÎÄ»¯µØÇø¡£
- * ÐèÒªLocaleÀ´Ö´ÐÐÆäÈÎÎñµÄ²Ù×÷³ÆÎªÓïÑÔ»·¾³Ãô¸ÐµÄ²Ù×÷£¬ËüÊ¹ÓÃLocaleÎªÓÃ»§Á¿Éí¶¨ÖÆÐÅÏ¢¡£
+ * Localeå¯¹è±¡è¡¨ç¤ºäº†ç‰¹å®šçš„åœ°ç†ã€æ”¿æ²»å’Œæ–‡åŒ–åœ°åŒºã€‚
+ * éœ€è¦Localeæ¥æ‰§è¡Œå…¶ä»»åŠ¡çš„æ“ä½œç§°ä¸ºè¯­è¨€çŽ¯å¢ƒæ•æ„Ÿçš„æ“ä½œï¼Œå®ƒä½¿ç”¨Localeä¸ºç”¨æˆ·é‡èº«å®šåˆ¶ä¿¡æ¯ã€‚
  * <p>
- * Locale ÊÇÒ»ÖÖ±êÊ¶ËùÒª»ñÈ¡µÄ¶ÔÏóÖÖÀàµÄ»úÖÆ£º
- * ½«Locale¶ÔÏó´«¸øÒÀÀµLocaleµÄÄÇÐ©·½·¨£¬ÕâÐ©·½·¨½«¸ù¾Ý²»Í¬µÄµØÓò²úÉú²»Í¬ÐÎÊ½µÄÎÄ±¾¡£
- * µ«LocaleÖ»ÊÇÒ»ÖÖ±êÊ¶¶ÔÏóµÄ»úÖÆ£¬²»ÊÇ¶ÔÏó±¾ÉíµÄÈÝÆ÷¡£ 
+ * Locale æ˜¯ä¸€ç§æ ‡è¯†æ‰€è¦èŽ·å–çš„å¯¹è±¡ç§ç±»çš„æœºåˆ¶ï¼š
+ * å°†Localeå¯¹è±¡ä¼ ç»™ä¾èµ–Localeçš„é‚£äº›æ–¹æ³•ï¼Œè¿™äº›æ–¹æ³•å°†æ ¹æ®ä¸åŒçš„åœ°åŸŸäº§ç”Ÿä¸åŒå½¢å¼çš„æ–‡æœ¬ã€‚
+ * ä½†Localeåªæ˜¯ä¸€ç§æ ‡è¯†å¯¹è±¡çš„æœºåˆ¶ï¼Œä¸æ˜¯å¯¹è±¡æœ¬èº«çš„å®¹å™¨ã€‚ 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-2-24
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-24
  */
 public class LocaleDemo {
 
@@ -25,30 +25,30 @@ public class LocaleDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// »ñµÃ´ËJavaÐéÄâ»úÊµÀýµÄµ±Ç°Ä¬ÈÏÓïÑÔ»·¾³Öµ 
+		// èŽ·å¾—æ­¤Javaè™šæ‹Ÿæœºå®žä¾‹çš„å½“å‰é»˜è®¤è¯­è¨€çŽ¯å¢ƒå€¼ 
 		Locale locale = Locale.getDefault();
 		print(locale);
 		
-		// ¸ù¾ÝÓïÑÔºÍ¹ú¼Ò¹¹ÔìÒ»¸öÓïÑÔ»·¾³
-		// ÓïÑÔ²ÎÊýÊÇÒ»¸öÓÐÐ§µÄ ISO ÓïÑÔ´úÂë£¬ÕâÐ©´úÂëÊÇÓÉ ISO-639 ¶¨ÒåµÄÐ¡Ð´Á½×ÖÄ¸´úÂë
-		// ¹ú¼Ò²ÎÊýÊÇÒ»¸öÓÐÐ§µÄ ISO ¹ú¼Ò´úÂë£¬ÕâÐ©´úÂëÊÇÓÉ ISO-3166 ¶¨ÒåµÄ´óÐ´Á½×ÖÄ¸´úÂë
+		// æ ¹æ®è¯­è¨€å’Œå›½å®¶æž„é€ ä¸€ä¸ªè¯­è¨€çŽ¯å¢ƒ
+		// è¯­è¨€å‚æ•°æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„ ISO è¯­è¨€ä»£ç ï¼Œè¿™äº›ä»£ç æ˜¯ç”± ISO-639 å®šä¹‰çš„å°å†™ä¸¤å­—æ¯ä»£ç 
+		// å›½å®¶å‚æ•°æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„ ISO å›½å®¶ä»£ç ï¼Œè¿™äº›ä»£ç æ˜¯ç”± ISO-3166 å®šä¹‰çš„å¤§å†™ä¸¤å­—æ¯ä»£ç 
 		Locale usa = new Locale("en", "US");
-		// Îª´ËJavaÐéÄâ»úÊµÀýÉèÖÃÄ¬ÈÏÓïÑÔ»·¾³£¬Õâ²»»áÓ°ÏìÖ÷»úµÄÓïÑÔ»·¾³ 
+		// ä¸ºæ­¤Javaè™šæ‹Ÿæœºå®žä¾‹è®¾ç½®é»˜è®¤è¯­è¨€çŽ¯å¢ƒï¼Œè¿™ä¸ä¼šå½±å“ä¸»æœºçš„è¯­è¨€çŽ¯å¢ƒ 
 		Locale.setDefault(usa);
 		print(usa);
 		
-		// Locale ÀàÌá¹©ÁËÒ»Ð©·½±ãµÄ³£Á¿£¬¿ÉÓÃÕâÐ©³£Á¿Îª³£ÓÃµÄÓïÑÔ»·¾³´´½¨ Locale ¶ÔÏó
+		// Locale ç±»æä¾›äº†ä¸€äº›æ–¹ä¾¿çš„å¸¸é‡ï¼Œå¯ç”¨è¿™äº›å¸¸é‡ä¸ºå¸¸ç”¨çš„è¯­è¨€çŽ¯å¢ƒåˆ›å»º Locale å¯¹è±¡
 		Locale uk = Locale.UK;
 		Locale.setDefault(uk);
 		print(uk);
 	}
 
 	private static void print(Locale locale) {
-		// ·µ»ØÊÊºÏÏòÓÃ»§ÏÔÊ¾µÄÓïÑÔ»·¾³Ãû
+		// è¿”å›žé€‚åˆå‘ç”¨æˆ·æ˜¾ç¤ºçš„è¯­è¨€çŽ¯å¢ƒå
 		System.out.println(locale.getDisplayName());
-		// ·µ»ØÊÊºÏÏòÓÃ»§ÏÔÊ¾µÄÓïÑÔ»·¾³¹ú¼ÒÃû
+		// è¿”å›žé€‚åˆå‘ç”¨æˆ·æ˜¾ç¤ºçš„è¯­è¨€çŽ¯å¢ƒå›½å®¶å
 		System.out.println(locale.getDisplayCountry());
-		// ·µ»ØÊÊºÏÏòÓÃ»§ÏÔÊ¾µÄÓïÑÔ»·¾³ÓïÑÔÃû
+		// è¿”å›žé€‚åˆå‘ç”¨æˆ·æ˜¾ç¤ºçš„è¯­è¨€çŽ¯å¢ƒè¯­è¨€å
 		System.out.println(locale.getDisplayLanguage());
 	}
 }

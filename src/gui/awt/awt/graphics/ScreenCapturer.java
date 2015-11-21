@@ -13,19 +13,19 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 /**
- * ½ØÆÁÆ÷
+ * æˆªå±å™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-22
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-22
  */
 public class ScreenCapturer {
 
 	/**
-	 * ½ØÆÁºó½«Í¼Æ¬´æµ½Ö¸¶¨ÎÄ¼ş
+	 * æˆªå±åå°†å›¾ç‰‡å­˜åˆ°æŒ‡å®šæ–‡ä»¶
 	 * 
 	 * @param fileName
-	 *            ½ØÆÁÍ¼Æ¬Êä³öÎÄ¼şÃû
+	 *            æˆªå±å›¾ç‰‡è¾“å‡ºæ–‡ä»¶å
 	 * @throws Exception
 	 */
 	public static void captureScreen(String fileName) throws Exception {

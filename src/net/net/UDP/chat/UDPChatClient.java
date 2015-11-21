@@ -6,11 +6,11 @@ package net.UDP.chat;
 import javax.swing.SwingUtilities;
 
 /**
- * µã¶ÔµãÁÄÌìÊ¾Àı
+ * ç‚¹å¯¹ç‚¹èŠå¤©ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ1ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ1æ—¥
  */
 public class UDPChatClient {
 
@@ -18,7 +18,7 @@ public class UDPChatClient {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		/** Èç¹ûÔÚÍ¬Ò»Ì¨»úÆ÷½øĞĞÁ½¸ö¿Í»§¶ËÖ®¼äµÄÁÄÌì */
+		/** å¦‚æœåœ¨åŒä¸€å°æœºå™¨è¿›è¡Œä¸¤ä¸ªå®¢æˆ·ç«¯ä¹‹é—´çš„èŠå¤© */
 		final String localhost = "127.0.0.1";
 
 		final int portSendA = 8881;
@@ -27,7 +27,7 @@ public class UDPChatClient {
 		final int portSendB = 8882;
 		final int portReceiveB = 9992;
 		
-		// ÁíÆğEDTÏß³Ì½øĞĞ½çÃæÕ¹ÏÖ£¬Ö÷Ïß³Ì²»ĞèÒª²ÎÓë
+		// å¦èµ·EDTçº¿ç¨‹è¿›è¡Œç•Œé¢å±•ç°ï¼Œä¸»çº¿ç¨‹ä¸éœ€è¦å‚ä¸
 		SwingUtilities.invokeLater(new Runnable() {
 
 			@Override
@@ -46,7 +46,7 @@ public class UDPChatClient {
 			}
 		});
 		
-		/** Èç¹ûÔÚ²»Í¬»úÆ÷½øĞĞÁ½¸ö¿Í»§¶ËÖ®¼äµÄÁÄÌì£¬ÔòÁ½¸ö¿Í»§¶Ë±ØĞëÔËĞĞÔÚ¸÷×ÔµÄÎïÀí»úÉÏ */
+		/** å¦‚æœåœ¨ä¸åŒæœºå™¨è¿›è¡Œä¸¤ä¸ªå®¢æˆ·ç«¯ä¹‹é—´çš„èŠå¤©ï¼Œåˆ™ä¸¤ä¸ªå®¢æˆ·ç«¯å¿…é¡»è¿è¡Œåœ¨å„è‡ªçš„ç‰©ç†æœºä¸Š */
 //		final String ipA = "10.25.2.212";
 //		final String ipB = "10.25.3.158";
 

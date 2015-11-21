@@ -14,13 +14,13 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * Ãæ°åÀà
+ * é¢æ¿ç±»
  * <p>
- * ¿ÉÒÔ¼ÓÔØ±³¾°Í¼Æ¬£¬ÖØĞ´paintComponent()·½·¨ÊµÏÖ¡£
+ * å¯ä»¥åŠ è½½èƒŒæ™¯å›¾ç‰‡ï¼Œé‡å†™paintComponent()æ–¹æ³•å®ç°ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-10-30
+ * åˆ›å»ºæ—¥æœŸï¼š2007-10-30
  */
 public class JPanelWithImageA {
 	
@@ -28,7 +28,7 @@ public class JPanelWithImageA {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Displayer.createAndShowGUI("ÖØĞ´paintComponent()ÊµÏÖÃæ°å±³¾°Í¼Æ¬", new ImagePanelA());
+		Displayer.createAndShowGUI("é‡å†™paintComponent()å®ç°é¢æ¿èƒŒæ™¯å›¾ç‰‡", new ImagePanelA());
 	}
 }
 
@@ -37,17 +37,17 @@ class ImagePanelA extends JPanel {
 	private static final long serialVersionUID = 1L;
 
 	public ImagePanelA() {
-		add(new JButton("±³¾°"));
+		add(new JButton("èƒŒæ™¯"));
 		setPreferredSize(new Dimension(400, 300));
 	}
 	
 	/**
-	 * ÓÃÓÚÃè»æÃæ°åµÄ±³¾°Í¼Æ¬
+	 * ç”¨äºæç»˜é¢æ¿çš„èƒŒæ™¯å›¾ç‰‡
 	 * 
 	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	 */
 	protected void paintComponent(Graphics g) {
-		// Í¼Æ¬Â·¾¶
+		// å›¾ç‰‡è·¯å¾„
 		Image bkgrdImage = new ImageIcon("images/gui.swing.panel/duke.gif").getImage();
 		g.drawImage(bkgrdImage, 0, 0, null);
 	}

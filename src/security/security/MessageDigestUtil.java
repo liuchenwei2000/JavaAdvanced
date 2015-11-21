@@ -12,48 +12,48 @@ import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 
 /**
- * ÏûÏ¢ÕªÒª¹¤¾ßÀà
+ * æ¶ˆæ¯æ‘˜è¦å·¥å…·ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-19
  */
 public class MessageDigestUtil {
 
 	/**
-	 * ÏûÏ¢ÕªÒªËã·¨Ã¶¾Ù
+	 * æ¶ˆæ¯æ‘˜è¦ç®—æ³•æšä¸¾
 	 */
 	private enum Algorithm {
 		SHA, MD5
 	}
 
 	/**
-	 * Í¨¹ıSHAËã·¨¼ÆËã²ÎÊıµÄÏûÏ¢ÕªÒª
+	 * é€šè¿‡SHAç®—æ³•è®¡ç®—å‚æ•°çš„æ¶ˆæ¯æ‘˜è¦
 	 * 
 	 * @param content
-	 *            ÄÚÈİ
+	 *            å†…å®¹
 	 */
 	public static byte[] computeDigestBySHA(String content) {
 		return computeDigest(Algorithm.SHA, content);
 	}
 
 	/**
-	 * Í¨¹ıMD5Ëã·¨¼ÆËã²ÎÊıµÄÏûÏ¢ÕªÒª
+	 * é€šè¿‡MD5ç®—æ³•è®¡ç®—å‚æ•°çš„æ¶ˆæ¯æ‘˜è¦
 	 * 
 	 * @param content
-	 *            ÄÚÈİ
+	 *            å†…å®¹
 	 */
 	public static byte[] computeDigestByMD5(String content) {
 		return computeDigest(Algorithm.MD5, content);
 	}
 
 	/**
-	 * ¸ù¾İ²ÎÊıËã·¨¼ÆËã²ÎÊıÄÚÈİµÄÏûÏ¢ÕªÒª
+	 * æ ¹æ®å‚æ•°ç®—æ³•è®¡ç®—å‚æ•°å†…å®¹çš„æ¶ˆæ¯æ‘˜è¦
 	 * 
 	 * @param algorithm
-	 *            ÏûÏ¢ÕªÒªËã·¨
+	 *            æ¶ˆæ¯æ‘˜è¦ç®—æ³•
 	 * @param content
-	 *            ÄÚÈİ
+	 *            å†…å®¹
 	 */
 	private static byte[] computeDigest(Algorithm algorithm, String content) {
 		if (content == null)
@@ -77,27 +77,27 @@ public class MessageDigestUtil {
 	}
 
 	/**
-	 * Í¨¹ıSHAËã·¨¼ÆËã²ÎÊıµÄÏûÏ¢ÕªÒª×Ö·û´®
+	 * é€šè¿‡SHAç®—æ³•è®¡ç®—å‚æ•°çš„æ¶ˆæ¯æ‘˜è¦å­—ç¬¦ä¸²
 	 * 
 	 * @param content
-	 *            ÄÚÈİ
+	 *            å†…å®¹
 	 */
 	public static String computeDigestStringBySHA(String content) {
 		return toHexString(computeDigestBySHA(content));
 	}
 
 	/**
-	 * Í¨¹ıMD5Ëã·¨¼ÆËã²ÎÊıµÄÏûÏ¢ÕªÒª×Ö·û´®
+	 * é€šè¿‡MD5ç®—æ³•è®¡ç®—å‚æ•°çš„æ¶ˆæ¯æ‘˜è¦å­—ç¬¦ä¸²
 	 * 
 	 * @param content
-	 *            ÄÚÈİ
+	 *            å†…å®¹
 	 */
 	public static String computeDigestStringByMD5(String content) {
 		return toHexString(computeDigestByMD5(content));
 	}
 
 	/**
-	 * ½« byte Êı×é×ª»»³ÉÊ®Áù½øÖÆÊı×ÖĞÎÊ½µÄ×Ö·û´®
+	 * å°† byte æ•°ç»„è½¬æ¢æˆåå…­è¿›åˆ¶æ•°å­—å½¢å¼çš„å­—ç¬¦ä¸²
 	 */
 	private static String toHexString(byte[] hash) {
 		BigInteger bi = new BigInteger(1, hash);
@@ -105,7 +105,7 @@ public class MessageDigestUtil {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÎÄ¼şµÄMD5Öµ
+	 * è·å–æŒ‡å®šæ–‡ä»¶çš„MD5å€¼
 	 */
 	public static String getMd5ByFile(File file) throws IOException {
 		FileInputStream in = null;

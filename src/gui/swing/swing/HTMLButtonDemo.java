@@ -14,14 +14,14 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * HTML»æÖÆButtonÑÝÊ¾Àà
+ * HTMLç»˜åˆ¶Buttonæ¼”ç¤ºç±»
  * <p>
- * ÈÎºÎÄÜ½ÓÊÜÎÄ±¾µÄ×é¼þ¶¼¿ÉÒÔ½ÓÊÜHTMLÎÄ±¾£¬ÇÒÄÜ¸ù¾ÝHTMLµÄ¹æÔòÀ´ÖØÐÂ¸ñÊ½»¯ÎÄ±¾¡£
- * ËùÒÔ¿ÉÒÔºÜÈÝÒ×µØÔÚSwing×é¼þÉÏ¼ÓÈëÆ¯ÁÁµÄÎÄ±¾¡£
+ * ä»»ä½•èƒ½æŽ¥å—æ–‡æœ¬çš„ç»„ä»¶éƒ½å¯ä»¥æŽ¥å—HTMLæ–‡æœ¬ï¼Œä¸”èƒ½æ ¹æ®HTMLçš„è§„åˆ™æ¥é‡æ–°æ ¼å¼åŒ–æ–‡æœ¬ã€‚
+ * æ‰€ä»¥å¯ä»¥å¾ˆå®¹æ˜“åœ°åœ¨Swingç»„ä»¶ä¸ŠåŠ å…¥æ¼‚äº®çš„æ–‡æœ¬ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-20
  */
 public class HTMLButtonDemo {
 	
@@ -46,20 +46,20 @@ class HTMLButtonPanel extends JPanel {
 
 	private JButton getHTMLButton() {
 		if (button == null) {
-			// ±ØÐëÊ¹ÎÄ±¾ÒÔ"<html>"±ê¼Ç¿ªÊ¼£¬È»ºó¾Í¿ÉÒÔÊ¹ÓÃÆÕÍ¨µÄHTML±ê¼ÇÁË£¬µ«²»»á±»Ç¿ÖÆÒªÇóÌí¼Ó½áÊø±ê¼Ç
-			// JTabbedPane,JMenuItem,JToolTip,JRadioButtonÒÔ¼°JCheckBoxÖÐ¶¼¿ÉÒÔÊ¹ÓÃHTMLÎÄ±¾
+			// å¿…é¡»ä½¿æ–‡æœ¬ä»¥"<html>"æ ‡è®°å¼€å§‹ï¼Œç„¶åŽå°±å¯ä»¥ä½¿ç”¨æ™®é€šçš„HTMLæ ‡è®°äº†ï¼Œä½†ä¸ä¼šè¢«å¼ºåˆ¶è¦æ±‚æ·»åŠ ç»“æŸæ ‡è®°
+			// JTabbedPane,JMenuItem,JToolTip,JRadioButtonä»¥åŠJCheckBoxä¸­éƒ½å¯ä»¥ä½¿ç”¨HTMLæ–‡æœ¬
 			button = new JButton(
 					"<html><b><font size=+2><center>Hi!<br><i>Press me now!");
 			button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					HTMLButtonPanel.this.add(new JLabel("<html>"
 							+ "<i><font size=+4>Hello!"));
-					// ÑéÖ¤´ËÈÝÆ÷¼°ÆäËùÓÐ×Ó×é¼þ£¬Ê¹ÓÃvalidate()·½·¨»áÊ¹ÈÝÆ÷ÔÙ´Î²¼ÖÃÆä×Ó×é¼þ
-					// ÒÑ¾­²¼ÖÃÈÝÆ÷ºó£¬ÔÚÐÞ¸Ä´ËÈÝÆ÷µÄ×Ó×é¼þµÄÊ±ºò(ÔÚÈÝÆ÷ÖÐÌí¼Ó»òÒÆ³ý×é¼þ
-					// »òÕß¸ü¸ÄÓë²¼¾ÖÏà¹ØµÄÐÅÏ¢)Ó¦¸Ãµ÷ÓÃÉÏÊö·½·¨
-					// ±ØÐëµ÷ÓÃÈÝÆ÷µÄvalidate()·½·¨À´Ç¿ÖÆ¶Ô×é¼þ½øÐÐÖØÐÂ²¼¾Ö£¬ÕâÑù¾ÍÄÜÏÔÊ¾¸ÃÐÂ±êÇ©ÁË
+					// éªŒè¯æ­¤å®¹å™¨åŠå…¶æ‰€æœ‰å­ç»„ä»¶ï¼Œä½¿ç”¨validate()æ–¹æ³•ä¼šä½¿å®¹å™¨å†æ¬¡å¸ƒç½®å…¶å­ç»„ä»¶
+					// å·²ç»å¸ƒç½®å®¹å™¨åŽï¼Œåœ¨ä¿®æ”¹æ­¤å®¹å™¨çš„å­ç»„ä»¶çš„æ—¶å€™(åœ¨å®¹å™¨ä¸­æ·»åŠ æˆ–ç§»é™¤ç»„ä»¶
+					// æˆ–è€…æ›´æ”¹ä¸Žå¸ƒå±€ç›¸å…³çš„ä¿¡æ¯)åº”è¯¥è°ƒç”¨ä¸Šè¿°æ–¹æ³•
+					// å¿…é¡»è°ƒç”¨å®¹å™¨çš„validate()æ–¹æ³•æ¥å¼ºåˆ¶å¯¹ç»„ä»¶è¿›è¡Œé‡æ–°å¸ƒå±€ï¼Œè¿™æ ·å°±èƒ½æ˜¾ç¤ºè¯¥æ–°æ ‡ç­¾äº†
 					validate();
-//					updateUI();// Ò²¿ÉÒÔ´ïµ½ÏàÍ¬µÄÄ¿µÄ
+//					updateUI();// ä¹Ÿå¯ä»¥è¾¾åˆ°ç›¸åŒçš„ç›®çš„
 				}
 			});
 		}

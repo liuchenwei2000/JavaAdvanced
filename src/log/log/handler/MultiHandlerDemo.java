@@ -8,17 +8,17 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 /**
- * ¶àÖØ´¦ÀíÆ÷ÑÝÊ¾Àà
+ * å¤šé‡å¤„ç†å™¨æ¼”ç¤ºç±»
  * <p>
- * ¿ÉÒÔÓÃÃ¿¸ö Logger ¶ÔÏó×¢²á¶à¸ö´¦ÀíÆ÷¡£
+ * å¯ä»¥ç”¨æ¯ä¸ª Logger å¯¹è±¡æ³¨å†Œå¤šä¸ªå¤„ç†å™¨ã€‚
  * <p>
- * µ±ÈÕÖ¾ÇëÇóµ½´ï Logger Ê±£¬Ö»Òª Logger µÄÈÕÖ¾¼¶±ð¸ßÓÚ»òµÈÓÚ´¦ÀíÆ÷µÄÈÕÖ¾ÇëÇó¼¶±ð£¬
- * Ëü¸æÖªËùÓÐÏòËü×¢²áµÄ´¦ÀíÆ÷£¬ÕâÐ©´¦ÀíÆ÷ÒÀ´ÎÓµÓÐÆä×Ô¼ºµÄÈÕÖ¾¼¶±ð¡£
- * Èç¹û LogRecord µÄ¼¶±ð¸ßÓÚ»òµÈÓÚÄ³¸ö´¦ÀíÆ÷µÄ¼¶±ð£¬ÄÇÃ´¸Ã´¦ÀíÆ÷¾Í»á·¢²¼±¨¸æ¡£
+ * å½“æ—¥å¿—è¯·æ±‚åˆ°è¾¾ Logger æ—¶ï¼Œåªè¦ Logger çš„æ—¥å¿—çº§åˆ«é«˜äºŽæˆ–ç­‰äºŽå¤„ç†å™¨çš„æ—¥å¿—è¯·æ±‚çº§åˆ«ï¼Œ
+ * å®ƒå‘ŠçŸ¥æ‰€æœ‰å‘å®ƒæ³¨å†Œçš„å¤„ç†å™¨ï¼Œè¿™äº›å¤„ç†å™¨ä¾æ¬¡æ‹¥æœ‰å…¶è‡ªå·±çš„æ—¥å¿—çº§åˆ«ã€‚
+ * å¦‚æžœ LogRecord çš„çº§åˆ«é«˜äºŽæˆ–ç­‰äºŽæŸä¸ªå¤„ç†å™¨çš„çº§åˆ«ï¼Œé‚£ä¹ˆè¯¥å¤„ç†å™¨å°±ä¼šå‘å¸ƒæŠ¥å‘Šã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class MultiHandlerDemo {
 

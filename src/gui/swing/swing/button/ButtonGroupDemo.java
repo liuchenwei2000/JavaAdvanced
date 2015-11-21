@@ -18,18 +18,18 @@ import javax.swing.border.TitledBorder;
 import util.Displayer;
 
 /**
- * °´Å¥×éÑİÊ¾
+ * æŒ‰é’®ç»„æ¼”ç¤º
  * <p>
- * ÒªÏëÈÃµ¥Ñ¡°´Å¥±íÏÖ³öÄ³ÖÖ"ÅÅËû"ĞĞÎª£¬±ØĞë°ÑËüÃÇ¼ÓÈëµ½Ò»¸ö"°´Å¥×é"ÖĞ¡£
- * ButtonGroupÓÃÓÚÎªÒ»×é°´Å¥´´½¨Ò»¸ö¶à³â(multiple-exclusion)×÷ÓÃÓò£¬
- * Ê¹ÓÃÏàÍ¬µÄButtonGroup¶ÔÏó´´½¨Ò»×é°´Å¥ÒâÎ¶×Å"¿ªÆô"ÆäÖĞÒ»¸ö°´Å¥Ê±£¬½«¹Ø±Õ×éÖĞµÄÆäËûËùÓĞ°´Å¥ ¡£
- * ¿É½«ButtonGroupÓÃÓÚÈÎºÎ´ÓAbstractButton¼Ì³ĞµÄ¶ÔÏó×é¡£
- * Í¨³££¬°´Å¥×é°üº¬JRadioButton¡¢JRadioButtonMenuItem»òJToggleButtonµÄÊµÀı¡£
- * µ«½«JButton»òJMenuItemµÄÊµÀı·ÅÈë°´Å¥×éÖĞ²¢Ã»ÓĞÊ²Ã´ÒâÒå£¬ÒòÎªJButtonºÍJMenuItem²»ÊµÏÖÑ¡Ôñ×´Ì¬ ¡£
+ * è¦æƒ³è®©å•é€‰æŒ‰é’®è¡¨ç°å‡ºæŸç§"æ’ä»–"è¡Œä¸ºï¼Œå¿…é¡»æŠŠå®ƒä»¬åŠ å…¥åˆ°ä¸€ä¸ª"æŒ‰é’®ç»„"ä¸­ã€‚
+ * ButtonGroupç”¨äºä¸ºä¸€ç»„æŒ‰é’®åˆ›å»ºä¸€ä¸ªå¤šæ–¥(multiple-exclusion)ä½œç”¨åŸŸï¼Œ
+ * ä½¿ç”¨ç›¸åŒçš„ButtonGroupå¯¹è±¡åˆ›å»ºä¸€ç»„æŒ‰é’®æ„å‘³ç€"å¼€å¯"å…¶ä¸­ä¸€ä¸ªæŒ‰é’®æ—¶ï¼Œå°†å…³é—­ç»„ä¸­çš„å…¶ä»–æ‰€æœ‰æŒ‰é’® ã€‚
+ * å¯å°†ButtonGroupç”¨äºä»»ä½•ä»AbstractButtonç»§æ‰¿çš„å¯¹è±¡ç»„ã€‚
+ * é€šå¸¸ï¼ŒæŒ‰é’®ç»„åŒ…å«JRadioButtonã€JRadioButtonMenuItemæˆ–JToggleButtonçš„å®ä¾‹ã€‚
+ * ä½†å°†JButtonæˆ–JMenuItemçš„å®ä¾‹æ”¾å…¥æŒ‰é’®ç»„ä¸­å¹¶æ²¡æœ‰ä»€ä¹ˆæ„ä¹‰ï¼Œå› ä¸ºJButtonå’ŒJMenuItemä¸å®ç°é€‰æ‹©çŠ¶æ€ ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-16
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-16
  */
 public class ButtonGroupDemo {
 	
@@ -45,7 +45,7 @@ class ButtonGroupPanel extends JPanel {
 
 	private static final long serialVersionUID = 1243483188884805647L;
 
-	/** °´Å¥Ãû³Æ */
+	/** æŒ‰é’®åç§° */
 	private static final String[] names = { "one", "two", "three", "four",
 			"five", "six" };
 
@@ -63,11 +63,11 @@ class ButtonGroupPanel extends JPanel {
 		String title = klass.getName();
 		title = title.substring(title.lastIndexOf('.') + 1);
 		panel.setBorder(new TitledBorder(title));
-		// Ìí¼Ó°´Å¥
+		// æ·»åŠ æŒ‰é’®
 		for (int i = 0; i < names.length; i++) {
 			AbstractButton button = new JButton("failed");
 			try {
-				// Ê¹ÓÃÁË·´Éä»úÖÆ
+				// ä½¿ç”¨äº†åå°„æœºåˆ¶
 				Constructor<?> c = klass
 						.getConstructor(new Class[] { String.class });
 				button = (AbstractButton) c

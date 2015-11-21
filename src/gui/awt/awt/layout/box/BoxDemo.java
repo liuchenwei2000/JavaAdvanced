@@ -15,17 +15,17 @@ import util.Displayer;
 import util.ui.ComponentFactory;
 
 /**
- * BoxÀàÑÝÊ¾
+ * Boxç±»æ¼”ç¤º
  * <p>
- * BoxÀà(ÀàËÆJPanelµÄÇáÁ¿¼¶ÈÝÆ÷)Ê¹ÓÃBoxLayout×÷ÎªÄ¬ÈÏ²¼¾Ö¹ÜÀíÆ÷ ¡£
+ * Boxç±»(ç±»ä¼¼JPanelçš„è½»é‡çº§å®¹å™¨)ä½¿ç”¨BoxLayoutä½œä¸ºé»˜è®¤å¸ƒå±€ç®¡ç†å™¨ ã€‚
  * <p>
- * BoxÀà°üº¬Ò»Ð©ÓÃÓÚ¹ÜÀíÏäÊ½²¼¾ÖµÄ¾²Ì¬·½·¨¡£
- * ÔÚË®Æ½µÄÏä×ÓÀï£¬×é¼þ´Ó×óµ½ÓÒÅÅÁÐ¡£
- * ÔÚ´¹Ö±µÄÏä×ÓÀï£¬×é¼þ´ÓÉÏµ½ÏÂÅÅÁÐ¡£
+ * Boxç±»åŒ…å«ä¸€äº›ç”¨äºŽç®¡ç†ç®±å¼å¸ƒå±€çš„é™æ€æ–¹æ³•ã€‚
+ * åœ¨æ°´å¹³çš„ç®±å­é‡Œï¼Œç»„ä»¶ä»Žå·¦åˆ°å³æŽ’åˆ—ã€‚
+ * åœ¨åž‚ç›´çš„ç®±å­é‡Œï¼Œç»„ä»¶ä»Žä¸Šåˆ°ä¸‹æŽ’åˆ—ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-1
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-1
  */
 public class BoxDemo {
 	
@@ -38,20 +38,20 @@ public class BoxDemo {
 }
 
 /**
- * Ä¬ÈÏÇé¿öÏÂÏäÊ½²¼¾ÖÖÐ¸÷×é¼þÖ®¼äÊÇÃ»ÓÐ¼ä¾àµÄ
+ * é»˜è®¤æƒ…å†µä¸‹ç®±å¼å¸ƒå±€ä¸­å„ç»„ä»¶ä¹‹é—´æ˜¯æ²¡æœ‰é—´è·çš„
  * <p>
- * Èç¹ûÐèÒªÌí¼Ó¼ä¾à£¬¿ÉÒÔÌí¼Ó²»¿É¼ûµÄÌî³ä¼þ(filler)¡£
- * ÓÐÈýÖÖÌî³ä¼þ£ºÖ§Öù(strut)¡¢¹Ì¶¨Çø(rigid area)¡¢½ºË®(glue)¡£
+ * å¦‚æžœéœ€è¦æ·»åŠ é—´è·ï¼Œå¯ä»¥æ·»åŠ ä¸å¯è§çš„å¡«å……ä»¶(filler)ã€‚
+ * æœ‰ä¸‰ç§å¡«å……ä»¶ï¼šæ”¯æŸ±(strut)ã€å›ºå®šåŒº(rigid area)ã€èƒ¶æ°´(glue)ã€‚
  *<p>
- * Ö§ÖùÖ±½ÓÔÚ×é¼þ¼äÔö¼Ó¿Õ¼ä</br>
- * Í¨¹ýÌí¼ÓÖ§Öù£¬¿ÉÒÔÊ¹ÓÃ¹Ì¶¨µÄÁ¿½«ÏàÁÚµÄ×é¼þ·Ö¿ª¡£
- * ¿ÉÒÔ½«Ë®Æ½Ö§ÖùÌí¼Óµ½Ë®Æ½ÏäÖÐ£¬»òÕß½«´¹Ö±Ö§ÖùÌí¼Óµ½´¹Ö±ÏäÖÐÀ´Ôö¼Ó×é¼þ¼ä¾à¿Õ¼ä¡£
+ * æ”¯æŸ±ç›´æŽ¥åœ¨ç»„ä»¶é—´å¢žåŠ ç©ºé—´</br>
+ * é€šè¿‡æ·»åŠ æ”¯æŸ±ï¼Œå¯ä»¥ä½¿ç”¨å›ºå®šçš„é‡å°†ç›¸é‚»çš„ç»„ä»¶åˆ†å¼€ã€‚
+ * å¯ä»¥å°†æ°´å¹³æ”¯æŸ±æ·»åŠ åˆ°æ°´å¹³ç®±ä¸­ï¼Œæˆ–è€…å°†åž‚ç›´æ”¯æŸ±æ·»åŠ åˆ°åž‚ç›´ç®±ä¸­æ¥å¢žåŠ ç»„ä»¶é—´è·ç©ºé—´ã€‚
  * <p>
- * ¹Ì¶¨ÇøÌî³ä¼þÓÐµãÏñÒ»¶ÔÖ§Öù</br>
- * Ëü¿ÉÒÔ°ÑÁÚ½Ó×é¼þ·ÖÀë¿ª£¬²¢ÇÒ»áÉèÖÃÁíÒ»¸ö·½ÏòÉÏµÄ×îÐ¡³ß´ç¡£
+ * å›ºå®šåŒºå¡«å……ä»¶æœ‰ç‚¹åƒä¸€å¯¹æ”¯æŸ±</br>
+ * å®ƒå¯ä»¥æŠŠé‚»æŽ¥ç»„ä»¶åˆ†ç¦»å¼€ï¼Œå¹¶ä¸”ä¼šè®¾ç½®å¦ä¸€ä¸ªæ–¹å‘ä¸Šçš„æœ€å°å°ºå¯¸ã€‚
  * <p>
- * ½ºË®Ôò¿ÉÒÔ¾¡¿ÉÄÜ´óµÄ¼ä¾à½«×é¼þ·Ö¿ª(½Ðµ¯»É¿ÉÄÜ¸üºÏÊÊ)¡£
- * ½ºË®½«°Ñ×é¼þ»¥ÏàÀ­¿ª£¬Ö±ÖÁ³äÂúÕû¸ö¿Õ¼ä¡£
+ * èƒ¶æ°´åˆ™å¯ä»¥å°½å¯èƒ½å¤§çš„é—´è·å°†ç»„ä»¶åˆ†å¼€(å«å¼¹ç°§å¯èƒ½æ›´åˆé€‚)ã€‚
+ * èƒ¶æ°´å°†æŠŠç»„ä»¶äº’ç›¸æ‹‰å¼€ï¼Œç›´è‡³å……æ»¡æ•´ä¸ªç©ºé—´ã€‚
  */
 class BoxPanel extends JPanel {
 
@@ -76,24 +76,24 @@ class BoxPanel extends JPanel {
 	}
 
 	private Box getBox() {
-		// ´´½¨Ò»¸öÊ¹ÓÃÏäÊ½²¼¾ÖµÄÐÂÈÝÆ÷(×ÝÏò)
+		// åˆ›å»ºä¸€ä¸ªä½¿ç”¨ç®±å¼å¸ƒå±€çš„æ–°å®¹å™¨(çºµå‘)
 		Box box = Box.createVerticalBox();
-		// BoxÈÝÆ÷µÄÊ¹ÓÃ·½·¨ºÍJPanelÊÇÒ»ÑùµÄ
+		// Boxå®¹å™¨çš„ä½¿ç”¨æ–¹æ³•å’ŒJPanelæ˜¯ä¸€æ ·çš„
 		box.add(getNameBox());
 		box.add(getPasswordBox());
-		// Ìí¼Ó¹Ì¶¨ÇøÓò(²»¹âBox¿ÉÒÔÌí¼Ó£¬ÈÎºÎÈÝÆ÷Ò²¶¼¿ÉÒÔ£¬±ÈÈçJPanel)
-		// Ð§¹ûÈçÍ¬Ò»¸ö¸ß¶ÈÎª30µÄÖ§ÖùÒ»Ñù£¬²¢°ÑboxµÄ×îÐ¡¿í¶ÈÉèÎª10
+		// æ·»åŠ å›ºå®šåŒºåŸŸ(ä¸å…‰Boxå¯ä»¥æ·»åŠ ï¼Œä»»ä½•å®¹å™¨ä¹Ÿéƒ½å¯ä»¥ï¼Œæ¯”å¦‚JPanel)
+		// æ•ˆæžœå¦‚åŒä¸€ä¸ªé«˜åº¦ä¸º30çš„æ”¯æŸ±ä¸€æ ·ï¼Œå¹¶æŠŠboxçš„æœ€å°å®½åº¦è®¾ä¸º10
 		box.add(Box.createRigidArea(new Dimension(10, 30)));
 		box.add(getButtonBox());
 		return box;
 	}
 
 	private Box getNameBox() {
-		// ´´½¨Ò»¸öÊ¹ÓÃÏäÊ½²¼¾ÖµÄÐÂÈÝÆ÷(ºáÏò)
+		// åˆ›å»ºä¸€ä¸ªä½¿ç”¨ç®±å¼å¸ƒå±€çš„æ–°å®¹å™¨(æ¨ªå‘)
 		Box box = Box.createHorizontalBox();
 		box.setBorder(new LineBorder(Color.RED));
 		box.add(getNameLabel());
-		// Ìí¼ÓË®Æ½Ö§Öù(¿í10 pix)
+		// æ·»åŠ æ°´å¹³æ”¯æŸ±(å®½10 pix)
 		box.add(Box.createHorizontalStrut(10));
 		box.add(getNameTextField());
 		return box;
@@ -112,7 +112,7 @@ class BoxPanel extends JPanel {
 		Box box = Box.createHorizontalBox();
 		box.setBorder(new LineBorder(Color.GREEN));
 		box.add(getOkButton());
-		// Ìí¼Ó½ºË®
+		// æ·»åŠ èƒ¶æ°´
 		box.add(Box.createGlue());
 		box.add(getCancelButton());
 		return box;

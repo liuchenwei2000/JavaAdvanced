@@ -12,37 +12,37 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * zipÎÄ¼şÑ¹Ëõ¹¤¾ßÀà
+ * zipæ–‡ä»¶å‹ç¼©å·¥å…·ç±»
  * <p>
- * Ñ¹ËõÀà¿âÊÇ°´ÕÕ×Ö½Ú·½Ê½¶ø²»ÊÇ×Ö·û·½Ê½´¦ÀíµÄ
+ * å‹ç¼©ç±»åº“æ˜¯æŒ‰ç…§å­—èŠ‚æ–¹å¼è€Œä¸æ˜¯å­—ç¬¦æ–¹å¼å¤„ç†çš„
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-20
  */
 public class ZipUtil {
 
 	/**
-	 * Ñ¹ËõÖ¸¶¨ÎÄ¼şµ½Ö¸¶¨zipÎÄ¼ş
+	 * å‹ç¼©æŒ‡å®šæ–‡ä»¶åˆ°æŒ‡å®šzipæ–‡ä»¶
 	 * 
 	 * @param source
-	 *            ´ıÑ¹ËõÔ´ÎÄ¼ş Èç"C:/a.txt"
+	 *            å¾…å‹ç¼©æºæ–‡ä»¶ å¦‚"C:/a.txt"
 	 * @param destZipPath
-	 *            Ñ¹ËõºózipÎÄ¼şÂ·¾¶ Èç"C:/a.zip"
+	 *            å‹ç¼©åzipæ–‡ä»¶è·¯å¾„ å¦‚"C:/a.zip"
 	 */
 	public static void zip(File source, String destZipPath) throws IOException {
 		zip(source, null, destZipPath);
 	}
 
 	/**
-	 * Ñ¹ËõÖ¸¶¨Ä¿Â¼¼°ÆäÏÂËùÓĞÎ´±»¹ıÂËµôµÄÎÄ¼ş(¼Ğ)µ½Ö¸¶¨zipÎÄ¼ş
+	 * å‹ç¼©æŒ‡å®šç›®å½•åŠå…¶ä¸‹æ‰€æœ‰æœªè¢«è¿‡æ»¤æ‰çš„æ–‡ä»¶(å¤¹)åˆ°æŒ‡å®šzipæ–‡ä»¶
 	 * 
 	 * @param source
-	 *            ´ıÑ¹ËõÔ´Ä¿Â¼ Èç"C:/a"
+	 *            å¾…å‹ç¼©æºç›®å½• å¦‚"C:/a"
 	 * @param filter
-	 *            Ô´Ä¿Â¼Ê¹ÓÃµÄÎÄ¼şÃû¹ıÂËÆ÷
+	 *            æºç›®å½•ä½¿ç”¨çš„æ–‡ä»¶åè¿‡æ»¤å™¨
 	 * @param destZipPath
-	 *            Ñ¹ËõºózipÎÄ¼şÂ·¾¶ Èç"C:/a.zip"
+	 *            å‹ç¼©åzipæ–‡ä»¶è·¯å¾„ å¦‚"C:/a.zip"
 	 */
 	public static void zip(File source, FilenameFilter filter,
 			String destZipPath) throws IOException {
@@ -51,33 +51,33 @@ public class ZipUtil {
 		}
 		File zipFile = new File(destZipPath);
 		ZipOutputStream out = new ZipOutputStream(new FileOutputStream(zipFile));
-		// ÒÔÔ´ÎÄ¼şÃûÎªÏÂ²ã»ùÄ¿Â¼
+		// ä»¥æºæ–‡ä»¶åä¸ºä¸‹å±‚åŸºç›®å½•
 		zip(out, source, filter, source.getName());
 		out.close();
 	}
 
 	/**
-	 * ½«Ô´ÎÄ¼ş(¼Ğ)Ñ¹Ëõµ½Ñ¹ËõÊä³öÁ÷Ö¸¶¨µÄÎÄ¼şÖĞ
+	 * å°†æºæ–‡ä»¶(å¤¹)å‹ç¼©åˆ°å‹ç¼©è¾“å‡ºæµæŒ‡å®šçš„æ–‡ä»¶ä¸­
 	 * 
 	 * @param out
-	 *            Ñ¹ËõºóµÄÎÄ¼ş´´½¨µÄÑ¹ËõÊä³öÁ÷
+	 *            å‹ç¼©åçš„æ–‡ä»¶åˆ›å»ºçš„å‹ç¼©è¾“å‡ºæµ
 	 * @param source
-	 *            ´ıÑ¹ËõÔ´ÎÄ¼ş
+	 *            å¾…å‹ç¼©æºæ–‡ä»¶
 	 * @param filter
-	 *            Ô´Ä¿Â¼Ê¹ÓÃµÄÎÄ¼şÃû¹ıÂËÆ÷
+	 *            æºç›®å½•ä½¿ç”¨çš„æ–‡ä»¶åè¿‡æ»¤å™¨
 	 * @param base
-	 *            Ñ¹ËõÌõÄ¿µÄ»ùÂ·¾¶
+	 *            å‹ç¼©æ¡ç›®çš„åŸºè·¯å¾„
 	 */
 	private static void zip(ZipOutputStream out, File source,
 			FilenameFilter filter, String base) throws IOException {
 		FileInputStream in = null;
-		// ´¦ÀíÎÄ¼ş¼ĞÊ±Ê¹ÓÃÁËµİ¹é
+		// å¤„ç†æ–‡ä»¶å¤¹æ—¶ä½¿ç”¨äº†é€’å½’
 		if (source.isDirectory()) {
 			File[] files = source.listFiles(filter);
 			out.putNextEntry(new ZipEntry(base + "/"));
-			// Æ´³ö¸ÃÎÄ¼şµÄÑ¹ËõÌõÄ¿Â·¾¶
+			// æ‹¼å‡ºè¯¥æ–‡ä»¶çš„å‹ç¼©æ¡ç›®è·¯å¾„
 			for (File f : files) {
-				// Ñ¹Ëõ¸ÃÎÄ¼ş¼ĞÏÂËùÓĞµÄÎÄ¼şºÍÎÄ¼ş¼Ğ
+				// å‹ç¼©è¯¥æ–‡ä»¶å¤¹ä¸‹æ‰€æœ‰çš„æ–‡ä»¶å’Œæ–‡ä»¶å¤¹
 				zip(out, f, filter, base + "/" + f.getName());
 			}
 		} else {

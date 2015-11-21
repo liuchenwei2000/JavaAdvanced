@@ -4,19 +4,19 @@
 package awt.event.design;
 
 /**
- * Text¸Ä±ä¼àÌıÆ÷½Ó¿Ú
+ * Textæ”¹å˜ç›‘å¬å™¨æ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public interface TextChangedListener extends IEventListener {
 
 	/**
-	 * Text¸Ä±äÊ±µÄ´¦Àí
+	 * Textæ”¹å˜æ—¶çš„å¤„ç†
 	 * 
 	 * @param event
-	 *            Text¸Ä±äÊÂ¼ş
+	 *            Textæ”¹å˜äº‹ä»¶
 	 */
 	public void actionPerformed(TextChangedEvent event);
 }

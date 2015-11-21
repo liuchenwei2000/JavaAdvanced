@@ -21,28 +21,28 @@ import javax.crypto.CipherOutputStream;
 import javax.crypto.KeyGenerator;
 
 /**
- * ÃÜÂë¹¤¾ßÀà
+ * å¯†ç å·¥å…·ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-20
  */
 public class CipherUtil {
 
-	/** ÃÜÔ¿¶ÔÖĞ¹«Ô¿ºÍÃÜÔ¿µÄ³¤¶È */
+	/** å¯†é’¥å¯¹ä¸­å…¬é’¥å’Œå¯†é’¥çš„é•¿åº¦ */
 	private static final int KEY_SIZE = 512;
 	
 	/**
-	 * Ê¹ÓÃAESËã·¨Éú³ÉËæ»úÃÜÔ¿
+	 * ä½¿ç”¨AESç®—æ³•ç”Ÿæˆéšæœºå¯†é’¥
 	 */
 	public static Key generateKey() {
 		Key key = null;
 		try {
-			// KeyGenertaorÀàÌá¹©(¶Ô³Æ)ÃÜÔ¿Éú³ÉÆ÷µÄ¹¦ÄÜ Ëã·¨ÓĞAES¡¢DESµÈ
+			// KeyGenertaorç±»æä¾›(å¯¹ç§°)å¯†é’¥ç”Ÿæˆå™¨çš„åŠŸèƒ½ ç®—æ³•æœ‰AESã€DESç­‰
 			KeyGenerator gen = KeyGenerator.getInstance("AES");
-			// SecureRandomÀàÌá¹©¼ÓÃÜµÄÇ¿Ëæ»úÊıÉú³ÉÆ÷
+			// SecureRandomç±»æä¾›åŠ å¯†çš„å¼ºéšæœºæ•°ç”Ÿæˆå™¨
 			SecureRandom random = new SecureRandom();
-			gen.init(random);// ³õÊ¼»¯´ËÃÜÔ¿Éú³ÉÆ÷
+			gen.init(random);// åˆå§‹åŒ–æ­¤å¯†é’¥ç”Ÿæˆå™¨
 			key = gen.generateKey();
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
@@ -51,15 +51,15 @@ public class CipherUtil {
 	}
 
 	/**
-	 * Ê¹ÓÃRSAËã·¨Éú³ÉËæ»úÃÜÔ¿¶Ô(ÃÜÔ¿³¤¶È512)
+	 * ä½¿ç”¨RSAç®—æ³•ç”Ÿæˆéšæœºå¯†é’¥å¯¹(å¯†é’¥é•¿åº¦512)
 	 */
 	public static KeyPair generateKeyPair() {
 		KeyPair keyPair = null;
 		try {
-			// KeyPairGeneratorÀàÓÃÓÚÉú³É¹«Ô¿ºÍË½Ô¿¶Ô Ëã·¨ÓĞRSAµÈ
+			// KeyPairGeneratorç±»ç”¨äºç”Ÿæˆå…¬é’¥å’Œç§é’¥å¯¹ ç®—æ³•æœ‰RSAç­‰
 			KeyPairGenerator pairgen = KeyPairGenerator.getInstance("RSA");
 			SecureRandom random = new SecureRandom();
-			// Ê¹ÓÃ¸ø¶¨µÄËæ»úÔ´³õÊ¼»¯È·¶¨ÃÜÔ¿³¤¶ÈµÄÃÜÔ¿¶ÔÉú³ÉÆ÷ 
+			// ä½¿ç”¨ç»™å®šçš„éšæœºæºåˆå§‹åŒ–ç¡®å®šå¯†é’¥é•¿åº¦çš„å¯†é’¥å¯¹ç”Ÿæˆå™¨ 
 			pairgen.initialize(KEY_SIZE, random);
 			keyPair = pairgen.generateKeyPair();
 		} catch (NoSuchAlgorithmException e) {
@@ -69,32 +69,32 @@ public class CipherUtil {
 	}
 	
 	/**
-	 * ¸ù¾İÃÜÔ¿Ê¹ÓÃAESËã·¨½«ÊäÈëÁ÷Êı¾İ¼ÓÃÜ£¬ÔÙ½«ÃÜÎÄÊı¾İĞ´Èëµ½Êä³öÁ÷
+	 * æ ¹æ®å¯†é’¥ä½¿ç”¨AESç®—æ³•å°†è¾“å…¥æµæ•°æ®åŠ å¯†ï¼Œå†å°†å¯†æ–‡æ•°æ®å†™å…¥åˆ°è¾“å‡ºæµ
 	 * 
 	 * @param in
-	 *            Ã÷ÎÄÊäÈëÁ÷
+	 *            æ˜æ–‡è¾“å…¥æµ
 	 * @param out
-	 *            ÃÜÎÄÊä³öÁ÷
+	 *            å¯†æ–‡è¾“å‡ºæµ
 	 * @param key
-	 *            ÃÜÔ¿
+	 *            å¯†é’¥
 	 */
 	public static void encrypt(InputStream in, OutputStream out, Key key)
 			throws Exception {
 		Cipher cipher = Cipher.getInstance("AES");
-		// Cipher¶ÔÏóµÄ³õÊ¼»¯·½Ê½(¼ÓÃÜor½âÃÜ)
+		// Cipherå¯¹è±¡çš„åˆå§‹åŒ–æ–¹å¼(åŠ å¯†orè§£å¯†)
 		cipher.init(Cipher.ENCRYPT_MODE, key);
 		crypt1(in, out, cipher);
 	}
 
 	/**
-	 * ¸ù¾İÃÜÔ¿Ê¹ÓÃAESËã·¨½«ÊäÈëÁ÷Êı¾İ½âÃÜ£¬ÔÙ½«Ã÷ÎÄÊı¾İĞ´Èëµ½Êä³öÁ÷
+	 * æ ¹æ®å¯†é’¥ä½¿ç”¨AESç®—æ³•å°†è¾“å…¥æµæ•°æ®è§£å¯†ï¼Œå†å°†æ˜æ–‡æ•°æ®å†™å…¥åˆ°è¾“å‡ºæµ
 	 * 
 	 * @param in
-	 *            ÃÜÎÄÊäÈëÁ÷
+	 *            å¯†æ–‡è¾“å…¥æµ
 	 * @param out
-	 *            Ã÷ÎÄÊä³öÁ÷
+	 *            æ˜æ–‡è¾“å‡ºæµ
 	 * @param key
-	 *            ÃÜÔ¿
+	 *            å¯†é’¥
 	 */
 	public static void decrypt(InputStream in, OutputStream out, Key key)
 			throws Exception {
@@ -104,18 +104,18 @@ public class CipherUtil {
 	}
 
 	/**
-	 * Ê¹ÓÃÃÜÂë×ª»»ÊäÈëÁ÷ÖĞµÄ×Ö½ÚÂë²¢½«×ª»»ºóµÄ×Ö½ÚÂë´«¸øÊä³öÁ÷
+	 * ä½¿ç”¨å¯†ç è½¬æ¢è¾“å…¥æµä¸­çš„å­—èŠ‚ç å¹¶å°†è½¬æ¢åçš„å­—èŠ‚ç ä¼ ç»™è¾“å‡ºæµ
 	 * 
 	 * @param in
-	 *            ÊäÈëÁ÷
+	 *            è¾“å…¥æµ
 	 * @param out
-	 *            Êä³öÁ÷
+	 *            è¾“å‡ºæµ
 	 * @param cipher
-	 *            ÃÜÂë
+	 *            å¯†ç 
 	 */
 	private static void crypt1(InputStream in, OutputStream out, Cipher cipher)
 			throws Exception {
-		// Ïê¼ûCipherÀàÎÄµµ
+		// è¯¦è§Cipherç±»æ–‡æ¡£
 		int blockSize = cipher.getBlockSize();
 		int outputSize = cipher.getOutputSize(blockSize);
 
@@ -142,25 +142,25 @@ public class CipherUtil {
 	}
 	
 	/**
-     * JCE¿â(Java Cryptographic Extension)Ìá¹©ÁËÒ»×éÊ¹ÓÃ·Ç³£·½±ãµÄÃÜÂëÁ÷¹¤¾ßÀà£¬
-     * ÓÃÓÚ¶ÔÁ÷½øĞĞ×Ô¶¯¼ÓÃÜ»ò½âÃÜ¡£
+     * JCEåº“(Java Cryptographic Extension)æä¾›äº†ä¸€ç»„ä½¿ç”¨éå¸¸æ–¹ä¾¿çš„å¯†ç æµå·¥å…·ç±»ï¼Œ
+     * ç”¨äºå¯¹æµè¿›è¡Œè‡ªåŠ¨åŠ å¯†æˆ–è§£å¯†ã€‚
 	 */
 	
 	/**
-	 * ¸ù¾İÃÜÔ¿Ê¹ÓÃAESËã·¨½«ÊäÈëÁ÷Êı¾İ¼ÓÃÜ£¬ÔÙ½«ÃÜÎÄÊı¾İĞ´Èëµ½Ö¸¶¨ÎÄ¼ş
+	 * æ ¹æ®å¯†é’¥ä½¿ç”¨AESç®—æ³•å°†è¾“å…¥æµæ•°æ®åŠ å¯†ï¼Œå†å°†å¯†æ–‡æ•°æ®å†™å…¥åˆ°æŒ‡å®šæ–‡ä»¶
 	 * 
 	 * @param in
-	 *            Ã÷ÎÄÊäÈëÁ÷
+	 *            æ˜æ–‡è¾“å…¥æµ
 	 * @param outputFileName
-	 *            ÃÜÎÄÊä³öÎÄ¼şÃû
+	 *            å¯†æ–‡è¾“å‡ºæ–‡ä»¶å
 	 * @param key
-	 *            ÃÜÔ¿
+	 *            å¯†é’¥
 	 */
 	public static void encrypt(InputStream in, String outputFileName, Key key)
 			throws Exception {
 		Cipher cipher = Cipher.getInstance("AES");
 		cipher.init(Cipher.ENCRYPT_MODE, key);
-		// ¹¹½¨Ò»¸öÊä³öÁ÷£¬ÒÔ±ã½«Êı¾İĞ´Èëout£¬²¢ÇÒÊ¹ÓÃÖ¸¶¨µÄÃÜÂë¶ÔÊı¾İ½øĞĞ¼ÓÃÜºÍ½âÃÜ
+		// æ„å»ºä¸€ä¸ªè¾“å‡ºæµï¼Œä»¥ä¾¿å°†æ•°æ®å†™å…¥outï¼Œå¹¶ä¸”ä½¿ç”¨æŒ‡å®šçš„å¯†ç å¯¹æ•°æ®è¿›è¡ŒåŠ å¯†å’Œè§£å¯†
 		CipherOutputStream cout = new CipherOutputStream(new FileOutputStream(
 				outputFileName), cipher);
 		crypt2(in, cout, cipher);
@@ -168,20 +168,20 @@ public class CipherUtil {
 	}
 
 	/**
-	 * ¸ù¾İÃÜÔ¿Ê¹ÓÃAESËã·¨½«ÃÜÎÄÎÄ¼şÊı¾İ½âÃÜ£¬ÔÙ½«Ã÷ÎÄÊı¾İĞ´Èëµ½Êä³öÁ÷
+	 * æ ¹æ®å¯†é’¥ä½¿ç”¨AESç®—æ³•å°†å¯†æ–‡æ–‡ä»¶æ•°æ®è§£å¯†ï¼Œå†å°†æ˜æ–‡æ•°æ®å†™å…¥åˆ°è¾“å‡ºæµ
 	 * 
 	 * @param inputFileName
-	 *            ÃÜÎÄÎÄ¼ş
+	 *            å¯†æ–‡æ–‡ä»¶
 	 * @param out
-	 *            Ã÷ÎÄÊä³öÁ÷
+	 *            æ˜æ–‡è¾“å‡ºæµ
 	 * @param key
-	 *            ÃÜÔ¿
+	 *            å¯†é’¥
 	 */
 	public static void decrypt(String inputFileName, OutputStream out, Key key)
 			throws Exception {
 		Cipher cipher = Cipher.getInstance("AES");
 		cipher.init(Cipher.DECRYPT_MODE, key);
-		// ¹¹½¨Ò»¸öÊäÈëÁ÷£¬ÒÔ¶ÁÈ¡inÖĞµÄÊı¾İ£¬²¢ÇÒÊ¹ÓÃÖ¸¶¨µÄÃÜÂë¶ÔÊı¾İ½øĞĞ½âÃÜºÍ¼ÓÃÜ
+		// æ„å»ºä¸€ä¸ªè¾“å…¥æµï¼Œä»¥è¯»å–inä¸­çš„æ•°æ®ï¼Œå¹¶ä¸”ä½¿ç”¨æŒ‡å®šçš„å¯†ç å¯¹æ•°æ®è¿›è¡Œè§£å¯†å’ŒåŠ å¯†
 		CipherInputStream cin = new CipherInputStream(new FileInputStream(
 				inputFileName), cipher);
 		crypt2(cin, out, cipher);
@@ -189,15 +189,15 @@ public class CipherUtil {
 	}
 
 	/**
-	 * Ê¹ÓÃÃÜÂë×ª»»ÊäÈëÁ÷ÖĞµÄ×Ö½ÚÂë²¢½«×ª»»ºóµÄ×Ö½ÚÂë´«¸øÊä³öÁ÷¡£
-	 * ÄÚ²¿Ê¹ÓÃÁËÃÜÂëÁ÷Àà½øĞĞ×ª»»£¬Ê¹µÃÄÜ¹»Í¸Ã÷µØ´¦ÀíupdateºÍdoFinal·½·¨¡£
+	 * ä½¿ç”¨å¯†ç è½¬æ¢è¾“å…¥æµä¸­çš„å­—èŠ‚ç å¹¶å°†è½¬æ¢åçš„å­—èŠ‚ç ä¼ ç»™è¾“å‡ºæµã€‚
+	 * å†…éƒ¨ä½¿ç”¨äº†å¯†ç æµç±»è¿›è¡Œè½¬æ¢ï¼Œä½¿å¾—èƒ½å¤Ÿé€æ˜åœ°å¤„ç†updateå’ŒdoFinalæ–¹æ³•ã€‚
 	 * 
 	 * @param in
-	 *            ÊäÈëÁ÷
+	 *            è¾“å…¥æµ
 	 * @param out
-	 *            Êä³öÁ÷
+	 *            è¾“å‡ºæµ
 	 * @param cipher
-	 *            ÃÜÂë
+	 *            å¯†ç 
 	 */
 	private static void crypt2(InputStream in, OutputStream out, Cipher cipher)
 			throws Exception {
@@ -214,43 +214,43 @@ public class CipherUtil {
 	}
 	
 	/**
-	 *                           ¹« ¹² ÃÜ Ô¿
-    AESÃÜÂëÊÇÒ»ÖÖ¶Ô³ÆÃÜÂë£¬¼ÓÃÜºÍ½âÃÜ¶¼Ê¹ÓÃÏàÍ¬µÄÃÜÔ¿¡£¶Ô³ÆÃÜÂëµÄÖÂÃüÈ±µãÔÚÓÚÃÜÂëµÄ·Ö·¢¡£
-Èç¹ûA¸øB·¢ËÍÒ»¸ö¼ÓÃÜĞÅÏ¢£¬ÄÇÃ´BĞèÒªÊ¹ÓÃÓëAÏàÍ¬µÄÃÜÔ¿¡£
-Èç¹ûAĞŞ¸ÄÁËÃÜÔ¿£¬ÄÇÃ´±ØĞëÔÚ¸øB·¢ËÍĞÅÏ¢µÄÍ¬Ê±£¬»¹ÒªÍ¨¹ı°²È«ĞÅµÀ·¢ËÍĞÂµÄÃÜÔ¿£¬
-µ«ÊÇÒ²ĞíA²¢²»ÓµÓĞµ½´ïBµÄ°²È«ĞÅµÀ£¬Õâ¾ÍÊÇÎªÊ²Ã´A±ØĞëÊ×ÏÈ¶ÔËû·¢ËÍ¸øBµÄĞÅÏ¢½øĞĞ¼ÓÃÜµÄÔ­Òò¡£
-       ¹«¹²ÃÜÔ¿ÃÜÂë¼¼Êõ½â¾öÁËÕâ¸öÎÊÌâ¡£ÔÚ¹«¹²ÃÜÔ¿ÃÜÂëÖĞ£¬BÓµÓĞÒ»¸öÃÜÔ¿¶Ô£¬°üÀ¨Ò»¸ö¹«¹²ÃÜÔ¿ºÍÒ»¸öÏàÆ¥ÅäµÄË½ÓĞÃÜÔ¿¡£
-B¿ÉÒÔÔÚÈÎºÎµØ·½¹«²¼¹«¹²ÃÜÔ¿£¬µ«ÊÇËû±ØĞëÑÏ¸ñ±£ÊØËûµÄË½ÓĞÃÜÔ¿¡£
-AÖ»ĞèÒªÊ¹ÓÃ¹«¹²ÃÜÔ¿¶ÔËı·¢ËÍ¸øBµÄĞÅÏ¢½øĞĞ¼ÓÃÜ¼´¿É¡£
-¹«¹²ÃÜÔ¿Ëã·¨µÄ²Ù×÷ËÙ¶È±È¶Ô³ÆÃÜÔ¿Ëã·¨ÂıºÜ¶à£¬Èç¹û½«¹«¹²ÃÜÔ¿ÃÜÂëÓë¿ìËÙµÄ¶Ô³ÆÃÜÂë½áºÏÆğÀ´£¬Õâ¸öÎÊÌâ¾Í¿ÉÒÔ½â¾ö£º
-1£¬AÉú³ÉÒ»¸öËæ»ú¶Ô³Æ¼ÓÃÜÃÜÔ¿£¬ËüÊ¹ÓÃ¸ÃÃÜÔ¿¶ÔÃ÷ÎÄ½øĞĞ¼ÓÃÜ¡£
-2£¬AÊ¹ÓÃBµÄ¹«¹²ÃÜÔ¿¸ø¶Ô³ÆÃÜÔ¿½øĞĞ¼ÓÃÜ¡£
-3£¬A½«¼ÓÃÜºóµÄ¶Ô³ÆÃÜÔ¿ºÍ¼ÓÃÜºóµÄÃ÷ÎÄÍ¬Ê±·¢¸øB¡£
-4£¬BÓÃËûµÄË½ÓĞÃÜÔ¿¸ø¶Ô³ÆÃÜÔ¿½âÃÜ¡£
-5£¬BÊ¹ÓÃ½âÃÜºóµÄ¶Ô³ÆÃÜÔ¿¸øĞÅÏ¢½âÃÜ¡£
-       ³ıÁËBÖ®Íâ£¬ÆäËûÈËÎŞ·¨¸ø¶Ô³ÆÃÜÔ¿½øĞĞ½âÃÜ£¬ÒòÎªÖ»ÓĞBÓµÓĞ½âÃÜµÄË½ÓĞÃÜÔ¿¡£ 
+	 *                           å…¬ å…± å¯† é’¥
+    AESå¯†ç æ˜¯ä¸€ç§å¯¹ç§°å¯†ç ï¼ŒåŠ å¯†å’Œè§£å¯†éƒ½ä½¿ç”¨ç›¸åŒçš„å¯†é’¥ã€‚å¯¹ç§°å¯†ç çš„è‡´å‘½ç¼ºç‚¹åœ¨äºå¯†ç çš„åˆ†å‘ã€‚
+å¦‚æœAç»™Bå‘é€ä¸€ä¸ªåŠ å¯†ä¿¡æ¯ï¼Œé‚£ä¹ˆBéœ€è¦ä½¿ç”¨ä¸Aç›¸åŒçš„å¯†é’¥ã€‚
+å¦‚æœAä¿®æ”¹äº†å¯†é’¥ï¼Œé‚£ä¹ˆå¿…é¡»åœ¨ç»™Bå‘é€ä¿¡æ¯çš„åŒæ—¶ï¼Œè¿˜è¦é€šè¿‡å®‰å…¨ä¿¡é“å‘é€æ–°çš„å¯†é’¥ï¼Œ
+ä½†æ˜¯ä¹Ÿè®¸Aå¹¶ä¸æ‹¥æœ‰åˆ°è¾¾Bçš„å®‰å…¨ä¿¡é“ï¼Œè¿™å°±æ˜¯ä¸ºä»€ä¹ˆAå¿…é¡»é¦–å…ˆå¯¹ä»–å‘é€ç»™Bçš„ä¿¡æ¯è¿›è¡ŒåŠ å¯†çš„åŸå› ã€‚
+       å…¬å…±å¯†é’¥å¯†ç æŠ€æœ¯è§£å†³äº†è¿™ä¸ªé—®é¢˜ã€‚åœ¨å…¬å…±å¯†é’¥å¯†ç ä¸­ï¼ŒBæ‹¥æœ‰ä¸€ä¸ªå¯†é’¥å¯¹ï¼ŒåŒ…æ‹¬ä¸€ä¸ªå…¬å…±å¯†é’¥å’Œä¸€ä¸ªç›¸åŒ¹é…çš„ç§æœ‰å¯†é’¥ã€‚
+Bå¯ä»¥åœ¨ä»»ä½•åœ°æ–¹å…¬å¸ƒå…¬å…±å¯†é’¥ï¼Œä½†æ˜¯ä»–å¿…é¡»ä¸¥æ ¼ä¿å®ˆä»–çš„ç§æœ‰å¯†é’¥ã€‚
+Aåªéœ€è¦ä½¿ç”¨å…¬å…±å¯†é’¥å¯¹å¥¹å‘é€ç»™Bçš„ä¿¡æ¯è¿›è¡ŒåŠ å¯†å³å¯ã€‚
+å…¬å…±å¯†é’¥ç®—æ³•çš„æ“ä½œé€Ÿåº¦æ¯”å¯¹ç§°å¯†é’¥ç®—æ³•æ…¢å¾ˆå¤šï¼Œå¦‚æœå°†å…¬å…±å¯†é’¥å¯†ç ä¸å¿«é€Ÿçš„å¯¹ç§°å¯†ç ç»“åˆèµ·æ¥ï¼Œè¿™ä¸ªé—®é¢˜å°±å¯ä»¥è§£å†³ï¼š
+1ï¼ŒAç”Ÿæˆä¸€ä¸ªéšæœºå¯¹ç§°åŠ å¯†å¯†é’¥ï¼Œå®ƒä½¿ç”¨è¯¥å¯†é’¥å¯¹æ˜æ–‡è¿›è¡ŒåŠ å¯†ã€‚
+2ï¼ŒAä½¿ç”¨Bçš„å…¬å…±å¯†é’¥ç»™å¯¹ç§°å¯†é’¥è¿›è¡ŒåŠ å¯†ã€‚
+3ï¼ŒAå°†åŠ å¯†åçš„å¯¹ç§°å¯†é’¥å’ŒåŠ å¯†åçš„æ˜æ–‡åŒæ—¶å‘ç»™Bã€‚
+4ï¼ŒBç”¨ä»–çš„ç§æœ‰å¯†é’¥ç»™å¯¹ç§°å¯†é’¥è§£å¯†ã€‚
+5ï¼ŒBä½¿ç”¨è§£å¯†åçš„å¯¹ç§°å¯†é’¥ç»™ä¿¡æ¯è§£å¯†ã€‚
+       é™¤äº†Bä¹‹å¤–ï¼Œå…¶ä»–äººæ— æ³•ç»™å¯¹ç§°å¯†é’¥è¿›è¡Œè§£å¯†ï¼Œå› ä¸ºåªæœ‰Bæ‹¥æœ‰è§£å¯†çš„ç§æœ‰å¯†é’¥ã€‚ 
 	 */
 	
 	/**
-	 * Ê¹ÓÃ¹«¹²ÃÜÔ¿¶Ô²ÎÊıÎÄ¼ş½øĞĞ¼ÓÃÜ
+	 * ä½¿ç”¨å…¬å…±å¯†é’¥å¯¹å‚æ•°æ–‡ä»¶è¿›è¡ŒåŠ å¯†
 	 * 
 	 * @param publicKey
-	 *            ¹«Ô¿
+	 *            å…¬é’¥
 	 * @param fileName
-	 *            ´ı¼ÓÃÜÎÄ¼şÃû
+	 *            å¾…åŠ å¯†æ–‡ä»¶å
 	 * @param encryptedFileName
-	 *            ¼ÓÃÜºóµÄÎÄ¼ş°üº¬£º 
-	 *            1£¬°ü×°¹ıµÄÃÜÔ¿µÄ³¤¶È 
-	 *            2£¬°ü×°¹ıµÄÃÜÔ¿×Ö½Ú 
-	 *            3£¬ÓÃAESÃÜÔ¿¼ÓÃÜµÄÃ÷ÎÄ
+	 *            åŠ å¯†åçš„æ–‡ä»¶åŒ…å«ï¼š 
+	 *            1ï¼ŒåŒ…è£…è¿‡çš„å¯†é’¥çš„é•¿åº¦ 
+	 *            2ï¼ŒåŒ…è£…è¿‡çš„å¯†é’¥å­—èŠ‚ 
+	 *            3ï¼Œç”¨AESå¯†é’¥åŠ å¯†çš„æ˜æ–‡
 	 */
 	public static void encrypt(Key publicKey, String fileName,
 			String encryptedFileName) throws Exception {
 		Cipher cipher = Cipher.getInstance("RSA");
 		cipher.init(Cipher.WRAP_MODE, publicKey);
 
-		Key key = generateKey();// ¼ÓÃÜÃ÷ÎÄÊ¹ÓÃµÄÃÜÔ¿
-		byte[] wrappedKey = cipher.wrap(key);// Ê¹ÓÃ¹«Ô¿¶ÔÃÜÔ¿¼ÓÃÜ
+		Key key = generateKey();// åŠ å¯†æ˜æ–‡ä½¿ç”¨çš„å¯†é’¥
+		byte[] wrappedKey = cipher.wrap(key);// ä½¿ç”¨å…¬é’¥å¯¹å¯†é’¥åŠ å¯†
 		DataOutputStream out = new DataOutputStream(new FileOutputStream(
 				encryptedFileName));
 		out.writeInt(wrappedKey.length);
@@ -260,24 +260,24 @@ AÖ»ĞèÒªÊ¹ÓÃ¹«¹²ÃÜÔ¿¶ÔËı·¢ËÍ¸øBµÄĞÅÏ¢½øĞĞ¼ÓÃÜ¼´¿É¡£
 	}
 
 	/**
-	 * Ê¹ÓÃË½ÓĞÃÜÔ¿¶Ô²ÎÊıÎÄ¼ş½øĞĞ½âÃÜ
+	 * ä½¿ç”¨ç§æœ‰å¯†é’¥å¯¹å‚æ•°æ–‡ä»¶è¿›è¡Œè§£å¯†
 	 * 
 	 * @param privateKey
-	 *            Ë½Ô¿
+	 *            ç§é’¥
 	 * @param encryptedFileName
-	 *            ÃÜÎÄÎÄ¼şÃû
+	 *            å¯†æ–‡æ–‡ä»¶å
 	 * @param decryptedFileName
-	 *            ½âÃÜºóµÄÎÄ¼şÃû
+	 *            è§£å¯†åçš„æ–‡ä»¶å
 	 */
 	public static void decrypt(Key privateKey, String encryptedFileName,
 			String decryptedFileName) throws Exception {
 		DataInputStream in = new DataInputStream(new FileInputStream(
 				encryptedFileName));
 		
-		int length = in.readInt();// °ü×°ºóµÄÃÜÔ¿³¤¶È
+		int length = in.readInt();// åŒ…è£…åçš„å¯†é’¥é•¿åº¦
 		byte[] wrappedKey = new byte[length];
-		in.read(wrappedKey, 0, length);// ¶ÁÈ¡°ü×°ºóµÄÃÜÔ¿×Ö½Ú
-		// Í¨¹ıË½Ô¿½âÃÜ °ü×°ºóµÄÃÜÔ¿
+		in.read(wrappedKey, 0, length);// è¯»å–åŒ…è£…åçš„å¯†é’¥å­—èŠ‚
+		// é€šè¿‡ç§é’¥è§£å¯† åŒ…è£…åçš„å¯†é’¥
 		Cipher cipher = Cipher.getInstance("RSA");
 		cipher.init(Cipher.UNWRAP_MODE, privateKey);
 		Key key = cipher.unwrap(wrappedKey, "AES", Cipher.SECRET_KEY);

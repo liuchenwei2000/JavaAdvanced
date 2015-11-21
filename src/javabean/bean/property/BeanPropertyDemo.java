@@ -11,11 +11,11 @@ import java.beans.VetoableChangeListener;
 import java.beans.VetoableChangeSupport;
 
 /**
- * BeanµÄËÄÖÖÊôĞÔ
+ * Beançš„å››ç§å±æ€§
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-3
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-3
  */
 public class BeanPropertyDemo {
 
@@ -24,7 +24,7 @@ public class BeanPropertyDemo {
 	 */
 	public static void main(String[] args) {
 		MyBean bean = new MyBean();
-		// ÎªbeanÌí¼ÓÒ»¸öPropertyChangeListener
+		// ä¸ºbeanæ·»åŠ ä¸€ä¸ªPropertyChangeListener
 		bean.addPropertyChangeListener(new PropertyChangeListener() {
 
 			public void propertyChange(PropertyChangeEvent evt) {
@@ -32,12 +32,12 @@ public class BeanPropertyDemo {
 						+ evt.getNewValue());
 			}
 		});
-		// ÎªbeanÌí¼ÓÒ»¸öVetoableChangeListener
+		// ä¸ºbeanæ·»åŠ ä¸€ä¸ªVetoableChangeListener
 		bean.addVetoableChangeListener(new VetoableChangeListener() {
 			
 			public void vetoableChange(PropertyChangeEvent evt)
 					throws PropertyVetoException {
-				throw new PropertyVetoException("ÎÒ¾ÍÊÇ²»ÈÃĞŞ¸Ä",evt);
+				throw new PropertyVetoException("æˆ‘å°±æ˜¯ä¸è®©ä¿®æ”¹",evt);
 			}
 		});
 		
@@ -52,14 +52,14 @@ public class BeanPropertyDemo {
 }
 
 /**
- * Ò»¸öJavaBean
+ * ä¸€ä¸ªJavaBean
  */
 class MyBean {
 	
 	/**
-	 *  ¼òµ¥ÊôĞÔ
+	 *  ç®€å•å±æ€§
 	 *  <p>
-	 *  ¼òµ¥ÊôĞÔÖ»¾ßÓĞÒ»¸öµ¥¶ÀµÄÖµ£¬ËüµÄgetter/setter·½·¨ÊµÏÖÒ²±È½Ï¼òµ¥¡£
+	 *  ç®€å•å±æ€§åªå…·æœ‰ä¸€ä¸ªå•ç‹¬çš„å€¼ï¼Œå®ƒçš„getter/setteræ–¹æ³•å®ç°ä¹Ÿæ¯”è¾ƒç®€å•ã€‚
 	 */
 	private String simpleProperty;
 	
@@ -74,14 +74,14 @@ class MyBean {
 	}
 
 	/**
-	 *  Ë÷ÒıÊôĞÔ
+	 *  ç´¢å¼•å±æ€§
 	 *  <p>
-	 *  Ë÷ÒıÊôĞÔÊÇ¿ÉÒÔ»ñÈ¡»òÉèÖÃÊı×éµÄÊôĞÔ£¬ĞèÒªÌá¹©Á½¶Ôgetter/setter·½·¨£ºÒ»¶Ô¸øÊı×éÊ¹ÓÃ£¬Ò»¶Ô¸øÊı×éÄÚµÄµ¥¸öÔªËØÊ¹ÓÃ¡£
+	 *  ç´¢å¼•å±æ€§æ˜¯å¯ä»¥è·å–æˆ–è®¾ç½®æ•°ç»„çš„å±æ€§ï¼Œéœ€è¦æä¾›ä¸¤å¯¹getter/setteræ–¹æ³•ï¼šä¸€å¯¹ç»™æ•°ç»„ä½¿ç”¨ï¼Œä¸€å¯¹ç»™æ•°ç»„å†…çš„å•ä¸ªå…ƒç´ ä½¿ç”¨ã€‚
 	 */
 	private String[] indexesProperty;
 	
 	/**
-	 * Ë÷ÒıÊôĞÔgetter/setter·½·¨µÄÃüÃû±ØĞë×ñÊØÏÂÃæµÄÄ£Ê½¡£
+	 * ç´¢å¼•å±æ€§getter/setteræ–¹æ³•çš„å‘½åå¿…é¡»éµå®ˆä¸‹é¢çš„æ¨¡å¼ã€‚
 	 */
 	
 	public String[] getIndexesProperty() {
@@ -106,17 +106,17 @@ class MyBean {
 	}
 
 	/**
-	 * °ó¶¨ÊôĞÔ
+	 * ç»‘å®šå±æ€§
 	 * <p>
-	 * °ó¶¨ÊôĞÔ»áÔÚÊôĞÔÖµ·¢Éú±ä»¯Ê±£¬Í¨ÖªËùÓĞÏà¹ØµÄ¼àÌıÆ÷¡£
-	 * <p>ÎªÁËÊµÏÖÒ»¸ö°ó¶¨ÊôĞÔ£¬±ØĞëÊµÏÖÁ½¸ö»úÖÆ£º
-	 * <li>1£¬Ö»ÒªÊôĞÔµÄÖµ·¢ÉúÁË±ä»¯£¬¸Ãbean±ØĞë·¢ËÍÒ»¸öPropertyChangeÊÂ¼ş¸øËùÓĞÒÑ×¢²áµÄ¼àÌıÆ÷¡£
-	 * <li>2£¬ÎªÁËÊ¹¸ĞĞËÈ¤µÄ¼àÌıÆ÷(PropertyChangeListener)ÄÜ¹»½øĞĞ×¢²á£¬bean±ØĞëÊµÏÖÌí¼ÓºÍÉ¾³ı¼àÌıÆ÷µÄ·½·¨¡£
+	 * ç»‘å®šå±æ€§ä¼šåœ¨å±æ€§å€¼å‘ç”Ÿå˜åŒ–æ—¶ï¼Œé€šçŸ¥æ‰€æœ‰ç›¸å…³çš„ç›‘å¬å™¨ã€‚
+	 * <p>ä¸ºäº†å®ç°ä¸€ä¸ªç»‘å®šå±æ€§ï¼Œå¿…é¡»å®ç°ä¸¤ä¸ªæœºåˆ¶ï¼š
+	 * <li>1ï¼Œåªè¦å±æ€§çš„å€¼å‘ç”Ÿäº†å˜åŒ–ï¼Œè¯¥beanå¿…é¡»å‘é€ä¸€ä¸ªPropertyChangeäº‹ä»¶ç»™æ‰€æœ‰å·²æ³¨å†Œçš„ç›‘å¬å™¨ã€‚
+	 * <li>2ï¼Œä¸ºäº†ä½¿æ„Ÿå…´è¶£çš„ç›‘å¬å™¨(PropertyChangeListener)èƒ½å¤Ÿè¿›è¡Œæ³¨å†Œï¼Œbeanå¿…é¡»å®ç°æ·»åŠ å’Œåˆ é™¤ç›‘å¬å™¨çš„æ–¹æ³•ã€‚
 	 */
 	private String bindingProperty;
 	
 	/**
-	 * java.beans.PropertyChangeSupportÊÇÒ»¸öºÜÊµÓÃµÄÀà£¬ÄÜ¹»¹ÜÀíPropertyChangeListener£¬¿ÉÒÔ±ÜÃâĞ´Ò»Ğ©ÖØ¸´ĞÔµÄ´úÂë¡£
+	 * java.beans.PropertyChangeSupportæ˜¯ä¸€ä¸ªå¾ˆå®ç”¨çš„ç±»ï¼Œèƒ½å¤Ÿç®¡ç†PropertyChangeListenerï¼Œå¯ä»¥é¿å…å†™ä¸€äº›é‡å¤æ€§çš„ä»£ç ã€‚
 	 */
 	private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
 
@@ -127,12 +127,12 @@ class MyBean {
 	public void setBindingProperty(String bindingProperty) {
 		String oldValue = this.bindingProperty;
 		this.bindingProperty = bindingProperty;
-		// ÊµÏÖµÚÒ»¸ö»úÖÆ£¬¸Ã·½·¨µÄÈı¸ö²ÎÊı£ºÊôĞÔÃû¡¢¾ÉµÄÖµÒÔ¼°ĞÂµÄÖµ¡£
+		// å®ç°ç¬¬ä¸€ä¸ªæœºåˆ¶ï¼Œè¯¥æ–¹æ³•çš„ä¸‰ä¸ªå‚æ•°ï¼šå±æ€§åã€æ—§çš„å€¼ä»¥åŠæ–°çš„å€¼ã€‚
 		propertyChangeSupport.firePropertyChange("bindingProperty", oldValue, bindingProperty);
 	}
 	
 	/**
-	 * ÏÂÃæÁ½¸ö·½·¨ÊµÏÖµÚ¶ş¸ö»úÖÆ
+	 * ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•å®ç°ç¬¬äºŒä¸ªæœºåˆ¶
 	 */
 	public void addPropertyChangeListener(PropertyChangeListener l){
 		propertyChangeSupport.addPropertyChangeListener(l);
@@ -143,17 +143,17 @@ class MyBean {
 	}
 
 	/**
-	 * Ô¼ÊøÊôĞÔ
+	 * çº¦æŸå±æ€§
 	 * <p>
-	 * Ô¼ÊøÊôĞÔÊÇÖ¸ÊÜµ½Ä³ÖÖÔ¼Êø£¬ÈÎºÎ¼àÌıÆ÷¶¼¿ÉÒÔ·ñ¾ö(veto)ËùÌá³öµÄ¸Ä±ä£¬Ç¿ÆÈÆä»¹Ô­¾ÉµÄÉèÖÃ¡£
-	 * <p>ÎªÁËÊµÏÖÒ»¸öÔ¼ÊøÊôĞÔ£¬bean±ØĞëÊµÏÖÁ½¸ö»úÖÆ£º
-	 * <li>1£¬Ö»ÒªÊôĞÔµÄÖµ·¢ÉúÁË±ä»¯£¬¸Ãbean±ØĞë·¢ËÍÒ»¸öVetoableChangeÊÂ¼ş¸øËùÓĞÒÑ×¢²áµÄ¼àÌıÆ÷¡£
-	 * <li>2£¬ÎªÁËÊ¹¸ĞĞËÈ¤µÄ¼àÌıÆ÷(VetoableChangeListener)ÄÜ¹»½øĞĞ×¢²á£¬bean±ØĞëÊµÏÖÌí¼ÓºÍÉ¾³ı¼àÌıÆ÷µÄ·½·¨¡£
+	 * çº¦æŸå±æ€§æ˜¯æŒ‡å—åˆ°æŸç§çº¦æŸï¼Œä»»ä½•ç›‘å¬å™¨éƒ½å¯ä»¥å¦å†³(veto)æ‰€æå‡ºçš„æ”¹å˜ï¼Œå¼ºè¿«å…¶è¿˜åŸæ—§çš„è®¾ç½®ã€‚
+	 * <p>ä¸ºäº†å®ç°ä¸€ä¸ªçº¦æŸå±æ€§ï¼Œbeanå¿…é¡»å®ç°ä¸¤ä¸ªæœºåˆ¶ï¼š
+	 * <li>1ï¼Œåªè¦å±æ€§çš„å€¼å‘ç”Ÿäº†å˜åŒ–ï¼Œè¯¥beanå¿…é¡»å‘é€ä¸€ä¸ªVetoableChangeäº‹ä»¶ç»™æ‰€æœ‰å·²æ³¨å†Œçš„ç›‘å¬å™¨ã€‚
+	 * <li>2ï¼Œä¸ºäº†ä½¿æ„Ÿå…´è¶£çš„ç›‘å¬å™¨(VetoableChangeListener)èƒ½å¤Ÿè¿›è¡Œæ³¨å†Œï¼Œbeanå¿…é¡»å®ç°æ·»åŠ å’Œåˆ é™¤ç›‘å¬å™¨çš„æ–¹æ³•ã€‚
 	 */
 	private String vetoableProperty;
 	
 	/**
-	 * java.beans.VetoableChangeSupportÊÇÒ»¸öºÜÊµÓÃµÄÀà£¬ÄÜ¹»¹ÜÀíVetoableChangeListener£¬¿ÉÒÔ±ÜÃâĞ´Ò»Ğ©ÖØ¸´ĞÔµÄ´úÂë¡£
+	 * java.beans.VetoableChangeSupportæ˜¯ä¸€ä¸ªå¾ˆå®ç”¨çš„ç±»ï¼Œèƒ½å¤Ÿç®¡ç†VetoableChangeListenerï¼Œå¯ä»¥é¿å…å†™ä¸€äº›é‡å¤æ€§çš„ä»£ç ã€‚
 	 */
 	private VetoableChangeSupport vetoableChangeSupport = new VetoableChangeSupport(this);
 
@@ -163,19 +163,19 @@ class MyBean {
 
 	public void setVetoableProperty(String vetoableProperty) throws PropertyVetoException {
 		/**
-		 * ÎªÁË¸üĞÂÒ»¸öÔ¼ÊøÊôĞÔ£¬beanÒª°´Ë³ĞòÖ´ĞĞÏÂÃæÈı¸ö²½Öè£º
+		 * ä¸ºäº†æ›´æ–°ä¸€ä¸ªçº¦æŸå±æ€§ï¼Œbeanè¦æŒ‰é¡ºåºæ‰§è¡Œä¸‹é¢ä¸‰ä¸ªæ­¥éª¤ï¼š
 		 */
 		String oldValue = this.vetoableProperty;
-		// 1,½«ĞŞ¸ÄÊôĞÔÖµµÄÒâÍ¼Í¨ÖªËùÓĞ¿É·ñ¾öĞŞ¸ÄµÄ¼àÌıÆ÷£¬Ò»µ©ÓĞ¼àÌıÆ÷±íÊ¾·ñ¾ö¾Í»áÅ×³öPropertyVetoException
+		// 1,å°†ä¿®æ”¹å±æ€§å€¼çš„æ„å›¾é€šçŸ¥æ‰€æœ‰å¯å¦å†³ä¿®æ”¹çš„ç›‘å¬å™¨ï¼Œä¸€æ—¦æœ‰ç›‘å¬å™¨è¡¨ç¤ºå¦å†³å°±ä¼šæŠ›å‡ºPropertyVetoException
 		vetoableChangeSupport.fireVetoableChange("vetoableProperty", oldValue, vetoableProperty);
-		// 2,Èç¹ûËùÓĞ¿É·ñ¾öĞŞ¸ÄµÄ¼àÌıÆ÷¶¼Ã»ÓĞÅ×³öPropertyVetoException£¬¾Í¸üĞÂÊôĞÔÖµ¡££¨Íò²»¿ÉÓë1Ë³Ğòµßµ¹£©
+		// 2,å¦‚æœæ‰€æœ‰å¯å¦å†³ä¿®æ”¹çš„ç›‘å¬å™¨éƒ½æ²¡æœ‰æŠ›å‡ºPropertyVetoExceptionï¼Œå°±æ›´æ–°å±æ€§å€¼ã€‚ï¼ˆä¸‡ä¸å¯ä¸1é¡ºåºé¢ å€’ï¼‰
 		this.vetoableProperty = vetoableProperty;
-		// 3,Í¨Öª¼àÌıÊôĞÔ¸Ä±äµÄËùÓĞ¼àÌıÆ÷£¬È·ÈÏÒ»¸ö¸Ä±ä·¢Éú¡£
+		// 3,é€šçŸ¥ç›‘å¬å±æ€§æ”¹å˜çš„æ‰€æœ‰ç›‘å¬å™¨ï¼Œç¡®è®¤ä¸€ä¸ªæ”¹å˜å‘ç”Ÿã€‚
 		propertyChangeSupport.firePropertyChange("vetoableProperty", oldValue, vetoableProperty);
 	}
 	
 	/**
-	 * ÏÂÃæÁ½¸ö·½·¨ÊµÏÖµÚ¶ş¸ö»úÖÆ
+	 * ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•å®ç°ç¬¬äºŒä¸ªæœºåˆ¶
 	 */
 	public void addVetoableChangeListener(VetoableChangeListener l){
 		vetoableChangeSupport.addVetoableChangeListener(l);

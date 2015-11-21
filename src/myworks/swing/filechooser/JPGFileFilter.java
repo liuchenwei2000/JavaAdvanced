@@ -8,23 +8,23 @@ import java.io.File;
 import javax.swing.filechooser.FileFilter;
 
 /**
- * JPGÎÄ¼ş¹ıÂËÆ÷
+ * JPGæ–‡ä»¶è¿‡æ»¤å™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class JPGFileFilter extends FileFilter {
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÎª¿ÉÑ¡µÄÎÄ¼ş
+	 * åˆ¤æ–­æ˜¯å¦ä¸ºå¯é€‰çš„æ–‡ä»¶
 	 */
 	public boolean accept(File f) {
 		return f.isDirectory() || f.getName().toLowerCase().endsWith(".jpg");
 	}
 
 	/**
-	 * ÎÄ¼şÃèÊö
+	 * æ–‡ä»¶æè¿°
 	 */
 	public String getDescription() {
 		return "*.jpg";

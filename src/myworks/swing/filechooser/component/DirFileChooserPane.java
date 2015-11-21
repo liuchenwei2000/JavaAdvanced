@@ -9,11 +9,11 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileFilter;
 
 /**
- * Ä¿Â¼ÎÄ¼ş´ò¿ª¿Ø¼şÀà
+ * ç›®å½•æ–‡ä»¶æ‰“å¼€æ§ä»¶ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-14
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-14
  */
 public class DirFileChooserPane extends FileChooserPane {
 
@@ -28,17 +28,17 @@ public class DirFileChooserPane extends FileChooserPane {
 		setFileFilter(new FileFilter() {
 
 			/**
-			 * Ö»ÓĞµ±ÎÄ¼şÊÇÎÄ¼ş¼ĞµÄÊ±ºò²Å½ÓÊÜ
+			 * åªæœ‰å½“æ–‡ä»¶æ˜¯æ–‡ä»¶å¤¹çš„æ—¶å€™æ‰æ¥å—
 			 */
 			public boolean accept(File f) {
 				return f.isDirectory();
 			}
 
 			/**
-			 * ·µ»ØÎÄ¼şÃèÊöĞÅÏ¢
+			 * è¿”å›æ–‡ä»¶æè¿°ä¿¡æ¯
 			 */
 			public String getDescription() {
-				return "ÎÄ¼ş¼Ğ";
+				return "æ–‡ä»¶å¤¹";
 			}
 		});
 	}

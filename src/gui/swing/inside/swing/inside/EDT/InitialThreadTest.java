@@ -7,14 +7,14 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 /**
- * ³õÊ¼»¯Ïß³ÌÑÝÊ¾
+ * åˆå§‹åŒ–çº¿ç¨‹æ¼”ç¤º
  * <p>
- * Ã¿Ò»¸öJavaÓ¦ÓÃ³ÌÐò¶¼¿ªÊ¼ÓÚÖ÷Ïß³ÌÖÐµÄmain·½·¨¡£
- * ÔÚSwing³ÌÐòÖÐ£¬Ö÷Ïß³ÌµÄÉúÃüÖÜÆÚÊÇºÜ¶ÌµÄ£¬ËüÆô¶¯EDTÏß³Ì¹¹ÔìÓÃ»§½çÃæºó¾ÍÍË³öÁË¡£
+ * æ¯ä¸€ä¸ªJavaåº”ç”¨ç¨‹åºéƒ½å¼€å§‹äºŽä¸»çº¿ç¨‹ä¸­çš„mainæ–¹æ³•ã€‚
+ * åœ¨Swingç¨‹åºä¸­ï¼Œä¸»çº¿ç¨‹çš„ç”Ÿå‘½å‘¨æœŸæ˜¯å¾ˆçŸ­çš„ï¼Œå®ƒå¯åŠ¨EDTçº¿ç¨‹æž„é€ ç”¨æˆ·ç•Œé¢åŽå°±é€€å‡ºäº†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-29
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-29
  */
 public class InitialThreadTest {
 
@@ -23,11 +23,11 @@ public class InitialThreadTest {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * ÏÂÃæÊÇ´íÎóµÄÆô¶¯UI½çÃæµÄ·½·¨£¬ËüÎ¥·´ÁË²»Ó¦ÔÚEDTÍâµÄÆäËûÏß³ÌÍ¬Swing×é¼þ½»»¥µÄÔ­Ôò¡£
-		 * Ïß³ÌÍ¬²½ÎÊÌâËäÈ»²»ÊÇÂíÉÏÏÔÏÖ³öÀ´£¬µ«ÊÇ»¹Òª×¢Òâ±ÜÃâÕâÑùµÄ×ö·¨¡£
+		 * ä¸‹é¢æ˜¯é”™è¯¯çš„å¯åŠ¨UIç•Œé¢çš„æ–¹æ³•ï¼Œå®ƒè¿åäº†ä¸åº”åœ¨EDTå¤–çš„å…¶ä»–çº¿ç¨‹åŒSwingç»„ä»¶äº¤äº’çš„åŽŸåˆ™ã€‚
+		 * çº¿ç¨‹åŒæ­¥é—®é¢˜è™½ç„¶ä¸æ˜¯é©¬ä¸Šæ˜¾çŽ°å‡ºæ¥ï¼Œä½†æ˜¯è¿˜è¦æ³¨æ„é¿å…è¿™æ ·çš„åšæ³•ã€‚
 		 */
 		new JFrame().setVisible(true);
-		// ÏÂÃæÊÇÕýÈ·µÄÆô¶¯UI½çÃæµÄ·½·¨
+		// ä¸‹é¢æ˜¯æ­£ç¡®çš„å¯åŠ¨UIç•Œé¢çš„æ–¹æ³•
 		SwingUtilities.invokeLater(new Runnable() {
 
 			public void run() {

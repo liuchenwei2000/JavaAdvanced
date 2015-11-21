@@ -15,15 +15,15 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * IconÑİÊ¾Àà
+ * Iconæ¼”ç¤ºç±»
  * <p>
- * ¿ÉÒÔÔÚJLable»òÕßÈÎºÎ´ÓAbstractButton(°üÀ¨JButton£¬JCheckBox£¬JRadioButton
- * ÒÔ¼°¼¸ÖÖJMenuItem)¼Ì³ĞµÄ×é¼şÖĞÊ¹ÓÃIcon¡£
- * Ğí¶àSwing×é¼şµÄ¹¹ÔìÆ÷¶¼½ÓÊÜIconÀàĞÍµÄ²ÎÊı£¬Ò²¿ÉÒÔÊ¹ÓÃsetIcon()À´¼ÓÈë»òÕß¸Ä±äÍ¼±ê¡£
+ * å¯ä»¥åœ¨JLableæˆ–è€…ä»»ä½•ä»AbstractButton(åŒ…æ‹¬JButtonï¼ŒJCheckBoxï¼ŒJRadioButton
+ * ä»¥åŠå‡ ç§JMenuItem)ç»§æ‰¿çš„ç»„ä»¶ä¸­ä½¿ç”¨Iconã€‚
+ * è®¸å¤šSwingç»„ä»¶çš„æ„é€ å™¨éƒ½æ¥å—Iconç±»å‹çš„å‚æ•°ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨setIcon()æ¥åŠ å…¥æˆ–è€…æ”¹å˜å›¾æ ‡ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-16
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-16
  */
 public class IconDemo {
 	
@@ -46,13 +46,13 @@ class IconPanel extends JPanel {
 
 	public IconPanel() {
 		faces = new Icon[] {
-				// ´´½¨IconµÄ·½Ê½
+				// åˆ›å»ºIconçš„æ–¹å¼
 				new ImageIcon(getClass().getResource("Face0.gif")),
 				new ImageIcon(getClass().getResource("Face1.gif")),
 				new ImageIcon(getClass().getResource("Face2.gif")),
 				new ImageIcon(getClass().getResource("Face3.gif")),
 				new ImageIcon(getClass().getResource("Face4.gif")), };
-		// ´øÍ¼±êµÄ°´Å¥
+		// å¸¦å›¾æ ‡çš„æŒ‰é’®
 		button1 = new JButton("JButton", faces[3]);
 		
 		button1.addActionListener(new ActionListener() {
@@ -64,21 +64,21 @@ class IconPanel extends JPanel {
 					button1.setIcon(faces[0]);
 					mad = true;
 				}
-				// ÉèÖÃÍ¼±êºÍÎÄ±¾µÄ´¹Ö±¶ÔÆë·½Ê½
+				// è®¾ç½®å›¾æ ‡å’Œæ–‡æœ¬çš„å‚ç›´å¯¹é½æ–¹å¼
 				button1.setVerticalAlignment(JButton.TOP);
-				// ÉèÖÃÍ¼±êºÍÎÄ±¾µÄË®Æ½¶ÔÆë·½Ê½
+				// è®¾ç½®å›¾æ ‡å’Œæ–‡æœ¬çš„æ°´å¹³å¯¹é½æ–¹å¼
 				button1.setHorizontalAlignment(JButton.LEFT);
 			}
 		});
 		
 		button1.setRolloverEnabled(true);
-		// ÉèÖÃ°´Å¥µÄ·­×ªÍ¼±ê
+		// è®¾ç½®æŒ‰é’®çš„ç¿»è½¬å›¾æ ‡
 		button1.setRolloverIcon(faces[1]);
-		// ÉèÖÃ°´Å¥µÄ°´ÏÂÍ¼±ê
+		// è®¾ç½®æŒ‰é’®çš„æŒ‰ä¸‹å›¾æ ‡
 		button1.setPressedIcon(faces[2]);
-		// ÉèÖÃ°´Å¥µÄ½ûÓÃÍ¼±ê
+		// è®¾ç½®æŒ‰é’®çš„ç¦ç”¨å›¾æ ‡
 		button1.setDisabledIcon(faces[4]);
-		// ÉèÖÃ¹¤¾ßÌáÊ¾ĞÅÏ¢
+		// è®¾ç½®å·¥å…·æç¤ºä¿¡æ¯
 		button1.setToolTipText("Yow!");
 		
 		button2.addActionListener(new ActionListener() {

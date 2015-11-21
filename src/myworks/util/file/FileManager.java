@@ -8,28 +8,28 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 /**
- * ÎÄ¼ş¹ÜÀíÆ÷
+ * æ–‡ä»¶ç®¡ç†å™¨
  * <p>
- * Ìá¹©¸´ÖÆ¡¢¼ôÇĞ¡¢É¾³ıÎÄ¼ş(¼Ğ)µÈ¹¦ÄÜ
+ * æä¾›å¤åˆ¶ã€å‰ªåˆ‡ã€åˆ é™¤æ–‡ä»¶(å¤¹)ç­‰åŠŸèƒ½
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-10-29
+ * åˆ›å»ºæ—¥æœŸï¼š2008-10-29
  */
 public class FileManager {
 
 	/**
-	 * ½«Ô´ÎÄ¼ş(¼Ğ)¸´ÖÆµ½Ä¿±êÎÄ¼ş(¼Ğ)ÖĞ 
+	 * å°†æºæ–‡ä»¶(å¤¹)å¤åˆ¶åˆ°ç›®æ ‡æ–‡ä»¶(å¤¹)ä¸­ 
 	 * <p>
-	 * <li>Èç¹ûisReplacementÎªtrueÔò»á¸²¸ÇÄ¿±êÎÄ¼ş¼ĞÖĞÒÑ´æÔÚµÄÍ¬ÃûÎÄ¼ş
-	 * <li>Èç¹ûisReplacementÎªfalseÈôÄ¿±êÎÄ¼ş¼ĞÖĞ´æÔÚÍ¬ÃûÎÄ¼şÔò»áÅ×³öÒì³£
+	 * <li>å¦‚æœisReplacementä¸ºtrueåˆ™ä¼šè¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹ä¸­å·²å­˜åœ¨çš„åŒåæ–‡ä»¶
+	 * <li>å¦‚æœisReplacementä¸ºfalseè‹¥ç›®æ ‡æ–‡ä»¶å¤¹ä¸­å­˜åœ¨åŒåæ–‡ä»¶åˆ™ä¼šæŠ›å‡ºå¼‚å¸¸
 	 * 
 	 * @param sourceFilePath
-	 *            Ô´ÎÄ¼ş(¼Ğ)Ãû³Æ
+	 *            æºæ–‡ä»¶(å¤¹)åç§°
 	 * @param destDirPath
-	 *            Ä¿±êÎÄ¼ş¼ĞÃû³Æ
+	 *            ç›®æ ‡æ–‡ä»¶å¤¹åç§°
 	 * @param replaceable
-	 *            ÊÇ·ñ¸²¸ÇÄ¿±êÎÄ¼ş¼ĞÖĞÒÑ´æÔÚµÄÍ¬ÃûÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹ä¸­å·²å­˜åœ¨çš„åŒåæ–‡ä»¶
 	 */
 	public static void copy(String sourceFilePath, String destDirPath,
 			boolean replaceable) throws Exception {
@@ -39,10 +39,10 @@ public class FileManager {
 		}
 		File sourceFile = new File(sourceFilePath);
 		if (!sourceFile.exists())
-			throw new RuntimeException("ÕÒ²»µ½Ô´ÎÄ¼ş(¼Ğ): " + sourceFilePath);
+			throw new RuntimeException("æ‰¾ä¸åˆ°æºæ–‡ä»¶(å¤¹): " + sourceFilePath);
 		File destDir = new File(destDirPath);
 		if (!destDir.exists())
-			throw new RuntimeException("ÕÒ²»µ½Ä¿±êÎÄ¼ş(¼Ğ): " + destDirPath);
+			throw new RuntimeException("æ‰¾ä¸åˆ°ç›®æ ‡æ–‡ä»¶(å¤¹): " + destDirPath);
 		if (sourceFile.isDirectory()) {
 			copyDir(sourceFilePath, destDirPath, replaceable);
 		} else {
@@ -55,25 +55,25 @@ public class FileManager {
 		File sourceFile = new File(sourceFilePath);
 		File destDir = new File(destDirPath);
 		if (!destDir.exists()) destDir.mkdirs();
-		// ¸´ÖÆµ½Ä¿±êÎÄ¼ş¼ĞµÄÎÄ¼şÂ·¾¶
+		// å¤åˆ¶åˆ°ç›®æ ‡æ–‡ä»¶å¤¹çš„æ–‡ä»¶è·¯å¾„
 		String destFileName = destDirPath + File.separator
 				+ sourceFile.getName();
 		File destFile = new File(destFileName);
 		if (destFile.exists() && !replaceable) {
-				throw new RuntimeException("Ä¿±êÎÄ¼ş£º" + destFileName + " ÒÑ¾­´æÔÚ¡£");
+				throw new RuntimeException("ç›®æ ‡æ–‡ä»¶ï¼š" + destFileName + " å·²ç»å­˜åœ¨ã€‚");
 		}
 		copyPrivate(sourceFilePath, destFileName);
-		System.out.println("copy file ¡¾" + sourceFilePath + "¡¿ to ¡¾"
-				+ destDirPath + "¡¿ successfully.");
+		System.out.println("copy file ã€" + sourceFilePath + "ã€‘ to ã€"
+				+ destDirPath + "ã€‘ successfully.");
 	}
 
 	/**
-	 * ½«Ô´ÎÄ¼ş¸´ÖÆµ½Ä¿±êÎÄ¼şÖĞ
+	 * å°†æºæ–‡ä»¶å¤åˆ¶åˆ°ç›®æ ‡æ–‡ä»¶ä¸­
 	 * 
 	 * @param sourceFileName
-	 *            Ô´ÎÄ¼şÈ«Â·¾¶Ãû
+	 *            æºæ–‡ä»¶å…¨è·¯å¾„å
 	 * @param destFileName
-	 *            Ä¿±êÎÄ¼şÈ«Â·¾¶Ãû
+	 *            ç›®æ ‡æ–‡ä»¶å…¨è·¯å¾„å
 	 */
 	private static void copyPrivate(String sourceFileName, String destFileName)
 			throws Exception {
@@ -89,64 +89,64 @@ public class FileManager {
 	}
 	
 	/**
-	 * ½«Ô´ÎÄ¼ş¼Ğ¸´ÖÆµ½Ä¿±êÎÄ¼ş¼ĞÖĞ 
+	 * å°†æºæ–‡ä»¶å¤¹å¤åˆ¶åˆ°ç›®æ ‡æ–‡ä»¶å¤¹ä¸­ 
 	 * 
 	 * @param sourceDirPath
-	 *            Ô´ÎÄ¼ş¼ĞÃû³Æ
+	 *            æºæ–‡ä»¶å¤¹åç§°
 	 * @param destDirPath
-	 *            Ä¿±êÎÄ¼ş¼ĞÃû³Æ
+	 *            ç›®æ ‡æ–‡ä»¶å¤¹åç§°
 	 * @param replaceable
-	 *            ÊÇ·ñ¸²¸ÇÄ¿±êÎÄ¼ş¼ĞµÄÒÑ´æÔÚÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹çš„å·²å­˜åœ¨æ–‡ä»¶
 	 */
 	private static void copyDir(String sourceDirPath, String destDirPath,
 			boolean replaceable) throws Exception {
 		copyDirPrivate(sourceDirPath, destDirPath, replaceable);
-		System.out.println("copy dir ¡¾" + sourceDirPath + "¡¿ successfully.");
+		System.out.println("copy dir ã€" + sourceDirPath + "ã€‘ successfully.");
 	}
 
 	/**
-	 * ½«Ô´ÎÄ¼ş¼Ğ¸´ÖÆµ½Ä¿±êÎÄ¼ş¼ĞÖĞ
+	 * å°†æºæ–‡ä»¶å¤¹å¤åˆ¶åˆ°ç›®æ ‡æ–‡ä»¶å¤¹ä¸­
 	 * 
 	 * @param sourceDirPath
-	 *            Ô´ÎÄ¼ş¼ĞÃû³Æ
+	 *            æºæ–‡ä»¶å¤¹åç§°
 	 * @param destDirPath
-	 *            Ä¿±êÎÄ¼ş¼ĞÃû³Æ
+	 *            ç›®æ ‡æ–‡ä»¶å¤¹åç§°
 	 * @param replaceable
-	 *            ÊÇ·ñ¸²¸ÇÄ¿±êÎÄ¼ş¼ĞµÄÒÑ´æÔÚÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹çš„å·²å­˜åœ¨æ–‡ä»¶
 	 */
 	private static void copyDirPrivate(String sourceDirPath,
 			String destDirPath, boolean replaceable) throws Exception {
 		File sourceDir = new File(sourceDirPath);
-		// Ô´ÎÄ¼şÊÇ±ê×¼ÎÄ¼şÔòÖ±½Ó¸´ÖÆ
+		// æºæ–‡ä»¶æ˜¯æ ‡å‡†æ–‡ä»¶åˆ™ç›´æ¥å¤åˆ¶
 		if (sourceDir.isFile()) {
 			copyFile(sourceDirPath, destDirPath, replaceable);
 		} else {
-			// ¸´ÖÆÔ´ÎÄ¼ş¼ĞÀïµÄËùÓĞÎÄ¼ş
+			// å¤åˆ¶æºæ–‡ä»¶å¤¹é‡Œçš„æ‰€æœ‰æ–‡ä»¶
 			copyDirAllFiles(sourceDirPath, destDirPath, replaceable);
 		}
 	}
 
 	/**
-	 * ½«Ô´ÎÄ¼ş¼ĞÖĞµÄËùÓĞÎÄ¼ş¶¼¸´ÖÆµ½Ä¿±êÎÄ¼ş¼Ğ
+	 * å°†æºæ–‡ä»¶å¤¹ä¸­çš„æ‰€æœ‰æ–‡ä»¶éƒ½å¤åˆ¶åˆ°ç›®æ ‡æ–‡ä»¶å¤¹
 	 * 
 	 * @param sourceDirPath
-	 *            Ô´ÎÄ¼ş¼ĞÃû³Æ
+	 *            æºæ–‡ä»¶å¤¹åç§°
 	 * @param destDirPath
-	 *            Ä¿±êÎÄ¼ş¼ĞÃû³Æ
+	 *            ç›®æ ‡æ–‡ä»¶å¤¹åç§°
 	 * @param replaceable
-	 *            ÊÇ·ñ¸²¸ÇÄ¿±êÎÄ¼ş¼ĞµÄÒÑ´æÔÚÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹çš„å·²å­˜åœ¨æ–‡ä»¶
 	 */
 	private static void copyDirAllFiles(String sourceDirPath,
 			String destDirPath, boolean replaceable) throws Exception {
 		File sourceDir = new File(sourceDirPath);
 		String dirName = destDirPath + File.separator + sourceDir.getName();
 		String[] fileNames = sourceDir.list();
-		// ¸´ÖÆÒ»¸ö¿ÕÎÄ¼ş¼Ğ
+		// å¤åˆ¶ä¸€ä¸ªç©ºæ–‡ä»¶å¤¹
 		if (fileNames == null) {
 			new File(dirName).mkdirs();
 			return;
 		}
-		// ¸´ÖÆÃ¿Ò»¸öÎÄ¼ş
+		// å¤åˆ¶æ¯ä¸€ä¸ªæ–‡ä»¶
 		for (String fileName : fileNames) {
 			String sourceFileName = sourceDirPath + File.separator + fileName;
 			copyDirPrivate(sourceFileName, dirName, replaceable);
@@ -154,13 +154,13 @@ public class FileManager {
 	}
 	
 	/**
-	 * É¾³ı²ÎÊıÎÄ¼şÃûÖ¸¶¨µÄÎÄ¼ş(¼Ğ)
+	 * åˆ é™¤å‚æ•°æ–‡ä»¶åæŒ‡å®šçš„æ–‡ä»¶(å¤¹)
 	 * <p>
-	 * <li>Èç¹ûfileÊÇ±ê×¼ÎÄ¼şÔòÖ±½ÓÉ¾³ı 
-	 * <li>Èç¹ûfileÊÇÎÄ¼ş¼ĞÔòÉ¾³ıÆäÏÂµÄËùÓĞÎÄ¼ş
+	 * <li>å¦‚æœfileæ˜¯æ ‡å‡†æ–‡ä»¶åˆ™ç›´æ¥åˆ é™¤ 
+	 * <li>å¦‚æœfileæ˜¯æ–‡ä»¶å¤¹åˆ™åˆ é™¤å…¶ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
 	 * 
 	 * @param fileName
-	 *            ´ıÉ¾³ıÎÄ¼ş(¼Ğ)Ãû
+	 *            å¾…åˆ é™¤æ–‡ä»¶(å¤¹)å
 	 */
 	public static void delete(String fileName) throws Exception {
 		if (isEmpty(fileName)) {
@@ -169,14 +169,14 @@ public class FileManager {
 		File file = new File(fileName);
 		if (!file.exists()) return;
 		deletePrivate(file);
-		System.out.println("delete ¡¾" + fileName + "¡¿ successfully.");
+		System.out.println("delete ã€" + fileName + "ã€‘ successfully.");
 	}
 
 	/**
-	 * É¾³ıÎÄ¼ş
+	 * åˆ é™¤æ–‡ä»¶
 	 * 
 	 * @param file
-	 *            ´ıÉ¾³ıÎÄ¼ş
+	 *            å¾…åˆ é™¤æ–‡ä»¶
 	 */
 	private static void deletePrivate(File file) {
 		if (file.isFile()) {
@@ -187,12 +187,12 @@ public class FileManager {
 	}
 
 	/**
-	 * É¾³ıÎÄ¼ş¼Ğ
+	 * åˆ é™¤æ–‡ä»¶å¤¹
 	 * <p>
-	 * ÏÈÉ¾³ıÆäÏÂËùÓĞµÄÎÄ¼şÔÙÉ¾³ıÎÄ¼ş¼Ğ×Ô¼º
+	 * å…ˆåˆ é™¤å…¶ä¸‹æ‰€æœ‰çš„æ–‡ä»¶å†åˆ é™¤æ–‡ä»¶å¤¹è‡ªå·±
 	 * 
 	 * @param dir
-	 *            ÎÄ¼ş¼Ğ
+	 *            æ–‡ä»¶å¤¹
 	 */
 	private static void deleteDir(File dir) {
 		String[] fileNames = dir.list();
@@ -209,21 +209,21 @@ public class FileManager {
 	}
 	
 	/**
-	 * ½«Ô´ÎÄ¼ş(¼Ğ)¼ôÇĞµ½Ä¿±êÎÄ¼ş(¼Ğ)ÖĞ 
+	 * å°†æºæ–‡ä»¶(å¤¹)å‰ªåˆ‡åˆ°ç›®æ ‡æ–‡ä»¶(å¤¹)ä¸­ 
 	 * <p>
-	 * <li>Èç¹ûisReplacementÎªtrueÔò»á¸²¸ÇÄ¿±êÎÄ¼ş¼ĞÖĞÒÑ´æÔÚµÄÍ¬ÃûÎÄ¼ş
-	 * <li>Èç¹ûisReplacementÎªfalseÈôÄ¿±êÎÄ¼ş¼ĞÖĞ´æÔÚÍ¬ÃûÎÄ¼şÔò»áÅ×³öÒì³£
+	 * <li>å¦‚æœisReplacementä¸ºtrueåˆ™ä¼šè¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹ä¸­å·²å­˜åœ¨çš„åŒåæ–‡ä»¶
+	 * <li>å¦‚æœisReplacementä¸ºfalseè‹¥ç›®æ ‡æ–‡ä»¶å¤¹ä¸­å­˜åœ¨åŒåæ–‡ä»¶åˆ™ä¼šæŠ›å‡ºå¼‚å¸¸
 	 * 
 	 * @param sourceFilePath
-	 *            Ô´ÎÄ¼ş(¼Ğ)Ãû³Æ
+	 *            æºæ–‡ä»¶(å¤¹)åç§°
 	 * @param destDirPath
-	 *            Ä¿±êÎÄ¼ş¼ĞÃû³Æ
+	 *            ç›®æ ‡æ–‡ä»¶å¤¹åç§°
 	 * @param replaceable
-	 *            ÊÇ·ñ¸²¸ÇÄ¿±êÎÄ¼ş¼ĞÖĞÒÑ´æÔÚµÄÍ¬ÃûÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–ç›®æ ‡æ–‡ä»¶å¤¹ä¸­å·²å­˜åœ¨çš„åŒåæ–‡ä»¶
 	 */
 	public static void cut(String sourceFilePath, String destDirPath,
 			boolean replaceable) throws Exception {
-		// ÄÚ²¿ÊµÏÖÃ»ÓĞÊ¹ÓÃfile.renameTo·½·¨£¬¶øÊÇ²ÉÓÃÏÈ¸´ÖÆÔÙÉ¾³ıÔ´ÎÄ¼şµÄ²ßÂÔ
+		// å†…éƒ¨å®ç°æ²¡æœ‰ä½¿ç”¨file.renameToæ–¹æ³•ï¼Œè€Œæ˜¯é‡‡ç”¨å…ˆå¤åˆ¶å†åˆ é™¤æºæ–‡ä»¶çš„ç­–ç•¥
 		copy(sourceFilePath, destDirPath, replaceable);
 		delete(sourceFilePath);
 	}

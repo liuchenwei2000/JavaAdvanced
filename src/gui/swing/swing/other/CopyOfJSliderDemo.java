@@ -15,16 +15,16 @@ import javax.swing.event.ChangeListener;
 import util.Displayer;
 
 /**
- * JSlider(»¬¿é)ÑİÊ¾Àà
+ * JSlider(æ»‘å—)æ¼”ç¤ºç±»
  * <p>
- * JSliderÊÇÈÃÓÃ»§ÒÔÍ¼ĞÎ·½Ê½ÔÚÓĞ½çÇø¼äÄÚÍ¨¹ıÒÆ¶¯»¬¿éÀ´Ñ¡ÔñÖµµÄ×é¼ş¡£
- * »¬¿é¿ÉÒÔÏÔÊ¾Ö÷¿Ì¶È±ê¼ÇºÍ´Î¿Ì¶È±ê¼Ç¡£
+ * JSlideræ˜¯è®©ç”¨æˆ·ä»¥å›¾å½¢æ–¹å¼åœ¨æœ‰ç•ŒåŒºé—´å†…é€šè¿‡ç§»åŠ¨æ»‘å—æ¥é€‰æ‹©å€¼çš„ç»„ä»¶ã€‚
+ * æ»‘å—å¯ä»¥æ˜¾ç¤ºä¸»åˆ»åº¦æ ‡è®°å’Œæ¬¡åˆ»åº¦æ ‡è®°ã€‚
  * 
  * @see gui.swing.other.JProgressBarDemo
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-1-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-20
  */
 public class CopyOfJSliderDemo {
 	
@@ -40,8 +40,8 @@ class JSliderPanel2 extends JPanel {
 
 	private static final long serialVersionUID = 7379083097908629737L;
 
-	private JSlider slider;// »¬¿é
-	private JTextField textField;// ÏÔÊ¾ÎÄ±¾¿ò
+	private JSlider slider;// æ»‘å—
+	private JTextField textField;// æ˜¾ç¤ºæ–‡æœ¬æ¡†
 
 	public JSliderPanel2() {
 		super();
@@ -56,16 +56,16 @@ class JSliderPanel2 extends JPanel {
 
 	private JSlider getSlider() {
 		if (slider == null) {
-			// ´Ó0µ½100£¬Ä¬ÈÏÔÚ50
+			// ä»0åˆ°100ï¼Œé»˜è®¤åœ¨50
 			slider = new JSlider(0, 200, 100);
-			// È·¶¨ÊÇ·ñÔÚ»¬¿éÉÏ»æÖÆ»¬µÀ(¿Ì¶È)
+			// ç¡®å®šæ˜¯å¦åœ¨æ»‘å—ä¸Šç»˜åˆ¶æ»‘é“(åˆ»åº¦)
 			slider.setPaintTicks(true);
 			slider.setPaintLabels(true);
 //			slider.setBorder(
 //	                BorderFactory.createEmptyBorder(0,0,10,0));
-			// ÉèÖÃÖ÷¿Ì¶È±ê¼ÇµÄ¼ä¸ô
+			// è®¾ç½®ä¸»åˆ»åº¦æ ‡è®°çš„é—´éš”
 			slider.setMajorTickSpacing(100);
-			// ÉèÖÃ´Î¿Ì¶È±ê¼ÇµÄ¼ä¸ô
+			// è®¾ç½®æ¬¡åˆ»åº¦æ ‡è®°çš„é—´éš”
 			slider.setMinorTickSpacing(10);
 			slider.addChangeListener(new ChangeListener() {
 

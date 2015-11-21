@@ -16,40 +16,40 @@ import javax.swing.JPanel;
 import swing.frame.BasicFrame;
 
 /**
- * ÏÔÊ¾Æ÷
+ * æ˜¾ç¤ºå™¨
  * <p>
- * ÓÃÓÚÖ±½ÓÒÔJFrameĞÎÊ½Õ¹ÏÖJPanel¡£
+ * ç”¨äºç›´æ¥ä»¥JFrameå½¢å¼å±•ç°JPanelã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-25
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-25
  */
 public class Displayer {
 
 	/**
-	 * ÉèÖÃ×é¼ş¾ÓÖĞ
+	 * è®¾ç½®ç»„ä»¶å±…ä¸­
 	 * 
 	 * @param comp
-	 *            ×é¼ş
+	 *            ç»„ä»¶
 	 */
 	public static void setCenter(Component comp) {
-		int windowWidth = comp.getWidth(); // »ñµÃ´°¿Ú¿í
-		int windowHeight = comp.getHeight(); // »ñµÃ´°¿Ú¸ß
-		Toolkit kit = Toolkit.getDefaultToolkit(); // ¶¨Òå¹¤¾ß°ü
-		Dimension screenSize = kit.getScreenSize(); // »ñÈ¡ÆÁÄ»µÄ³ß´ç
-		int screenWidth = screenSize.width; // »ñÈ¡ÆÁÄ»µÄ¿í
-		int screenHeight = screenSize.height; // »ñÈ¡ÆÁÄ»µÄ¸ß
+		int windowWidth = comp.getWidth(); // è·å¾—çª—å£å®½
+		int windowHeight = comp.getHeight(); // è·å¾—çª—å£é«˜
+		Toolkit kit = Toolkit.getDefaultToolkit(); // å®šä¹‰å·¥å…·åŒ…
+		Dimension screenSize = kit.getScreenSize(); // è·å–å±å¹•çš„å°ºå¯¸
+		int screenWidth = screenSize.width; // è·å–å±å¹•çš„å®½
+		int screenHeight = screenSize.height; // è·å–å±å¹•çš„é«˜
 		comp.setLocation(screenWidth / 2 - windowWidth / 2, screenHeight / 2
-				- windowHeight / 2);// ÉèÖÃ´°¿Ú¾ÓÖĞÏÔÊ¾
+				- windowHeight / 2);// è®¾ç½®çª—å£å±…ä¸­æ˜¾ç¤º
 	}
 
 	/**
-	 * ´´½¨²¢ÇÒÕ¹Ê¾½çÃæ(Ê¹ÓÃJFrame)
+	 * åˆ›å»ºå¹¶ä¸”å±•ç¤ºç•Œé¢(ä½¿ç”¨JFrame)
 	 * 
 	 * @param title
-	 *            ±êÌâ
+	 *            æ ‡é¢˜
 	 * @param comp
-	 *            Õ¹Ê¾µÄ×é¼ş
+	 *            å±•ç¤ºçš„ç»„ä»¶
 	 */
 	public static void createAndShowGUI(String title, JComponent comp) {
 		BasicFrame frame = new BasicFrame(title);
@@ -59,7 +59,7 @@ public class Displayer {
 	}
 	
 	/**
-	 * ÏÔÊ¾JFrame
+	 * æ˜¾ç¤ºJFrame
 	 */
 	public static void display(JFrame frame, int width, int height) {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,7 +69,7 @@ public class Displayer {
 	}
 	
 	/**
-	 * ÏÔÊ¾JApplet
+	 * æ˜¾ç¤ºJApplet
 	 */
 	public static void display(JApplet applet, int width, int height) {
 		BasicFrame frame = new BasicFrame(getClassName(applet));
@@ -81,7 +81,7 @@ public class Displayer {
 	}
 	
 	/**
-	 * ÏÔÊ¾JPanel
+	 * æ˜¾ç¤ºJPanel
 	 */
 	public static void display(JPanel panel, int width, int height) {
 		BasicFrame frame = new BasicFrame(getClassName(panel));
@@ -91,7 +91,7 @@ public class Displayer {
 	}
 	
 	/**
-	 * ·µ»Ø²ÎÊı¶ÔÏóËùÊôÀàÃû
+	 * è¿”å›å‚æ•°å¯¹è±¡æ‰€å±ç±»å
 	 */
 	private static String getClassName(Object object){
 		if(object == null) return null;

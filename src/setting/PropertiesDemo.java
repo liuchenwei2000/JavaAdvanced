@@ -16,26 +16,26 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * ÅäÖÃÎÄ¼şÑİÊ¾Àà
+ * é…ç½®æ–‡ä»¶æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2008-3-19
+ * åˆ›å»ºæ—¶é—´ï¼š2008-3-19
  */
 public class PropertiesDemo {
 
-	/** ÅäÖÃÎÄ¼şÃû */
+	/** é…ç½®æ–‡ä»¶å */
 	private static final String SETTINGS_FILE_NAME = "files/setting/settings.properties";
-	/** Ä¬ÈÏÅäÖÃ */
+	/** é»˜è®¤é…ç½® */
 	private static Properties defaultSetting = getDefaultSettings();
 
 	/**
-	 * Éú³ÉÅäÖÃÎÄ¼ş
+	 * ç”Ÿæˆé…ç½®æ–‡ä»¶
 	 */
 	private static void createSettingFile(String fileName) {
 		try {
 			FileOutputStream out = new FileOutputStream(fileName);
-			// ½«ÅäÖÃĞÅÏ¢³Ö¾Ã»¯µ½±¾µØÎÄ¼şÀï(µÚ¶ş¸ö²ÎÊıÊÇÎÄ¼şÖĞµÄ×¢ÊÍ)
+			// å°†é…ç½®ä¿¡æ¯æŒä¹…åŒ–åˆ°æœ¬åœ°æ–‡ä»¶é‡Œ(ç¬¬äºŒä¸ªå‚æ•°æ˜¯æ–‡ä»¶ä¸­çš„æ³¨é‡Š)
 			defaultSetting.store(out, "color properties");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -44,17 +44,17 @@ public class PropertiesDemo {
 
 	private static JComponent getPanel() {
 		JPanel panel = new JPanel();
-		JLabel label = new JLabel("×Ô¶¨ÒåÅäÖÃÑİÊ¾");
-		// ¸ù¾İÄ¬ÈÏÅäÖÃÉú³ÉĞÂµÄÊôĞÔ£¬µ±ĞÂÅäÖÃµÄÊôĞÔÖµÎª¿ÕÊ±¾ÍÊÇÓÃÄ¬ÈÏÖµ
+		JLabel label = new JLabel("è‡ªå®šä¹‰é…ç½®æ¼”ç¤º");
+		// æ ¹æ®é»˜è®¤é…ç½®ç”Ÿæˆæ–°çš„å±æ€§ï¼Œå½“æ–°é…ç½®çš„å±æ€§å€¼ä¸ºç©ºæ—¶å°±æ˜¯ç”¨é»˜è®¤å€¼
 		Properties settings = new Properties(defaultSetting);
 		try {
 			FileInputStream in = new FileInputStream(SETTINGS_FILE_NAME);
-			// ¼ÓÔØÅäÖÃÎÄ¼şĞÅÏ¢
+			// åŠ è½½é…ç½®æ–‡ä»¶ä¿¡æ¯
 			settings.load(in);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// ¶ÁÈ¡¸÷¸öÊôĞÔ¶ÔÓ¦µÄÖµ
+		// è¯»å–å„ä¸ªå±æ€§å¯¹åº”çš„å€¼
 		int red = Integer.parseInt(settings.getProperty("color.red"));
 		int green = Integer.parseInt(settings.getProperty("color.green"));
 		int blue = Integer.parseInt(settings.getProperty("color.blue"));

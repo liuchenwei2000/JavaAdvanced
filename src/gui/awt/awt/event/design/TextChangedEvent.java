@@ -4,15 +4,15 @@
 package awt.event.design;
 
 /**
- * Text¸Ä±äÊÂ¼ş
+ * Textæ”¹å˜äº‹ä»¶
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class TextChangedEvent implements IEvent{
 
-	// ×÷ÎªÊÂ¼şµÄ±êÊ¶
+	// ä½œä¸ºäº‹ä»¶çš„æ ‡è¯†
 	private static int counter = 0;
 
 	private String oldText;

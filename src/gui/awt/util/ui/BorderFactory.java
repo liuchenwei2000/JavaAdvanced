@@ -8,15 +8,15 @@ import java.awt.Color;
 import javax.swing.border.LineBorder;
 
 /**
- * Border¹¤³§
+ * Borderå·¥åŽ‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-10-9
+ * åˆ›å»ºæ—¶é—´ï¼š2008-10-9
  */
 public class BorderFactory {
 
-	/** ÏÊÑÞµÄÑÕÉ« */
+	/** é²œè‰³çš„é¢œè‰² */
 	private static final Color FRESH = new Color(0X7f9db9);
 
 	private BorderFactory() {
@@ -24,7 +24,7 @@ public class BorderFactory {
 	}
 
 	/**
-	 * Ê¹ÓÃÁËÏÊÑÞÑÕÉ«µÄLineBorder
+	 * ä½¿ç”¨äº†é²œè‰³é¢œè‰²çš„LineBorder
 	 */
 	public static LineBorder createLineBorder() {
 		return new LineBorder(FRESH);

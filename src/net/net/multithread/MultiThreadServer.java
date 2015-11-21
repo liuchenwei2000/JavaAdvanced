@@ -13,16 +13,16 @@ import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
- * ·þÎñÆ÷´¦Àí¶à¿Í»§¶ËÇëÇóÊ¾Àý
+ * æœåŠ¡å™¨å¤„ç†å¤šå®¢æˆ·ç«¯è¯·æ±‚ç¤ºä¾‹
  * <p>
- * ²ÉÓÃ¶àÏß³Ì±à³ÌÄ£ÐÍÒÔºó£¬²»½öÌá¸ßÁË·þÎñÆ÷¶Ë³ÌÐò´¦Àí²¢·¢µÄÄÜÁ¦£¬¶øÇÒ¶ÔÓÚ´úÂëµÄ¹ÜÀíÒ²ÊÇÓÐ°ïÖúµÄ¡£
- * Ö÷Ïß³ÌÖ»¸ºÔð¼àÌýºÍ½ÓÊÜÇëÇó£¬¶øÒµÎñ´úÂëÔò·ÅÔÚHandlerÖÐ¡£
+ * é‡‡ç”¨å¤šçº¿ç¨‹ç¼–ç¨‹æ¨¡åž‹ä»¥åŽï¼Œä¸ä»…æé«˜äº†æœåŠ¡å™¨ç«¯ç¨‹åºå¤„ç†å¹¶å‘çš„èƒ½åŠ›ï¼Œè€Œä¸”å¯¹äºŽä»£ç çš„ç®¡ç†ä¹Ÿæ˜¯æœ‰å¸®åŠ©çš„ã€‚
+ * ä¸»çº¿ç¨‹åªè´Ÿè´£ç›‘å¬å’ŒæŽ¥å—è¯·æ±‚ï¼Œè€Œä¸šåŠ¡ä»£ç åˆ™æ”¾åœ¨Handlerä¸­ã€‚
  * <p>
- * Ò²¿ÉÒÔÍ¨¹ýWINDOWSµÄ"telnet"ÃüÁîµÄ"open localhost 8189"½øÐÐ²âÊÔ¡£
+ * ä¹Ÿå¯ä»¥é€šè¿‡WINDOWSçš„"telnet"å‘½ä»¤çš„"open localhost 8189"è¿›è¡Œæµ‹è¯•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class MultiThreadServer {
 
@@ -36,16 +36,16 @@ public class MultiThreadServer {
 			int i = 1;
 			
 			/*
-			 * Ã¿µ±³ÌÐò½¨Á¢Ò»¸öÐÂµÄÌ×½Ó×ÖÁ¬½Ó£¬Ò²¾ÍÊÇËµµ± accept ±»³É¹¦µ÷ÓÃµÄÊ±ºò½«´´½¨
-			 * Ò»¸öÐÂµÄÏß³ÌÀ´´¦Àí·þÎñÆ÷ºÍ¸Ã¿Í»§¶ËÖ®¼äµÄÁ¬½Ó£¬Ö÷³ÌÐò½«Á¢¼´·µ»Ø²¢µÈ´ýÏÂÒ»¸öÁ¬½Ó¡£
+			 * æ¯å½“ç¨‹åºå»ºç«‹ä¸€ä¸ªæ–°çš„å¥—æŽ¥å­—è¿žæŽ¥ï¼Œä¹Ÿå°±æ˜¯è¯´å½“ accept è¢«æˆåŠŸè°ƒç”¨çš„æ—¶å€™å°†åˆ›å»º
+			 * ä¸€ä¸ªæ–°çš„çº¿ç¨‹æ¥å¤„ç†æœåŠ¡å™¨å’Œè¯¥å®¢æˆ·ç«¯ä¹‹é—´çš„è¿žæŽ¥ï¼Œä¸»ç¨‹åºå°†ç«‹å³è¿”å›žå¹¶ç­‰å¾…ä¸‹ä¸€ä¸ªè¿žæŽ¥ã€‚
 			 */
 			while (true) {
 				Socket client = server.accept();
 				System.out.println("client thread number : " + i);
 				System.out.println("client ip : " + client.getInetAddress().getHostAddress());
 				/*
-				 * Ã¿Ò»¸öÁ¬½Ó¶¼»áÆô¶¯Ò»¸öÐÂµÄÏß³Ì£¬Òò¶ø¶à¸ö¿Í»§¶Ë¾Í¿ÉÒÔÍ¬Ê±Á¬½Óµ½·þÎñÆ÷ÁË¡£
-				 * µ«ÕâÖÖÃ¿¸öÁ¬½Ó¶¼»áÉú³ÉÒ»¸ö¶ÀÁ¢Ïß³ÌµÄ·½Ê½²¢²»ÄÜÂú×ã¸ßÐÔÄÜ·þÎñÆ÷µÄÒªÇó¡£
+				 * æ¯ä¸€ä¸ªè¿žæŽ¥éƒ½ä¼šå¯åŠ¨ä¸€ä¸ªæ–°çš„çº¿ç¨‹ï¼Œå› è€Œå¤šä¸ªå®¢æˆ·ç«¯å°±å¯ä»¥åŒæ—¶è¿žæŽ¥åˆ°æœåŠ¡å™¨äº†ã€‚
+				 * ä½†è¿™ç§æ¯ä¸ªè¿žæŽ¥éƒ½ä¼šç”Ÿæˆä¸€ä¸ªç‹¬ç«‹çº¿ç¨‹çš„æ–¹å¼å¹¶ä¸èƒ½æ»¡è¶³é«˜æ€§èƒ½æœåŠ¡å™¨çš„è¦æ±‚ã€‚
 				 */
 				new Thread(new Handler(i++, client)).start();
 			}
@@ -57,7 +57,7 @@ public class MultiThreadServer {
 	}
 	
 	/**
-	 * ¿Í»§¶ËÇëÇó´¦ÀíÀà
+	 * å®¢æˆ·ç«¯è¯·æ±‚å¤„ç†ç±»
 	 */
 	private static class Handler implements Runnable {
 

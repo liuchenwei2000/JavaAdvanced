@@ -12,11 +12,11 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * UIÀà 
+ * UIç±» 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-24
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-24
  */
 public class UI extends JPanel implements ActionListener {
 	
@@ -34,7 +34,7 @@ public class UI extends JPanel implements ActionListener {
 
 	private JButton getButton() {
 		if (button == null) {
-			button = new JButton("²âÊÔ");
+			button = new JButton("æµ‹è¯•");
 			button.addActionListener(this);
 		}
 		return button;
@@ -55,6 +55,6 @@ public class UI extends JPanel implements ActionListener {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Displayer.createAndShowGUI("²âÊÔ", new UI());
+		Displayer.createAndShowGUI("æµ‹è¯•", new UI());
 	}
 }

@@ -21,11 +21,11 @@ import javax.swing.SwingWorker;
 import util.Displayer;
 
 /**
- * SwingWorkerÀàµÄ»ù±¾ÑİÊ¾
+ * SwingWorkerç±»çš„åŸºæœ¬æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-4-1
+ * åˆ›å»ºæ—¥æœŸï¼š2011-4-1
  */
 public class SwingWorkerTest {
 
@@ -65,10 +65,10 @@ class LongTaskPanel extends JPanel {
 
 				public void actionPerformed(ActionEvent e) {
 				    /*
-				     * ÕıÈ·Ê¹ÓÃ SwingWorkerµÄ²½ÖèÊÇ£º
-				     * ÊµÀı»¯SwingWorker¶ÔÏó£¬Èç¹ûĞèÒª»ñÖªÏß³Ì·¢ÉúµÄ×´Ì¬±ä»¯Í¨ÖªÔòÒªÌí¼ÓÊôĞÔ±ä»¯´¦ÀíÆ÷£¬×îºóÖ´ĞĞ(execute)¡£
+				     * æ­£ç¡®ä½¿ç”¨ SwingWorkerçš„æ­¥éª¤æ˜¯ï¼š
+				     * å®ä¾‹åŒ–SwingWorkerå¯¹è±¡ï¼Œå¦‚æœéœ€è¦è·çŸ¥çº¿ç¨‹å‘ç”Ÿçš„çŠ¶æ€å˜åŒ–é€šçŸ¥åˆ™è¦æ·»åŠ å±æ€§å˜åŒ–å¤„ç†å™¨ï¼Œæœ€åæ‰§è¡Œ(execute)ã€‚
 				     * 
-				     * execute·½·¨ÊÇÒì²½Ö´ĞĞ£¬Ëü±»µ÷ÓÃºó»áÁ¢¼´·µ»Øµ½µ÷ÓÃÏß³Ì(±¾ÀıÊÇEDT)¡£
+				     * executeæ–¹æ³•æ˜¯å¼‚æ­¥æ‰§è¡Œï¼Œå®ƒè¢«è°ƒç”¨åä¼šç«‹å³è¿”å›åˆ°è°ƒç”¨çº¿ç¨‹(æœ¬ä¾‹æ˜¯EDT)ã€‚
 				     */
 					LongTask longTask = new LongTask();
 					longTask.addPropertyChangeListener(new ProgressBarListener());
@@ -80,18 +80,18 @@ class LongTaskPanel extends JPanel {
 	}
 	
 	/**
-	 * ³¤Ê±¼äÈÎÎñ
+	 * é•¿æ—¶é—´ä»»åŠ¡
 	 * <p>
-	 * ¸²¸ÇdoInBackground·½·¨À´Íê³ÉºÄÊ±µÄ¹¤×÷£¬²»Ê±µØµ÷ÓÃpublishÀ´±¨¸æ¹¤×÷½ø¶È¡£
-	 * publish·½·¨ÔÚ¹¤×÷½ø³ÌÖĞÖ´ĞĞ£¬ËüÊ¹µÃprocess·½·¨ÔÚEDTÖĞÖ´ĞĞÀ´´¦Àí½ø¶ÈÊı¾İ¡£
-	 * µ±¹¤×÷Íê³ÉÊ±£¬done·½·¨ÔÚEDTÏß³ÌÖĞ»á±»µ÷ÓÃÒÔ±ãÍê³ÉUIµÄ¸üĞÂ¡£
+	 * è¦†ç›–doInBackgroundæ–¹æ³•æ¥å®Œæˆè€—æ—¶çš„å·¥ä½œï¼Œä¸æ—¶åœ°è°ƒç”¨publishæ¥æŠ¥å‘Šå·¥ä½œè¿›åº¦ã€‚
+	 * publishæ–¹æ³•åœ¨å·¥ä½œè¿›ç¨‹ä¸­æ‰§è¡Œï¼Œå®ƒä½¿å¾—processæ–¹æ³•åœ¨EDTä¸­æ‰§è¡Œæ¥å¤„ç†è¿›åº¦æ•°æ®ã€‚
+	 * å½“å·¥ä½œå®Œæˆæ—¶ï¼Œdoneæ–¹æ³•åœ¨EDTçº¿ç¨‹ä¸­ä¼šè¢«è°ƒç”¨ä»¥ä¾¿å®ŒæˆUIçš„æ›´æ–°ã€‚
 	 */
 	private class LongTask extends SwingWorker<String, Void> {
 
 		/**
-		 * ¸²¸ÇÕâ¸ö·½·¨ÒÔ´¦ÀíºÄÊ±µÄÈÎÎñ
+		 * è¦†ç›–è¿™ä¸ªæ–¹æ³•ä»¥å¤„ç†è€—æ—¶çš„ä»»åŠ¡
 		 * <p>
-		 * ±¾·½·¨ÔËĞĞÔÚ¹¤×÷Ïß³ÌÉÏ£¬²»ÄÜ²Ù×÷ÈÎºÎSwing¿Ø¼ş¡£
+		 * æœ¬æ–¹æ³•è¿è¡Œåœ¨å·¥ä½œçº¿ç¨‹ä¸Šï¼Œä¸èƒ½æ“ä½œä»»ä½•Swingæ§ä»¶ã€‚
 		 * 
 		 * @see javax.swing.SwingWorker#doInBackground()
 		 */
@@ -99,15 +99,15 @@ class LongTaskPanel extends JPanel {
 		protected String doInBackground() throws Exception {
 			for (int i = 0; i < 100; i++) {
 				Thread.sleep(100);
-				// progressÊôĞÔÖµ·¶Î§ÊÇ´Ó0µ½100£¬µ±ÈÎÎñÊµÀıÄÚ´¦ÀíÕâĞ©ĞÅÏ¢Ê±£¬¿ÉÒÔµ÷ÓÃsetProgressÀ´¸üĞÂÕâ¸öÊôĞÔ¡£
-				// µ±ÈÎÎñÊôĞÔ·¢Éú±ä»¯Ê±£¬ËüÍ¨Öª´¦ÀíÆ÷¶ÔÏó¡£
+				// progresså±æ€§å€¼èŒƒå›´æ˜¯ä»0åˆ°100ï¼Œå½“ä»»åŠ¡å®ä¾‹å†…å¤„ç†è¿™äº›ä¿¡æ¯æ—¶ï¼Œå¯ä»¥è°ƒç”¨setProgressæ¥æ›´æ–°è¿™ä¸ªå±æ€§ã€‚
+				// å½“ä»»åŠ¡å±æ€§å‘ç”Ÿå˜åŒ–æ—¶ï¼Œå®ƒé€šçŸ¥å¤„ç†å™¨å¯¹è±¡ã€‚
 				setProgress(i + 1);
 			}
 			return "Thread.sleep(10s)";
 		}
 
 		/**
-		 * ÏÂÃæÕâÁ½¸ö·½·¨ÔËĞĞÔÚEDTÉÏ£¬ËùÒÔ¿ÉÒÔ×ÔÓÉ²Ù×÷Swing¿Ø¼ş
+		 * ä¸‹é¢è¿™ä¸¤ä¸ªæ–¹æ³•è¿è¡Œåœ¨EDTä¸Šï¼Œæ‰€ä»¥å¯ä»¥è‡ªç”±æ“ä½œSwingæ§ä»¶
 		 * 
 		 * @see javax.swing.SwingWorker#doInBackground()
 		 */

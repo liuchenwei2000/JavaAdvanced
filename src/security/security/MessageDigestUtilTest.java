@@ -7,11 +7,11 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * ÏûÏ¢ÕªÒªÑİÊ¾Àà
+ * æ¶ˆæ¯æ‘˜è¦æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-19
  */
 public class MessageDigestUtilTest {
 
@@ -34,7 +34,7 @@ public class MessageDigestUtilTest {
 	}
 
 	/**
-	 * ´òÓ¡²ÎÊı×Ö·û´®µÄÕªÒªĞÅÏ¢
+	 * æ‰“å°å‚æ•°å­—ç¬¦ä¸²çš„æ‘˜è¦ä¿¡æ¯
 	 * 
 	 * @param content
 	 */

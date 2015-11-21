@@ -1,13 +1,13 @@
-                                                                                 ÈÕ Ö¾ ¹ý ÂË Æ÷ ¼ò ½é
+                                                                                 æ—¥ å¿— è¿‡ æ»¤ å™¨ ç®€ ä»‹
 
 
-Logger¶ÔÏóÓÐ¿ÉÒÔÉèÖÃµÄ¼¶±ð£¬ÒÔ±ãÄÜ¹»¾ö¶¨Ëü¿ÉÒÔ½ÓÊÕÊ²Ã´¼¶±ðµÄÏûÏ¢£»¶øÆäËüËùÓÐÏûÏ¢¶¼½«±»ºöÂÔµô¡£
-Õâ¿ÉÒÔ±»¿´×÷ÊÇÒ»ÖÖ»ù±¾µÄ¹ýÂË¹¦ÄÜ£¬µ«ÊÇÍ¨³£ÕâÒ²¾ÍÊÇÎÒÃÇËùÐèÒªµÄÈ«²¿¡£²»¹ý£¬ÓÐÊ±ÎÒÃÇÐèÒª¸ü¸´ÔÓµÄ¹ýÂË¹¦ÄÜ£¬
-ÒÔ±ã¿ÉÒÔÈÃÎÒÃÇ»ùÓÚÆäËûÄ³Ð©Ô­Ôò¶ø²»ÊÇµ±Ç°µÄ¼¶±ðÀ´¾ö¶¨ÊÇ·ñ½ÓÊÜÒ»ÌõÏûÏ¢¡£
+Loggerå¯¹è±¡æœ‰å¯ä»¥è®¾ç½®çš„çº§åˆ«ï¼Œä»¥ä¾¿èƒ½å¤Ÿå†³å®šå®ƒå¯ä»¥æŽ¥æ”¶ä»€ä¹ˆçº§åˆ«çš„æ¶ˆæ¯ï¼›è€Œå…¶å®ƒæ‰€æœ‰æ¶ˆæ¯éƒ½å°†è¢«å¿½ç•¥æŽ‰ã€‚
+è¿™å¯ä»¥è¢«çœ‹ä½œæ˜¯ä¸€ç§åŸºæœ¬çš„è¿‡æ»¤åŠŸèƒ½ï¼Œä½†æ˜¯é€šå¸¸è¿™ä¹Ÿå°±æ˜¯æˆ‘ä»¬æ‰€éœ€è¦çš„å…¨éƒ¨ã€‚ä¸è¿‡ï¼Œæœ‰æ—¶æˆ‘ä»¬éœ€è¦æ›´å¤æ‚çš„è¿‡æ»¤åŠŸèƒ½ï¼Œ
+ä»¥ä¾¿å¯ä»¥è®©æˆ‘ä»¬åŸºäºŽå…¶ä»–æŸäº›åŽŸåˆ™è€Œä¸æ˜¯å½“å‰çš„çº§åˆ«æ¥å†³å®šæ˜¯å¦æŽ¥å—ä¸€æ¡æ¶ˆæ¯ã€‚
 
-ÎªÁËÊµÏÖÕâÒ»µã£¬¿ÉÒÔ±àÐ´×Ô¶¨ÒåµÄ Filter ¶ÔÏó£¬Filter ÊÇÒ»¸ö½Ó¿Ú£¬Ö»°üº¬Ò»¸öµ¥Ò»·½·¨£º 
+ä¸ºäº†å®žçŽ°è¿™ä¸€ç‚¹ï¼Œå¯ä»¥ç¼–å†™è‡ªå®šä¹‰çš„ Filter å¯¹è±¡ï¼ŒFilter æ˜¯ä¸€ä¸ªæŽ¥å£ï¼ŒåªåŒ…å«ä¸€ä¸ªå•ä¸€æ–¹æ³•ï¼š 
 
-boolean isLoggable(LogRecord record)£ºÓÃÀ´¾ö¶¨Õâ¸öÌØ¶¨µÄLogRecordÊÇ·ñÖµµÃ±¨ËÍ£¨»ò·¢²¼£©¡£
+boolean isLoggable(LogRecord record)ï¼šç”¨æ¥å†³å®šè¿™ä¸ªç‰¹å®šçš„LogRecordæ˜¯å¦å€¼å¾—æŠ¥é€ï¼ˆæˆ–å‘å¸ƒï¼‰ã€‚
 
-Ò»µ©´´½¨ÁËÒ»¸öFilter£¬¾Í¿ÉÒÔÍ¨¹ýÊ¹ÓÃsetFilter()·½·¨£¬½«Ëü×¢²áµ½Ò»¸öLogger£¨¾ö¶¨ÊÇ·ñ±¨ËÍ£©»òÒ»¸öHandler£¨¾ö¶¨ÊÇ·ñ·¢²¼£©ÉÏ¡£
-Í¬Ò»Ê±¿ÌÒ»¸öLogger¶ÔÏó»òHandler¶ÔÏó×î¶àÖ»ÄÜÓÐÒ»¸ö¹ýÂËÆ÷¡£
+ä¸€æ—¦åˆ›å»ºäº†ä¸€ä¸ªFilterï¼Œå°±å¯ä»¥é€šè¿‡ä½¿ç”¨setFilter()æ–¹æ³•ï¼Œå°†å®ƒæ³¨å†Œåˆ°ä¸€ä¸ªLoggerï¼ˆå†³å®šæ˜¯å¦æŠ¥é€ï¼‰æˆ–ä¸€ä¸ªHandlerï¼ˆå†³å®šæ˜¯å¦å‘å¸ƒï¼‰ä¸Šã€‚
+åŒä¸€æ—¶åˆ»ä¸€ä¸ªLoggerå¯¹è±¡æˆ–Handlerå¯¹è±¡æœ€å¤šåªèƒ½æœ‰ä¸€ä¸ªè¿‡æ»¤å™¨ã€‚

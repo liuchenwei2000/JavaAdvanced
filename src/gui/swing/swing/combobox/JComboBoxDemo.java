@@ -14,15 +14,15 @@ import javax.swing.JTextField;
 import util.Displayer;
 
 /**
- * JComboBox��������ʾ��
+ * JComboBox下拉框演示类
  * <p>
- * ��������һ�鵥ѡ��ť�Ĺ������ƣ�Ҳ����ǿ���û���һ����ܵ�Ԫ����ֻѡ��һ����
- * ���ַ������ӽ��գ������ڲ���ʹ�û��е��Ի��ǰ���£��ı������б��е����ݸ����ס�
- * ���ʹ�������ڿɱ༭״̬���������򽫰����û��������м���ֵ�Ŀɱ༭�ֶΡ� 
+ * 下拉框与一组单选按钮的功能类似，也用来强制用户从一组可能的元素中只选择一个。
+ * 这种方法更加紧凑，而且在不会使用户感到迷惑的前提下，改变下拉列表中的内容更容易。
+ * 如果使下拉框处于可编辑状态，则下拉框将包括用户可在其中键入值的可编辑字段。 
  *
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-5-17
+ * 创建日期：2009-5-17
  */
 public class JComboBoxDemo {
 	
@@ -63,8 +63,8 @@ class JComboBoxPanel extends JPanel {
 				textField.setText("index : " + index + " || value : " + value.toString());
 			}
 		});
-		// �ɱ༭�����û����ı����м������ݻ��ߴ��б���ѡ��������ʼ���ı���ִ�д˲�����
-		// �ı��Ϳɱ༭�ˣ��༭��Ӱ���ı���ʾ���б����ԭ��
+		// 可编辑允许用户在文本框中键入内容或者从列表中选择项来初始化文本，执行此操作后
+		// 文本就可编辑了，编辑仅影响文本显示，列表项保持原样
 		comboBox.setEditable(true);
 		textField.setEditable(false);
 		add(textField);

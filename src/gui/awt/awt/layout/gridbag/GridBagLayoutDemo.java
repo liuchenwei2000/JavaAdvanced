@@ -19,11 +19,11 @@ import javax.swing.JTextArea;
 import util.Displayer;
 
 /**
- * GridBagLayoutÑÝÊ¾
+ * GridBagLayoutæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-9
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-9
  */
 public class GridBagLayoutDemo {
 
@@ -37,30 +37,30 @@ public class GridBagLayoutDemo {
 }
 
 /**
- * Íø¸ñ×é²¼¾Ö(GridBagLayout)ÊÇËùÓÐ²¼¾Ö¹ÜÀíÆ÷Ö®Ê×£¬¿ÉÒÔÈÏÎªÍø¸ñ×é²¼¾ÖÊÇÃ»ÓÐÏÞÖÆµÄÍø¸ñ²¼¾Ö¡£
- * ÔÚÍø¸ñ×é²¼¾ÖÖÐ£¬ÐÐºÍÁÐµÄ³ß´ç¿ÉÒÔ¸Ä±ä¡£¿ÉÒÔÍ¨¹ý½«ÏàÁÚµÄµ¥ÔªºÏ²¢À´ÊÊÓ¦¸ü´óµÄ×é¼þ¡£
- * ×é¼þ²»ÐèÒªÌî³äÕû¸öµ¥Ôª¸ñÇøÓò£¬²¢¿ÉÒÔÖ¸¶¨ËüÃÇÔÚµ¥Ôª¸ñÄÚµÄ¶ÔÆë·½Ê½¡£
+ * ç½‘æ ¼ç»„å¸ƒå±€(GridBagLayout)æ˜¯æ‰€æœ‰å¸ƒå±€ç®¡ç†å™¨ä¹‹é¦–ï¼Œå¯ä»¥è®¤ä¸ºç½‘æ ¼ç»„å¸ƒå±€æ˜¯æ²¡æœ‰é™åˆ¶çš„ç½‘æ ¼å¸ƒå±€ã€‚
+ * åœ¨ç½‘æ ¼ç»„å¸ƒå±€ä¸­ï¼Œè¡Œå’Œåˆ—çš„å°ºå¯¸å¯ä»¥æ”¹å˜ã€‚å¯ä»¥é€šè¿‡å°†ç›¸é‚»çš„å•å…ƒåˆå¹¶æ¥é€‚åº”æ›´å¤§çš„ç»„ä»¶ã€‚
+ * ç»„ä»¶ä¸éœ€è¦å¡«å……æ•´ä¸ªå•å…ƒæ ¼åŒºåŸŸï¼Œå¹¶å¯ä»¥æŒ‡å®šå®ƒä»¬åœ¨å•å…ƒæ ¼å†…çš„å¯¹é½æ–¹å¼ã€‚
  * <p>
- * Íø¸ñ×é²¼¾Ö¿ÉÄÜÏàµ±¸´ÔÓ£¬µ«ÊÇËü×îÁé»îÇÒÊÊÓÃ·¶Î§×î¹ã¡£
- * Ê¹ÓÃ²¼¾Ö¹ÜÀíÆ÷µÄÄ¿µÄÊÇÊ¹µÃ×é½¨µÄÅÅÁÐÔÚ¸÷ÖÖ×ÖÌåÒÔ¼°¸÷ÖÖ²Ù×÷ÏµÍ³ÉÏ¶¼ÄÜ¹»Õý³£ÏÔÊ¾¡£
- * µ±ÐèÒªÔÚË®Æ½ºÍ´¹Ö±·½ÏòÉÏ°Ñ×é¼þÅÅÁÐÕûÆëÊ±£¬¾ÍÓ¦¸Ã¿¼ÂÇÊ¹ÓÃGridBagLayoutÁË¡£
+ * ç½‘æ ¼ç»„å¸ƒå±€å¯èƒ½ç›¸å½“å¤æ‚ï¼Œä½†æ˜¯å®ƒæœ€çµæ´»ä¸”é€‚ç”¨èŒƒå›´æœ€å¹¿ã€‚
+ * ä½¿ç”¨å¸ƒå±€ç®¡ç†å™¨çš„ç›®çš„æ˜¯ä½¿å¾—ç»„å»ºçš„æŽ’åˆ—åœ¨å„ç§å­—ä½“ä»¥åŠå„ç§æ“ä½œç³»ç»Ÿä¸Šéƒ½èƒ½å¤Ÿæ­£å¸¸æ˜¾ç¤ºã€‚
+ * å½“éœ€è¦åœ¨æ°´å¹³å’Œåž‚ç›´æ–¹å‘ä¸ŠæŠŠç»„ä»¶æŽ’åˆ—æ•´é½æ—¶ï¼Œå°±åº”è¯¥è€ƒè™‘ä½¿ç”¨GridBagLayoutäº†ã€‚
  * <p>
- * GridBagLayoutÀàÊÇÒ»¸öÁé»îµÄ²¼¾Ö¹ÜÀíÆ÷£¬Ëü²»ÒªÇó×é¼þµÄ´óÐ¡ÏàÍ¬¼´¿É½«×é¼þ´¹Ö±ºÍË®Æ½¶ÔÆë¡£
- * Ã¿¸öGridBagLayout¶ÔÏóÎ¬³ÖÒ»¸ö¶¯Ì¬µÄ¾ØÐÎµ¥ÔªÍø¸ñ£¬Ã¿¸ö×é¼þÕ¼ÓÃÒ»¸ö»ò¶à¸öÕâÑùµÄµ¥Ôª£¬³ÆÎªÏÔÊ¾ÇøÓò¡£
- * Ã¿¸öÓÉGridBagLayout¹ÜÀíµÄ×é¼þ¶¼ÓëGridBagConstraintsµÄÊµÀýÏà¹ØÁª¡£
- * Constraints¶ÔÏóÖ¸¶¨×é¼þÔÚÍø¸ñÖÐµÄÏÔÊ¾ÇøÓòÒÔ¼°×é¼þÔÚÆäÏÔÊ¾ÇøÓòÖÐµÄ·ÅÖÃ·½Ê½¡£
- * ³ýÁËConstraints¶ÔÏóÖ®Íâ£¬GridBagLayout»¹¿¼ÂÇÃ¿¸ö×é¼þµÄ×îÐ¡ºÍÊ×Ñ¡´óÐ¡£¬ÒÔÈ·¶¨×é¼þµÄ´óÐ¡¡£
+ * GridBagLayoutç±»æ˜¯ä¸€ä¸ªçµæ´»çš„å¸ƒå±€ç®¡ç†å™¨ï¼Œå®ƒä¸è¦æ±‚ç»„ä»¶çš„å¤§å°ç›¸åŒå³å¯å°†ç»„ä»¶åž‚ç›´å’Œæ°´å¹³å¯¹é½ã€‚
+ * æ¯ä¸ªGridBagLayoutå¯¹è±¡ç»´æŒä¸€ä¸ªåŠ¨æ€çš„çŸ©å½¢å•å…ƒç½‘æ ¼ï¼Œæ¯ä¸ªç»„ä»¶å ç”¨ä¸€ä¸ªæˆ–å¤šä¸ªè¿™æ ·çš„å•å…ƒï¼Œç§°ä¸ºæ˜¾ç¤ºåŒºåŸŸã€‚
+ * æ¯ä¸ªç”±GridBagLayoutç®¡ç†çš„ç»„ä»¶éƒ½ä¸ŽGridBagConstraintsçš„å®žä¾‹ç›¸å…³è”ã€‚
+ * Constraintså¯¹è±¡æŒ‡å®šç»„ä»¶åœ¨ç½‘æ ¼ä¸­çš„æ˜¾ç¤ºåŒºåŸŸä»¥åŠç»„ä»¶åœ¨å…¶æ˜¾ç¤ºåŒºåŸŸä¸­çš„æ”¾ç½®æ–¹å¼ã€‚
+ * é™¤äº†Constraintså¯¹è±¡ä¹‹å¤–ï¼ŒGridBagLayoutè¿˜è€ƒè™‘æ¯ä¸ªç»„ä»¶çš„æœ€å°å’Œé¦–é€‰å¤§å°ï¼Œä»¥ç¡®å®šç»„ä»¶çš„å¤§å°ã€‚
  *  <p>
- * Íø¸ñµÄ×ÜÌå·½ÏòÈ¡¾öÓÚÈÝÆ÷µÄComponentOrientationÊôÐÔ</br>
- * ¶ÔÓÚË®Æ½µÄ´Ó×óµ½ÓÒµÄ·½Ïò£¬Íø¸ñ×ø±ê (0,0) Î»ÓÚÈÝÆ÷µÄ×óÉÏ½Ç£¬ÆäÖÐ X ÏòÓÒµÝÔö£¬Y ÏòÏÂµÝÔö¡£
- * ¶ÔÓÚË®Æ½µÄ´ÓÓÒµ½×óµÄ·½Ïò£¬Íø¸ñ×ø±ê (0,0) Î»ÓÚÈÝÆ÷µÄÓÒÉÏ½Ç£¬ÆäÖÐ X Ïò×óµÝÔö£¬Y ÏòÏÂµÝÔö¡£
+ * ç½‘æ ¼çš„æ€»ä½“æ–¹å‘å–å†³äºŽå®¹å™¨çš„ComponentOrientationå±žæ€§</br>
+ * å¯¹äºŽæ°´å¹³çš„ä»Žå·¦åˆ°å³çš„æ–¹å‘ï¼Œç½‘æ ¼åæ ‡ (0,0) ä½äºŽå®¹å™¨çš„å·¦ä¸Šè§’ï¼Œå…¶ä¸­ X å‘å³é€’å¢žï¼ŒY å‘ä¸‹é€’å¢žã€‚
+ * å¯¹äºŽæ°´å¹³çš„ä»Žå³åˆ°å·¦çš„æ–¹å‘ï¼Œç½‘æ ¼åæ ‡ (0,0) ä½äºŽå®¹å™¨çš„å³ä¸Šè§’ï¼Œå…¶ä¸­ X å‘å·¦é€’å¢žï¼ŒY å‘ä¸‹é€’å¢žã€‚
  */
 class GridBagLayoutPanel extends JPanel {
 
 	private static final long serialVersionUID = 3824355385856418695L;
 
-	private JLabel styleLabel = new JLabel("Font Style£º");
-	private JLabel sizeLabel = new JLabel("Size£º");
+	private JLabel styleLabel = new JLabel("Font Styleï¼š");
+	private JLabel sizeLabel = new JLabel("Sizeï¼š");
 
 	private JComboBox styleBox;
 	private JComboBox sizeBox;
@@ -73,61 +73,61 @@ class GridBagLayoutPanel extends JPanel {
 	private ActionListener fontListener = new FontActionListener();
 
 	/**
-	 * ½¨Á¢Ò»¸öÍø¸ñ×é²¼¾ÖµÄ·½·¨£º<p>
-	 * <li>1£¬ÔÚÖ½ÉÏ»­³ö×é¼þ²¼¾Ö²ÝÍ¼£»
-	 * <li>2£¬ÕÒ³öÒ»ÖÖÍø¸ñ£¬Ð¡×é¼þ¿ÉÒÔÈÝÄÉÔÚÒ»¸öµ¥Ôª¸ñÄÚ£¬´ó×é¼þ½«Õ¼ÓÃ¶à¸öµ¥Ôª¸ñ£»
-	 * <li>3£¬Ê¹ÓÃ0£¬1£¬2...±êÊ¶Íø¸ñµÄÐÐºÍÁÐ£¬¾Í¿ÉÒÔ¶ÁÈ¡³ögridx¡¢gridy¡¢gridwidthºÍgridweightµÄÖµ£»
-	 * <li>4£¬¶ÔÓÚÃ¿¸ö×é¼þ£¬ÐèÒª¿¼ÂÇÊÇ·ñÐèÒªË®Æ½»ò´¹Ö±Ìî³äËüËùÔÚµÄµ¥Ôª¸ñ£¿Èç¹û²»ÐèÒªÓÖÈçºÎÅÅÁÐ£¿Ò²¾ÍÊÇÈ·¶¨fillºÍanchor²ÎÊý£»
-	 * <li>5£¬½«ËùÓÐµÄÔöÁ¿ÉèÖÃÎª100£¬Èç¹ûÐèÒªÄ³Ò»ÐÐ»òÒ»ÁÐ±£³ÖÄ¬ÈÏµÄ³ß´ç£¬¾Í½«¸ÃÐÐ»ò¸ÃÁÐÖÐµÄËùÓÐ×é¼þµÄweightxºÍweightyÉèÖÃÎª0£»
-	 * <li>6£¬±àÒëÔËÐÐ£¬²»¶ÏµØµ÷Õû´úÂë¡£
+	 * å»ºç«‹ä¸€ä¸ªç½‘æ ¼ç»„å¸ƒå±€çš„æ–¹æ³•ï¼š<p>
+	 * <li>1ï¼Œåœ¨çº¸ä¸Šç”»å‡ºç»„ä»¶å¸ƒå±€è‰å›¾ï¼›
+	 * <li>2ï¼Œæ‰¾å‡ºä¸€ç§ç½‘æ ¼ï¼Œå°ç»„ä»¶å¯ä»¥å®¹çº³åœ¨ä¸€ä¸ªå•å…ƒæ ¼å†…ï¼Œå¤§ç»„ä»¶å°†å ç”¨å¤šä¸ªå•å…ƒæ ¼ï¼›
+	 * <li>3ï¼Œä½¿ç”¨0ï¼Œ1ï¼Œ2...æ ‡è¯†ç½‘æ ¼çš„è¡Œå’Œåˆ—ï¼Œå°±å¯ä»¥è¯»å–å‡ºgridxã€gridyã€gridwidthå’Œgridweightçš„å€¼ï¼›
+	 * <li>4ï¼Œå¯¹äºŽæ¯ä¸ªç»„ä»¶ï¼Œéœ€è¦è€ƒè™‘æ˜¯å¦éœ€è¦æ°´å¹³æˆ–åž‚ç›´å¡«å……å®ƒæ‰€åœ¨çš„å•å…ƒæ ¼ï¼Ÿå¦‚æžœä¸éœ€è¦åˆå¦‚ä½•æŽ’åˆ—ï¼Ÿä¹Ÿå°±æ˜¯ç¡®å®šfillå’Œanchorå‚æ•°ï¼›
+	 * <li>5ï¼Œå°†æ‰€æœ‰çš„å¢žé‡è®¾ç½®ä¸º100ï¼Œå¦‚æžœéœ€è¦æŸä¸€è¡Œæˆ–ä¸€åˆ—ä¿æŒé»˜è®¤çš„å°ºå¯¸ï¼Œå°±å°†è¯¥è¡Œæˆ–è¯¥åˆ—ä¸­çš„æ‰€æœ‰ç»„ä»¶çš„weightxå’Œweightyè®¾ç½®ä¸º0ï¼›
+	 * <li>6ï¼Œç¼–è¯‘è¿è¡Œï¼Œä¸æ–­åœ°è°ƒæ•´ä»£ç ã€‚
 	 */
 	public GridBagLayoutPanel() {
 		setPreferredSize(new Dimension(300, 200));
 		/*
-		 * ÒªÏëÊ¹ÓÃÍø¸ñ×é²¼¾Ö¹ÜÀíÆ÷½øÐÐ²¼¾Ö£¬±ØÐë¾­¹ýÏÂÁÐ¹ý³Ì£º
-		 * 1£¬½¨Á¢GridBagLayoutÀàÐÍµÄ¶ÔÏó£¬²»ÐèÒªÖ¸¶¨Íø¸ñµÄÐÐÊýºÍÁÐÊý£¬²¼¾Ö¹ÜÀíÆ÷»á¸ù¾ÝºóÃæËù¸øµÄÐÅÏ¢²Â²â³öÀ´
-		 * 2£¬°ÑGridBagLayout¶ÔÏóÉèÖÃ³É×é¼þµÄ²¼¾Ö¹ÜÀíÆ÷
-		 * 3£¬ÎªÃ¿¸ö×é¼þ½¨Á¢Ò»¸öGridBagConstraintsÀàÐÍµÄ¶ÔÏó£¬ÉèÖÃGridBagConstraints¶ÔÏóµÄ×Ö¶ÎÖµÒÔ±ãÖÆ¶¨×é¼þÔÚÍø¸ñ×éÖÐµÄ²¼¾Ö·½°¸
-		 * 4£¬×îºóÍ¨¹ýÏÂÃæµÄµ÷ÓÃÌí¼Ó×é¼þµÄÔ¼Êø£ºadd(component,constraints);
+		 * è¦æƒ³ä½¿ç”¨ç½‘æ ¼ç»„å¸ƒå±€ç®¡ç†å™¨è¿›è¡Œå¸ƒå±€ï¼Œå¿…é¡»ç»è¿‡ä¸‹åˆ—è¿‡ç¨‹ï¼š
+		 * 1ï¼Œå»ºç«‹GridBagLayoutç±»åž‹çš„å¯¹è±¡ï¼Œä¸éœ€è¦æŒ‡å®šç½‘æ ¼çš„è¡Œæ•°å’Œåˆ—æ•°ï¼Œå¸ƒå±€ç®¡ç†å™¨ä¼šæ ¹æ®åŽé¢æ‰€ç»™çš„ä¿¡æ¯çŒœæµ‹å‡ºæ¥
+		 * 2ï¼ŒæŠŠGridBagLayoutå¯¹è±¡è®¾ç½®æˆç»„ä»¶çš„å¸ƒå±€ç®¡ç†å™¨
+		 * 3ï¼Œä¸ºæ¯ä¸ªç»„ä»¶å»ºç«‹ä¸€ä¸ªGridBagConstraintsç±»åž‹çš„å¯¹è±¡ï¼Œè®¾ç½®GridBagConstraintså¯¹è±¡çš„å­—æ®µå€¼ä»¥ä¾¿åˆ¶å®šç»„ä»¶åœ¨ç½‘æ ¼ç»„ä¸­çš„å¸ƒå±€æ–¹æ¡ˆ
+		 * 4ï¼Œæœ€åŽé€šè¿‡ä¸‹é¢çš„è°ƒç”¨æ·»åŠ ç»„ä»¶çš„çº¦æŸï¼šadd(component,constraints);
 		 */
 		GridBagLayout gbl = new GridBagLayout();
 		setLayout(gbl);
 		/*
-		 * ÈçºÎÉèÖÃGridBagConstraints¶ÔÏóµÄ×´Ì¬ÊÇ·Ç³£ÖØÒªµÄ£º
-		 * 1£¬gridx¡¢gridy¡¢gridwidthºÍgridheight²ÎÊý
-		 * ÕâÐ©Ô¼Êø¶¨ÒåÁË×é¼þÔÚÍø¸ñÖÐµÄÎ»ÖÃ
+		 * å¦‚ä½•è®¾ç½®GridBagConstraintså¯¹è±¡çš„çŠ¶æ€æ˜¯éžå¸¸é‡è¦çš„ï¼š
+		 * 1ï¼Œgridxã€gridyã€gridwidthå’Œgridheightå‚æ•°
+		 * è¿™äº›çº¦æŸå®šä¹‰äº†ç»„ä»¶åœ¨ç½‘æ ¼ä¸­çš„ä½ç½®
 		 * 
-		 * gridxºÍgridyÖ¸¶¨ÁË±»Ìí¼Ó×é¼þ×óÉÏ½ÇµÄÐÐºÍÁÐµÄÎ»ÖÃ
-		 * Ö¸¶¨°üº¬×é¼þÏÔÊ¾ÇøÓòµÄÇ°µ¼½ÇµÄµ¥Ôª£¬ÔÚ´ËÏÔÊ¾ÇøÓòÖÐ£¬Î»ÓÚÍø¸ñÔ­µãµÄµ¥ÔªµØÖ·ÊÇgridx = 0¡¢gridy = 0
-		 * ¶ÔÓÚË®Æ½µÄ´Ó×óµ½ÓÒµÄ²¼¾Ö£¬×é¼þµÄÇ°µ¼½ÇÊÇÆä×óÉÏ½Ç¡£¶ÔÓÚË®Æ½µÄ´ÓÓÒµ½×óµÄ²¼¾Ö£¬×é¼þµÄÇ°µ¼½ÇÊÇÆäÓÒÉÏ½Ç
-		 * Ê¹ÓÃGridBagConstraints.RELATIVE(Ä¬ÈÏÖµ)Ö¸¶¨½«×é¼þÖÃÓÚÌí¼Ó´Ë×é¼þÇ°¸Õ¸ÕÌí¼Óµ½ÈÝÆ÷×é¼þµÄºóÃæ(ÑØgridxµÄXÖá»ògridyµÄYÖá)
+		 * gridxå’ŒgridyæŒ‡å®šäº†è¢«æ·»åŠ ç»„ä»¶å·¦ä¸Šè§’çš„è¡Œå’Œåˆ—çš„ä½ç½®
+		 * æŒ‡å®šåŒ…å«ç»„ä»¶æ˜¾ç¤ºåŒºåŸŸçš„å‰å¯¼è§’çš„å•å…ƒï¼Œåœ¨æ­¤æ˜¾ç¤ºåŒºåŸŸä¸­ï¼Œä½äºŽç½‘æ ¼åŽŸç‚¹çš„å•å…ƒåœ°å€æ˜¯gridx = 0ã€gridy = 0
+		 * å¯¹äºŽæ°´å¹³çš„ä»Žå·¦åˆ°å³çš„å¸ƒå±€ï¼Œç»„ä»¶çš„å‰å¯¼è§’æ˜¯å…¶å·¦ä¸Šè§’ã€‚å¯¹äºŽæ°´å¹³çš„ä»Žå³åˆ°å·¦çš„å¸ƒå±€ï¼Œç»„ä»¶çš„å‰å¯¼è§’æ˜¯å…¶å³ä¸Šè§’
+		 * ä½¿ç”¨GridBagConstraints.RELATIVE(é»˜è®¤å€¼)æŒ‡å®šå°†ç»„ä»¶ç½®äºŽæ·»åŠ æ­¤ç»„ä»¶å‰åˆšåˆšæ·»åŠ åˆ°å®¹å™¨ç»„ä»¶çš„åŽé¢(æ²¿gridxçš„Xè½´æˆ–gridyçš„Yè½´)
 		 * 
-		 * gridwidthºÍgridheightÖµ¾ö¶¨ÁË×é¼þÕ¼ÓÃµÄÐÐÊýºÍÁÐÊý
-		 * Ö¸¶¨×é¼þµÄÏÔÊ¾ÇøÓòÖÐÐÐ(Õë¶Ôgridwidth)»òÁÐ(Õë¶Ôgridheight)ÖÐµÄµ¥ÔªÊý£¬Ä¬ÈÏÖµÎª1
-		 * Ê¹ÓÃGridBagConstraints.REMAINDERÖ¸¶¨×é¼þµÄÏÔÊ¾ÇøÓòÎª´Ógridxµ½¸ÃÐÐ(Õë¶Ôgridwidth)ÖÐµÄ×îºóÒ»¸öµ¥Ôª
-		 * »òÕß´Ógridyµ½¸ÃÁÐ(Õë¶Ôgridheight)ÖÐµÄ×îºóÒ»¸öµ¥Ôª
-		 * Ê¹ÓÃGridBagConstraints.RELATIVEÖ¸¶¨×é¼þµÄÏÔÊ¾ÇøÓòÎª´Ógridxµ½ÆäËùÔÚÐÐ(Õë¶Ôgridwidth)µÄµ¹ÊýµÚ¶þ¸öµ¥Ôª
-		 * »òÕß´Ógridyµ½ÆäËùÔÚÁÐ(Õë¶Ôgridheight)µÄµ¹ÊýµÚ¶þ¸öµ¥Ôª
+		 * gridwidthå’Œgridheightå€¼å†³å®šäº†ç»„ä»¶å ç”¨çš„è¡Œæ•°å’Œåˆ—æ•°
+		 * æŒ‡å®šç»„ä»¶çš„æ˜¾ç¤ºåŒºåŸŸä¸­è¡Œ(é’ˆå¯¹gridwidth)æˆ–åˆ—(é’ˆå¯¹gridheight)ä¸­çš„å•å…ƒæ•°ï¼Œé»˜è®¤å€¼ä¸º1
+		 * ä½¿ç”¨GridBagConstraints.REMAINDERæŒ‡å®šç»„ä»¶çš„æ˜¾ç¤ºåŒºåŸŸä¸ºä»Žgridxåˆ°è¯¥è¡Œ(é’ˆå¯¹gridwidth)ä¸­çš„æœ€åŽä¸€ä¸ªå•å…ƒ
+		 * æˆ–è€…ä»Žgridyåˆ°è¯¥åˆ—(é’ˆå¯¹gridheight)ä¸­çš„æœ€åŽä¸€ä¸ªå•å…ƒ
+		 * ä½¿ç”¨GridBagConstraints.RELATIVEæŒ‡å®šç»„ä»¶çš„æ˜¾ç¤ºåŒºåŸŸä¸ºä»Žgridxåˆ°å…¶æ‰€åœ¨è¡Œ(é’ˆå¯¹gridwidth)çš„å€’æ•°ç¬¬äºŒä¸ªå•å…ƒ
+		 * æˆ–è€…ä»Žgridyåˆ°å…¶æ‰€åœ¨åˆ—(é’ˆå¯¹gridheight)çš„å€’æ•°ç¬¬äºŒä¸ªå•å…ƒ
 		 * 
-		 * 2£¬ÔöÁ¿×Ö¶ÎweightxºÍweighty
-		 * ÔÚÍø¸ñ×é²¼¾ÖÖÐÐèÒªÎªÃ¿¸öÇøÓòÉèÖÃÔöÁ¿×Ö¶Î£¬Èç¹ûÔöÁ¿×Ö¶ÎÎª0£¬ÔòÕâ¸öÇøÓòÓÀÔ¶Îª³õÊ¼³ß´ç(¼´µ±´°¿ÚÀ©´ó»òËõÐ¡Ê±×é¼þµÄ´óÐ¡Ê¼ÖÕ±£³Ö²»±ä)
-		 * Èç¹ûÏëÈÃÒ»ÐÐ»òÒ»ÁÐµÄ´óÐ¡±£³Ö²»±ä£¬¾ÍÐèÒª°Ñ¸ÃÐÐ¡¢¸ÃÁÐµÄËùÓÐ×é¼þµÄÔöÁ¿ÉèÖÃÎª0
-		 * ÔöÁ¿²¢²»Êµ¼Ê¸ø³öÁÐµÄÏà¶Ô´óÐ¡¡£µ±ÈÝÆ÷³¬¹ýËüµÄÊ×Ñ¡´óÐ¡Ê±£¬ÔöÁ¿±íÊ¾·ÖÅä¸øÃ¿¸öÇøÓòµÄÀ©Õ¹±ÈÀýÖµ
-		 * ½¨Òé°ÑËùÓÐµÄÔöÁ¿ÉèÖÃÎª100£¬ÔËÐÐ³ÌÐò²é¿´Ò»ÏÂ²¼¾ÖÇé¿ö
-		 * Ëõ·Å¶Ô»°¿ò²é¿´Ò»ÏÂÐÐºÍÁÐÊÇÈçºÎµ÷ÕûµÄ£¬Èç¹û·¢ÏÖÄ³ÐÐ»òÄ³ÁÐ²»Ó¦¸ÃÀ©´ó£¬¾Í°ÑËùÓÐµÄ×é¼þÔöÁ¿ÉèÖÃÎª0
+		 * 2ï¼Œå¢žé‡å­—æ®µweightxå’Œweighty
+		 * åœ¨ç½‘æ ¼ç»„å¸ƒå±€ä¸­éœ€è¦ä¸ºæ¯ä¸ªåŒºåŸŸè®¾ç½®å¢žé‡å­—æ®µï¼Œå¦‚æžœå¢žé‡å­—æ®µä¸º0ï¼Œåˆ™è¿™ä¸ªåŒºåŸŸæ°¸è¿œä¸ºåˆå§‹å°ºå¯¸(å³å½“çª—å£æ‰©å¤§æˆ–ç¼©å°æ—¶ç»„ä»¶çš„å¤§å°å§‹ç»ˆä¿æŒä¸å˜)
+		 * å¦‚æžœæƒ³è®©ä¸€è¡Œæˆ–ä¸€åˆ—çš„å¤§å°ä¿æŒä¸å˜ï¼Œå°±éœ€è¦æŠŠè¯¥è¡Œã€è¯¥åˆ—çš„æ‰€æœ‰ç»„ä»¶çš„å¢žé‡è®¾ç½®ä¸º0
+		 * å¢žé‡å¹¶ä¸å®žé™…ç»™å‡ºåˆ—çš„ç›¸å¯¹å¤§å°ã€‚å½“å®¹å™¨è¶…è¿‡å®ƒçš„é¦–é€‰å¤§å°æ—¶ï¼Œå¢žé‡è¡¨ç¤ºåˆ†é…ç»™æ¯ä¸ªåŒºåŸŸçš„æ‰©å±•æ¯”ä¾‹å€¼
+		 * å»ºè®®æŠŠæ‰€æœ‰çš„å¢žé‡è®¾ç½®ä¸º100ï¼Œè¿è¡Œç¨‹åºæŸ¥çœ‹ä¸€ä¸‹å¸ƒå±€æƒ…å†µ
+		 * ç¼©æ”¾å¯¹è¯æ¡†æŸ¥çœ‹ä¸€ä¸‹è¡Œå’Œåˆ—æ˜¯å¦‚ä½•è°ƒæ•´çš„ï¼Œå¦‚æžœå‘çŽ°æŸè¡Œæˆ–æŸåˆ—ä¸åº”è¯¥æ‰©å¤§ï¼Œå°±æŠŠæ‰€æœ‰çš„ç»„ä»¶å¢žé‡è®¾ç½®ä¸º0
 		 * 
-		 * 3£¬fillºÍanchor²ÎÊý
-		 * µ±×é¼þµÄÏÔÊ¾ÇøÓò´óÓÚ×é¼þµÄËùÐè´óÐ¡Ê±£¬¾ÍÐèÒªÉèÖÃfillÔ¼Êø£¬ÓÃÓÚÈ·¶¨ÊÇ·ñ(ÒÔ¼°ÈçºÎ)µ÷Õû×é¼þ
-		 * ¿ÉÄÜµÄÖµÎªGridBagConstraints.NONE(Ä¬ÈÏÖµ)¡¢HORIZONTAL(¼Ó¿í×é¼þÖ±µ½Ëü×ãÒÔÔÚË®Æ½·½ÏòÉÏÌîÂúÆäÏÔÊ¾ÇøÓò£¬µ«²»¸ü¸ÄÆä¸ß¶È)¡¢
-		 * VERTICAL(¼Ó¸ß×é¼þÖ±µ½Ëü×ãÒÔÔÚ´¹Ö±·½ÏòÉÏÌîÂúÆäÏÔÊ¾ÇøÓò£¬µ«²»¸ü¸ÄÆä¿í¶È)ºÍ BOTH(Ê¹×é¼þÍêÈ«ÌîÂúÆäÏÔÊ¾ÇøÓò) 
+		 * 3ï¼Œfillå’Œanchorå‚æ•°
+		 * å½“ç»„ä»¶çš„æ˜¾ç¤ºåŒºåŸŸå¤§äºŽç»„ä»¶çš„æ‰€éœ€å¤§å°æ—¶ï¼Œå°±éœ€è¦è®¾ç½®fillçº¦æŸï¼Œç”¨äºŽç¡®å®šæ˜¯å¦(ä»¥åŠå¦‚ä½•)è°ƒæ•´ç»„ä»¶
+		 * å¯èƒ½çš„å€¼ä¸ºGridBagConstraints.NONE(é»˜è®¤å€¼)ã€HORIZONTAL(åŠ å®½ç»„ä»¶ç›´åˆ°å®ƒè¶³ä»¥åœ¨æ°´å¹³æ–¹å‘ä¸Šå¡«æ»¡å…¶æ˜¾ç¤ºåŒºåŸŸï¼Œä½†ä¸æ›´æ”¹å…¶é«˜åº¦)ã€
+		 * VERTICAL(åŠ é«˜ç»„ä»¶ç›´åˆ°å®ƒè¶³ä»¥åœ¨åž‚ç›´æ–¹å‘ä¸Šå¡«æ»¡å…¶æ˜¾ç¤ºåŒºåŸŸï¼Œä½†ä¸æ›´æ”¹å…¶å®½åº¦)å’Œ BOTH(ä½¿ç»„ä»¶å®Œå…¨å¡«æ»¡å…¶æ˜¾ç¤ºåŒºåŸŸ) 
 		 * 
-		 * Èç¹û×é¼þÃ»ÓÐÌî³äÕû¸öÇøÓò£¬¿ÉÒÔÍ¨¹ýÉèÖÃanchor×Ö¶ÎÀ´Ö¸¶¨ÆäÎ»ÖÃ£º
-		 * GridBagConstraints.NORTH¡¢SOUTH¡¢WEST¡¢EAST¡¢NORTHWEST¡¢NORTHEAST¡¢SOUTHWEST¡¢SOUTHEAST¡¢CENTER(Ä¬ÈÏ)
+		 * å¦‚æžœç»„ä»¶æ²¡æœ‰å¡«å……æ•´ä¸ªåŒºåŸŸï¼Œå¯ä»¥é€šè¿‡è®¾ç½®anchorå­—æ®µæ¥æŒ‡å®šå…¶ä½ç½®ï¼š
+		 * GridBagConstraints.NORTHã€SOUTHã€WESTã€EASTã€NORTHWESTã€NORTHEASTã€SOUTHWESTã€SOUTHEASTã€CENTER(é»˜è®¤)
 		 * 
-		 * 4£¬ÌîÈû
-		 * Í¨¹ýÉèÖÃGridBagLayoutµÄinsets×Ö¶ÎÀ´ÔÚ×é¼þÖÜÎ§Ôö¼Ó¸½¼ÓµÄ¿Õ°×ÇøÓò
-		 * Í¨¹ýÉèÖÃinsets¶ÔÏóµÄleft¡¢top¡¢rightºÍbottomÖµÀ´ÉèÖÃ×é¼þÖÜÎ§µÄ¿Õ¼äÁ¿£¬Õâ±»³Æ×÷Íâ²¿ÌîÈû
-		 * ÓÃipadxºÍipadyÖµÉèÖÃÄÚ²¿ÌîÈû£¬ÕâÁ½¸öÖµ½«±»Ìí¼Óµ½×é¼þµÄ×îÐ¡¿í¶ÈºÍ×îÐ¡¸ß¶ÈÉÏ£¬ÕâÑù¿ÉÒÔ±£Ö¤×é¼þ²»»áÊÕËõÖÁ×îÐ¡³ß´çÖ®ÏÂ
+		 * 4ï¼Œå¡«å¡ž
+		 * é€šè¿‡è®¾ç½®GridBagLayoutçš„insetså­—æ®µæ¥åœ¨ç»„ä»¶å‘¨å›´å¢žåŠ é™„åŠ çš„ç©ºç™½åŒºåŸŸ
+		 * é€šè¿‡è®¾ç½®insetså¯¹è±¡çš„leftã€topã€rightå’Œbottomå€¼æ¥è®¾ç½®ç»„ä»¶å‘¨å›´çš„ç©ºé—´é‡ï¼Œè¿™è¢«ç§°ä½œå¤–éƒ¨å¡«å¡ž
+		 * ç”¨ipadxå’Œipadyå€¼è®¾ç½®å†…éƒ¨å¡«å¡žï¼Œè¿™ä¸¤ä¸ªå€¼å°†è¢«æ·»åŠ åˆ°ç»„ä»¶çš„æœ€å°å®½åº¦å’Œæœ€å°é«˜åº¦ä¸Šï¼Œè¿™æ ·å¯ä»¥ä¿è¯ç»„ä»¶ä¸ä¼šæ”¶ç¼©è‡³æœ€å°å°ºå¯¸ä¹‹ä¸‹
 		 */
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.weightx = 100;
@@ -148,7 +148,7 @@ class GridBagLayoutPanel extends JPanel {
 //		gbc.weightx = 100;
 //		gbc.weighty = 100;
 //		add(getTextArea(), gbc, 2, 0, 1, 4);
-		// Ê¹ÓÃÁË¸¨ÖúÀàGBCÉèÖÃConstraints£¬Ð§¹ûÈçÉÏ×¢ÊÍ²¿·Ö
+		// ä½¿ç”¨äº†è¾…åŠ©ç±»GBCè®¾ç½®Constraintsï¼Œæ•ˆæžœå¦‚ä¸Šæ³¨é‡Šéƒ¨åˆ†
 		add(getTextArea(), new GBC(2, 0, 1, 4).setFill(GridBagConstraints.BOTH)
 				.setWeight(100, 100));
 	}
@@ -229,18 +229,18 @@ class GridBagLayoutPanel extends JPanel {
 }
 
 /**
- * Íø¸ñ×éÔ¼Êø°ïÖúÀà
+ * ç½‘æ ¼ç»„çº¦æŸå¸®åŠ©ç±»
  * <p>
- * Íø¸ñ×é²¼¾Ö×î·¦Î¶µÄ¹¤×÷¾ÍÊÇÎªÉèÖÃÔ¼Êø±àÐ´´úÂë£¬ËùÒÔ¿ÉÒÔÊ¹ÓÃ°ïÖúÀàÀ´Ð­Öú¹ÜÀíÔ¼Êø¡£<p>
- * Õâ¸ö°ïÖúÀàÓÐÈçÏÂÌØÐÔ£º</br>
- * <li>1£¬Ãû×Ö¼ò¶Ì£ºGBCÌæ´úGridBagConstraints
- * <li>2£¬À©Õ¹ÓÚGridBagConstraints£¬Òò´Ë¿ÉÒÔÊ¹ÓÃÔ¼ÊøµÄËõÐ´£¬ÈçGBC.EAST
- * <li>3£¬Ìí¼Ó×é¼þºÍÔ¼ÊøÊ±£¬¿ÉÒÔÊ¹ÓÃGBC¶ÔÏó£¬Èç£ºadd(component,new GBC(1,2));
- * <li>4£¬ÓÐÁ½¸ö¹¹ÔìÆ÷¿ÉÒÔÉèÖÃ×îÍ¨³£µÄ²ÎÊý£ºgridxºÍgirdy»òÕßgridx¡¢girdy¡¢gridwidthºÍgridheight
- * <li>5£¬×Ö¶ÎÓÐ·½±ãµÄsetter£¬x/yÖµ¶Ô£ºadd(component,new GBC(1,2).setWeight(100,100));
- * <li>6£¬setter·½·¨½«·µ»Øthis£¬ËùÒÔ¿ÉÒÔÁ´½ÓËüÃÇ£º</br>
+ * ç½‘æ ¼ç»„å¸ƒå±€æœ€ä¹å‘³çš„å·¥ä½œå°±æ˜¯ä¸ºè®¾ç½®çº¦æŸç¼–å†™ä»£ç ï¼Œæ‰€ä»¥å¯ä»¥ä½¿ç”¨å¸®åŠ©ç±»æ¥ååŠ©ç®¡ç†çº¦æŸã€‚<p>
+ * è¿™ä¸ªå¸®åŠ©ç±»æœ‰å¦‚ä¸‹ç‰¹æ€§ï¼š</br>
+ * <li>1ï¼Œåå­—ç®€çŸ­ï¼šGBCæ›¿ä»£GridBagConstraints
+ * <li>2ï¼Œæ‰©å±•äºŽGridBagConstraintsï¼Œå› æ­¤å¯ä»¥ä½¿ç”¨çº¦æŸçš„ç¼©å†™ï¼Œå¦‚GBC.EAST
+ * <li>3ï¼Œæ·»åŠ ç»„ä»¶å’Œçº¦æŸæ—¶ï¼Œå¯ä»¥ä½¿ç”¨GBCå¯¹è±¡ï¼Œå¦‚ï¼šadd(component,new GBC(1,2));
+ * <li>4ï¼Œæœ‰ä¸¤ä¸ªæž„é€ å™¨å¯ä»¥è®¾ç½®æœ€é€šå¸¸çš„å‚æ•°ï¼šgridxå’Œgirdyæˆ–è€…gridxã€girdyã€gridwidthå’Œgridheight
+ * <li>5ï¼Œå­—æ®µæœ‰æ–¹ä¾¿çš„setterï¼Œx/yå€¼å¯¹ï¼šadd(component,new GBC(1,2).setWeight(100,100));
+ * <li>6ï¼Œsetteræ–¹æ³•å°†è¿”å›žthisï¼Œæ‰€ä»¥å¯ä»¥é“¾æŽ¥å®ƒä»¬ï¼š</br>
  * add(component,new GBC(1,2).setAnchor(GBC.EAST).setWight(100,100));
- * <li>7£¬setInsets·½·¨½«¹¹ÔìÒ»¸öInset¶ÔÏó£¬ÒªÏë»ñÈ¡Ò»¸öÏñËØµÄinsets£¬¿ÉÒÔµ÷ÓÃ£º</br>
+ * <li>7ï¼ŒsetInsetsæ–¹æ³•å°†æž„é€ ä¸€ä¸ªInsetå¯¹è±¡ï¼Œè¦æƒ³èŽ·å–ä¸€ä¸ªåƒç´ çš„insetsï¼Œå¯ä»¥è°ƒç”¨ï¼š</br>
  * add(component,new GBC(1,2).setInsets(1));
  */
 class GBC extends GridBagConstraints {

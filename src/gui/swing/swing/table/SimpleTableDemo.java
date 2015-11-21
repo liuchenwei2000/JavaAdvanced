@@ -16,21 +16,21 @@ import javax.swing.table.TableColumn;
 import util.Displayer;
 
 /**
- * Í¨¹ı¶ÔÏóÊı×é´´½¨µÄJTable 
+ * é€šè¿‡å¯¹è±¡æ•°ç»„åˆ›å»ºçš„JTable 
  * <p>
- * ³£ÓÃµÄ¹¹Ôì·½·¨£º </br>
+ * å¸¸ç”¨çš„æ„é€ æ–¹æ³•ï¼š </br>
  * <li>JTable(int numRows, int numColumns) </br>
- * Ê¹ÓÃ DefaultTableModel ¹¹Ôì¾ßÓĞ¿Õµ¥Ôª¸ñµÄ numRows ĞĞºÍ numColumns ÁĞµÄ 
+ * ä½¿ç”¨ DefaultTableModel æ„é€ å…·æœ‰ç©ºå•å…ƒæ ¼çš„ numRows è¡Œå’Œ numColumns åˆ—çš„ 
  * <li>JTable JTable(Object[][] rowData, Object[] columnNames) </br>
- * ¹¹Ôì JTable£¬ÓÃÀ´ÏÔÊ¾¶şÎ¬Êı×é rowData ÖĞµÄÖµ£¬ÆäÁĞÃû³ÆÎª columnNames 
+ * æ„é€  JTableï¼Œç”¨æ¥æ˜¾ç¤ºäºŒç»´æ•°ç»„ rowData ä¸­çš„å€¼ï¼Œå…¶åˆ—åç§°ä¸º columnNames 
  * <li>JTable(TableModel dm) </br>
- * ¹¹Ôì JTable£¬Ê¹ÓÃ dm ×÷ÎªÊı¾İÄ£ĞÍ¡¢Ä¬ÈÏµÄÁĞÄ£ĞÍºÍÄ¬ÈÏµÄÑ¡ÔñÄ£ĞÍ¶ÔÆä½øĞĞ³õÊ¼»¯ 
+ * æ„é€  JTableï¼Œä½¿ç”¨ dm ä½œä¸ºæ•°æ®æ¨¡å‹ã€é»˜è®¤çš„åˆ—æ¨¡å‹å’Œé»˜è®¤çš„é€‰æ‹©æ¨¡å‹å¯¹å…¶è¿›è¡Œåˆå§‹åŒ– 
  * <li>JTable(Vector rowData, Vector columnNames) </br>
- * ¹¹Ôì JTable£¬ÓÃÀ´ÏÔÊ¾Vector (rowData) ÖĞµÄÖµ£¬ÆäÁĞÃû³ÆÎª columnNames 
+ * æ„é€  JTableï¼Œç”¨æ¥æ˜¾ç¤ºVector (rowData) ä¸­çš„å€¼ï¼Œå…¶åˆ—åç§°ä¸º columnNames 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-17
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-17
  */
 public class SimpleTableDemo {
 	
@@ -60,8 +60,8 @@ class SimpleTablePanel extends JPanel implements ActionListener {
 		setPreferredSize(new Dimension(270,400));
 		
 		table = new JTable(data, column);
-		//µ±µ÷Õû±íµÄ´óĞ¡Ê±£¬ÉèÖÃ±íµÄ×Ô¶¯µ÷ÕûÄ£Ê½
-		//³£Á¿AUTO_RESIZE_OFF£º²»×Ô¶¯µ÷ÕûÁĞµÄ¿í¶È¶øÊÇÊ¹ÓÃ¹ö¶¯Ìõ
+		//å½“è°ƒæ•´è¡¨çš„å¤§å°æ—¶ï¼Œè®¾ç½®è¡¨çš„è‡ªåŠ¨è°ƒæ•´æ¨¡å¼
+		//å¸¸é‡AUTO_RESIZE_OFFï¼šä¸è‡ªåŠ¨è°ƒæ•´åˆ—çš„å®½åº¦è€Œæ˜¯ä½¿ç”¨æ»šåŠ¨æ¡
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		JScrollPane scroll = new JScrollPane(table);
 		scroll.setBounds(0, 0, 266, 352);
@@ -82,10 +82,10 @@ class SimpleTablePanel extends JPanel implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("clear")) {
-			// È¡ÏûÑ¡ÖĞËùÓĞÒÑÑ¡¶¨µÄĞĞºÍÁĞ
+			// å–æ¶ˆé€‰ä¸­æ‰€æœ‰å·²é€‰å®šçš„è¡Œå’Œåˆ—
 			table.clearSelection();
 		} else if (e.getActionCommand().equals("resize")){
-			// Ê¹µÃµÚÒ»ÁĞÔÙÍØ¿í10
+			// ä½¿å¾—ç¬¬ä¸€åˆ—å†æ‹“å®½10
 			TableColumn tc = table.getColumnModel().getColumn(1);
 			tc.setPreferredWidth(tc.getWidth() + 10);
 		}	

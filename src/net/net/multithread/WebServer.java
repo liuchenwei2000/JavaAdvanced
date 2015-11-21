@@ -12,22 +12,22 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Ä£ÄâWeb·şÎñÆ÷Ê¾Àı
+ * æ¨¡æ‹ŸWebæœåŠ¡å™¨ç¤ºä¾‹
  * <p>
- * Web·şÎñÆ÷Êµ¼ÊÉÏÒ²ÊÇ²ÉÓÃÁËTCPÍ¨ĞÅÄ£ĞÍ£¬±¾Àı´´½¨Ò»¸ö¼òÒ×µÄWeb·şÎñÆ÷¡£
+ * WebæœåŠ¡å™¨å®é™…ä¸Šä¹Ÿæ˜¯é‡‡ç”¨äº†TCPé€šä¿¡æ¨¡å‹ï¼Œæœ¬ä¾‹åˆ›å»ºä¸€ä¸ªç®€æ˜“çš„WebæœåŠ¡å™¨ã€‚
  * <p>
- * HTTPÊÇÒ»¸öÓ¦ÓÃ²ã´ÎµÄĞ­Òé£¬ÊÇ»ùÓÚTCPĞ­ÒéµÄ£¬Ëüµ×²ãµÄÍ¨ĞÅÔ­ÀíÒÀÈ»ĞèÒª×ñÑ­TCPµÄ±à³ÌÄ£ĞÍ¡£
- * Ö»²»¹ıHTTP»¹¶¨ÒåÁËÆäËûÒ»Ğ©WebÍ¨ĞÅµÄ¹æ·¶¡£
+ * HTTPæ˜¯ä¸€ä¸ªåº”ç”¨å±‚æ¬¡çš„åè®®ï¼Œæ˜¯åŸºäºTCPåè®®çš„ï¼Œå®ƒåº•å±‚çš„é€šä¿¡åŸç†ä¾ç„¶éœ€è¦éµå¾ªTCPçš„ç¼–ç¨‹æ¨¡å‹ã€‚
+ * åªä¸è¿‡HTTPè¿˜å®šä¹‰äº†å…¶ä»–ä¸€äº›Webé€šä¿¡çš„è§„èŒƒã€‚
  * <p>
- * WebServerÆô¶¯Ö®ºó£¬¿ÉÍ¨¹ıä¯ÀÀÆ÷·ÃÎÊ http://localhost:8080/
+ * WebServerå¯åŠ¨ä¹‹åï¼Œå¯é€šè¿‡æµè§ˆå™¨è®¿é—® http://localhost:8080/
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class WebServer {
 
-	/** Ïß³Ì³Ø */
+	/** çº¿ç¨‹æ±  */
 	private static ExecutorService threadPool = Executors.newFixedThreadPool(5);
 	
 	/**
@@ -49,7 +49,7 @@ public class WebServer {
 	}
 	
 	/**
-	 * HTTPÇëÇó´¦ÀíÀà
+	 * HTTPè¯·æ±‚å¤„ç†ç±»
 	 */
 	private static class HttpRequestHandler implements Runnable {
 
@@ -63,7 +63,7 @@ public class WebServer {
 			try {
 				OutputStream out = socket.getOutputStream();
 				PrintWriter writer = new PrintWriter(out, true);
-				// ´òÓ¡ html
+				// æ‰“å° html
 				writer.println("<html><head><title>");
 				writer.println("Welcome");
 				writer.println("</title></head><body>");

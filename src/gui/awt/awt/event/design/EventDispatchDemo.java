@@ -4,11 +4,11 @@
 package awt.event.design;
 
 /**
- * ÊÂ¼þ»úÖÆÑÝÊ¾
+ * äº‹ä»¶æœºåˆ¶æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class EventDispatchDemo {
 

@@ -10,14 +10,14 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * BoxLayoutÑİÊ¾
+ * BoxLayoutæ¼”ç¤º
  * <p>
- * BoxLayoutÔÊĞí×İÏò»òºáÏò²¼ÖÃ¶à¸ö×é¼şµÄ²¼¾Ö¹ÜÀíÆ÷£¬
- * ²¢ÇÒÍ¨¹ıËùÎ½µÄÖ§¼ÜºÍ½ºË®(struts and glue)µÄ»úÖÆÀ´¿ØÖÆ×é¼şµÄ¼ä¸ô¡£
+ * BoxLayoutå…è®¸çºµå‘æˆ–æ¨ªå‘å¸ƒç½®å¤šä¸ªç»„ä»¶çš„å¸ƒå±€ç®¡ç†å™¨ï¼Œ
+ * å¹¶ä¸”é€šè¿‡æ‰€è°“çš„æ”¯æ¶å’Œèƒ¶æ°´(struts and glue)çš„æœºåˆ¶æ¥æ§åˆ¶ç»„ä»¶çš„é—´éš”ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-21
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-21
  */
 public class BoxLayoutDemo {
 	
@@ -36,13 +36,13 @@ class BoxLayoutPanel extends JPanel {
 	public BoxLayoutPanel(){
     	super();
     	JPanel hPanel = new JPanel();
-    	// ºáÏòÅÅÁĞ×é¼ş
+    	// æ¨ªå‘æ’åˆ—ç»„ä»¶
     	BoxLayout boxH = new BoxLayout(hPanel,BoxLayout.X_AXIS);
     	hPanel.setLayout(boxH);
     	addButtons2Panel(hPanel);
     	
     	JPanel vPanel = new JPanel();
-    	// ×İÏòÅÅÁĞ×é¼ş
+    	// çºµå‘æ’åˆ—ç»„ä»¶
 		BoxLayout boxV = new BoxLayout(vPanel,BoxLayout.Y_AXIS);
 		vPanel.setLayout(boxV);
     	addButtons2Panel(vPanel);

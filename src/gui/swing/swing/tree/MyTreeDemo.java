@@ -19,11 +19,11 @@ import javax.swing.tree.TreePath;
 import util.Displayer;
 
 /**
- * JTreeÊ¾Àı 
+ * JTreeç¤ºä¾‹ 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-20
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-20
  */
 public class MyTreeDemo {
 	
@@ -136,55 +136,55 @@ class MyTreePanel extends JPanel implements TreeSelectionListener {
 		createNodes(child2);
 		top.add(child1);
 		top.add(child2);
-		// ÒÔ¸ù½Úµã´´½¨Ê÷
+		// ä»¥æ ¹èŠ‚ç‚¹åˆ›å»ºæ ‘
 		tree = new JTree(top);
 		tree.setDragEnabled(true);
 		tree.setTransferHandler(new TreeTransferHandler());
-		// ÉèÖÃÊ÷µÄÑ¡ÔñÄ£Ê½(µ¥Ñ¡)
+		// è®¾ç½®æ ‘çš„é€‰æ‹©æ¨¡å¼(å•é€‰)
 //		tree.getSelectionModel().setSelectionMode(
 //				TreeSelectionModel.SINGLE_TREE_SELECTION);
 		tree.addTreeSelectionListener(this);
 
-		// ÉèÖÃÌáÊ¾ÓïÔÚÊ÷½ÚµãÉÏ¿ÉÒÔÏÔÊ¾
+		// è®¾ç½®æç¤ºè¯­åœ¨æ ‘èŠ‚ç‚¹ä¸Šå¯ä»¥æ˜¾ç¤º
 		ToolTipManager.sharedInstance().registerComponent(tree);		 
 		 		
 		/*
-		 * ½ÚµãÍâ¹ÛÉèÖÃ
+		 * èŠ‚ç‚¹å¤–è§‚è®¾ç½®
 		 */
-		ImageIcon leafIcon = new ImageIcon("images/gui.swing.tree/treeleaf.gif");// Ò¶½Úµã
-		// ÈôÊÇ´ò°üjar·¢²¼ºóÔËĞĞĞèÒªÕâÑù»ñÈ¡ÏµÍ³×ÊÔ´
+		ImageIcon leafIcon = new ImageIcon("images/gui.swing.tree/treeleaf.gif");// å¶èŠ‚ç‚¹
+		// è‹¥æ˜¯æ‰“åŒ…jarå‘å¸ƒåè¿è¡Œéœ€è¦è¿™æ ·è·å–ç³»ç»Ÿèµ„æº
 		// ImageIcon leafIcon = new
 		// ImageIcon(getToolkit().getImage(ClassLoader.getSystemResource("images/treeleaf.gif")));
-		ImageIcon branchIcon = new ImageIcon("images/gui.swing.tree/treenode.gif");// ·ÇÒ¶½Úµã
-		ImageIcon collapsedIcon = new ImageIcon("images/gui.swing.tree/treecollapse.gif");// ½ÚµãÊÕËõÍ¼±ê
-		ImageIcon expandedIcon = new ImageIcon("images/gui.swing.tree/treeexpand.gif");// ½ÚµãÕ¹¿ªÍ¼±ê
+		ImageIcon branchIcon = new ImageIcon("images/gui.swing.tree/treenode.gif");// éå¶èŠ‚ç‚¹
+		ImageIcon collapsedIcon = new ImageIcon("images/gui.swing.tree/treecollapse.gif");// èŠ‚ç‚¹æ”¶ç¼©å›¾æ ‡
+		ImageIcon expandedIcon = new ImageIcon("images/gui.swing.tree/treeexpand.gif");// èŠ‚ç‚¹å±•å¼€å›¾æ ‡
 		
 		if ((leafIcon != null) && (branchIcon != null)) {
 			/*
-			 * // ½ÚµãäÖÈ¾Æ÷(ÉèÖÃ×Ô¶¨ÒåµÄ½ÚµãÍâ¹Û) 
+			 * // èŠ‚ç‚¹æ¸²æŸ“å™¨(è®¾ç½®è‡ªå®šä¹‰çš„èŠ‚ç‚¹å¤–è§‚) 
 			 * DefaultTreeCellRenderer renderer = new
 			 * DefaultTreeCellRenderer(); 
-			 * renderer.setLeafIcon(leafIcon); // ÉèÖÃÒ¶½ÚµãµÄÍâ¹Û
-			 * renderer.setOpenIcon(branchIcon); // ÉèÖÃ·ÇÒ¶½Úµã´ò¿ªÊ±µÄÍâ¹Û
-			 * renderer.setClosedIcon(branchIcon);// ÉèÖÃ·ÇÒ¶½Úµã¹Ø±ÕÊ±µÄÍâ¹Û
+			 * renderer.setLeafIcon(leafIcon); // è®¾ç½®å¶èŠ‚ç‚¹çš„å¤–è§‚
+			 * renderer.setOpenIcon(branchIcon); // è®¾ç½®éå¶èŠ‚ç‚¹æ‰“å¼€æ—¶çš„å¤–è§‚
+			 * renderer.setClosedIcon(branchIcon);// è®¾ç½®éå¶èŠ‚ç‚¹å…³é—­æ—¶çš„å¤–è§‚
 			 * tree.setCellRenderer(renderer);
 			 */
 			
-			 // Ê¹ÓÃ×Ô¶¨ÒåµÄäÖÈ¾Æ÷ 
+			 // ä½¿ç”¨è‡ªå®šä¹‰çš„æ¸²æŸ“å™¨ 
 			 tree.setCellRenderer(new MyRenderer(leafIcon, branchIcon));			
 		} else {
 			System.err.println("Icon missing; using default.");
 		}
 		
 		 /**
-		  * ÉèÖÃ½ÚµãµÄÊÕËõÀ©Õ¹Í¼±ê 
+		  * è®¾ç½®èŠ‚ç‚¹çš„æ”¶ç¼©æ‰©å±•å›¾æ ‡ 
 		  */
 		BasicTreeUI treeUI = (BasicTreeUI) tree.getUI();
-		treeUI.setCollapsedIcon(collapsedIcon);// ÊÕËõ
-		treeUI.setExpandedIcon(expandedIcon);// Õ¹¿ª
+		treeUI.setCollapsedIcon(collapsedIcon);// æ”¶ç¼©
+		treeUI.setExpandedIcon(expandedIcon);// å±•å¼€
 		
 		/**
-		 * ½Úµã±»Êó±êµã»÷ÊÂ¼ş´¦Àí
+		 * èŠ‚ç‚¹è¢«é¼ æ ‡ç‚¹å‡»äº‹ä»¶å¤„ç†
 		 */
 		MouseListener ml = new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
@@ -192,11 +192,11 @@ class MyTreePanel extends JPanel implements TreeSelectionListener {
 				TreePath selPath = tree.getPathForLocation(e.getX(), e.getY());
 				if (selRow != -1) {
 					/*
-					 * // µ¥»÷ if(e.getClickCount() == 1) {
+					 * // å•å‡» if(e.getClickCount() == 1) {
 					 * System.out.println(selPath.getLastPathComponent().toString() +
 					 * "single click"); }
 					 */
-					// Ë«»÷
+					// åŒå‡»
 					if (e.getClickCount() == 2) {
 						System.out.println(selPath.getPathComponent(selPath
 								.getPathCount() - 2)
@@ -206,7 +206,7 @@ class MyTreePanel extends JPanel implements TreeSelectionListener {
 						DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree
 								.getLastSelectedPathComponent();
 						/*
-						 * node.add(new DefaultMutableTreeNode("new"));//Ö±½ÓÌí¼Ó²»ÄÜ¼°Ê±Í¨Öª¸øÊÓÍ¼
+						 * node.add(new DefaultMutableTreeNode("new"));//ç›´æ¥æ·»åŠ ä¸èƒ½åŠæ—¶é€šçŸ¥ç»™è§†å›¾
 						 * DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
 						 * model.insertNodeInto(new DefaultMutableTreeNode("new2"), node, 0);
 						 */
@@ -223,7 +223,7 @@ class MyTreePanel extends JPanel implements TreeSelectionListener {
 		tree.addMouseListener(ml);
 		tree.setRootVisible(true);
 		/*
-		 * // ÊÇ·ñÏÔÊ¾¼Ì³ĞÏß(Ä¬ÈÏÏÔÊ¾) 
+		 * // æ˜¯å¦æ˜¾ç¤ºç»§æ‰¿çº¿(é»˜è®¤æ˜¾ç¤º) 
 		 * tree.putClientProperty("JTree.lineStyle", "None");
 		 */
 		
@@ -248,7 +248,7 @@ class MyTreePanel extends JPanel implements TreeSelectionListener {
 	}
 
 	/**
-	 * Ê÷½ÚµãÑ¡Ôñ±ä»»µÄÊ±ºò´¥·¢
+	 * æ ‘èŠ‚ç‚¹é€‰æ‹©å˜æ¢çš„æ—¶å€™è§¦å‘
 	 */
 	public void valueChanged(TreeSelectionEvent e) {
 //		DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree

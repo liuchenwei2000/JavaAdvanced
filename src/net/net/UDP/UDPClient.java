@@ -10,15 +10,15 @@ import java.net.InetAddress;
 import java.net.SocketException;
 
 /**
- * UDP·¢ËÍ¶ËÊ¾Àı
+ * UDPå‘é€ç«¯ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ31ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ31æ—¥
  */
 public class UDPClient {
 	
-	/** ·¢ËÍ¶Ë¿ÚºÅ */
+	/** å‘é€ç«¯å£å· */
 	private static final int PORT = 8888;
 
 	/**
@@ -27,15 +27,15 @@ public class UDPClient {
 	public static void main(String[] args) {
 		DatagramSocket client = null;
 		try {
-			// 1,ÓÃÖ¸¶¨¶Ë¿ÚºÅ´´½¨socket
+			// 1,ç”¨æŒ‡å®šç«¯å£å·åˆ›å»ºsocket
 			client = new DatagramSocket(PORT);
 
 			String message = "Hello world";
-			// 2,´´½¨Êı¾İ±¨
+			// 2,åˆ›å»ºæ•°æ®æŠ¥
 			DatagramPacket packet = new DatagramPacket(message.getBytes(), 0,
 					message.length(), InetAddress.getLocalHost(),
 					UDPServer.PORT);
-			// 3,·¢ËÍÊı¾İ±¨
+			// 3,å‘é€æ•°æ®æŠ¥
 			client.send(packet);
 		} catch (SocketException e) {
 			e.printStackTrace();
@@ -43,7 +43,7 @@ public class UDPClient {
 			e.printStackTrace();
 		} finally {
 			if (client != null) {
-				// 4,ÊÍ·Å×ÊÔ´
+				// 4,é‡Šæ”¾èµ„æº
 				client.close();
 			}
 		}

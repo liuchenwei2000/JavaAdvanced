@@ -19,19 +19,19 @@ import javax.swing.JTextArea;
 import swing.frame.BasicFrame;
 
 /**
- * Java¼ôÇĞ°åÑİÊ¾Àà
+ * Javaå‰ªåˆ‡æ¿æ¼”ç¤ºç±»
  * <p>
- * Java»ù±¾Àà¿â(JFC)¶ÔÏµÍ³¼ôÌù°åÌá¹©ÁËÓĞÏŞµÄÖ§³Ö(ÒÔjava.awt.datatransfer°üµÄĞÎÊ½)¡£
- * ¿ÉÒÔ°Ñ×Ö·û´®¶ÔÏó×÷ÎªÎÄ±¾¸´ÖÆµ½¼ôÌù°å£¬»òÕß´Ó¼ôÌù°åÕ³ÌùÎÄ±¾µ½Ò»¸ö×Ö·û´®¶ÔÏóÖĞ¡£
- * ¼ôÌù°å±»Éè¼Æ³É¿ÉÒÔ³ÖÓĞÈÎºÎÊı¾İ£¬²»¹ı¼ôÌù°åÉÏµÄÊı¾İÈçºÎ±íÊ¾ÔòÈ¡¾öÓÚÊµÏÖ¼ôÇĞºÍÕ³Ìù¶¯×÷µÄ³ÌĞò¡£
- * Java¼ôÌù°åµÄAPIÍ¨¹ı"·çÎ¶"µÄ¸ÅÄîÌá¹©ÁËÀ©Õ¹ĞÔ¡£
- * µ±Êı¾İÀë¿ª¼ôÌù°åÊ±£¬Ëü¾Í¹ØÁªÁËÒ»¸öÏà¹ØµÄ·çÎ¶¼¯£¬±íÃ÷Ëü¿ÉÒÔ±»×ª»»³ÉµÄ¸ñÊ½¡£
- * ±ÈÈç£¬Í¼ĞÎ¿ÉÄÜÒÔÊı×Ö×Ö·û´®±íÊ¾£¬Ò²¿ÉÒÔÓÃÍ¼Ïñ±íÊ¾¡£
- * Ò²¿ÉÒÔ²é¿´Õâ¸ö¼ôÌù°åÊı¾İÊÇ·ñÖ§³ÖÄãËù¸ĞĞËÈ¤µÄ"·çÎ¶"¡£
+ * JavaåŸºæœ¬ç±»åº“(JFC)å¯¹ç³»ç»Ÿå‰ªè´´æ¿æä¾›äº†æœ‰é™çš„æ”¯æŒ(ä»¥java.awt.datatransferåŒ…çš„å½¢å¼)ã€‚
+ * å¯ä»¥æŠŠå­—ç¬¦ä¸²å¯¹è±¡ä½œä¸ºæ–‡æœ¬å¤åˆ¶åˆ°å‰ªè´´æ¿ï¼Œæˆ–è€…ä»å‰ªè´´æ¿ç²˜è´´æ–‡æœ¬åˆ°ä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡ä¸­ã€‚
+ * å‰ªè´´æ¿è¢«è®¾è®¡æˆå¯ä»¥æŒæœ‰ä»»ä½•æ•°æ®ï¼Œä¸è¿‡å‰ªè´´æ¿ä¸Šçš„æ•°æ®å¦‚ä½•è¡¨ç¤ºåˆ™å–å†³äºå®ç°å‰ªåˆ‡å’Œç²˜è´´åŠ¨ä½œçš„ç¨‹åºã€‚
+ * Javaå‰ªè´´æ¿çš„APIé€šè¿‡"é£å‘³"çš„æ¦‚å¿µæä¾›äº†æ‰©å±•æ€§ã€‚
+ * å½“æ•°æ®ç¦»å¼€å‰ªè´´æ¿æ—¶ï¼Œå®ƒå°±å…³è”äº†ä¸€ä¸ªç›¸å…³çš„é£å‘³é›†ï¼Œè¡¨æ˜å®ƒå¯ä»¥è¢«è½¬æ¢æˆçš„æ ¼å¼ã€‚
+ * æ¯”å¦‚ï¼Œå›¾å½¢å¯èƒ½ä»¥æ•°å­—å­—ç¬¦ä¸²è¡¨ç¤ºï¼Œä¹Ÿå¯ä»¥ç”¨å›¾åƒè¡¨ç¤ºã€‚
+ * ä¹Ÿå¯ä»¥æŸ¥çœ‹è¿™ä¸ªå‰ªè´´æ¿æ•°æ®æ˜¯å¦æ”¯æŒä½ æ‰€æ„Ÿå…´è¶£çš„"é£å‘³"ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-23
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-23
  */
 public class ClipboardDemo {
 
@@ -53,8 +53,8 @@ class ClipboardFrame extends BasicFrame {
 	private JMenuItem copyItem;
 	private JMenuItem pasteItem;
 	private JTextArea textArea = new JTextArea(20, 20);
-	// »ñÈ¡ÏµÍ³¼ôÇĞ°åµÄÒ»¸öÊµÀı£¬¸ÃClipboardÓëOSÌá¹©µÄ¼ôÌù°å¹¤¾ßÏà»¥×÷ÓÃ
-	// ¸Ã¼ôÌù°åÊ¹Êı¾İÄÜ¹»ÔÚJavaÓ¦ÓÃ³ÌĞòºÍÊ¹ÓÃ±¾»ú¼ôÌù°å¹¤¾ßµÄ±¾»úÓ¦ÓÃ³ÌĞòÖ®¼ä´«Êä
+	// è·å–ç³»ç»Ÿå‰ªåˆ‡æ¿çš„ä¸€ä¸ªå®ä¾‹ï¼Œè¯¥Clipboardä¸OSæä¾›çš„å‰ªè´´æ¿å·¥å…·ç›¸äº’ä½œç”¨
+	// è¯¥å‰ªè´´æ¿ä½¿æ•°æ®èƒ½å¤Ÿåœ¨Javaåº”ç”¨ç¨‹åºå’Œä½¿ç”¨æœ¬æœºå‰ªè´´æ¿å·¥å…·çš„æœ¬æœºåº”ç”¨ç¨‹åºä¹‹é—´ä¼ è¾“
 	private Clipboard clipboard = getToolkit().getSystemClipboard();
 
 	public ClipboardFrame() {
@@ -66,7 +66,7 @@ class ClipboardFrame extends BasicFrame {
 
 	private JMenu getEditMenu() {
 		if (editMenu == null) {
-			editMenu = new JMenu("±à¼­");
+			editMenu = new JMenu("ç¼–è¾‘");
 			editMenu.add(getCutItem());
 			editMenu.add(getCopyItem());
 			editMenu.add(getPasteItem());
@@ -76,7 +76,7 @@ class ClipboardFrame extends BasicFrame {
 
 	private JMenuItem getCutItem() {
 		if (cutItem == null) {
-			cutItem = new JMenuItem("¼ôÇĞ");
+			cutItem = new JMenuItem("å‰ªåˆ‡");
 			cutItem.addActionListener(getCutListener());
 		}
 		return cutItem;
@@ -84,7 +84,7 @@ class ClipboardFrame extends BasicFrame {
 
 	private JMenuItem getCopyItem() {
 		if (copyItem == null) {
-			copyItem = new JMenuItem("¸´ÖÆ");
+			copyItem = new JMenuItem("å¤åˆ¶");
 			copyItem.addActionListener(getCopyListener());
 		}
 		return copyItem;
@@ -92,19 +92,19 @@ class ClipboardFrame extends BasicFrame {
 
 	private JMenuItem getPasteItem() {
 		if (pasteItem == null) {
-			pasteItem = new JMenuItem("Õ³Ìù");
+			pasteItem = new JMenuItem("ç²˜è´´");
 			pasteItem.addActionListener(getPasteListener());
 		}
 		return pasteItem;
 	}
 
-	/** ÈçÏÂ¶¯×÷Ö´ĞĞÖ®ºóÒ²¿ÉÒÔÊ¹ÓÃOSµÄÏà¹Ø¿ì½İ¼ü²é¿´Ğ§¹û */
+	/** å¦‚ä¸‹åŠ¨ä½œæ‰§è¡Œä¹‹åä¹Ÿå¯ä»¥ä½¿ç”¨OSçš„ç›¸å…³å¿«æ·é”®æŸ¥çœ‹æ•ˆæœ */
 	
 	private ActionListener getCutListener() {
 		return new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				getCopyListener().actionPerformed(e);
-				// ½«Ñ¡ÔñµÄÎÄ±¾Ìæ»»³É¿Õ´®
+				// å°†é€‰æ‹©çš„æ–‡æœ¬æ›¿æ¢æˆç©ºä¸²
 				textArea.replaceRange("", textArea.getSelectionStart(),
 						textArea.getSelectionEnd());
 			}
@@ -114,14 +114,14 @@ class ClipboardFrame extends BasicFrame {
 	private ActionListener getCopyListener() {
 		return new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// ·µ»Ø´ËTextComponentÖĞ°üº¬µÄÑ¡¶¨ÎÄ±¾
+				// è¿”å›æ­¤TextComponentä¸­åŒ…å«çš„é€‰å®šæ–‡æœ¬
 				String selection = textArea.getSelectedText();
 				if (selection == null) return;
-				// ÊµÏÖ´«ÊäStringËùĞèÄÜÁ¦µÄTransferable
-				// ´ËTransferable¿ÉÒÔÕıÈ·Ö§³ÖDataFlavor.stringFlavor¼°ËùÓĞµÈĞ§flavor
+				// å®ç°ä¼ è¾“Stringæ‰€éœ€èƒ½åŠ›çš„Transferable
+				// æ­¤Transferableå¯ä»¥æ­£ç¡®æ”¯æŒDataFlavor.stringFlavoråŠæ‰€æœ‰ç­‰æ•ˆflavor
 				StringSelection clipString = new StringSelection(selection);
-				// ½«¼ôÌù°åµÄµ±Ç°ÄÚÈİÉèÖÃµ½Ö¸¶¨µÄtransferable¶ÔÏó
-				// ²¢½«Ö¸¶¨µÄ¼ôÌù°åËùÓĞÕß×÷ÎªĞÂÄÚÈİµÄËùÓĞÕß×¢²á
+				// å°†å‰ªè´´æ¿çš„å½“å‰å†…å®¹è®¾ç½®åˆ°æŒ‡å®šçš„transferableå¯¹è±¡
+				// å¹¶å°†æŒ‡å®šçš„å‰ªè´´æ¿æ‰€æœ‰è€…ä½œä¸ºæ–°å†…å®¹çš„æ‰€æœ‰è€…æ³¨å†Œ
 				clipboard.setContents(clipString, clipString);
 			}
 		};
@@ -130,14 +130,14 @@ class ClipboardFrame extends BasicFrame {
 	private ActionListener getPasteListener() {
 		return new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// ·µ»Ø±íÊ¾¼ôÌù°åµ±Ç°ÄÚÈİµÄtransferable¶ÔÏó
+				// è¿”å›è¡¨ç¤ºå‰ªè´´æ¿å½“å‰å†…å®¹çš„transferableå¯¹è±¡
 				Transferable clipData = clipboard.getContents(ClipboardFrame.this);
 				try {
-					// ·µ»ØÒ»¸ö¶ÔÏó£¬¸Ã¶ÔÏó±íÊ¾½«Òª±»´«ÊäµÄÊı¾İ
-					// ·µ»Ø¶ÔÏóµÄÀàÊÇÓÉ²ÎÊı flavor µÄ±íÊ¾Àà¶¨ÒåµÄ
+					// è¿”å›ä¸€ä¸ªå¯¹è±¡ï¼Œè¯¥å¯¹è±¡è¡¨ç¤ºå°†è¦è¢«ä¼ è¾“çš„æ•°æ®
+					// è¿”å›å¯¹è±¡çš„ç±»æ˜¯ç”±å‚æ•° flavor çš„è¡¨ç¤ºç±»å®šä¹‰çš„
 					String clipString = (String) clipData
 							.getTransferData(DataFlavor.stringFlavor);
-					// ½«Ñ¡ÔñµÄÎÄ±¾Ìæ»»Îª¼ôÇĞ°åÖĞµÄÄÚÈİ
+					// å°†é€‰æ‹©çš„æ–‡æœ¬æ›¿æ¢ä¸ºå‰ªåˆ‡æ¿ä¸­çš„å†…å®¹
 					textArea.replaceRange(clipString, textArea
 							.getSelectionStart(), textArea.getSelectionEnd());
 				} catch (Exception ex) {

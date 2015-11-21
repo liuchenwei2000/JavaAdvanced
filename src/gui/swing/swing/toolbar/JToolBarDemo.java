@@ -16,15 +16,15 @@ import javax.swing.JToolBar;
 import util.Displayer;
 
 /**
- * JToolBar��ʾ��
+ * JToolBar演示类
  * <p>
- * JToolBar���������ڳ������ṩ���ٷ��ʳ�������İ�ť����
- * ��������֮�����ڿ��԰����Ƶ��κεط���������ק����ܵ��ĸ��߽��ϡ�
- * ����������ȫ�����ܣ������Ĺ��������������Լ��Ŀ���С�
+ * JToolBar工具栏是在程序中提供快速访问常用命令的按钮栏，
+ * 它的特殊之处在于可以把它移到任何地方，可以拖拽到框架的四个边界上。
+ * 甚至可以完全脱离框架，这样的工具栏将包含在自己的框架中。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-6-30
+ * 创建日期：2009-6-30
  */
 public class JToolBarDemo {
 	
@@ -40,7 +40,7 @@ class ToolBarPanel extends JPanel {
 	
 	private static final long serialVersionUID = 4469973302494249840L;
 	
-	// ������Ĭ����ˮƽ�ģ�����ʹ��HORIZONTAL��VERTICAL��ָ��
+	// 工具栏默认是水平的，可以使用HORIZONTAL和VERTICAL来指明
 	private JToolBar bar = new JToolBar("Color");
 	private JPanel emptyPanel = new JPanel();
 
@@ -69,16 +69,16 @@ class ToolBarPanel extends JPanel {
 			}
 		};
 		exitAction.putValue(Action.SHORT_DESCRIPTION, "Exit");
-		// ����һ����ť(��ťʹ�ò���Actionȥ����)�����ص��ǰ�ť����
-		// ���˿������Ӱ�ť֮�⣬�������������縴ѡ��ȿؼ�
+		// 添加一个按钮(按钮使用参数Action去构造)，返回的是按钮引用
+		// 除了可以添加按钮之外，还可以添加诸如复选框等控件
 		bar.add(new JCheckBox("M"));
 		bar.add(blueAction);
 		bar.add(yellowAction);
 		bar.add(redAction);
-		// ���ӷָ���
+		// 添加分隔符
 		bar.addSeparator();
 		bar.add(exitAction);
-		// ���ù������Ƿ����ק�ƶ���Ĭ��Ϊtrue
+		// 设置工具栏是否可拖拽移动，默认为true
 //		bar.setFloatable(false);
 	}
 

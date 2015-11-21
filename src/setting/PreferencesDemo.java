@@ -8,13 +8,13 @@ import java.util.Iterator;
 import java.util.prefs.Preferences;
 
 /**
- * PreferencesÑİÊ¾Àà
+ * Preferencesæ¼”ç¤ºç±»
  * <p>
- * ÆäÖĞusageCount³ÌĞòÃ¿ÔËĞĞÒ»´Î¶¼»á+1£¬Õâ¸öĞÅÏ¢»á±»×÷ÎªÓÃ»§µÄÆ«ºÃ±£´æÔÚÏµÍ³ÖĞ¡£ 
+ * å…¶ä¸­usageCountç¨‹åºæ¯è¿è¡Œä¸€æ¬¡éƒ½ä¼š+1ï¼Œè¿™ä¸ªä¿¡æ¯ä¼šè¢«ä½œä¸ºç”¨æˆ·çš„åå¥½ä¿å­˜åœ¨ç³»ç»Ÿä¸­ã€‚ 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-13
  */
 public class PreferencesDemo {
 
@@ -23,17 +23,17 @@ public class PreferencesDemo {
 	 */
 	public static void main(String[] args) throws Exception {
 		/*
-		 * ÕâÀïÓÃµÄÊÇ userNodeForPackage()£¬×îºÃ½«"user"ÓÃÓÚ¸ö±ğÓÃ»§µÄÆ«ºÃ£¬
-		 * ½« systemNodeForPackage() ÓÃÓÚÍ¨ÓÃµÄ°²×°ÅäÖÃ¡£
-		 * ÒòÎªmain·½·¨ÊÇstaticµÄ£¬ËùÒÔPreferencesDemo.class¿ÉÒÔÓÃÀ´±êÊ¶½Úµã¡£
-		 * µ«ÊÇÔÚ·Ç¾²Ì¬·½·¨ÄÚ²¿£¬Í¨³£Ê¹ÓÃgetClass()£¬¾¡¹Ü²¢·ÇÒ»¶¨Òª°Ñµ±Ç°Àà×÷Îª½Úµã±êÊ¶·û¡£
-		 * Ò»µ©´´½¨ÁË½Úµã£¬¾Í¿ÉÒÔÓÃËüÀ´¼ÓÔØ»òÕß¶ÁÈ¡Êı¾İÁË¡£
+		 * è¿™é‡Œç”¨çš„æ˜¯ userNodeForPackage()ï¼Œæœ€å¥½å°†"user"ç”¨äºä¸ªåˆ«ç”¨æˆ·çš„åå¥½ï¼Œ
+		 * å°† systemNodeForPackage() ç”¨äºé€šç”¨çš„å®‰è£…é…ç½®ã€‚
+		 * å› ä¸ºmainæ–¹æ³•æ˜¯staticçš„ï¼Œæ‰€ä»¥PreferencesDemo.classå¯ä»¥ç”¨æ¥æ ‡è¯†èŠ‚ç‚¹ã€‚
+		 * ä½†æ˜¯åœ¨éé™æ€æ–¹æ³•å†…éƒ¨ï¼Œé€šå¸¸ä½¿ç”¨getClass()ï¼Œå°½ç®¡å¹¶éä¸€å®šè¦æŠŠå½“å‰ç±»ä½œä¸ºèŠ‚ç‚¹æ ‡è¯†ç¬¦ã€‚
+		 * ä¸€æ—¦åˆ›å»ºäº†èŠ‚ç‚¹ï¼Œå°±å¯ä»¥ç”¨å®ƒæ¥åŠ è½½æˆ–è€…è¯»å–æ•°æ®äº†ã€‚
 		 */
 		Preferences p = Preferences.userNodeForPackage(PreferencesDemo.class);
 		p.put("Location", "Oz");
 		p.putInt("Companions", 4);
 		p.putBoolean("Are there witches?", true);
-		// ±ØĞëÎªkeyÌá¹©Ä¬ÈÏÖµ(ÕâÀï UsageCount Ä¬ÈÏÖµÊÇ 0)
+		// å¿…é¡»ä¸ºkeyæä¾›é»˜è®¤å€¼(è¿™é‡Œ UsageCount é»˜è®¤å€¼æ˜¯ 0)
 		int usageCount = p.getInt("UsageCount", 0);
 		usageCount++;
 		p.putInt("UsageCount", usageCount);

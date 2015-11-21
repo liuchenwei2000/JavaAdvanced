@@ -14,22 +14,22 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * ¼òµ¥µÄÊÂ¼ş´¦Àí
+ * ç®€å•çš„äº‹ä»¶å¤„ç†
  * <p>
- * ÕıÈ·´¦ÀíGUIÊÂ¼ş£º</br>
- * <li>1£¬ÊµÏÖActionListener½Ó¿Ú</br>
+ * æ­£ç¡®å¤„ç†GUIäº‹ä»¶ï¼š</br>
+ * <li>1ï¼Œå®ç°ActionListeneræ¥å£</br>
  * public class MyClass implements ActionListener
- * <li>2£¬Îª½«Òª²úÉúÊÂ¼şµÄGUI×é¼ş×¢²áÒ»¸öÊÂ¼ş¼àÌıÆ÷</br>
+ * <li>2ï¼Œä¸ºå°†è¦äº§ç”Ÿäº‹ä»¶çš„GUIç»„ä»¶æ³¨å†Œä¸€ä¸ªäº‹ä»¶ç›‘å¬å™¨</br>
  * someComponent.addActionListener(instanceOfMyClass);
- * <li>3£¬ÊµÏÖÒ»¸öÊÂ¼ş´¦Àí·½·¨</br>
+ * <li>3ï¼Œå®ç°ä¸€ä¸ªäº‹ä»¶å¤„ç†æ–¹æ³•</br>
  * public void actionPerformed(ActionEvent e) { 
  * ...//code that reacts to the action... 
  * } <p></br><p>
- * ÊÂ¼ş¼àÌıÆ÷¸ºÔğ¼àÌıÊÂ¼şÔ´²úÉúµÄÌØ¶¨ÀàĞÍµÄÊÂ¼ş£¬È»ºóµ÷ÓÃÊÂ¼ş´¦Àí·½·¨ÏìÓ¦ËüËù¼àÌıµ½µÄÊÂ¼ş
+ * äº‹ä»¶ç›‘å¬å™¨è´Ÿè´£ç›‘å¬äº‹ä»¶æºäº§ç”Ÿçš„ç‰¹å®šç±»å‹çš„äº‹ä»¶ï¼Œç„¶åè°ƒç”¨äº‹ä»¶å¤„ç†æ–¹æ³•å“åº”å®ƒæ‰€ç›‘å¬åˆ°çš„äº‹ä»¶
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-21
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-21
  */
 public class SimpleEventHandlerDemo {
 	

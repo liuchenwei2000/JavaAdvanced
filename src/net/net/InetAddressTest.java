@@ -8,13 +8,13 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 
 /**
- * InetAddresÊ¾Àı
+ * InetAddresç¤ºä¾‹
  * <p>
- * Èç¹ûĞèÒªÔÚÖ÷»úÃûºÍÒòÌØÍøµØÖ·Ö®¼ä½øĞĞ×ª»»Ê±£¬¿ÉÒÔÊ¹ÓÃInetAddressÀà¡£
+ * å¦‚æœéœ€è¦åœ¨ä¸»æœºåå’Œå› ç‰¹ç½‘åœ°å€ä¹‹é—´è¿›è¡Œè½¬æ¢æ—¶ï¼Œå¯ä»¥ä½¿ç”¨InetAddressç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ7ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ7æ—¥
  */
 public class InetAddressTest {
 
@@ -22,19 +22,19 @@ public class InetAddressTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String host = "www.baidu.com";// Ö÷»úÃû/ÓòÃû
+		String host = "www.baidu.com";// ä¸»æœºå/åŸŸå
 		try {
-			// ·µ»Ø´ú±íÄ³¸öÖ÷»úµÄInetAddress¶ÔÏó
+			// è¿”å›ä»£è¡¨æŸä¸ªä¸»æœºçš„InetAddresså¯¹è±¡
 			InetAddress address = InetAddress.getByName(host);
 			System.out.println("IP:" + Arrays.asList(address.getHostAddress()));
 			
-			// ·µ»Ø´ú±íÄ³¸öÖ÷»úµÄËùÓĞInetAddress¶ÔÏó
+			// è¿”å›ä»£è¡¨æŸä¸ªä¸»æœºçš„æ‰€æœ‰InetAddresså¯¹è±¡
 			InetAddress[] all = InetAddress.getAllByName(host);
 			for (InetAddress inetAddress : all) {
 				System.out.println(inetAddress);
 			}
 			
-			// µÃµ½±¾µØÖ÷»úµØÖ·
+			// å¾—åˆ°æœ¬åœ°ä¸»æœºåœ°å€
 			System.out.println(InetAddress.getLocalHost());
 		} catch (UnknownHostException e) {
 			e.printStackTrace();

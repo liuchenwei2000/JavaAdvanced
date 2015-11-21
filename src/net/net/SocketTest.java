@@ -10,13 +10,13 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 /**
- * SocketÊ¾Àı
+ * Socketç¤ºä¾‹
  * <p>
- * SocketÀà·Ç³£¼òµ¥Ò×ÓÃ£¬ÒòÎªJava¼¼ÊõÒş²ØÁË½¨Á¢ÍøÂçÁ¬½ÓºÍÍ¨¹ıÁ¬½Ó·¢ËÍÊı¾İµÄ¸´ÔÓ¹ı³Ì¡£
+ * Socketç±»éå¸¸ç®€å•æ˜“ç”¨ï¼Œå› ä¸ºJavaæŠ€æœ¯éšè—äº†å»ºç«‹ç½‘ç»œè¿æ¥å’Œé€šè¿‡è¿æ¥å‘é€æ•°æ®çš„å¤æ‚è¿‡ç¨‹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-7
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-7
  */
 public class SocketTest {
 
@@ -24,19 +24,19 @@ public class SocketTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String url = "time-A.timefreq.bldrdoc.gov";// ·şÎñÆ÷URL
+		String url = "time-A.timefreq.bldrdoc.gov";// æœåŠ¡å™¨URL
 		/*
-		 * ÔÚÍøÂçÊõÓïÖĞ£¬¶Ë¿ÚÖ¸µÄ²¢²»ÊÇÎïÀíÉè±¸£¬¶øÊÇÎªÁË±ãÓÚÊµÏÖ·şÎñÆ÷Óë¿Í»§¶ËÖ®¼äÍ¨ĞÅËùÊ¹ÓÃµÄ³éÏó¸ÅÄî¡£
+		 * åœ¨ç½‘ç»œæœ¯è¯­ä¸­ï¼Œç«¯å£æŒ‡çš„å¹¶ä¸æ˜¯ç‰©ç†è®¾å¤‡ï¼Œè€Œæ˜¯ä¸ºäº†ä¾¿äºå®ç°æœåŠ¡å™¨ä¸å®¢æˆ·ç«¯ä¹‹é—´é€šä¿¡æ‰€ä½¿ç”¨çš„æŠ½è±¡æ¦‚å¿µã€‚
 		 */
-		int port = 13;// ¶Ë¿ÚºÅ
+		int port = 13;// ç«¯å£å·
 		
 		Socket socket = null;
 		try {
 			/*
-			 * ´ò¿ªÒ»¸öÌ×½Ó×ÖSocket£¬ÕâÊÇÒ»¸ö³éÏó¸ÅÄî£¬¸ºÔğÊ¹¸Ã³ÌĞòÄÚ²¿ºÍÍâ²¿Ö®¼äÍ¨ĞÅ¡£
+			 * æ‰“å¼€ä¸€ä¸ªå¥—æ¥å­—Socketï¼Œè¿™æ˜¯ä¸€ä¸ªæŠ½è±¡æ¦‚å¿µï¼Œè´Ÿè´£ä½¿è¯¥ç¨‹åºå†…éƒ¨å’Œå¤–éƒ¨ä¹‹é—´é€šä¿¡ã€‚
 			 */
 			socket = new Socket(url, port);
-			// ´Ó·şÎñÆ÷·µ»ØÒ»¸öÁ÷¶ÔÏó£¬¿ÉÒÔÍ¨¹ıËü¶ÁÈ¡·şÎñÆ÷ĞÅÏ¢
+			// ä»æœåŠ¡å™¨è¿”å›ä¸€ä¸ªæµå¯¹è±¡ï¼Œå¯ä»¥é€šè¿‡å®ƒè¯»å–æœåŠ¡å™¨ä¿¡æ¯
 			InputStream is = socket.getInputStream();
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));

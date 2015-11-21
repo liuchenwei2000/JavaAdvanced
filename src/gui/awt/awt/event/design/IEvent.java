@@ -4,16 +4,16 @@
 package awt.event.design;
 
 /**
- * ÊÂ¼ş½Ó¿Ú
+ * äº‹ä»¶æ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public interface IEvent {
 
 	/**
-	 * ·µ»ØÊÂ¼şÔ´¶ÔÏó
+	 * è¿”å›äº‹ä»¶æºå¯¹è±¡
 	 */
 	public Object getSource();
 }

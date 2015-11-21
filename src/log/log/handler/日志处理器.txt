@@ -1,15 +1,15 @@
-                                                                                                   ÈÕ Ö¾ ´¦ Àí Æ÷
+                                                                                                   æ—¥ å¿— å¤„ ç† å™¨
 
 
-Ã¿¸ö Logger ¶ÔÏó¿ÉÒÔÓÐÒ»µ½¶à¸öÓëÖ®Ïà¹ØÁªµÄ Handler£¨´¦ÀíÆ÷£©¶ÔÏó£¬ÓÃÓÚ½« Logger ¶ÔÏó´«µÝÀ´µÄ LogRecord ·¢²¼³öÈ¥£¨Èç¿ØÖÆÌ¨¡¢ÄÚ´æ¡¢ÎÄ¼þ¡¢ÍøÂçµÈµÈ£©¡£
-Ã¿¸ö Handler ¶ÔÏóÌá¹©Ò»ÖÖÓÃÓÚ·¢²¼ÈÕÖ¾ÏûÏ¢µÄ²ßÂÔ£¬¸ÃÏûÏ¢°üº¬ÔÚ LogRecord ¶ÔÏóÖÐ¡£
-ÎªÁË´´½¨Ò»ÖÖÐÂÀàÐÍµÄ Handler£¬Ö»Ðè´Ó Handler Àà¼Ì³Ð²¢¸²¸ÇÆä publish() ·½·¨£¨Á¬Í¬ flush() ºÍ e() Ò»Æð£¬À´´¦ÀíÔÚ Handler ÖÐ¿ÉÄÜÊ¹ÓÃµ½µÄËùÓÐÁ÷£©¡£
-¸ùÈÕÖ¾¼ÇÂ¼Æ÷È±Ê¡µØ×ÜÊÇÓëÒ»¸ö´¦ÀíÆ÷Ïà¹ØÁª£¬½«Êä³ö·¢ËÍµ½¿ØÖÆÌ¨¡£
+æ¯ä¸ª Logger å¯¹è±¡å¯ä»¥æœ‰ä¸€åˆ°å¤šä¸ªä¸Žä¹‹ç›¸å…³è”çš„ Handlerï¼ˆå¤„ç†å™¨ï¼‰å¯¹è±¡ï¼Œç”¨äºŽå°† Logger å¯¹è±¡ä¼ é€’æ¥çš„ LogRecord å‘å¸ƒå‡ºåŽ»ï¼ˆå¦‚æŽ§åˆ¶å°ã€å†…å­˜ã€æ–‡ä»¶ã€ç½‘ç»œç­‰ç­‰ï¼‰ã€‚
+æ¯ä¸ª Handler å¯¹è±¡æä¾›ä¸€ç§ç”¨äºŽå‘å¸ƒæ—¥å¿—æ¶ˆæ¯çš„ç­–ç•¥ï¼Œè¯¥æ¶ˆæ¯åŒ…å«åœ¨ LogRecord å¯¹è±¡ä¸­ã€‚
+ä¸ºäº†åˆ›å»ºä¸€ç§æ–°ç±»åž‹çš„ Handlerï¼Œåªéœ€ä»Ž Handler ç±»ç»§æ‰¿å¹¶è¦†ç›–å…¶ publish() æ–¹æ³•ï¼ˆè¿žåŒ flush() å’Œ e() ä¸€èµ·ï¼Œæ¥å¤„ç†åœ¨ Handler ä¸­å¯èƒ½ä½¿ç”¨åˆ°çš„æ‰€æœ‰æµï¼‰ã€‚
+æ ¹æ—¥å¿—è®°å½•å™¨ç¼ºçœåœ°æ€»æ˜¯ä¸Žä¸€ä¸ªå¤„ç†å™¨ç›¸å…³è”ï¼Œå°†è¾“å‡ºå‘é€åˆ°æŽ§åˆ¶å°ã€‚
 
-JavaÔ¤ÖÃµÄ´¦ÀíÆ÷£º
+Javaé¢„ç½®çš„å¤„ç†å™¨ï¼š
 
-StreamHandler        ½«¸ñÊ½»¯µÄ¼ÇÂ¼Ð´µ½OutputStreamÖÐ
-ConsoleHandler       ½«¸ñÊ½»¯µÄ¼ÇÂ¼Ð´µ½System.errÖÐ
-FileHandler          ½«¸ñÊ½»¯µÄÈÕÖ¾¼ÇÂ¼Ð´µ½Ò»¸öµ¥Ò»ÎÄ¼þ£¬»òÕßÒ»¸ö½»ÌæµÄ¼ÇÂ¼ÎÄ¼þ¼¯ºÏÖÐ
-SocketHandler        ½«¸ñÊ½»¯µÄÈÕÖ¾¼ÇÂ¼Ð´µ½Ô¶³ÌTCP¶Ë¿ÚÖÐ
-MemoryHandler        ÔÚÄÚ´æÖÐ»º´æÈÕÖ¾¼ÇÂ¼
+StreamHandler        å°†æ ¼å¼åŒ–çš„è®°å½•å†™åˆ°OutputStreamä¸­
+ConsoleHandler       å°†æ ¼å¼åŒ–çš„è®°å½•å†™åˆ°System.errä¸­
+FileHandler          å°†æ ¼å¼åŒ–çš„æ—¥å¿—è®°å½•å†™åˆ°ä¸€ä¸ªå•ä¸€æ–‡ä»¶ï¼Œæˆ–è€…ä¸€ä¸ªäº¤æ›¿çš„è®°å½•æ–‡ä»¶é›†åˆä¸­
+SocketHandler        å°†æ ¼å¼åŒ–çš„æ—¥å¿—è®°å½•å†™åˆ°è¿œç¨‹TCPç«¯å£ä¸­
+MemoryHandler        åœ¨å†…å­˜ä¸­ç¼“å­˜æ—¥å¿—è®°å½•

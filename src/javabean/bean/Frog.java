@@ -8,15 +8,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 
 /**
- * ¼òµ¥JavaBeanÑİÊ¾
+ * ç®€å•JavaBeanæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-17
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-17
  */
 public class Frog {
 	
-	/** ËùÓĞµÄ×Ö¶Î¶¼ÊÇË½ÓĞµÄ£¬Ö»ÄÜÍ¨¹ı·½·¨²ÅÄÜ¹»·ÃÎÊ */
+	/** æ‰€æœ‰çš„å­—æ®µéƒ½æ˜¯ç§æœ‰çš„ï¼Œåªèƒ½é€šè¿‡æ–¹æ³•æ‰èƒ½å¤Ÿè®¿é—® */
 	private int jumps;
 	private Color color;
 	private Spots spots;
@@ -55,7 +55,7 @@ public class Frog {
 	}
 
 	/**
-	 * ¸ù¾İ"add"ºÍ"remove"·½·¨¶ÔÏà¹Ø¼àÌıÆ÷µÄÃüÃû¿ÉÒÔ¿´³ö£ºÕâ¸öBeanËù´¦ÀíµÄÊÂ¼şÊÇActionEventºÍKeyEvent¡£
+	 * æ ¹æ®"add"å’Œ"remove"æ–¹æ³•å¯¹ç›¸å…³ç›‘å¬å™¨çš„å‘½åå¯ä»¥çœ‹å‡ºï¼šè¿™ä¸ªBeanæ‰€å¤„ç†çš„äº‹ä»¶æ˜¯ActionEventå’ŒKeyEventã€‚
 	 */
 	public void addActionListener(ActionListener l) {
 		// ...
@@ -74,7 +74,7 @@ public class Frog {
 	}
 
 	/**
-	 *  Ô­Éú¹«¹²·½·¨Ò²ÊÇBeanµÄÒ»²¿·Ö£¬ÕâÊÇÒòÎªËüÊÇpublicµÄ£¬¶ø²»ÊÇÒòÎªËüÒ²×ñÑ­ÁËÈÎºÎÃüÃû¹æÔò¡£
+	 *  åŸç”Ÿå…¬å…±æ–¹æ³•ä¹Ÿæ˜¯Beançš„ä¸€éƒ¨åˆ†ï¼Œè¿™æ˜¯å› ä¸ºå®ƒæ˜¯publicçš„ï¼Œè€Œä¸æ˜¯å› ä¸ºå®ƒä¹Ÿéµå¾ªäº†ä»»ä½•å‘½åè§„åˆ™ã€‚
 	 */
 	public void croak() {
 		System.out.println("Ribbet!");

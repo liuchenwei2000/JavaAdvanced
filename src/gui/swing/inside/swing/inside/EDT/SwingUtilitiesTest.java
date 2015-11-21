@@ -6,23 +6,23 @@ package swing.inside.EDT;
 import javax.swing.SwingUtilities;
 
 /**
- * SwingUtilitiesÑÝÊ¾Àà
+ * SwingUtilitiesæ¼”ç¤ºç±»
  * <p>
- * SwingUtilitiesÀà°üº¬Ò»Ð©¾²Ì¬·½·¨°ïÄãÍ¬UI×é¼þ½»»¥£¬ÆäÖÐ
- * <li>invokeLater·½·¨µÄÒâË¼ÊÇ£ºÔÚEDTÉÏÖ´ÐÐÆäRunnableÈÎÎñ£¬´Ë·½·¨ÊÇÒì²½Ö´ÐÐµÄ£¬µ÷ÓÃºó»áÁ¢¼´·µ»Ø¡£
- * <li>invokeAndWait·½·¨ÊÇ×èÈûÖ´ÐÐµÄ£¬ËüÔÚEDTÉÏÖ´ÐÐRunnableÈÎÎñ£¬Ö±µ½ÈÎÎñÖ´ÐÐÍêÁË£¬¸Ã·½·¨²Å·µ»Øµ÷ÓÃÏß³Ì¡£
+ * SwingUtilitiesç±»åŒ…å«ä¸€äº›é™æ€æ–¹æ³•å¸®ä½ åŒUIç»„ä»¶äº¤äº’ï¼Œå…¶ä¸­
+ * <li>invokeLateræ–¹æ³•çš„æ„æ€æ˜¯ï¼šåœ¨EDTä¸Šæ‰§è¡Œå…¶Runnableä»»åŠ¡ï¼Œæ­¤æ–¹æ³•æ˜¯å¼‚æ­¥æ‰§è¡Œçš„ï¼Œè°ƒç”¨åŽä¼šç«‹å³è¿”å›žã€‚
+ * <li>invokeAndWaitæ–¹æ³•æ˜¯é˜»å¡žæ‰§è¡Œçš„ï¼Œå®ƒåœ¨EDTä¸Šæ‰§è¡ŒRunnableä»»åŠ¡ï¼Œç›´åˆ°ä»»åŠ¡æ‰§è¡Œå®Œäº†ï¼Œè¯¥æ–¹æ³•æ‰è¿”å›žè°ƒç”¨çº¿ç¨‹ã€‚
  * <p>
- * ÕâÁ½¸ö·½·¨¶¼ÊÇÔÚÊÂ¼þ¶ÓÁÐ(EventQueue)ÖÐµÄËùÓÐÊÂ¼þ¶¼´¦ÀíÍêÖ®ºó²ÅÖ´ÐÐËüÃÇµÄRunnableÈÎÎñ£¬
- * Ò²¾ÍÊÇËµ£¬ÕâÁ½¸ö·½·¨½«RunnableÈÎÎñ·ÅÔÚÊÂ¼þ¶ÓÁÐµÄÄ©Î²£¬ÔÚEDTÏß³ÌÖÐÖ´ÐÐ£¬Ã»ÓÐÐÂµÄÏß³Ì±»´´½¨¡£
+ * è¿™ä¸¤ä¸ªæ–¹æ³•éƒ½æ˜¯åœ¨äº‹ä»¶é˜Ÿåˆ—(EventQueue)ä¸­çš„æ‰€æœ‰äº‹ä»¶éƒ½å¤„ç†å®Œä¹‹åŽæ‰æ‰§è¡Œå®ƒä»¬çš„Runnableä»»åŠ¡ï¼Œ
+ * ä¹Ÿå°±æ˜¯è¯´ï¼Œè¿™ä¸¤ä¸ªæ–¹æ³•å°†Runnableä»»åŠ¡æ”¾åœ¨äº‹ä»¶é˜Ÿåˆ—çš„æœ«å°¾ï¼Œåœ¨EDTçº¿ç¨‹ä¸­æ‰§è¡Œï¼Œæ²¡æœ‰æ–°çš„çº¿ç¨‹è¢«åˆ›å»ºã€‚
  * <p>
- * ¾¯¸æ£ºËäÈ»¿ÉÒÔÔÚÆäËûÏß³ÌÉÏµ÷ÓÃinvokeLater£¬Ò²¿ÉÒÔÔÚEDTÉÏµ÷ÓÃ£¬
- * µ«ÊÇÇ§Íò²»ÒªÔÚEDTÉÏµ÷ÓÃinvokeAndWait£¬ ÒÔÃâÔì³ÉÏß³Ì¾ºÕù£¬ÏÝÈëËÀËø¡£
+ * è­¦å‘Šï¼šè™½ç„¶å¯ä»¥åœ¨å…¶ä»–çº¿ç¨‹ä¸Šè°ƒç”¨invokeLaterï¼Œä¹Ÿå¯ä»¥åœ¨EDTä¸Šè°ƒç”¨ï¼Œ
+ * ä½†æ˜¯åƒä¸‡ä¸è¦åœ¨EDTä¸Šè°ƒç”¨invokeAndWaitï¼Œ ä»¥å…é€ æˆçº¿ç¨‹ç«žäº‰ï¼Œé™·å…¥æ­»é”ã€‚
  * <p>
- * SwingUtilities´æÔÚµÄÒâÒå£ºÈç¹ûÏëÔÚ·ÇEDTÏß³ÌÉÏ·ÃÎÊUI×é¼þ£¬Ôò±ØÐëÍ¨¹ý¸ÃÀàµÄinvokeXXX·½·¨¡£
+ * SwingUtilitieså­˜åœ¨çš„æ„ä¹‰ï¼šå¦‚æžœæƒ³åœ¨éžEDTçº¿ç¨‹ä¸Šè®¿é—®UIç»„ä»¶ï¼Œåˆ™å¿…é¡»é€šè¿‡è¯¥ç±»çš„invokeXXXæ–¹æ³•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-29
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-29
  */
 public class SwingUtilitiesTest {
 

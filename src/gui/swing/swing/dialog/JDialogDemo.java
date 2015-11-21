@@ -17,18 +17,18 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * JDialog��ʾ��
+ * JDialog演示类
  * <p>
- * �����Ի��򴰿ڵ���Ҫ�࣬����ʹ�ô��ഴ���Զ���ĶԻ���
+ * 创建对话框窗口的主要类，可以使用此类创建自定义的对话框。
  * <p>
- * AWT����ģʽ�Ի������ģʽ�Ի���</br>
- * һ��ģʽ�Ի������û����������Ĳ���֮ǰ���������û���Ӧ�ó�������Ĵ��ڽ��н�����
- * ģʽ�Ի��������ڳ����������֮ǰ����û��ṩ����Ϣ��
- * ��ģʽ�Ի��������û�ͬʱ�ڶԻ����Ӧ�ó�������Ĵ�����������Ϣ��
+ * AWT区分模式对话框和无模式对话框</br>
+ * 一个模式对话框在用户结束对它的操作之前，不允许用户与应用程序其余的窗口进行交互，
+ * 模式对话框用于在程序继续运行之前获得用户提供的信息。
+ * 无模式对话框允许用户同时在对话框和应用程序其余的窗口中输入信息。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-5-19
+ * 创建日期：2009-5-19
  */
 public class JDialogDemo {
 
@@ -73,9 +73,9 @@ class MyDialog extends JDialog {
 			}
 		});
 		cp.add(ok);
-		// ָ����dialog�Ƿ�Ӧ����ģ̬�ģ���ģ̬��DialogΪ�ɼ�ʱ
-		// �û����뵽Ӧ�ó������������ڵ����ݽ������(��ֻ�ɺ�Dialog���н���)
-		// ����Dialog��Ϊ�������ߴ����Ĵ��ڳ���
+		// 指定此dialog是否应该是模态的，当模态的Dialog为可见时
+		// 用户输入到应用程序中其他窗口的内容将被阻断(即只可和Dialog进行交互)
+		// 将此Dialog作为其所有者创建的窗口除外
 		setModal(true);
 		setSize(150, 125);
 	}

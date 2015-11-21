@@ -4,11 +4,11 @@
 package bean.persistent;
 
 /**
- * Ò»¸ö¼òµ¥JavaBean
+ * ä¸€ä¸ªç®€å•JavaBean
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-4
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-4
  */
 public class JavaBean {
 

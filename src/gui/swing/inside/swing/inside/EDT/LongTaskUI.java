@@ -16,15 +16,15 @@ import javax.swing.SwingUtilities;
 import util.Displayer;
 
 /**
- * SwingÖĞÊ¹ÓÃ¶àÏß³ÌÊ¾Àı
+ * Swingä¸­ä½¿ç”¨å¤šçº¿ç¨‹ç¤ºä¾‹
  * <p>
- * ½«Ïß³ÌÓëSwingÒ»ÆğÊ¹ÓÃÊ±£¬±ØĞë×ñÑ­Á½¸ö¼òµ¥µÄÔ­Ôò£º
- * <li>1£¬Èç¹ûÒ»¸ö¶¯×÷ĞèÒª»¨·ÑºÜ³¤Ê±¼ä£¬ÔÚÒ»¸ö¶ÀÁ¢µÄ¹¤×÷Æ÷Ïß³ÌÖĞ×öÕâ¼şÊÂ¶ø²»ÒªÔÚÊÂ¼ş·ÖÅÉÏß³Ì£¨Event Dispatcher Thread£¬EDT£©ÖĞ×ö¡£
- * <li>2£¬³ıÁËÊÂ¼ş·ÖÅÉÏß³Ì£¬²»ÒªÔÚÈÎºÎÏß³ÌÖĞ½Ó´¥Swing×é¼ş¡£
+ * å°†çº¿ç¨‹ä¸Swingä¸€èµ·ä½¿ç”¨æ—¶ï¼Œå¿…é¡»éµå¾ªä¸¤ä¸ªç®€å•çš„åŸåˆ™ï¼š
+ * <li>1ï¼Œå¦‚æœä¸€ä¸ªåŠ¨ä½œéœ€è¦èŠ±è´¹å¾ˆé•¿æ—¶é—´ï¼Œåœ¨ä¸€ä¸ªç‹¬ç«‹çš„å·¥ä½œå™¨çº¿ç¨‹ä¸­åšè¿™ä»¶äº‹è€Œä¸è¦åœ¨äº‹ä»¶åˆ†æ´¾çº¿ç¨‹ï¼ˆEvent Dispatcher Threadï¼ŒEDTï¼‰ä¸­åšã€‚
+ * <li>2ï¼Œé™¤äº†äº‹ä»¶åˆ†æ´¾çº¿ç¨‹ï¼Œä¸è¦åœ¨ä»»ä½•çº¿ç¨‹ä¸­æ¥è§¦Swingç»„ä»¶ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ3ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ3æ—¥
  */
 public class LongTaskUI extends JPanel {
 
@@ -57,7 +57,7 @@ public class LongTaskUI extends JPanel {
 
 	private JButton getButton() {
 		if (button == null) {
-			button = new JButton("Ö´ĞĞºÄÊ±ÈÎÎñ");
+			button = new JButton("æ‰§è¡Œè€—æ—¶ä»»åŠ¡");
 			button.addActionListener(new LongTaskAction());
 		}
 		return button;
@@ -67,7 +67,7 @@ public class LongTaskUI extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// ×ñÑ­µÚÒ»¸öÔ­Ôò£¬ÁíÆğÒ»¸öÏß³ÌÖ´ĞĞºÄÊ±²Ù×÷£¬ÕâÑùEDTÏß³Ì¾Í¿ÉÒÔÁ¢¼´·µ»Ø£¬½çÃæ²»»á¿¨×¡
+			// éµå¾ªç¬¬ä¸€ä¸ªåŸåˆ™ï¼Œå¦èµ·ä¸€ä¸ªçº¿ç¨‹æ‰§è¡Œè€—æ—¶æ“ä½œï¼Œè¿™æ ·EDTçº¿ç¨‹å°±å¯ä»¥ç«‹å³è¿”å›ï¼Œç•Œé¢ä¸ä¼šå¡ä½
 			new Thread(new LongTask()).start();
 		}
 	}
@@ -76,7 +76,7 @@ public class LongTaskUI extends JPanel {
 
 		@Override
 		public void run() {
-			// Ä£ÄâºÄÊ±²Ù×÷
+			// æ¨¡æ‹Ÿè€—æ—¶æ“ä½œ
 			double random = Math.random();
 			final int totalTime = (int) (5000 * random);
 			try {
@@ -84,7 +84,7 @@ public class LongTaskUI extends JPanel {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			// ×ñÑ­µÚ¶ş¸öÔ­Ôò£¬²Ù×÷Swing¿Ø¼şÒªÔÚEDTÏß³ÌÖĞ½øĞĞ£¬Ò²¾ÍÊÇÊ¹ÓÃSwingUtilities.invokeXXXÀà·½·¨
+			// éµå¾ªç¬¬äºŒä¸ªåŸåˆ™ï¼Œæ“ä½œSwingæ§ä»¶è¦åœ¨EDTçº¿ç¨‹ä¸­è¿›è¡Œï¼Œä¹Ÿå°±æ˜¯ä½¿ç”¨SwingUtilities.invokeXXXç±»æ–¹æ³•
 			SwingUtilities.invokeLater(new Runnable() {
 				
 				@Override
@@ -102,7 +102,7 @@ public class LongTaskUI extends JPanel {
 		SwingUtilities.invokeLater(new Runnable() {
 
 			public void run() {
-				Displayer.createAndShowGUI("Ïß³ÌÓëSwingÊ¾Àı", new LongTaskUI());
+				Displayer.createAndShowGUI("çº¿ç¨‹ä¸Swingç¤ºä¾‹", new LongTaskUI());
 			}
 		});
 	}

@@ -16,19 +16,19 @@ import javax.swing.event.ChangeListener;
 import util.Displayer;
 
 /**
- * GUI��ܻ�ͼ(��������)��ʾ��
+ * GUI框架绘图(正弦曲线)演示类
  * <p>
- * �����κλ�ͼ�������������ھ�����ͼλ�õļ���ͨ���ȶԻ�ͼ���ܵĵ���Ҫ���ӵöࡣ
- * ������Щ������򳣳����ͼ�������һ�����Կ���������Ľӿڱ�ʵ����Ҫ��Ҫ�����ӡ�
- * �����κ�ʱ��JComponent�϶����Ի�ͼ����������Ϊ��ˣ����԰����ǵ���������canvas����
- * ���ǣ�Ҫ��ֻ������һ������ֱ�ӻ�ͼ��ƽ��Ļ������͵������Ǵ�JPanel�̳С�
- * Ψһ��Ҫ���صķ�������paintComponent()��������������뱻���»��Ƶ�ʱ�򱻵��á�
- * ͨ������Ϊ�˵��ģ���Ϊ��ʱ������Swing������
- * ���˷���������ʱ��Swing������һ��Graphics����Ȼ��Ϳ���ʹ���������������ϻ����ˡ�
+ * 对于任何绘图程序，其问题在于决定绘图位置的计算通常比对绘图功能的调用要复杂得多。
+ * 并且这些计算程序常常与绘图程序混在一起，所以看起来程序的接口比实际需要的要更复杂。
+ * 尽管任何时候JComponent上都可以绘图，而且正因为如此，可以把它们当作画布（canvas）。
+ * 但是，要是只是想有一个可以直接绘图的平面的话，典型的做法是从JPanel继承。
+ * 唯一需要重载的方法就是paintComponent()，它将在组件必须被重新绘制的时候被调用。
+ * 通常不必为此担心，因为何时调用由Swing决定。
+ * 当此方法被调用时，Swing将传入一个Graphics对象，然后就可以使用这个对象并在组件上绘制了。
  *
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-5-19
+ * 创建日期：2009-5-19
  */
 public class SinDrawDemo {
 

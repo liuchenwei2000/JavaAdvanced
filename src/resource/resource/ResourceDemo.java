@@ -18,25 +18,25 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 /**
- * ��Դ������ʾ��
+ * 资源机制演示类
  * <p>
- * applet��Ӧ�ó�����ʹ�õ���ͨ�����õ�һЩ��ص������ļ����磺</br>
- * ͼ��������ļ����ı��ļ��������������ļ���
+ * applet和应用程序中使用的类通常会用到一些相关的数据文件，如：</br>
+ * 图像和声音文件、文本文件、二进制数据文件。
  * <p>
- * ��Java�У���Щ�������ļ���Ϊ��Դ(resource)��</br>
- * ������Դ���ƣ����ڷ����ļ��������Ҳ���Է���Ķ�λ��Щ��Դ�������Ǳ�Ҫ�Ĳ��裺
- * <li>1����þ�����Դ��Class����(����ΪAboutPanel.class)��
- * <li>2������getResource(fileName)����ȡ��ΪURL����Դ��λ�á�
- * <li>3�������Դ��ͼ�����Ƶ�ļ�������ʹ��getImage��getAudioClip����ֱ�Ӷ�ȡ��
- * <li>4������ͨ������getResourceAsStream������ȡ�ļ��е����ݡ�
+ * 在Java中，这些关联的文件称为资源(resource)。</br>
+ * 利用资源机制，对于非类文件类加载器也可以方便的定位这些资源，下面是必要的步骤：
+ * <li>1，获得具有资源的Class对象(本例为AboutPanel.class)。
+ * <li>2，调用getResource(fileName)来获取作为URL的资源的位置。
+ * <li>3，如果资源是图像或音频文件，可以使用getImage或getAudioClip方法直接读取。
+ * <li>4，否则，通过调用getResourceAsStream方法读取文件中的数据。
  * </br>
- * �ص�������������ǵ���ζ�λ���λ�ã���������ͬһλ��(���ļ�λ��)������ص���Դ��Ҳ������ͬһ��JAR�ļ��ж�λ��Դ�ļ���
+ * 重点在于类加载器记得如何定位类的位置，它可以在同一位置(类文件位置)查找相关的资源，也就是在同一个JAR文件中定位资源文件。
  * <p>
- * �Զ�������Դ�ļ���������Դ����������ɵģ�û�б�׼�ķ�����������Դ�ļ������ݣ�ÿ��������������Լ��Ľ�����Դ�ļ��ķ�����
+ * 自动加载资源文件是利用资源加载特性完成的，没有标准的方法来解释资源文件的内容，每个程序必须有其自己的解释资源文件的方法。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2009-7-3
+ * 创建日期：2009-7-3
  */
 public class ResourceDemo {
 
@@ -44,7 +44,7 @@ public class ResourceDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// û��ʹ��Displayer��Ϊ�˴��jar���ܷ�������
+		// 没有使用Displayer是为了打包jar后能方便运行
 		JFrame frame = new JFrame("Resource Demo");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout());
@@ -77,7 +77,7 @@ class AboutPanel extends JPanel {
 
 	private JButton getAboutButton() {
 		if (aboutButton == null) {
-			// ��ζ�Ŵ��ҵ�AboutPanel.class���ļ��ĵط���λabout.gif�ļ�
+			// 意味着从找到AboutPanel.class类文件的地方定位about.gif文件
 			URL aboutURL = AboutPanel.class.getResource("about.gif");
 			aboutButton = new JButton("About", new ImageIcon(aboutURL));
 			aboutButton.addActionListener(new AboutAction());
@@ -90,11 +90,11 @@ class AboutPanel extends JPanel {
 		public void actionPerformed(ActionEvent event) {
 			try {
 				/*
-				 * ����������Դ�ļ������ļ�������ͬһĿ¼�£����԰�����������Ŀ¼���棬
-				 * ��ʹ�þ��в�ε���Դ���ƣ� �磺text/about.txt
+				 * 如果不想把资源文件和类文件放置在同一目录下，可以把它放置在子目录下面，
+				 * 并使用具有层次的资源名称， 如：text/about.txt
 				 * 
-				 * ����һ�������Դ���ƣ����ᱻ����Ϊ����ڼ�����Դ�������ڵİ���
-				 * ע�⣬����ʹ��"/"��Ϊ�ָ�������OS�޹صģ���Դ���������Զ��ذ�"/"ת��Ϊ"\"��
+				 * 这是一个相对资源名称，它会被解释为相对于加载资源的类所在的包。
+				 * 注意，必须使用"/"作为分隔符，是OS无关的，资源管理器会自动地把"/"转换为"\"。
 				 */
 				InputStream in = AboutPanel.class
 						.getResourceAsStream("text/about.txt");

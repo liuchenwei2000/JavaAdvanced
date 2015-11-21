@@ -8,11 +8,11 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 /**
- * FileĞÅÏ¢TableModel
+ * Fileä¿¡æ¯TableModel
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2011-1-21
  */
 public class FileInfoTableModel extends AbstractTableModel {	
 	
@@ -21,7 +21,7 @@ public class FileInfoTableModel extends AbstractTableModel {
 	 */
 	private static final long serialVersionUID = 8301130997521360463L;
 	
-	/** Ä¿Ç°Ö»ÓĞÈıÁĞ */
+	/** ç›®å‰åªæœ‰ä¸‰åˆ— */
 	private static final String[] COLUMN = { "Name", "Path", "Last Write Time" };
 	
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

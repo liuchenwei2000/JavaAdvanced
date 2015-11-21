@@ -14,30 +14,30 @@ import javax.swing.JPanel;
 import swing.frame.BasicFrame;
 
 /**
- * ÊÂ¼þÔ´ÑÝÊ¾Àà
+ * äº‹ä»¶æºæ¼”ç¤ºç±»
  * <p>
- * (½«JFrame×îÐ¡»¯ºóÔÙ´ò¿ª¿ÉÒÔ¿´µ½ÏÖÏó)
+ * (å°†JFrameæœ€å°åŒ–åŽå†æ‰“å¼€å¯ä»¥çœ‹åˆ°çŽ°è±¡)
  * <p>
- * ÊÂ¼þÔ´ÄÜ¹»Éú³É×Ô¼ºµÄÊÂ¼þ²¢Í¨Öª¸ø¶Ô´ËÊÂ¼þ¸ÐÐËÈ¤µÄ¼àÌýÆ÷¡£
+ * äº‹ä»¶æºèƒ½å¤Ÿç”Ÿæˆè‡ªå·±çš„äº‹ä»¶å¹¶é€šçŸ¥ç»™å¯¹æ­¤äº‹ä»¶æ„Ÿå…´è¶£çš„ç›‘å¬å™¨ã€‚
  * <p>
- * ÊÂ¼þÔ´ÐèÒª¾ßÓÐÏÂÃæÈý¸öÒªËØ£º</br>
- * <li>1£¬ÊÂ¼þÀàÐÍ(event type) </br>
- * ¿ÉÒÔ¶¨Òå×Ô¼ºµÄÊÂ¼þÀà(±¾ÀýÊ¹ÓÃJDKÌá¹©µÄPropertyChangeEvent)
- * <li>2£¬ÊÂ¼þ¼àÌý½Ó¿Ú(event listener interface) </br>
- * ¿ÉÒÔ¶¨Òå×Ô¼ºµÄ½Ó¿Ú(±¾ÀýÊ¹ÓÃJDKÌá¹©µÄPropertyChangeListener)
- * <li>3£¬Ôö¼Ó»òÉ¾³ý¼àÌýÆ÷µÄ·½·¨
+ * äº‹ä»¶æºéœ€è¦å…·æœ‰ä¸‹é¢ä¸‰ä¸ªè¦ç´ ï¼š</br>
+ * <li>1ï¼Œäº‹ä»¶ç±»åž‹(event type) </br>
+ * å¯ä»¥å®šä¹‰è‡ªå·±çš„äº‹ä»¶ç±»(æœ¬ä¾‹ä½¿ç”¨JDKæä¾›çš„PropertyChangeEvent)
+ * <li>2ï¼Œäº‹ä»¶ç›‘å¬æŽ¥å£(event listener interface) </br>
+ * å¯ä»¥å®šä¹‰è‡ªå·±çš„æŽ¥å£(æœ¬ä¾‹ä½¿ç”¨JDKæä¾›çš„PropertyChangeListener)
+ * <li>3ï¼Œå¢žåŠ æˆ–åˆ é™¤ç›‘å¬å™¨çš„æ–¹æ³•
  * <p>
- * ÔõÑù²ÅÄÜÈ·±£ÊÂ¼þÄÜ¹»·¢ËÍµ½¸ÐÐËÈ¤µÄ¸÷·½ÄØ£¿</br>
- * ÕâÊÇÊÂ¼þÔ´µÄÔðÈÎ£¬ÔÚÊÂ¼þ·¢ÉúµÄÊ±ºò£¬±ØÐë¹¹ÔìÒ»¸öÊÂ¼þ¶ÔÏó£¬²¢½«Ëü´«µÝ¸ø±»×¢²áµÄ¼àÌýÆ÷¡£
- * ÊÂ¼þ¹ÜÀíÊÇÒ»Ïî³£¼ûµÄÈÎÎñ£¬SwingÌá¹©ÁËÒ»ÖÖºÜ·½±ãµÄÀàEventListenerList¡£
- * ´Ó¶ø¿ÉÒÔÇá¶øÒ×¾ÙµÄÊµÏÖÔö¼Ó¡¢É¾³ý¼àÌýÆ÷ºÍ¼¤»îÊÂ¼þµÄ·½·¨¡£
- * ÓÉÓÚÓÐÐ©ÊÂ¼þÔ´ÔÊÐí½ÓÊÕ¶àÖÖÀàÐÍµÄ¼àÌýÆ÷£¬ËùÒÔÊÂ¼þ¼àÌýÆ÷ÁÐ±íÖÐµÄÃ¿¸ö¼àÌýÆ÷ÓëÒ»¸öÌØ¶¨µÄÀà¹ØÁª¡£
+ * æ€Žæ ·æ‰èƒ½ç¡®ä¿äº‹ä»¶èƒ½å¤Ÿå‘é€åˆ°æ„Ÿå…´è¶£çš„å„æ–¹å‘¢ï¼Ÿ</br>
+ * è¿™æ˜¯äº‹ä»¶æºçš„è´£ä»»ï¼Œåœ¨äº‹ä»¶å‘ç”Ÿçš„æ—¶å€™ï¼Œå¿…é¡»æž„é€ ä¸€ä¸ªäº‹ä»¶å¯¹è±¡ï¼Œå¹¶å°†å®ƒä¼ é€’ç»™è¢«æ³¨å†Œçš„ç›‘å¬å™¨ã€‚
+ * äº‹ä»¶ç®¡ç†æ˜¯ä¸€é¡¹å¸¸è§çš„ä»»åŠ¡ï¼ŒSwingæä¾›äº†ä¸€ç§å¾ˆæ–¹ä¾¿çš„ç±»EventListenerListã€‚
+ * ä»Žè€Œå¯ä»¥è½»è€Œæ˜“ä¸¾çš„å®žçŽ°å¢žåŠ ã€åˆ é™¤ç›‘å¬å™¨å’Œæ¿€æ´»äº‹ä»¶çš„æ–¹æ³•ã€‚
+ * ç”±äºŽæœ‰äº›äº‹ä»¶æºå…è®¸æŽ¥æ”¶å¤šç§ç±»åž‹çš„ç›‘å¬å™¨ï¼Œæ‰€ä»¥äº‹ä»¶ç›‘å¬å™¨åˆ—è¡¨ä¸­çš„æ¯ä¸ªç›‘å¬å™¨ä¸Žä¸€ä¸ªç‰¹å®šçš„ç±»å…³è”ã€‚
  * 
- * @see gui.event.design°üµÄÏà¹ØÀà£¬±¾ÀàÖ»ÊÇ»ùÓÚJDKÌá¹©µÄÒ»Ð©ÀàÊµÏÖÁËÊÂ¼þÔ´¡£
+ * @see gui.event.designåŒ…çš„ç›¸å…³ç±»ï¼Œæœ¬ç±»åªæ˜¯åŸºäºŽJDKæä¾›çš„ä¸€äº›ç±»å®žçŽ°äº†äº‹ä»¶æºã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-24
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-24
  */
 public class EventSourceDemo {
 
@@ -90,7 +90,7 @@ class PaintCountPanel extends JPanel {
 	}
 
 	private void firePropertyChangeEvent(PropertyChangeEvent event) {
-		// ·µ»Ø¸ø¶¨ÀàÐÍµÄËùÓÐ¼àÌýÆ÷×é³ÉµÄÊý×é
+		// è¿”å›žç»™å®šç±»åž‹çš„æ‰€æœ‰ç›‘å¬å™¨ç»„æˆçš„æ•°ç»„
 		EventListener[] listeners = listenerList
 				.getListeners(PropertyChangeListener.class);
 		for (EventListener l : listeners) {

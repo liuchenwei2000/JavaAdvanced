@@ -10,16 +10,16 @@ import javax.swing.JTable;
 import javax.swing.SwingWorker;
 
 /**
- * ÎÄ¼þÌ½²âÆ÷
+ * æ–‡ä»¶æŽ¢æµ‹å™¨
  * <p>
- * SwingWorkerµÄ×ÓÀà¿ÉÄÜ¼È»áÉú³É×îÖÕ½á¹ûÒ²»á²úÉúÖÐ¼ä½á¹û£¬
- * Ïß³ÌÔÚdoInBackgroud·½·¨½áÊøÊ±²Å²úÉú×îºó½á¹û£¬µ«ÈÎÎñÏß³ÌÒ²¿ÉÒÔ²úÉúºÍ¹«²¼ÖÐ¼ä½á¹û¡£
- * ÊµÏÖSwingWorker×ÓÀàÊ±£¬ÔÚÀàÉùÃ÷´¦ÒªÖ¸¶¨×îÖÕºÍÖÐ¼ä½á¹ûµÄÀàÐÍ¡£
- * SwingWorker<T, V>²úÉúÀàÐÍÎªTµÄ½á¹ûÒÔ¼°ÀàÐÍÎªVµÄÖÐ¼ä½á¹û¡£
+ * SwingWorkerçš„å­ç±»å¯èƒ½æ—¢ä¼šç”Ÿæˆæœ€ç»ˆç»“æžœä¹Ÿä¼šäº§ç”Ÿä¸­é—´ç»“æžœï¼Œ
+ * çº¿ç¨‹åœ¨doInBackgroudæ–¹æ³•ç»“æŸæ—¶æ‰äº§ç”Ÿæœ€åŽç»“æžœï¼Œä½†ä»»åŠ¡çº¿ç¨‹ä¹Ÿå¯ä»¥äº§ç”Ÿå’Œå…¬å¸ƒä¸­é—´ç»“æžœã€‚
+ * å®žçŽ°SwingWorkerå­ç±»æ—¶ï¼Œåœ¨ç±»å£°æ˜Žå¤„è¦æŒ‡å®šæœ€ç»ˆå’Œä¸­é—´ç»“æžœçš„ç±»åž‹ã€‚
+ * SwingWorker<T, V>äº§ç”Ÿç±»åž‹ä¸ºTçš„ç»“æžœä»¥åŠç±»åž‹ä¸ºVçš„ä¸­é—´ç»“æžœã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-1-18
+ * åˆ›å»ºæ—¥æœŸï¼š2011-1-18
  */
 public class FileDetector extends SwingWorker<List<File>, File> {
 
@@ -38,11 +38,11 @@ public class FileDetector extends SwingWorker<List<File>, File> {
 	}
 	
 	/**
-	 * ¸ù¾ÝÖ¸¶¨ÎÄ¼þ·µ»ØÆäÏÂËùÓÐ×ÓÎÄ¼þ(¼Ð)µÄÐÅÏ¢¡£
+	 * æ ¹æ®æŒ‡å®šæ–‡ä»¶è¿”å›žå…¶ä¸‹æ‰€æœ‰å­æ–‡ä»¶(å¤¹)çš„ä¿¡æ¯ã€‚
 	 */
 	private List<File> listAllFiles(File file) {
 		if(!file.exists()) return null;
-		// ÓÃÀ´´æ·Å½á¹û
+		// ç”¨æ¥å­˜æ”¾ç»“æžœ
 		List<File> files = new ArrayList<File>();
 		listAllFiles(file, files);
 		return files;
@@ -50,19 +50,19 @@ public class FileDetector extends SwingWorker<List<File>, File> {
 
 	private void listAllFiles(File file, List<File> files) {
 		/*
-		 * Èç¹ûÏëÔÊÐí³ÌÐòÓÃ»§È¡ÏûÈÎÎñ£¬ÊµÏÖ´úÂëÒªÔÚSwingWorker×ÓÀàÖÐÖÜÆÚÐÔµÄ¼ì²éÈ¡ÏûÇëÇó¡£
-		 * µ÷ÓÃisCancelled·½·¨À´¼ì²éÊÇ·ñÓÐÈ¡ÏûÇëÇó¡£
-		 * ÔÚÑ­»·µü´ú»òÕßÆäËû¼ì²éµãµ÷ÓÃÕâ¸ö·½·¨È·±£Ïß³ÌÄÜ¼°Ê±»ñµÃÈ¡ÏûÇëÇó¡£
-		 * Ïß³ÌÖÜÆÚÐÔµØ¼ì²éÕâÖÖÇëÇó²¢Í£Ö¹¹¤×÷£¬±ÈÈç£º
-		 * 1.doInBackgroud·½·¨µÄ×ÓÈÎÎñÔÚÑ­»·±éÀú¸É»îÊ±¡£
-		 * 2.process·½·¨ÖÐ¸üÐÂGUIÊ±¡£
-		 * 3.done·½·¨ÖÐ¸üÐÂGUIÊ±¡£
+		 * å¦‚æžœæƒ³å…è®¸ç¨‹åºç”¨æˆ·å–æ¶ˆä»»åŠ¡ï¼Œå®žçŽ°ä»£ç è¦åœ¨SwingWorkerå­ç±»ä¸­å‘¨æœŸæ€§çš„æ£€æŸ¥å–æ¶ˆè¯·æ±‚ã€‚
+		 * è°ƒç”¨isCancelledæ–¹æ³•æ¥æ£€æŸ¥æ˜¯å¦æœ‰å–æ¶ˆè¯·æ±‚ã€‚
+		 * åœ¨å¾ªçŽ¯è¿­ä»£æˆ–è€…å…¶ä»–æ£€æŸ¥ç‚¹è°ƒç”¨è¿™ä¸ªæ–¹æ³•ç¡®ä¿çº¿ç¨‹èƒ½åŠæ—¶èŽ·å¾—å–æ¶ˆè¯·æ±‚ã€‚
+		 * çº¿ç¨‹å‘¨æœŸæ€§åœ°æ£€æŸ¥è¿™ç§è¯·æ±‚å¹¶åœæ­¢å·¥ä½œï¼Œæ¯”å¦‚ï¼š
+		 * 1.doInBackgroudæ–¹æ³•çš„å­ä»»åŠ¡åœ¨å¾ªçŽ¯éåŽ†å¹²æ´»æ—¶ã€‚
+		 * 2.processæ–¹æ³•ä¸­æ›´æ–°GUIæ—¶ã€‚
+		 * 3.doneæ–¹æ³•ä¸­æ›´æ–°GUIæ—¶ã€‚
 		 */
 		if (isCancelled()) return;// 1
 		files.add(file);
-		if (files.size() % 1000 == 0) {// Ã¿1000Ìõ·¢²¼Ò»´Î
-			// ¿ÉÒÔÊ¹ÓÃpublish·½·¨À´·¢²¼Òª´¦ÀíµÄÖÐ¼äÊý¾Ý,ÎªÔÚÈÎÎñÖ´ÐÐÖÐ¶ø·ÇÈÎÎñ½áÊøÊ±·¢²¼Êý¾Ý£¬
-			// Òªµ÷ÓÃpublish·½·¨£¬²¢ÒÔ²ÎÊýµÄÐÎÊ½Ìá¹©Òª·¢²¼µÄÊý¾Ý£¬±ØÐëÔÚÀàÉùÃ÷ÖÐÖ¸¶¨ÖÐ¼äÊý¾ÝµÄÀàÐÍ¡£
+		if (files.size() % 1000 == 0) {// æ¯1000æ¡å‘å¸ƒä¸€æ¬¡
+			// å¯ä»¥ä½¿ç”¨publishæ–¹æ³•æ¥å‘å¸ƒè¦å¤„ç†çš„ä¸­é—´æ•°æ®,ä¸ºåœ¨ä»»åŠ¡æ‰§è¡Œä¸­è€Œéžä»»åŠ¡ç»“æŸæ—¶å‘å¸ƒæ•°æ®ï¼Œ
+			// è¦è°ƒç”¨publishæ–¹æ³•ï¼Œå¹¶ä»¥å‚æ•°çš„å½¢å¼æä¾›è¦å‘å¸ƒçš„æ•°æ®ï¼Œå¿…é¡»åœ¨ç±»å£°æ˜Žä¸­æŒ‡å®šä¸­é—´æ•°æ®çš„ç±»åž‹ã€‚
 			publish(files.toArray(new File[0]));
 		}
 		if (file.isDirectory()) {
@@ -75,14 +75,14 @@ public class FileDetector extends SwingWorker<List<File>, File> {
 		}}
 
 	/**
-	 * Èç¹ûSwingWorker×ÓÀà·¢²¼ÁËÒ»Ð©Êý¾Ý£¬ÄÇÃ´Ò²Ó¦¸ÃÊµÏÖprocess·½·¨À´´¦ÀíÕâÐ©ÖÐ¼ä½á¹û¡£
-	 * SwingWork»áÔÚEDTÏß³ÌÉÏ¼¤»îprocess·½·¨£¬Òò´ËÔÚ´Ë·½·¨ÖÐ³ÌÐò¿ÉÒÔ°²È«µÄ¸üÐÂUI×é¼þ¡£
+	 * å¦‚æžœSwingWorkerå­ç±»å‘å¸ƒäº†ä¸€äº›æ•°æ®ï¼Œé‚£ä¹ˆä¹Ÿåº”è¯¥å®žçŽ°processæ–¹æ³•æ¥å¤„ç†è¿™äº›ä¸­é—´ç»“æžœã€‚
+	 * SwingWorkä¼šåœ¨EDTçº¿ç¨‹ä¸Šæ¿€æ´»processæ–¹æ³•ï¼Œå› æ­¤åœ¨æ­¤æ–¹æ³•ä¸­ç¨‹åºå¯ä»¥å®‰å…¨çš„æ›´æ–°UIç»„ä»¶ã€‚
 	 * <p>
-	 * µ±´ÓÈÎÎñÏß³Ìµ÷ÓÃpublish·½·¨Ê±£¬SwingWorkerÀàµ÷¶Èprocess·½·¨¡£
-	 * ÓÐÒâË¼µÄÊÇprocess·½·¨ÊÇÔÚEDTÉÏÃæÖ´ÐÐµÄ£¬ÕâÒâÎ¶×Å¿ÉÒÔÍ¬Swing×é¼þºÍÆäÄ£ÐÍÖ±½Ó½»»¥¡£
-	 * ×¢Òâpublish·½·¨µÄ²ÎÊý£¬ÊÇÒ»¸ö¿É±ä²ÎÊý£¬Ô­ÒòÊÇpublish·½·¨ÄÜ¹»ÒÔÅúÄ£Ê½À´µ÷ÓÃprocess·½·¨£¬
-	 * Ò²¾ÍÊÇËµ£¬Ã¿¸öpublishµ÷ÓÃ²¢²»×ÜÊÇ²úÉúÏàÓ¦µÄprocessµ÷ÓÃ¡£
-	 * Èç¹û¿ÉÄÜ£¬publish·½·¨»áÊÕ¼¯¶ÔÏó²¢ÒÔ¶ÔÏóµÄÁÐ±íÎª²ÎÊýµ÷ÓÃprocess·½·¨¡£
+	 * å½“ä»Žä»»åŠ¡çº¿ç¨‹è°ƒç”¨publishæ–¹æ³•æ—¶ï¼ŒSwingWorkerç±»è°ƒåº¦processæ–¹æ³•ã€‚
+	 * æœ‰æ„æ€çš„æ˜¯processæ–¹æ³•æ˜¯åœ¨EDTä¸Šé¢æ‰§è¡Œçš„ï¼Œè¿™æ„å‘³ç€å¯ä»¥åŒSwingç»„ä»¶å’Œå…¶æ¨¡åž‹ç›´æŽ¥äº¤äº’ã€‚
+	 * æ³¨æ„publishæ–¹æ³•çš„å‚æ•°ï¼Œæ˜¯ä¸€ä¸ªå¯å˜å‚æ•°ï¼ŒåŽŸå› æ˜¯publishæ–¹æ³•èƒ½å¤Ÿä»¥æ‰¹æ¨¡å¼æ¥è°ƒç”¨processæ–¹æ³•ï¼Œ
+	 * ä¹Ÿå°±æ˜¯è¯´ï¼Œæ¯ä¸ªpublishè°ƒç”¨å¹¶ä¸æ€»æ˜¯äº§ç”Ÿç›¸åº”çš„processè°ƒç”¨ã€‚
+	 * å¦‚æžœå¯èƒ½ï¼Œpublishæ–¹æ³•ä¼šæ”¶é›†å¯¹è±¡å¹¶ä»¥å¯¹è±¡çš„åˆ—è¡¨ä¸ºå‚æ•°è°ƒç”¨processæ–¹æ³•ã€‚
 	 * 
 	 * @see javax.swing.SwingWorker#process(java.util.List)
 	 */
@@ -106,6 +106,6 @@ public class FileDetector extends SwingWorker<List<File>, File> {
 	private void updateUI(List<File> files) {
 		FileInfoTableModel dataModel = new FileInfoTableModel(files);
 		table.setModel(dataModel);
-		label.setText(dataModel.getRowCount() + " ¸öÎÄ¼þ");
+		label.setText(dataModel.getRowCount() + " ä¸ªæ–‡ä»¶");
 	}
 }

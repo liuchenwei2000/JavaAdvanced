@@ -11,13 +11,13 @@ import javax.swing.SpringLayout;
 import util.Displayer;
 
 /**
- * µ¯»É²¼¾ÖÆ÷ÑİÊ¾
+ * å¼¹ç°§å¸ƒå±€å™¨æ¼”ç¤º
  * <p>
- * ½¨Òé¶ÔÓÚ¸´ÔÓµÄ²¼¾Ö»¹ÊÇÓ¦¸ÃÊ¹ÓÃÍø¸ñ×é²¼¾Ö¡£
+ * å»ºè®®å¯¹äºå¤æ‚çš„å¸ƒå±€è¿˜æ˜¯åº”è¯¥ä½¿ç”¨ç½‘æ ¼ç»„å¸ƒå±€ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class SpringLayoutDemo {
 
@@ -33,8 +33,8 @@ class SpringLayoutPanel extends JPanel {
 
 	private static final long serialVersionUID = -1284238951065109154L;
 
-	private JLabel styleLabel = new JLabel("Font Style£º");
-	private JLabel sizeLabel = new JLabel("Size£º");
+	private JLabel styleLabel = new JLabel("Font Styleï¼š");
+	private JLabel sizeLabel = new JLabel("Sizeï¼š");
 
 	private JComboBox styleBox;
 	private JComboBox sizeBox;
@@ -48,28 +48,28 @@ class SpringLayoutPanel extends JPanel {
 		this.add(sizeLabel);
 		this.add(getStyleBox());
 		this.add(getSizeBox());
-		// Ö§Öù£¬ÓÃÀ´¸ôÀë±êÇ©ºÍÏÂÀ­¿ò
+		// æ”¯æŸ±ï¼Œç”¨æ¥éš”ç¦»æ ‡ç­¾å’Œä¸‹æ‹‰æ¡†
 		Spring strut = Spring.constant(10);
-		// getConstraints·½·¨½«´´½¨Ò»¸öSpringLayout.ConstraintsÀàĞÍµÄ¶ÔÏó
-		// ¿ÉÒÔ½«Õâ¸ö¶ÔÏóÏëÏó³ÉÒ»¸ö¾ØĞÎ£¬Ö»ÊÇÏëx¡¢y¡¢¿í¶ÈºÍ¸ß¶ÈµÄÖµÊÇµ¯»É£¬¶ø²»ÊÇÊı×Ö
-		// Í¨¹ıgetWidth()µÃµ½¹á´©×é¼şµÄ¿í¶È
+		// getConstraintsæ–¹æ³•å°†åˆ›å»ºä¸€ä¸ªSpringLayout.Constraintsç±»å‹çš„å¯¹è±¡
+		// å¯ä»¥å°†è¿™ä¸ªå¯¹è±¡æƒ³è±¡æˆä¸€ä¸ªçŸ©å½¢ï¼Œåªæ˜¯æƒ³xã€yã€å®½åº¦å’Œé«˜åº¦çš„å€¼æ˜¯å¼¹ç°§ï¼Œè€Œä¸æ˜¯æ•°å­—
+		// é€šè¿‡getWidth()å¾—åˆ°è´¯ç©¿ç»„ä»¶çš„å®½åº¦
 		Spring styleWidth = layout.getConstraints(styleLabel).getWidth();
 		Spring sizeWidth = layout.getConstraints(sizeLabel).getWidth();
-		// maxµÃµ½Á½¸öµ¯»ÉµÄ×î´óÖµ£¬Æä½á¹ûÊÇÁ½¸öµ¯»ÉÖĞ½Ï³¤µÄÄÇ¸öµ¯»É
+		// maxå¾—åˆ°ä¸¤ä¸ªå¼¹ç°§çš„æœ€å¤§å€¼ï¼Œå…¶ç»“æœæ˜¯ä¸¤ä¸ªå¼¹ç°§ä¸­è¾ƒé•¿çš„é‚£ä¸ªå¼¹ç°§
 		Spring maxWidth = Spring.max(styleWidth, sizeWidth);
-		// sumµÃµ½Á½¸öµ¯»ÉµÄºÍ
+		// sumå¾—åˆ°ä¸¤ä¸ªå¼¹ç°§çš„å’Œ
 		Spring labelsEast = Spring.sum(strut, maxWidth);
-		// Ê¹ÓÃÍ¬Ò»¸öµ¯»ÉÄÜÊ¹µÃÁ½¸ö±êÇ©¶¼ÊÇÓÒ¶ÔÆë£¬²¢ÇÒÁ½¸ö±êÇ©Ò²ÊÇ¶ÔÆëµÄ
+		// ä½¿ç”¨åŒä¸€ä¸ªå¼¹ç°§èƒ½ä½¿å¾—ä¸¤ä¸ªæ ‡ç­¾éƒ½æ˜¯å³å¯¹é½ï¼Œå¹¶ä¸”ä¸¤ä¸ªæ ‡ç­¾ä¹Ÿæ˜¯å¯¹é½çš„
 		layout.putConstraint(SpringLayout.EAST, styleLabel, labelsEast,
 				SpringLayout.WEST, this);
 		layout.putConstraint(SpringLayout.EAST, sizeLabel, labelsEast,
 				SpringLayout.WEST, this);
-		// Ê¹ÓÃÍ¬Ò»¸öµ¯»ÉÊ¹µÃ±êÇ©ºÍÏÂÀ­¿òµÄNORTH±ßÄÜ±£³Ö¶ÔÆë
+		// ä½¿ç”¨åŒä¸€ä¸ªå¼¹ç°§ä½¿å¾—æ ‡ç­¾å’Œä¸‹æ‹‰æ¡†çš„NORTHè¾¹èƒ½ä¿æŒå¯¹é½
 		layout.putConstraint(SpringLayout.NORTH, styleLabel, strut,
 				SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.NORTH, getStyleBox(), strut,
 				SpringLayout.NORTH, this);
-		// getConstraint´´½¨Ò»¸ö×é¼şÖ¸¶¨±ß½çµ½´ïÆä¸¸¼¶µÄ¶¥±ß»ò×ó±ßµÄµ¯»É
+		// getConstraintåˆ›å»ºä¸€ä¸ªç»„ä»¶æŒ‡å®šè¾¹ç•Œåˆ°è¾¾å…¶çˆ¶çº§çš„é¡¶è¾¹æˆ–å·¦è¾¹çš„å¼¹ç°§
 		Spring styleLabelSouth = layout.getConstraint(SpringLayout.SOUTH,
 				styleLabel);
 		Spring styleBoxSouth = layout.getConstraint(SpringLayout.SOUTH,

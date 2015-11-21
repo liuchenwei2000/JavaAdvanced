@@ -15,14 +15,14 @@ import util.Displayer;
 import util.ui.BorderFactory;
 
 /**
- * JScrollPaneÑİÊ¾Àà
+ * JScrollPaneæ¼”ç¤ºç±»
  * <p>
- * JScrollPaneÈ¥Ö´ĞĞ¹ö¶¯¿ØÖÆ£¬²»¹ı»¹¿ÉÒÔÈ¥¿ØÖÆÓĞÄÄĞ©¹ö¶¯ÌõÊÇ¿ÉÓÃµÄ£º</br>
- * Ë®Æ½µÄ¡¢´¹Ö±µÄ¡¢Á½Õß¶¼ÓÃ»¹ÊÇÁ½Õß¶¼²»ÓÃ¡£
+ * JScrollPaneå»æ‰§è¡Œæ»šåŠ¨æ§åˆ¶ï¼Œä¸è¿‡è¿˜å¯ä»¥å»æ§åˆ¶æœ‰å“ªäº›æ»šåŠ¨æ¡æ˜¯å¯ç”¨çš„ï¼š</br>
+ * æ°´å¹³çš„ã€å‚ç›´çš„ã€ä¸¤è€…éƒ½ç”¨è¿˜æ˜¯ä¸¤è€…éƒ½ä¸ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-17
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-17
  */
 public class JScrollPaneDemo {
 	
@@ -38,11 +38,11 @@ class JScrollPanePanel extends JPanel {
 
 	private static final long serialVersionUID = 3477024713392480248L;
 
-	private JLabel label1 = new JLabel("ºá:²»¿ÉÓÃ£¬×İ:²»¿ÉÓÃ");
-	private JLabel label2 = new JLabel("ºá:¿ÉÓÃ£¬×İ:²»¿ÉÓÃ");
-	private JLabel label3 = new JLabel("ºá:²»¿ÉÓÃ£¬×İ:¿ÉÓÃ");
-	private JLabel label4 = new JLabel("ºá:¿ÉÓÃ£¬×İ:¿ÉÓÃ");
-	private JLabel label5 = new JLabel("ºá:ĞèÒªÊ±¿ÉÓÃ£¬×İ:ĞèÒªÊ±¿ÉÓÃ");
+	private JLabel label1 = new JLabel("æ¨ª:ä¸å¯ç”¨ï¼Œçºµ:ä¸å¯ç”¨");
+	private JLabel label2 = new JLabel("æ¨ª:å¯ç”¨ï¼Œçºµ:ä¸å¯ç”¨");
+	private JLabel label3 = new JLabel("æ¨ª:ä¸å¯ç”¨ï¼Œçºµ:å¯ç”¨");
+	private JLabel label4 = new JLabel("æ¨ª:å¯ç”¨ï¼Œçºµ:å¯ç”¨");
+	private JLabel label5 = new JLabel("æ¨ª:éœ€è¦æ—¶å¯ç”¨ï¼Œçºµ:éœ€è¦æ—¶å¯ç”¨");
 	
 	private JTextArea textArea1 = new JTextArea("textArea1", 5, 5);
 	private JTextArea textArea2 = new JTextArea("textArea2", 5, 5);
@@ -50,10 +50,10 @@ class JScrollPanePanel extends JPanel {
 	private JTextArea textArea4 = new JTextArea("textArea4", 5, 5);
 	private JTextArea textArea5 = new JTextArea("textArea5", 5, 5);
 	
-	// ´´½¨Ò»¸ö¾ßÓĞÖ¸¶¨¹ö¶¯Ìõ²ßÂÔµÄ¿Õ(ÎŞ´°¿ÚµÄÊÓÍ¼)JScrollPane
-	// JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED ĞèÒªÊ±ÏÔÊ¾¹ö¶¯Ìõ
-    // JScrollPane.HORIZONTAL_SCROLLBAR_NEVER ´Ó²»ÏÔÊ¾¹ö¶¯Ìõ
-    // JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS Ò»Ö±ÏÔÊ¾¹ö¶¯Ìõ
+	// åˆ›å»ºä¸€ä¸ªå…·æœ‰æŒ‡å®šæ»šåŠ¨æ¡ç­–ç•¥çš„ç©º(æ— çª—å£çš„è§†å›¾)JScrollPane
+	// JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED éœ€è¦æ—¶æ˜¾ç¤ºæ»šåŠ¨æ¡
+    // JScrollPane.HORIZONTAL_SCROLLBAR_NEVER ä»ä¸æ˜¾ç¤ºæ»šåŠ¨æ¡
+    // JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS ä¸€ç›´æ˜¾ç¤ºæ»šåŠ¨æ¡
 	private JScrollPane scrollPane1 = new JScrollPane(textArea1,
 			JScrollPane.VERTICAL_SCROLLBAR_NEVER,
 			JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);

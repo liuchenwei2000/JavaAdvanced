@@ -9,13 +9,13 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * ¿Í»§¶ËÊ¹Ê¾Àı
+ * å®¢æˆ·ç«¯ä½¿ç¤ºä¾‹
  * <p>
- * Ò²¿ÉÒÔÔÚWINDOWSÏÂÊ¹ÓÃ "telnet localhost 8189" ÃüÁî½øĞĞ²âÊÔ¡£
+ * ä¹Ÿå¯ä»¥åœ¨WINDOWSä¸‹ä½¿ç”¨ "telnet localhost 8189" å‘½ä»¤è¿›è¡Œæµ‹è¯•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class Client {
 
@@ -39,9 +39,9 @@ public class Client {
 		public void run() {
 			Socket socket = null;
 			try {
-				// ´ò¿ªÒ»¸öÌ×½Ó×Ö(Socket)½¨Á¢ºÍ·şÎñÆ÷µÄÁ¬½Ó
+				// æ‰“å¼€ä¸€ä¸ªå¥—æ¥å­—(Socket)å»ºç«‹å’ŒæœåŠ¡å™¨çš„è¿æ¥
 				socket = new Socket("localhost", 8189);
-				// »ñÈ¡·şÎñÆ÷µÄÊäÈëÁ÷
+				// è·å–æœåŠ¡å™¨çš„è¾“å…¥æµ
 				InputStream stream = socket.getInputStream();
 				Scanner scanner = new Scanner(stream);
 				while (scanner.hasNextLine()) {

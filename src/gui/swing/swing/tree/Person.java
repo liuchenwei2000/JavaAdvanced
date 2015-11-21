@@ -4,18 +4,18 @@
 package swing.tree;
 
 /**
- * ÈËÀà
+ * äººç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Person {
 	
 	private String name;
 
 	public Person() {
-		name = "ÎŞÃûÊÏ";
+		name = "æ— åæ°";
 	}
 
 	public Person(String theName) {

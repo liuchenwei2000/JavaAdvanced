@@ -7,11 +7,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * ��־��ʾ��
+ * 日志演示类
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-6-18
+ * 创建日期：2009-6-18
  */
 public class LoggerDemo {
 
@@ -23,22 +23,22 @@ public class LoggerDemo {
 	public static void main(String[] args) {
 		String message = "Logging an INFO-Level message.";
 		/*
-		 * "ȫ��" Logger ��������ż��ʹ�� Logging ����������Ա�ṩ��һ�ֱ�ݷ�����
-		 * ���ھ���ʹ�� Logging ���Ŀ�����ԱӦ������ʹ�����Լ��� Logger ����(����)��
-		 * �����������ʺ���ÿ�� Logger ���ȵļ����Ͽ�����־��¼��
+		 * "全局" Logger 对象是向偶尔使用 Logging 包开发的人员提供的一种便捷方法。
+		 * 对于经常使用 Logging 包的开发人员应创建和使用其自己的 Logger 对象(如下)。
+		 * 这样才能在适合于每个 Logger 粒度的级别上控制日志记录。
 		 */
 		Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info(message);
 		/*
-		 * ��¼��־ϵͳ�ܹ�̽�⵽�˲�����־�������ͷ�������
-		 * �����ܱ�֤��Щ���ֶ�����ȷ�ģ���˲�Ӧ���������������ṩ�ľ�ȷ�ԡ�
+		 * 记录日志系统能够探测到了产生日志的类名和方法名，
+		 * 它不能保证这些名字都是正确的，因此不应该依赖于它所能提供的精确性。
 		 */
 		logger.info(message);
 		/*
-		 * �����ȷ����ӡ����ȷ�������ͷ�������ô�Ϳ���ʹ������ķ����� 
-		 * logp()�������ܼ�¼��־�����������������Լ�Ҫ������־���ַ�����Ϊ�������
+		 * 如果想确保打印出正确的类名和方法，那么就可以使用下面的方法： 
+		 * logp()方法接受记录日志级别、类名、方法名以及要记入日志的字符串作为其参数。
 		 */
 		logger.logp(Level.INFO, "LoggerDemo", "main", message);
-		/* ��־�ĳ�����;�Ǽ�¼��Щ����Ԥ�ϵ��쳣 */
+		/* 日志的常见用途是记录那些不可预料的异常 */
 		try {
 			throw new RuntimeException("Exception occured.");
 		} catch (Exception e) {

@@ -13,13 +13,13 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * Ãæ°åÀà
+ * é¢æ¿ç±»
  * <p>
- * ¿ÉÒÔ¼ÓÔØ±³¾°Í¼Æ¬£¬Ê¹ÓÃJLabel·½·¨ÊµÏÖ¡£
+ * å¯ä»¥åŠ è½½èƒŒæ™¯å›¾ç‰‡ï¼Œä½¿ç”¨JLabelæ–¹æ³•å®ç°ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-10-31
+ * åˆ›å»ºæ—¥æœŸï¼š2007-10-31
  */
 public class JPanelWithImageB {
 	
@@ -27,7 +27,7 @@ public class JPanelWithImageB {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Displayer.createAndShowGUI("JLabelÊµÏÖÃæ°å±³¾°Í¼Æ¬", new ImagePanelB());
+		Displayer.createAndShowGUI("JLabelå®ç°é¢æ¿èƒŒæ™¯å›¾ç‰‡", new ImagePanelB());
 	}
 }
 
@@ -40,12 +40,12 @@ class ImagePanelB extends JPanel {
 	
 	public ImagePanelB() {
 		setLayout(null);
-		button = new JButton("±³¾°");
+		button = new JButton("èƒŒæ™¯");
 		button.setBounds(250, 50, 180, 30);
 		add(button);
 		ImageIcon image = new ImageIcon("images/gui.swing.panel/duke.gif");
 		label = new JLabel(image);
-		// ×¢Òâ¸ß¿íµÄÉèÖÃ
+		// æ³¨æ„é«˜å®½çš„è®¾ç½®
 		label.setBounds(0, 0, image.getIconWidth(), image.getIconHeight());
 		add(label);
 		setPreferredSize(new Dimension(400, 300));

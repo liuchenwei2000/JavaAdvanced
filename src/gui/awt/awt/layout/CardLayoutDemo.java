@@ -16,14 +16,14 @@ import javax.swing.JTextField;
 import util.Displayer;
 
 /**
- * CardLayout½«ÈİÆ÷ÖĞµÄÃ¿¸ö×é¼ş¿´×÷Ò»ÕÅ¿¨Æ¬
+ * CardLayoutå°†å®¹å™¨ä¸­çš„æ¯ä¸ªç»„ä»¶çœ‹ä½œä¸€å¼ å¡ç‰‡
  * <p>
- * Ò»´ÎÖ»ÄÜ¿´µ½Ò»ÕÅ¿¨Æ¬£¬¶øÈİÆ÷³äµ±¿¨Æ¬µÄ¶ÑÕ»¡£
- * µ±ÈİÆ÷µÚÒ»´ÎÏÔÊ¾Ê±£¬µÚÒ»¸öÌí¼Óµ½CardLayout¶ÔÏóµÄ×é¼şÎª¿É¼û×é¼ş ¡£
+ * ä¸€æ¬¡åªèƒ½çœ‹åˆ°ä¸€å¼ å¡ç‰‡ï¼Œè€Œå®¹å™¨å……å½“å¡ç‰‡çš„å †æ ˆã€‚
+ * å½“å®¹å™¨ç¬¬ä¸€æ¬¡æ˜¾ç¤ºæ—¶ï¼Œç¬¬ä¸€ä¸ªæ·»åŠ åˆ°CardLayoutå¯¹è±¡çš„ç»„ä»¶ä¸ºå¯è§ç»„ä»¶ ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-21
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-21
  */
 public class CardLayoutDemo {
 	
@@ -42,7 +42,7 @@ class CardLayoutPanel extends JPanel implements ItemListener {
 	private static final String BUTTON_PANEL = "JPanel with JButtons";
 	private static final String TEXT_PANEL = "JPanel with JTextField";
 	
-	private JPanel cardsPanel;// CardLayout²¼¾ÖµÄÈİÆ÷
+	private JPanel cardsPanel;// CardLayoutå¸ƒå±€çš„å®¹å™¨
 	
 	public CardLayoutPanel() {
 		JPanel comboBoxPanel = new JPanel();
@@ -50,7 +50,7 @@ class CardLayoutPanel extends JPanel implements ItemListener {
 				TEXT_PANEL });
 		comboBox.addItemListener(this);
 		comboBoxPanel.add(comboBox);
-		// cardsPanelÖĞµÄÁ½¸ö×é¼ş
+		// cardsPanelä¸­çš„ä¸¤ä¸ªç»„ä»¶
 		JPanel buttonCard = new JPanel();
 		buttonCard.add(new JButton("Button 1"));
 		buttonCard.add(new JButton("Button 2"));
@@ -59,7 +59,7 @@ class CardLayoutPanel extends JPanel implements ItemListener {
 		JPanel textCard = new JPanel();
 		textCard.add(new JTextField("TextField", 20));
 
-		// °Ñ×é¼ş¼ÓÈëµ½cardsPanelÖĞ
+		// æŠŠç»„ä»¶åŠ å…¥åˆ°cardsPanelä¸­
 		cardsPanel = new JPanel(new CardLayout());
 		cardsPanel.add(buttonCard, BUTTON_PANEL);
 		cardsPanel.add(textCard, TEXT_PANEL);
@@ -72,7 +72,7 @@ class CardLayoutPanel extends JPanel implements ItemListener {
 	public void itemStateChanged(ItemEvent e) {
 		CardLayout cardLayout = (CardLayout) (cardsPanel.getLayout());
 		/*
-		 * ·­×ªµ½ÒÑÌí¼Óµ½´Ë²¼¾ÖµÄ¾ßÓĞÖ¸¶¨nameµÄ×é¼ş
+		 * ç¿»è½¬åˆ°å·²æ·»åŠ åˆ°æ­¤å¸ƒå±€çš„å…·æœ‰æŒ‡å®šnameçš„ç»„ä»¶
 		 */
 		cardLayout.show(cardsPanel, (String) e.getItem());
 	}

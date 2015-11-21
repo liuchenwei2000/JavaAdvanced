@@ -18,15 +18,15 @@ import util.Displayer;
 import util.ui.ComponentFactory;
 
 /**
- * ÃÜÂëÓòÑİÊ¾Àà
+ * å¯†ç åŸŸæ¼”ç¤ºç±»
  * <p>
- * ÃÜÂëÓòÔÊĞí±à¼­Ò»¸öµ¥ĞĞÎÄ±¾£¬ÆäÊÓÍ¼Ö¸Ê¾¼üÈëÄÚÈİ£¬µ«²»ÏÔÊ¾Ô­Ê¼×Ö·û ¡£
- * Ã¿¸öÊäÈëµÄ×Ö·û¶¼ÓÃ»ØÏÔ×Ö·û(echo character)±íÊ¾¡£
- * JDK1.5Í¨³£ÓÃĞÇºÅ"*"È¡´ú£¬JDK1.6Í¨³£ÓÃĞÇºÅ"."È¡´ú¡£
+ * å¯†ç åŸŸå…è®¸ç¼–è¾‘ä¸€ä¸ªå•è¡Œæ–‡æœ¬ï¼Œå…¶è§†å›¾æŒ‡ç¤ºé”®å…¥å†…å®¹ï¼Œä½†ä¸æ˜¾ç¤ºåŸå§‹å­—ç¬¦ ã€‚
+ * æ¯ä¸ªè¾“å…¥çš„å­—ç¬¦éƒ½ç”¨å›æ˜¾å­—ç¬¦(echo character)è¡¨ç¤ºã€‚
+ * JDK1.5é€šå¸¸ç”¨æ˜Ÿå·"*"å–ä»£ï¼ŒJDK1.6é€šå¸¸ç”¨æ˜Ÿå·"."å–ä»£ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-25
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-25
  */
 public class JPasswordFieldDemo {
 
@@ -62,14 +62,14 @@ class JPasswordFieldPanel extends JPanel {
 
 	private JLabel getPasswordLabel() {
 		if (passwordLabel == null) {
-			passwordLabel = ComponentFactory.createCommonLabel(" ÃÜ  Âë ");
+			passwordLabel = ComponentFactory.createCommonLabel(" å¯†  ç  ");
 		}
 		return passwordLabel;
 	}
 
 	private JLabel getEchoLabel() {
 		if (echoLabel == null) {
-			echoLabel = ComponentFactory.createCommonLabel("»ØÏÔÃÜÂë");
+			echoLabel = ComponentFactory.createCommonLabel("å›æ˜¾å¯†ç ");
 		}
 		return echoLabel;
 	}
@@ -77,7 +77,7 @@ class JPasswordFieldPanel extends JPanel {
 	private JPasswordField getPasswordField() {
 		if (passwordField == null) {
 			passwordField = ComponentFactory.createCommonPasswordField();
-			// ÎªÃÜÂëÓòÉèÖÃ»ØÏÔ×Ö·û£¬0±íÊ¾ÖØÖÃÎªÄ¬ÈÏµÄ»ØÏÔ×Ö·û
+			// ä¸ºå¯†ç åŸŸè®¾ç½®å›æ˜¾å­—ç¬¦ï¼Œ0è¡¨ç¤ºé‡ç½®ä¸ºé»˜è®¤çš„å›æ˜¾å­—ç¬¦
 			passwordField.setEchoChar('#');
 		}
 		return passwordField;
@@ -97,11 +97,11 @@ class JPasswordFieldPanel extends JPanel {
 			button.addActionListener(new ActionListener() {
 
 				public void actionPerformed(ActionEvent e) {
-				    // ·µ»ØÃÜÂëÓòÖĞµÄÎÄ±¾
-					// ÃÜÂë²¢²»ÊÇÒÔ×Ö·û´®StringĞÍ·µ»ØµÄ£¬ÒòÎª×Ö·û´®Ò»Ö±±£ÁôÔÚJVMÉÏ£¬Ö±µ½À¬»ø»ØÊÕ
+				    // è¿”å›å¯†ç åŸŸä¸­çš„æ–‡æœ¬
+					// å¯†ç å¹¶ä¸æ˜¯ä»¥å­—ç¬¦ä¸²Stringå‹è¿”å›çš„ï¼Œå› ä¸ºå­—ç¬¦ä¸²ä¸€ç›´ä¿ç•™åœ¨JVMä¸Šï¼Œç›´åˆ°åƒåœ¾å›æ”¶
 					char[] password = getPasswordField().getPassword();
 					getTextField().setText(new String(password));
-					// ÎªÁË°²È«Æğ¼û£¬ÔÚÊ¹ÓÃÖ®ºóÓ¦¸Ã¸²Ğ´·µ»ØµÄÊı×éÄÚÈİ
+					// ä¸ºäº†å®‰å…¨èµ·è§ï¼Œåœ¨ä½¿ç”¨ä¹‹ååº”è¯¥è¦†å†™è¿”å›çš„æ•°ç»„å†…å®¹
 					Arrays.fill(password, ' ');
 				}
 			});

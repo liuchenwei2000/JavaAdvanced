@@ -25,11 +25,11 @@ import javax.swing.JRadioButton;
 import util.Displayer;
 
 /**
- * JOptionPaneµÄËùÓĞÀàĞÍÑİÊ¾Àà
+ * JOptionPaneçš„æ‰€æœ‰ç±»å‹æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-2
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-2
  */
 public class AllOptionPaneDemo {
 

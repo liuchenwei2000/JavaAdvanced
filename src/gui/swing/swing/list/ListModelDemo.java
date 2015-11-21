@@ -19,11 +19,11 @@ import javax.swing.ListSelectionModel;
 import util.Displayer;
 
 /**
- * ListModelÑİÊ¾Àà
+ * ListModelæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-29
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-29
  */
 public class ListModelDemo {
 	
@@ -50,7 +50,7 @@ class ListModelPanel extends JPanel implements ActionListener{
 	
 	public ListModelPanel(){
 		setLayout(new BorderLayout());
-		// ½«Ö¸¶¨ÖµÌí¼Óµ½±íÄ£ĞÍµÄÄ©Î²
+		// å°†æŒ‡å®šå€¼æ·»åŠ åˆ°è¡¨æ¨¡å‹çš„æœ«å°¾
 		model.addElement("One");
 		model.addElement("Two");
 		model.addElement("Three");
@@ -76,44 +76,44 @@ class ListModelPanel extends JPanel implements ActionListener{
 	}
 
 	/**
-	 * °´Å¥µã»÷µÄÊÂ¼ş´¦Àí
+	 * æŒ‰é’®ç‚¹å‡»çš„äº‹ä»¶å¤„ç†
 	 */
 	public void actionPerformed(ActionEvent e) {
-		// Êµ¼ÊÉÏ·µ»ØµÄ¾ÍÊÇ ³ÉÔ±±äÁ¿ model
+		// å®é™…ä¸Šè¿”å›çš„å°±æ˜¯ æˆå‘˜å˜é‡ model
 		DefaultListModel listModel = (DefaultListModel) list.getModel();
 		// delete
 		if (e.getSource().equals(deleteButton)) {
-			// µ±Ç°Ñ¡ÔñÏîµÄË÷Òı
+			// å½“å‰é€‰æ‹©é¡¹çš„ç´¢å¼•
 			int index = list.getSelectedIndex();
 			text.setText("delete " + listModel.getElementAt(index));
-			// ÏÂÃæµÄÓï¾äÍê³ÉÏàÍ¬µÄ²Ù×÷
+			// ä¸‹é¢çš„è¯­å¥å®Œæˆç›¸åŒçš„æ“ä½œ
 			// text.setText("delete" + getList().getSelectedValue());
-			// ÔÚÁĞ±íÄ£ĞÍÉÏÉ¾³ıÕâ¸öÑ¡Ïî(ÁĞ±í»á¸ù¾İÄ£ĞÍÖØĞÂ»æÖÆ)
+			// åœ¨åˆ—è¡¨æ¨¡å‹ä¸Šåˆ é™¤è¿™ä¸ªé€‰é¡¹(åˆ—è¡¨ä¼šæ ¹æ®æ¨¡å‹é‡æ–°ç»˜åˆ¶)
 			listModel.remove(index);
-			// ´ÓÁĞ±íÖĞÒÆ³ı²ÎÊı¶ÔÏóµÄµÚÒ»¸ö(Ë÷Òı×îĞ¡)µÄÆ¥ÅäÏî
+			// ä»åˆ—è¡¨ä¸­ç§»é™¤å‚æ•°å¯¹è±¡çš„ç¬¬ä¸€ä¸ª(ç´¢å¼•æœ€å°)çš„åŒ¹é…é¡¹
 			// listModel.removeElement(list.getSelectedValue());
-			// ÉèÖÃÄ¬ÈÏÑ¡ÔñÏî
+			// è®¾ç½®é»˜è®¤é€‰æ‹©é¡¹
 			if (index < listModel.getSize()) {
-				// É¾³ıµÄ²»ÊÇ×îºóÒ»¸öÑ¡ÏîÔòÏòÏÂÑ¡Ôñ
+				// åˆ é™¤çš„ä¸æ˜¯æœ€åä¸€ä¸ªé€‰é¡¹åˆ™å‘ä¸‹é€‰æ‹©
 				list.setSelectedIndex(index);
 			} else {
-				// É¾³ıµÄÊÇ×îºóÒ»¸öÑ¡ÏîÔòÏòÉÏÑ¡Ôñ
+				// åˆ é™¤çš„æ˜¯æœ€åä¸€ä¸ªé€‰é¡¹åˆ™å‘ä¸Šé€‰æ‹©
 				list.setSelectedIndex(index - 1);
 			}
-			// È«²¿É¾³ıÍê±ÏÖ®ºó°´Å¥ÖÃ»Ò
+			// å…¨éƒ¨åˆ é™¤å®Œæ¯•ä¹‹åæŒ‰é’®ç½®ç°
 			if (listModel.getSize() == 0) {
 				deleteButton.setEnabled(false);
 			}
 		} 
 		// add
 		else if (e.getSource().equals(addButton)) {
-			// ÔÚÁĞ±íÄ£ĞÍÉÏĞÂÔöÒ»¸öÑ¡Ïî
+			// åœ¨åˆ—è¡¨æ¨¡å‹ä¸Šæ–°å¢ä¸€ä¸ªé€‰é¡¹
 			text.setText("add " + "new" + listModel.getSize());
 			listModel.add(listModel.getSize(), "new" + listModel.getSize());
 			list.setSelectedIndex(listModel.getSize() - 1);
-			// ÔÚÁĞ±íÄ£ĞÍµÄÄ©¶ËÌí¼ÓÒ»¸öĞÂµÄ¶ÔÏó
+			// åœ¨åˆ—è¡¨æ¨¡å‹çš„æœ«ç«¯æ·»åŠ ä¸€ä¸ªæ–°çš„å¯¹è±¡
 			// listModel.addElement("new" + listModel.getSize());
-			// Ã»ÓĞÑ¡ÔñÏîĞÂÔöºóÉ¾³ı°´Å¥¿ÉÓÃ
+			// æ²¡æœ‰é€‰æ‹©é¡¹æ–°å¢ååˆ é™¤æŒ‰é’®å¯ç”¨
 			if (listModel.getSize() > 0) {
 				deleteButton.setEnabled(true);
 			}

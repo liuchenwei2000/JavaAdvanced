@@ -10,15 +10,15 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 /**
- * ¸ñÊ½Æ÷ÑİÊ¾Àà
+ * æ ¼å¼å™¨æ¼”ç¤ºç±»
  * <p>
- * Formatter(¸ñÊ½Æ÷)ÊÇÒ»ÖÖÏòHandlerµÄ´¦Àí²½ÖèÖĞ²åÈë¸ñÊ½»¯²Ù×÷µÄ·½Ê½¡£
- * Èç¹ûÏòHandler¶ÔÏó×¢²áÁËFormatter¶ÔÏó£¬ÄÇÃ´ÔÚÍ¨¹ıHandler·¢²¼LogRecordÖ®Ç°£¬
- * ËüÊ×ÏÈ»á±»ËÍµ½Formatter£¬ÔÚ±»¸ñÊ½»¯Ö®ºóLogRecord±»·µ»Ø¸øHandler£¬½Ó×Å°ÑËü·¢²¼³öÈ¥¡£
+ * Formatter(æ ¼å¼å™¨)æ˜¯ä¸€ç§å‘Handlerçš„å¤„ç†æ­¥éª¤ä¸­æ’å…¥æ ¼å¼åŒ–æ“ä½œçš„æ–¹å¼ã€‚
+ * å¦‚æœå‘Handlerå¯¹è±¡æ³¨å†Œäº†Formatterå¯¹è±¡ï¼Œé‚£ä¹ˆåœ¨é€šè¿‡Handlerå‘å¸ƒLogRecordä¹‹å‰ï¼Œ
+ * å®ƒé¦–å…ˆä¼šè¢«é€åˆ°Formatterï¼Œåœ¨è¢«æ ¼å¼åŒ–ä¹‹åLogRecordè¢«è¿”å›ç»™Handlerï¼Œæ¥ç€æŠŠå®ƒå‘å¸ƒå‡ºå»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-19
  */
 public class FormatterDemo {
 	
@@ -29,7 +29,7 @@ public class FormatterDemo {
 	 */
 	public static void main(String[] args) {
 		Handler handler = new ConsoleHandler();
-		// ½«Formatter×¢²áµ½Handler
+		// å°†Formatteræ³¨å†Œåˆ°Handler
 		handler.setFormatter(new MyFormatter());
 		logger.setUseParentHandlers(false);
 		logger.addHandler(handler);
@@ -43,7 +43,7 @@ public class FormatterDemo {
 }
 
 /**
- * ±àĞ´Ò»¸ö×Ô¶¨ÒåµÄFormatter£¬ÒªÀ©Õ¹FormatterÀà²¢ÇÒ¸²¸Çformat(LogRecord)
+ * ç¼–å†™ä¸€ä¸ªè‡ªå®šä¹‰çš„Formatterï¼Œè¦æ‰©å±•Formatterç±»å¹¶ä¸”è¦†ç›–format(LogRecord)
  */
 class MyFormatter extends Formatter {
 	

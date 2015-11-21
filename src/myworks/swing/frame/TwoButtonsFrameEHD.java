@@ -9,21 +9,21 @@ import java.awt.event.ActionListener;
 import util.ui.DialogManager;
 
 /**
- * ÓĞ"È·¶¨"¡¢"È¡Ïû"Á½¸ö°´Å¥µÄJFrameÊÂ¼ş´¦ÀíÆ÷
+ * æœ‰"ç¡®å®š"ã€"å–æ¶ˆ"ä¸¤ä¸ªæŒ‰é’®çš„JFrameäº‹ä»¶å¤„ç†å™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2008-9-16
+ * åˆ›å»ºæ—¶é—´ï¼š2008-9-16
  */
 public abstract class TwoButtonsFrameEHD implements ActionListener {
 
-	private TwoButtonsFrame frame;// ¹ØÁªµÄJFrame
+	private TwoButtonsFrame frame;// å…³è”çš„JFrame
 
 	/**
-	 * ÓĞ"È·¶¨"¡¢"È¡Ïû"Á½¸ö°´Å¥µÄJFrameÊÂ¼ş´¦ÀíÆ÷
+	 * æœ‰"ç¡®å®š"ã€"å–æ¶ˆ"ä¸¤ä¸ªæŒ‰é’®çš„JFrameäº‹ä»¶å¤„ç†å™¨
 	 * 
 	 * @param frame
-	 *            ¹ØÁªµÄJFrame
+	 *            å…³è”çš„JFrame
 	 */
 	public TwoButtonsFrameEHD(TwoButtonsFrame frame) {
 		this.frame = frame;
@@ -42,19 +42,19 @@ public abstract class TwoButtonsFrameEHD implements ActionListener {
 	}
 
 	/**
-	 * JFrame×ÔÉí´¦ÀíÒì³£µÄ·½Ê½
+	 * JFrameè‡ªèº«å¤„ç†å¼‚å¸¸çš„æ–¹å¼
 	 */
 	private void handleException(Exception e) {
 		DialogManager.showErrorDialog(e.getMessage());
 	}
 
 	/**
-	 * È·¶¨ °´Å¥µÄÊÂ¼ş´¦Àí
+	 * ç¡®å®š æŒ‰é’®çš„äº‹ä»¶å¤„ç†
 	 */
 	protected abstract void doOKAction() throws Exception;
 
 	/**
-	 * È¡Ïû °´Å¥µÄÊÂ¼ş´¦Àí
+	 * å–æ¶ˆ æŒ‰é’®çš„äº‹ä»¶å¤„ç†
 	 */
 	protected void doCancelAction() throws Exception {
 		getFrame().dispose();

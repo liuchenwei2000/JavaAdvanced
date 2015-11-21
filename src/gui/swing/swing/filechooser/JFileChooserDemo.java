@@ -14,14 +14,14 @@ import javax.swing.*;
 import util.Displayer;
 
 /**
- * JFileChooserÑİÊ¾Àà
+ * JFileChooseræ¼”ç¤ºç±»
  * <p>
- * Í¼ĞÎ²Ù×÷ÏµÍ³Ò»°ã¶¼Ö§³Ö´ò¿ªºÍ±£´æÎÄ¼ş£¬ËùÒÔJavaÌá¹©ÁËJFileChooser¡£
- * Ëü·â×°ÁËÕâĞ©²Ù×÷£¬Ê¹ÎÄ¼ş²Ù×÷±äµÃ¸ü¼Ó·½±ã¡£
+ * å›¾å½¢æ“ä½œç³»ç»Ÿä¸€èˆ¬éƒ½æ”¯æŒæ‰“å¼€å’Œä¿å­˜æ–‡ä»¶ï¼Œæ‰€ä»¥Javaæä¾›äº†JFileChooserã€‚
+ * å®ƒå°è£…äº†è¿™äº›æ“ä½œï¼Œä½¿æ–‡ä»¶æ“ä½œå˜å¾—æ›´åŠ æ–¹ä¾¿ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-19
  */
 public class JFileChooserDemo {
 	
@@ -73,23 +73,23 @@ class JFileChooserPanel extends JPanel {
 	}
 
 	/**
-	 * ´ò¿ª¶¯×÷¼àÌıÆ÷
+	 * æ‰“å¼€åŠ¨ä½œç›‘å¬å™¨
 	 */
 	class OpenActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			JFileChooser chooser = new JFileChooser();
-			// ÉèÖÃÑ¡ÔñÆ÷Ä¬ÈÏµÄµ±Ç°Ä¿Â¼
+			// è®¾ç½®é€‰æ‹©å™¨é»˜è®¤çš„å½“å‰ç›®å½•
 			chooser.setCurrentDirectory(new File("."));
 			int result = chooser.showOpenDialog(JFileChooserPanel.this);
-			//  Ñ¡ÔñÈ·ÈÏ(yes¡¢ok)ºó·µ»Ø¸ÃÖµ
+			//  é€‰æ‹©ç¡®è®¤(yesã€ok)åè¿”å›è¯¥å€¼
 			if (result == JFileChooser.APPROVE_OPTION) {
-				// ·µ»ØÑ¡ÖĞµÄÎÄ¼ş£¬¿ÉÓÉ³ÌĞòÔ±Í¨¹ısetSelectedFile()»òÕßÍ¨¹ıÓÃ»§²Ù×÷
-				// ÈçÔÚUIÖĞ¼üÈëÎÄ¼şÃû£¬»òÕß´ÓUIÖĞµÄÁĞ±íÄÚÑ¡ÔñÎÄ¼şÀ´½øĞĞ´ËÉèÖÃ
+				// è¿”å›é€‰ä¸­çš„æ–‡ä»¶ï¼Œå¯ç”±ç¨‹åºå‘˜é€šè¿‡setSelectedFile()æˆ–è€…é€šè¿‡ç”¨æˆ·æ“ä½œ
+				// å¦‚åœ¨UIä¸­é”®å…¥æ–‡ä»¶åï¼Œæˆ–è€…ä»UIä¸­çš„åˆ—è¡¨å†…é€‰æ‹©æ–‡ä»¶æ¥è¿›è¡Œæ­¤è®¾ç½®
 				filenameField.setText(chooser.getSelectedFile().getName());
-				// ·µ»Øµ±Ç°Ä¿Â¼
+				// è¿”å›å½“å‰ç›®å½•
 				dirpathField.setText(chooser.getCurrentDirectory().toString());
 			} 
-			// Ñ¡ÔñÈ¡Ïûºó·µ»Ø¸ÃÖµ
+			// é€‰æ‹©å–æ¶ˆåè¿”å›è¯¥å€¼
 			else if (result == JFileChooser.CANCEL_OPTION) {
 				filenameField.setText("You pressed cancel");
 				dirpathField.setText("");
@@ -98,7 +98,7 @@ class JFileChooserPanel extends JPanel {
 	}
 
 	/**
-	 * ±£´æ¶¯×÷¼àÌıÆ÷
+	 * ä¿å­˜åŠ¨ä½œç›‘å¬å™¨
 	 */
 	class SaveActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {

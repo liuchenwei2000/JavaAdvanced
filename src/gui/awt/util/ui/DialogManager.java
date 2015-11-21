@@ -6,11 +6,11 @@ package util.ui;
 import javax.swing.JOptionPane;
 
 /**
- * ¶Ô»°¿ò¹ÜÀíÆ÷Àà
+ * å¯¹è¯æ¡†ç®¡ç†å™¨ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-10-9
+ * åˆ›å»ºæ—¶é—´ï¼š2008-10-9
  */
 public class DialogManager {
 
@@ -19,10 +19,10 @@ public class DialogManager {
 	}
 
 	/**
-	 * ÏÔÊ¾´íÎóĞÅÏ¢¶Ô»°¿ò
+	 * æ˜¾ç¤ºé”™è¯¯ä¿¡æ¯å¯¹è¯æ¡†
 	 * 
 	 * @param message
-	 *            ĞÅÏ¢
+	 *            ä¿¡æ¯
 	 */
 	public static void showErrorDialog(String message) {
 		JOptionPane.showMessageDialog(null, message, "Error",
@@ -30,12 +30,12 @@ public class DialogManager {
 	}
 
 	/**
-	 * ÏÔÊ¾ÆÕÍ¨ĞÅÏ¢¶Ô»°¿ò
+	 * æ˜¾ç¤ºæ™®é€šä¿¡æ¯å¯¹è¯æ¡†
 	 * 
 	 * @param message
-	 *            ĞÅÏ¢
+	 *            ä¿¡æ¯
 	 * @param title
-	 *            ±êÌâ
+	 *            æ ‡é¢˜
 	 */
 	public static void showMessageDialog(String message, String title) {
 		JOptionPane.showMessageDialog(null, message, title,

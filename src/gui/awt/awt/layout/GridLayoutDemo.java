@@ -12,14 +12,14 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * GridLayoutÑİÊ¾Àà
+ * GridLayoutæ¼”ç¤ºç±»
  * <p>
- * GridLayoutÏñµç×ÓÊı¾İ±í¸ñÒ»Ñù£¬°´ĞĞÁĞÅÅÁĞËùÓĞµÄ×é¼ş²¢ÇÒËüµÄÃ¿¸öµ¥Ôª´óĞ¡¶¼Ò»Ñù¡£
- * ÔÚÊµ¼ÊÓ¦ÓÃÖĞ£¬Ğ¡µÄÍø¸ñ(Í¨³£Ö»ÓĞÒ»ĞĞ»òÕßÒ»ÁĞ)ÔÚ×éÖ¯´°¿ÚµÄ²¼¾ÖÇøÓòÊ±±È½ÏÓĞÓÃ¡£
+ * GridLayoutåƒç”µå­æ•°æ®è¡¨æ ¼ä¸€æ ·ï¼ŒæŒ‰è¡Œåˆ—æ’åˆ—æ‰€æœ‰çš„ç»„ä»¶å¹¶ä¸”å®ƒçš„æ¯ä¸ªå•å…ƒå¤§å°éƒ½ä¸€æ ·ã€‚
+ * åœ¨å®é™…åº”ç”¨ä¸­ï¼Œå°çš„ç½‘æ ¼(é€šå¸¸åªæœ‰ä¸€è¡Œæˆ–è€…ä¸€åˆ—)åœ¨ç»„ç»‡çª—å£çš„å¸ƒå±€åŒºåŸŸæ—¶æ¯”è¾ƒæœ‰ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-21
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-21
  */
 public class GridLayoutDemo {
 	
@@ -39,8 +39,8 @@ class GridLayoutPanel extends JPanel {
 		super();
 		JPanel buttonPanel = new JPanel();
 		GridLayout grid = new GridLayout(3, 2);
-		grid.setHgap(10);// ÉèÖÃĞĞ¾à
-		grid.setVgap(10);// ÉèÖÃÁĞ¾à
+		grid.setHgap(10);// è®¾ç½®è¡Œè·
+		grid.setVgap(10);// è®¾ç½®åˆ—è·
 		buttonPanel.setLayout(grid);
 		buttonPanel.add(new JButton("one"));
 		buttonPanel.add(new JButton("two"));
@@ -49,11 +49,11 @@ class GridLayoutPanel extends JPanel {
 		buttonPanel.add(new JButton("five"));
 
 		JPanel labelPanel = new JPanel();
-		// ´´½¨¾ßÓĞÖ¸¶¨ĞĞÊıºÍÁĞÊıµÄÍø¸ñ²¼¾Ö¡£¸ø²¼¾ÖÖĞµÄËùÓĞ×é¼ş·ÖÅäÏàµÈµÄ´óĞ¡
-		// ĞĞÊıºÍÁĞÊıÖĞµÄÒ»¸ö¿ÉÒÔÎªÁã(µ«²»ÄÜÁ½ÕßÍ¬Ê±ÎªÁã)£¬Õâ±íÊ¾¿ÉÒÔ½«ÈÎºÎÊıÄ¿µÄ¶ÔÏóÖÃÓÚĞĞ»òÁĞÖĞ
+		// åˆ›å»ºå…·æœ‰æŒ‡å®šè¡Œæ•°å’Œåˆ—æ•°çš„ç½‘æ ¼å¸ƒå±€ã€‚ç»™å¸ƒå±€ä¸­çš„æ‰€æœ‰ç»„ä»¶åˆ†é…ç›¸ç­‰çš„å¤§å°
+		// è¡Œæ•°å’Œåˆ—æ•°ä¸­çš„ä¸€ä¸ªå¯ä»¥ä¸ºé›¶(ä½†ä¸èƒ½ä¸¤è€…åŒæ—¶ä¸ºé›¶)ï¼Œè¿™è¡¨ç¤ºå¯ä»¥å°†ä»»ä½•æ•°ç›®çš„å¯¹è±¡ç½®äºè¡Œæˆ–åˆ—ä¸­
 		GridLayout grid2 = new GridLayout(0, 1);
-		grid.setHgap(10);// ÉèÖÃĞĞ¾à
-		grid.setVgap(10);// ÉèÖÃÁĞ¾à
+		grid.setHgap(10);// è®¾ç½®è¡Œè·
+		grid.setVgap(10);// è®¾ç½®åˆ—è·
 		labelPanel.setLayout(grid2);
 		labelPanel.add(new JLabel("one"));
 		labelPanel.add(new JLabel("two"));

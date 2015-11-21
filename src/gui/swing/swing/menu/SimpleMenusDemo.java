@@ -16,16 +16,16 @@ import javax.swing.JTextField;
 import util.Displayer;
 
 /**
- * ¼òµ¥²Ëµ¥ÑİÊ¾Àà
+ * ç®€å•èœå•æ¼”ç¤ºç±»
  * <p>
- * Ã¿¸ö×é¼ş¶¼ÄÜ¹»³ÖÓĞÒ»¸ö²Ëµ¥£¬°üÀ¨JApplet£¬JFrame£¬JDialogÒÔ¼°ËüÃÇµÄ×ÓÀà¡£
- * ËüÃÇµÄsetJMenuBar()·½·¨½ÓÊÜÒ»¸öJMenuBar¶ÔÏó(Ã¿¸ö×é¼şÖ»ÄÜ³ÖÓĞÒ»¸öJMenuBar¶ÔÏó)×÷Îª²ÎÊı¡£
- * ÏÈ°ÑJMenu¶ÔÏóÌí¼Óµ½JMenuBarÖĞ£¬È»ºó°ÑJMenuItemÌí¼Óµ½JMenuÖĞ¡£
- * Ã¿¸öJMenuItem¶¼ÄÜÓĞÒ»¸öÏà¹ØÁªµÄActionListener£¬ÓÃÀ´²¶»ñ²Ëµ¥Ïî±»Ñ¡ÖĞÊ±´¥·¢µÄÊÂ¼ş¡£
+ * æ¯ä¸ªç»„ä»¶éƒ½èƒ½å¤ŸæŒæœ‰ä¸€ä¸ªèœå•ï¼ŒåŒ…æ‹¬JAppletï¼ŒJFrameï¼ŒJDialogä»¥åŠå®ƒä»¬çš„å­ç±»ã€‚
+ * å®ƒä»¬çš„setJMenuBar()æ–¹æ³•æ¥å—ä¸€ä¸ªJMenuBarå¯¹è±¡(æ¯ä¸ªç»„ä»¶åªèƒ½æŒæœ‰ä¸€ä¸ªJMenuBarå¯¹è±¡)ä½œä¸ºå‚æ•°ã€‚
+ * å…ˆæŠŠJMenuå¯¹è±¡æ·»åŠ åˆ°JMenuBarä¸­ï¼Œç„¶åæŠŠJMenuItemæ·»åŠ åˆ°JMenuä¸­ã€‚
+ * æ¯ä¸ªJMenuIteméƒ½èƒ½æœ‰ä¸€ä¸ªç›¸å…³è”çš„ActionListenerï¼Œç”¨æ¥æ•è·èœå•é¡¹è¢«é€‰ä¸­æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-18
  */
 public class SimpleMenusDemo {
 	
@@ -42,25 +42,25 @@ class SimpleMenusPanel extends JFrame {
 	private static final long serialVersionUID = -5316049677104076415L;
 
 	private JTextField text = new JTextField(15);
-	// ²Ëµ¥ Êı×é
+	// èœå• æ•°ç»„
 	private JMenu fileMenu = new JMenu("File");
 	private JMenu editMenu = new JMenu("Edit");
 	private JMenu helpMenu = new JMenu("Help");
 
 	private JMenu[] menus = { fileMenu, editMenu, helpMenu };
 
-	private ActionListener listener;// ²Ëµ¥Ïî¼àÌıÆ÷
+	private ActionListener listener;// èœå•é¡¹ç›‘å¬å™¨
 
 	public SimpleMenusPanel(String title) {
 		super(title);
 		initMenus();
 		initListeners();
-		// ²Ëµ¥À¸
+		// èœå•æ 
 		JMenuBar menuBar = new JMenuBar();
 		for (JMenu menu : menus) {
 			menuBar.add(menu);
 		}
-		// ÉèÖÃ´ËFrameµÄ²Ëµ¥À¸
+		// è®¾ç½®æ­¤Frameçš„èœå•æ 
 		setJMenuBar(menuBar);
 		text.setEditable(false);
 		add(text);
@@ -83,13 +83,13 @@ class SimpleMenusPanel extends JFrame {
 		editMenu.add(new JMenuItem("Cut"));
 		editMenu.add(new JMenuItem("Copy"));
 		editMenu.add(new JMenuItem("Paste"));
-		// ´øÍ¼±êµÄ²Ëµ¥Ïî
+		// å¸¦å›¾æ ‡çš„èœå•é¡¹
 		JMenuItem deleteItem = new JMenuItem("Delete", new ImageIcon(
 				"images/gui.swing.menu/delete.gif"));
 		editMenu.add(deleteItem);
 		JMenuItem deleteItem2 = new JMenuItem("Delete", new ImageIcon(
 				"images/gui.swing.menu/delete.gif"));
-		// ÉèÖÃÎÄ±¾µÄË®Æ½ÏÔÊ¾Î»ÖÃ(Ïà¶ÔÍ¼±ê)
+		// è®¾ç½®æ–‡æœ¬çš„æ°´å¹³æ˜¾ç¤ºä½ç½®(ç›¸å¯¹å›¾æ ‡)
 		deleteItem2.setHorizontalTextPosition(JMenuItem.LEFT);
 		editMenu.add(deleteItem2);
 	}
@@ -103,7 +103,7 @@ class SimpleMenusPanel extends JFrame {
 	private void initListeners() {
 		for (JMenu menu : menus) {
 			for (int i = 0; i < menu.getItemCount(); i++) {
-				// ÅÅ³ıseparatorµÄÇé¿ö
+				// æ’é™¤separatorçš„æƒ…å†µ
 				if (menu.getItem(i) != null) {
 					menu.getItem(i).addActionListener(getListener());
 				}

@@ -11,14 +11,14 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeCellRenderer;
 
 /**
- * ×Ô¶¨ÒåÊ÷½ÚµãäÖÈ¾Æ÷Àà
+ * è‡ªå®šä¹‰æ ‘èŠ‚ç‚¹æ¸²æŸ“å™¨ç±»
  * <p>
- * (Ò¶½ÚµãÎªÒ»ÖÖÍ¼±ê£¬·ÇÒ¶½ÚµãÊÇÁíÒ»ÖÖÍ¼±êÒ¶½ÚµãµÄÃû³ÆÈôÊÇº¬ÓĞ'A'ÔòÓĞÌáÊ¾Óï)¡£
- * ¼Ì³Ğ×ÔDefaultTreeCellRendererÀà£¬ĞèÒª¸²¸ÇgetTreeCellRendererComponent·½·¨¡£
+ * (å¶èŠ‚ç‚¹ä¸ºä¸€ç§å›¾æ ‡ï¼Œéå¶èŠ‚ç‚¹æ˜¯å¦ä¸€ç§å›¾æ ‡å¶èŠ‚ç‚¹çš„åç§°è‹¥æ˜¯å«æœ‰'A'åˆ™æœ‰æç¤ºè¯­)ã€‚
+ * ç»§æ‰¿è‡ªDefaultTreeCellRendererç±»ï¼Œéœ€è¦è¦†ç›–getTreeCellRendererComponentæ–¹æ³•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-23
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-23
  */
 public class MyRenderer extends DefaultTreeCellRenderer {
 	
@@ -27,8 +27,8 @@ public class MyRenderer extends DefaultTreeCellRenderer {
 	 */
 	private static final long serialVersionUID = 4362529347974019607L;
 
-	private Icon leafIcon;// Ò¶½Úµã
-	private Icon branchIcon;// ·ÇÒ¶½Úµã
+	private Icon leafIcon;// å¶èŠ‚ç‚¹
+	private Icon branchIcon;// éå¶èŠ‚ç‚¹
 
 	public MyRenderer(Icon leaf, Icon branch) {
 		leafIcon = leaf;
@@ -36,7 +36,7 @@ public class MyRenderer extends DefaultTreeCellRenderer {
 	}
 
 	/**
-	 * ÖØĞ´´Ë·½·¨ÒÔÊµÏÖ×Ô¶¨ÒåµÄäÖÈ¾Æ÷¹æÔò
+	 * é‡å†™æ­¤æ–¹æ³•ä»¥å®ç°è‡ªå®šä¹‰çš„æ¸²æŸ“å™¨è§„åˆ™
 	 * 
 	 * @see javax.swing.tree.DefaultTreeCellRenderer#getTreeCellRendererComponent(javax.swing.JTree,
 	 *      java.lang.Object, boolean, boolean, boolean, int, boolean)
@@ -48,7 +48,7 @@ public class MyRenderer extends DefaultTreeCellRenderer {
 		super.getTreeCellRendererComponent(tree, value, sel, expanded, leaf,
 				row, hasFocus);
 		if (leaf) {
-			// ÉèÖÃ·ûºÏÌõ¼şµÄÒ¶½ÚµãµÄIconºÍÌáÊ¾Óï
+			// è®¾ç½®ç¬¦åˆæ¡ä»¶çš„å¶èŠ‚ç‚¹çš„Iconå’Œæç¤ºè¯­
 			setIcon(leafIcon);
 			if (hasWordA(value))
 				setToolTipText("The name has word 'A'");
@@ -61,7 +61,7 @@ public class MyRenderer extends DefaultTreeCellRenderer {
 	}
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñº¬ÓĞ×ÖÄ¸A 
+	 * åˆ¤æ–­æ˜¯å¦å«æœ‰å­—æ¯A 
 	 */
 	protected boolean hasWordA(Object value) {
 		DefaultMutableTreeNode node = (DefaultMutableTreeNode) value;

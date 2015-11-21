@@ -8,21 +8,21 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 /**
- * PropertiesÎÄ¼şÔÄ¶ÁÆ÷
+ * Propertiesæ–‡ä»¶é˜…è¯»å™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-17
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-17
  */
 public class PropertiesFileReader {
 
-	private Properties properties;// ÊôĞÔ¼¯
+	private Properties properties;// å±æ€§é›†
 
 	/**
-	 * PropertiesÎÄ¼şÔÄ¶ÁÆ÷
+	 * Propertiesæ–‡ä»¶é˜…è¯»å™¨
 	 * 
 	 * @param fileName
-	 *            ÊôĞÔÎÄ¼şÃû
+	 *            å±æ€§æ–‡ä»¶å
 	 * @throws Exception
 	 */
 	public PropertiesFileReader(String fileName) throws Exception {
@@ -32,10 +32,10 @@ public class PropertiesFileReader {
 	}
 
 	/**
-	 * ¸ù¾İ¼üÃû·µ»Ø¶ÔÓ¦µÄÖµ
+	 * æ ¹æ®é”®åè¿”å›å¯¹åº”çš„å€¼
 	 * 
 	 * @param key
-	 *            ¼üÃû
+	 *            é”®å
 	 */
 	public String getProperty(String key) {
 		return properties.getProperty(key);

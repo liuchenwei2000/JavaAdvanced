@@ -17,11 +17,11 @@ import javax.swing.table.TableColumn;
 import util.Displayer;
 
 /**
- * Í¨¹ıTableModel´´½¨µÄJTable
+ * é€šè¿‡TableModelåˆ›å»ºçš„JTable
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-17
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-17
  */
 public class MyTableDemo {
 	
@@ -43,25 +43,25 @@ class MyTablePanel extends JPanel {
 		super(new GridLayout(1, 0));
 		setLayout(new BorderLayout());
 		table = new JTable(new MyTableModel());
-		// ÉèÖÃÁĞµÄ±à¼­Æ÷
+		// è®¾ç½®åˆ—çš„ç¼–è¾‘å™¨
 		TableColumn sexColumn = table.getColumnModel().getColumn(1);
 		JComboBox comboBox = new JComboBox();
 		comboBox.addItem("M");
 		comboBox.addItem("F");
 		sexColumn.setCellEditor(new DefaultCellEditor(comboBox));
-		// ÉèÖÃÁĞµÄäÖÈ¾Æ÷
+		// è®¾ç½®åˆ—çš„æ¸²æŸ“å™¨
 		DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-		// ÓÃäÖÈ¾Æ÷ÉèÖÃÁĞÍ·ÌáÊ¾Óï
+		// ç”¨æ¸²æŸ“å™¨è®¾ç½®åˆ—å¤´æç¤ºè¯­
 		renderer.setToolTipText("Click for combo box");
 		sexColumn.setCellRenderer(renderer);
 		table.getTableHeader().setToolTipText("Test");
-		// ÉèÖÃÓÃ»§ÊÇ·ñ¿ÉÒÔÍÏ¶¯ÁĞÍ·£¬ÒÔÖØĞÂÅÅĞò¸÷ÁĞ
+		// è®¾ç½®ç”¨æˆ·æ˜¯å¦å¯ä»¥æ‹–åŠ¨åˆ—å¤´ï¼Œä»¥é‡æ–°æ’åºå„åˆ—
 		table.getTableHeader().setReorderingAllowed(false);
-		// ÉèÖÃĞĞ¸ß
+		// è®¾ç½®è¡Œé«˜
 		// table.setRowHeight(1, 30);
 		JScrollPane scroll = new JScrollPane(table);
 		scroll.setBounds(0, 0, 250, 327);
-		// ÉèÖÃÁĞ¿í
+		// è®¾ç½®åˆ—å®½
 		TableColumn tc = null;
 		for (int i = 0; i < table.getColumnCount(); i++) {
 			tc = table.getColumnModel().getColumn(i);

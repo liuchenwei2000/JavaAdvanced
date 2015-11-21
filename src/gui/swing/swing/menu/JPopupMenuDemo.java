@@ -13,17 +13,17 @@ import javax.swing.*;
 import util.Displayer;
 
 /**
- * JPopupMenuÑİÊ¾Àà
+ * JPopupMenuæ¼”ç¤ºç±»
  * <p>
- * JPopupMenuµ¯³öÊ½²Ëµ¥ÊÇÒ»¸ö¿Éµ¯³ö²¢ÏÔÊ¾Ò»ÏµÁĞÑ¡ÏîµÄĞ¡´°¿Ú ¡£
- * ÓÃÓÚµ±ÓÃ»§Ñ¡Ôñ²Ëµ¥Ïî²¢¼¤»îËüÊ±ÏÔÊ¾µÄ"ÓÒÀ­Ê½(pull-right)"²Ëµ¥£¬
- * »¹¿ÉÒÔÔÚÏëÈÃ²Ëµ¥ÏÔÊ¾µÄÈÎºÎÆäËûÎ»ÖÃÊ¹ÓÃ£¬ÀıÈçµ±ÓÃ»§ÔÚÖ¸¶¨ÇøÓòÖĞÓÒ»÷Ê±¡£
+ * JPopupMenuå¼¹å‡ºå¼èœå•æ˜¯ä¸€ä¸ªå¯å¼¹å‡ºå¹¶æ˜¾ç¤ºä¸€ç³»åˆ—é€‰é¡¹çš„å°çª—å£ ã€‚
+ * ç”¨äºå½“ç”¨æˆ·é€‰æ‹©èœå•é¡¹å¹¶æ¿€æ´»å®ƒæ—¶æ˜¾ç¤ºçš„"å³æ‹‰å¼(pull-right)"èœå•ï¼Œ
+ * è¿˜å¯ä»¥åœ¨æƒ³è®©èœå•æ˜¾ç¤ºçš„ä»»ä½•å…¶ä»–ä½ç½®ä½¿ç”¨ï¼Œä¾‹å¦‚å½“ç”¨æˆ·åœ¨æŒ‡å®šåŒºåŸŸä¸­å³å‡»æ—¶ã€‚
  * <p>
- * ±¾ÀıÊÇJPopupMenuÈçºÎÊ¹ÓÃµÄµäĞÍÓÃÀı¡£
+ * æœ¬ä¾‹æ˜¯JPopupMenuå¦‚ä½•ä½¿ç”¨çš„å…¸å‹ç”¨ä¾‹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-19
  */
 public class JPopupMenuDemo {
 	
@@ -44,16 +44,16 @@ class JPopupMenuPanel extends JPanel {
 
 	public JPopupMenuPanel() {
 		initPopupMenu();
-		// ÉèÖÃ×é¼şÓÒ¼üµã»÷Ê±µÄJPopupMenu
+		// è®¾ç½®ç»„ä»¶å³é”®ç‚¹å‡»æ—¶çš„JPopupMenu
 		setComponentPopupMenu(popupMenu);
-		// Í¨¹ı¼àÌı·½Ê½ÎªJTextFieldÌí¼ÓÓÒ¼üµã»÷µÄJPopupMenu
+		// é€šè¿‡ç›‘å¬æ–¹å¼ä¸ºJTextFieldæ·»åŠ å³é”®ç‚¹å‡»çš„JPopupMenu
 		text.addMouseListener(new PopupListener());
 		text.setText("Right  click  your  mouse.");
 		add(text);
 	}
 
 	/**
-	 * ³õÊ¼»¯JPopupMenu
+	 * åˆå§‹åŒ–JPopupMenu
 	 */
 	private void initPopupMenu() {
 		ActionListener listener = getListener();
@@ -61,9 +61,9 @@ class JPopupMenuPanel extends JPanel {
 		item1.addActionListener(listener);
 		JMenuItem item2 = new JMenuItem("Second");
 		item2.addActionListener(listener);
-		// ½«Ö¸¶¨²Ëµ¥Ïî×·¼Óµ½´Ë²Ëµ¥µÄÄ©Î²
+		// å°†æŒ‡å®šèœå•é¡¹è¿½åŠ åˆ°æ­¤èœå•çš„æœ«å°¾
 		popupMenu.add(item1);
-		// ½«ĞÂ·Ö¸ô·û×·¼Óµ½²Ëµ¥µÄÄ©Î²
+		// å°†æ–°åˆ†éš”ç¬¦è¿½åŠ åˆ°èœå•çš„æœ«å°¾
 		popupMenu.addSeparator();
 		popupMenu.add(item2);
 	}
@@ -79,9 +79,9 @@ class JPopupMenuPanel extends JPanel {
 		}
 
 		private void maybeShowPopup(MouseEvent e) {
-			// ·µ»Ø´ËÊó±êÊÂ¼şÊÇ·ñÎª¸ÃÆ½Ì¨µÄµ¯³ö²Ëµ¥´¥·¢ÊÂ¼ş
+			// è¿”å›æ­¤é¼ æ ‡äº‹ä»¶æ˜¯å¦ä¸ºè¯¥å¹³å°çš„å¼¹å‡ºèœå•è§¦å‘äº‹ä»¶
 			if (e.isPopupTrigger()){
-				// ÔÚ×é¼şµ÷ÓÃÕßµÄ×ø±ê¿Õ¼äÖĞµÄÎ»ÖÃ X¡¢Y ÏÔÊ¾µ¯³ö²Ëµ¥
+				// åœ¨ç»„ä»¶è°ƒç”¨è€…çš„åæ ‡ç©ºé—´ä¸­çš„ä½ç½® Xã€Y æ˜¾ç¤ºå¼¹å‡ºèœå•
 				popupMenu.show(e.getComponent(), e.getX(), e.getY());
 			}
 		}

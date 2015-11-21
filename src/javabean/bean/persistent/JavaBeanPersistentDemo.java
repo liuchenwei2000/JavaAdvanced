@@ -11,11 +11,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 /**
- * JavaBean³Ö¾Ã»¯Ê¾Àı
+ * JavaBeanæŒä¹…åŒ–ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-4
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-4
  */
 public class JavaBeanPersistentDemo {
 
@@ -36,16 +36,16 @@ public class JavaBeanPersistentDemo {
 	}
 
 	/**
-	 * ³Ö¾Ã»¯Ò»¸öJavaBean¶ÔÏóµ½XMLÎÄ¼ş
+	 * æŒä¹…åŒ–ä¸€ä¸ªJavaBeanå¯¹è±¡åˆ°XMLæ–‡ä»¶
 	 */
 	private static void writeJavaBean(String filePath, JavaBean bean) {
 		XMLEncoder encoder = null;
 		try {
 			/**
-			 * Ö»ÓĞÄÇĞ©ÓëÄ¬ÈÏÖµ²»Í¬µÄÊôĞÔ»á±»±£´æÏÂÀ´¡£
-			 * XMLEncoder»áÉú³ÉÒ»¸öÄ¬ÈÏµÄJavaBean¶ÔÏó£¬²¢½«ËüµÄÊôĞÔÓë±»´¦ÀíµÄJavaBean¶ÔÏó×÷±È½Ï¡£
-			 * Ö»ÓĞÄÇĞ©ÓëÄ¬ÈÏÖµ²»Í¬µÄÊôĞÔ£¬²Å»áÉú³ÉÊôĞÔÉèÖÃÓï¾ä£¬Õâ¸ö¹ı³Ì½Ğ×öÏû³ıÈßÓà¡£
-			 * ½á¹ûÊÇ£¬´æ´¢ÏÂÀ´µÄ¶«Î÷Í¨³£±ÈĞòÁĞ»¯µÄ½á¹ûÒªĞ¡¡£
+			 * åªæœ‰é‚£äº›ä¸é»˜è®¤å€¼ä¸åŒçš„å±æ€§ä¼šè¢«ä¿å­˜ä¸‹æ¥ã€‚
+			 * XMLEncoderä¼šç”Ÿæˆä¸€ä¸ªé»˜è®¤çš„JavaBeanå¯¹è±¡ï¼Œå¹¶å°†å®ƒçš„å±æ€§ä¸è¢«å¤„ç†çš„JavaBeanå¯¹è±¡ä½œæ¯”è¾ƒã€‚
+			 * åªæœ‰é‚£äº›ä¸é»˜è®¤å€¼ä¸åŒçš„å±æ€§ï¼Œæ‰ä¼šç”Ÿæˆå±æ€§è®¾ç½®è¯­å¥ï¼Œè¿™ä¸ªè¿‡ç¨‹å«åšæ¶ˆé™¤å†—ä½™ã€‚
+			 * ç»“æœæ˜¯ï¼Œå­˜å‚¨ä¸‹æ¥çš„ä¸œè¥¿é€šå¸¸æ¯”åºåˆ—åŒ–çš„ç»“æœè¦å°ã€‚
 			 */
 			encoder = new XMLEncoder(new FileOutputStream(new File(filePath)));
 			encoder.writeObject(bean);
@@ -59,7 +59,7 @@ public class JavaBeanPersistentDemo {
 	}
 	
 	/**
-	 * ´ÓXMLÎÄ¼şÖĞ¶ÁÈ¡Ò»¸öJavaBean¶ÔÏó
+	 * ä»XMLæ–‡ä»¶ä¸­è¯»å–ä¸€ä¸ªJavaBeanå¯¹è±¡
 	 */
 	private static JavaBean readJavaBean(String filePath) {
 		XMLDecoder decoder = null;

@@ -12,11 +12,11 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * Ö§ÖùÑÝÊ¾Àà
+ * æ”¯æŸ±æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-15
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-15
  */
 public class StrutDemo {
 
@@ -29,8 +29,8 @@ public class StrutDemo {
 }
 
 /**
- * Ö§Öù(strut)¿ÉÒÔÒÔÏñËØÎªµ¥Î»À´Ôö¼Ó×é¼þÖ®¼äµÄ¿ÕÏ¶¡£
- * Èç¹ûÒªÊ¹ÓÃÖ§Öù£¬Ö»ÐèÔÚÌí¼Ó×é¼þµÄÊ±ºò£¬°ÑËü¼ÓÈëµ½Òª¸ô¿ªµÄ×é¼þÖ®¼ä¼´¿É ¡£
+ * æ”¯æŸ±(strut)å¯ä»¥ä»¥åƒç´ ä¸ºå•ä½æ¥å¢žåŠ ç»„ä»¶ä¹‹é—´çš„ç©ºéš™ã€‚
+ * å¦‚æžœè¦ä½¿ç”¨æ”¯æŸ±ï¼Œåªéœ€åœ¨æ·»åŠ ç»„ä»¶çš„æ—¶å€™ï¼ŒæŠŠå®ƒåŠ å…¥åˆ°è¦éš”å¼€çš„ç»„ä»¶ä¹‹é—´å³å¯ ã€‚
  */
 class StrutPanel extends JPanel {
 

@@ -7,15 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ÊÂ¼şÔ´
+ * äº‹ä»¶æº
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class EventSource {
 	
-	// ÊÂ¼ş¼àÌıÆ÷ÁĞ±í
+	// äº‹ä»¶ç›‘å¬å™¨åˆ—è¡¨
 	private List<TextChangedListener> listeners = new ArrayList<TextChangedListener>();
 	
 	private String text;
@@ -29,7 +29,7 @@ public class EventSource {
 	}
 
 	/**
-	 * ÔÚ½øĞĞÉèÖµµÄÊ±ºò·¢³öÎÄ±¾¸Ä±äµÄÊÂ¼şÍ¨Öª
+	 * åœ¨è¿›è¡Œè®¾å€¼çš„æ—¶å€™å‘å‡ºæ–‡æœ¬æ”¹å˜çš„äº‹ä»¶é€šçŸ¥
 	 */
 	public void setText(String text) {
 		String oldText = getText();
@@ -38,9 +38,9 @@ public class EventSource {
 	}
 	
 	/**
-	 * ÎÄ±¾¸Ä±äÊÂ¼şÍ¨Öª
+	 * æ–‡æœ¬æ”¹å˜äº‹ä»¶é€šçŸ¥
 	 * <p>
-	 * Êµ¼ÊÉÏÊÇË³ĞòÖ´ĞĞÊÂ¼ş¼àÌıÆ÷ÁĞ±íÖĞµÄÃ¿Ò»¸ö¼àÌıÆ÷ÔÚÎÄ±¾¸Ä±äÊ±µÄ´¦Àí¶¯×÷¡£
+	 * å®é™…ä¸Šæ˜¯é¡ºåºæ‰§è¡Œäº‹ä»¶ç›‘å¬å™¨åˆ—è¡¨ä¸­çš„æ¯ä¸€ä¸ªç›‘å¬å™¨åœ¨æ–‡æœ¬æ”¹å˜æ—¶çš„å¤„ç†åŠ¨ä½œã€‚
 	 */
 	private void fireTextChanged(TextChangedEvent event) {
 		for (TextChangedListener listener : listeners) {
@@ -49,14 +49,14 @@ public class EventSource {
 	}
 
 	/**
-	 * Ìí¼ÓÎÄ±¾¸Ä±ä¼àÌıÆ÷
+	 * æ·»åŠ æ–‡æœ¬æ”¹å˜ç›‘å¬å™¨
 	 */
 	public void addTextChangedListener(TextChangedListener l){
 		listeners.add(l);
 	}
 	
 	/**
-	 * ÒÆ³ıÎÄ±¾¸Ä±ä¼àÌıÆ÷
+	 * ç§»é™¤æ–‡æœ¬æ”¹å˜ç›‘å¬å™¨
 	 */
 	public void removeTextChangedListener(TextChangedListener l){
 		listeners.remove(l);

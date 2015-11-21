@@ -1,62 +1,62 @@
 
-´ÓJDK6¿ªÊ¼Òý½øµÄSwingWorkerÄÜ¸üÇáËÉµÄ±àÐ´¶àÏß³ÌSwing³ÌÐò£¬¸ÄÉÆSwing³ÌÐòµÄ½á¹¹£¬Ìá¸ß½çÃæÏàÓ¦µÄÁé»îÐÔ¡£
+ä»ŽJDK6å¼€å§‹å¼•è¿›çš„SwingWorkerèƒ½æ›´è½»æ¾çš„ç¼–å†™å¤šçº¿ç¨‹Swingç¨‹åºï¼Œæ”¹å–„Swingç¨‹åºçš„ç»“æž„ï¼Œæé«˜ç•Œé¢ç›¸åº”çš„çµæ´»æ€§ã€‚
 
-SwingWorkerÀà°ïÄã¹ÜÀíÈÎÎñÏß³ÌºÍSwingEDTÖ®¼äµÄ½»»¥£¬¾¡¹ÜSwingWorker²»ÄÜ½â¾ö²¢·¢Ïß³ÌÖÐÓöµ½µÄËùÓÐÎÊÌâ£¬µ«µÄÈ·ÓÐÖúÓÚ·ÖÀëSwingEDTºÍÈÎÎñÏß³Ì£¬Ê¹ËüÃÇ¸÷¸ºÆäÔð£º
-¶ÔÓÚEDT¶øÑÔ£¬¾ÍÊÇ»æÖÆºÍ¸üÐÂ½çÃæ£¬ÏìÓ¦ÓÃ»§ÊäÈë£»
-¶ÔÓÚÈÎÎñÏß³Ì¶øÑÔ£¬¾ÍÊÇÖ´ÐÐºÍ½çÃæÎÞÖ±½Ó¹ØÏµµÄºÄÊ±²Ù×÷¡£
-¿ÉÒÔÏëÏóEDTÏß³ÌµÄÊÂ¼þ¶ÓÁÐºÜ·±Ã¦£¬¼¸ºõÃ¿Ò»´ÎGUI½»»¥ºÍÊ±¼ä¶¼ÊÇÍ¨¹ýËüÍê³É¡£
-ÊÂ¼þ¶ÓÁÐÉÏµÄÈÎÎñ±ØÐë·Ç³£¿ì£¬·ñÔò¾Í»á×èÈûÆäËûÈÎÎñµÄÖ´ÐÐ£¬Ê¹¶ÓÁÐÀï×èÈûÁËºÜ¶àµÈ´ýÖ´ÐÐµÄÊÂ¼þ£¬Ôì³É½çÃæÏìÓ¦²»Áé»î¡£
-ÈÎºÎÐèÊ±³¬¹ý30µ½100ºÁÃëµÄÈÎÎñ²»Ó¦·ÅÔÚEDTÉÏÖ´ÐÐ£¬·ñÔòÓÃ»§¾Í»á¾õ²ìµ½ÊäÈëºÍ½çÃæÏàÓ¦Ö®¼äµÄÑÓ³Ù¡£
+SwingWorkerç±»å¸®ä½ ç®¡ç†ä»»åŠ¡çº¿ç¨‹å’ŒSwingEDTä¹‹é—´çš„äº¤äº’ï¼Œå°½ç®¡SwingWorkerä¸èƒ½è§£å†³å¹¶å‘çº¿ç¨‹ä¸­é‡åˆ°çš„æ‰€æœ‰é—®é¢˜ï¼Œä½†çš„ç¡®æœ‰åŠ©äºŽåˆ†ç¦»SwingEDTå’Œä»»åŠ¡çº¿ç¨‹ï¼Œä½¿å®ƒä»¬å„è´Ÿå…¶è´£ï¼š
+å¯¹äºŽEDTè€Œè¨€ï¼Œå°±æ˜¯ç»˜åˆ¶å’Œæ›´æ–°ç•Œé¢ï¼Œå“åº”ç”¨æˆ·è¾“å…¥ï¼›
+å¯¹äºŽä»»åŠ¡çº¿ç¨‹è€Œè¨€ï¼Œå°±æ˜¯æ‰§è¡Œå’Œç•Œé¢æ— ç›´æŽ¥å…³ç³»çš„è€—æ—¶æ“ä½œã€‚
+å¯ä»¥æƒ³è±¡EDTçº¿ç¨‹çš„äº‹ä»¶é˜Ÿåˆ—å¾ˆç¹å¿™ï¼Œå‡ ä¹Žæ¯ä¸€æ¬¡GUIäº¤äº’å’Œæ—¶é—´éƒ½æ˜¯é€šè¿‡å®ƒå®Œæˆã€‚
+äº‹ä»¶é˜Ÿåˆ—ä¸Šçš„ä»»åŠ¡å¿…é¡»éžå¸¸å¿«ï¼Œå¦åˆ™å°±ä¼šé˜»å¡žå…¶ä»–ä»»åŠ¡çš„æ‰§è¡Œï¼Œä½¿é˜Ÿåˆ—é‡Œé˜»å¡žäº†å¾ˆå¤šç­‰å¾…æ‰§è¡Œçš„äº‹ä»¶ï¼Œé€ æˆç•Œé¢å“åº”ä¸çµæ´»ã€‚
+ä»»ä½•éœ€æ—¶è¶…è¿‡30åˆ°100æ¯«ç§’çš„ä»»åŠ¡ä¸åº”æ”¾åœ¨EDTä¸Šæ‰§è¡Œï¼Œå¦åˆ™ç”¨æˆ·å°±ä¼šè§‰å¯Ÿåˆ°è¾“å…¥å’Œç•Œé¢ç›¸åº”ä¹‹é—´çš„å»¶è¿Ÿã€‚
 														  
-SwingWorkerÊÇ³éÏóÀà£¬Òò´Ë±ØÐë¼Ì³ÐËü²ÅÄÜÖ´ÐÐËùÐèµÄÌØ¶¨ÈÎÎñ¡£
+SwingWorkeræ˜¯æŠ½è±¡ç±»ï¼Œå› æ­¤å¿…é¡»ç»§æ‰¿å®ƒæ‰èƒ½æ‰§è¡Œæ‰€éœ€çš„ç‰¹å®šä»»åŠ¡ã€‚
 
-¸ÃÀàÓÐÁ½¸öÀàÐÍ²ÎÊý£ºT¼°V¡£TÊÇdoInBackgroudºÍget·½·¨µÄ·µ»ØÀàÐÍ£¬VÊÇpublishºÍprocessÒª´¦ÀíµÄÊý¾ÝÀàÐÍ¡£
+è¯¥ç±»æœ‰ä¸¤ä¸ªç±»åž‹å‚æ•°ï¼šTåŠVã€‚Tæ˜¯doInBackgroudå’Œgetæ–¹æ³•çš„è¿”å›žç±»åž‹ï¼ŒVæ˜¯publishå’Œprocessè¦å¤„ç†çš„æ•°æ®ç±»åž‹ã€‚
 
-SwingWorkerÊµÏÖÁËRunnable½Ó¿ÚºÍFutureÁ½¸ö½Ó¿Ú¡£
-Runnable¶ÔÏóÒ»°ã×÷ÎªÏß³ÌµÄÒ»²¿·ÖÖ´ÐÐ£¬µ±Thread¶ÔÏóÆô¶¯Ê±£¬Ëü¼¤»îRunnable¶ÔÏóµÄrun·½·¨¡£
-ÊµÏÖÁËFutrue½Ó¿Ú£¬Òò´ËSwingWorker²úÉúÀàÐÍÎªTµÄ½á¹ûÖµ²¢Ìá¹©Í¬Ïß³Ì½»»¥µÄ·½·¨¡£
+SwingWorkerå®žçŽ°äº†RunnableæŽ¥å£å’ŒFutureä¸¤ä¸ªæŽ¥å£ã€‚
+Runnableå¯¹è±¡ä¸€èˆ¬ä½œä¸ºçº¿ç¨‹çš„ä¸€éƒ¨åˆ†æ‰§è¡Œï¼Œå½“Threadå¯¹è±¡å¯åŠ¨æ—¶ï¼Œå®ƒæ¿€æ´»Runnableå¯¹è±¡çš„runæ–¹æ³•ã€‚
+å®žçŽ°äº†FutrueæŽ¥å£ï¼Œå› æ­¤SwingWorkeräº§ç”Ÿç±»åž‹ä¸ºTçš„ç»“æžœå€¼å¹¶æä¾›åŒçº¿ç¨‹äº¤äº’çš„æ–¹æ³•ã€‚
 
-SwingWorkerÊµÏÖÒÔÏÂ½Ó¿Ú·½·¨£º
+SwingWorkerå®žçŽ°ä»¥ä¸‹æŽ¥å£æ–¹æ³•ï¼š
 boolean cancel(boolean mayInterruptIfRunning)
 T get()
 T get(long timeout,TimeUnit unit)
 boolean isCancelled()
 boolean isDone()
 
-¼Ì³ÐÀàÐèÒªÊµÏÖSwingWorkerµÄ³éÏó·½·¨£º
+ç»§æ‰¿ç±»éœ€è¦å®žçŽ°SwingWorkerçš„æŠ½è±¡æ–¹æ³•ï¼š
 protected T doInBackgroud throws Exception
 
-doInBackgroud·½·¨×÷ÎªÈÎÎñÏß³ÌµÄÒ»²¿·ÖÖ´ÐÐ£¬Ëü¸ºÔðÍê³ÉÏß³ÌµÄ»ù±¾ÈÎÎñ£¬²¢ÒÔ·µ»ØÖµÀ´×÷ÎªÏß³ÌµÄÖ´ÐÐ½á¹û¡£
-¼Ì³ÐÀàÐë¸²¸Ç¸Ã·½·¨²¢È·±£°üº¬»ò´úÀíÈÎÎñÏß³ÌµÄ»ù±¾ÈÎÎñ¡£
-²»ÒªÖ±½Óµ÷ÓÃ¸Ã·½·¨£¬Ó¦Ê¹ÓÃÈÎÎñ¶ÔÏó(SwingWorkerµÄ×ÓÀà¶ÔÏó)µÄexecute()·½·¨À´µ÷¶ÈÖ´ÐÐ¡£
+doInBackgroudæ–¹æ³•ä½œä¸ºä»»åŠ¡çº¿ç¨‹çš„ä¸€éƒ¨åˆ†æ‰§è¡Œï¼Œå®ƒè´Ÿè´£å®Œæˆçº¿ç¨‹çš„åŸºæœ¬ä»»åŠ¡ï¼Œå¹¶ä»¥è¿”å›žå€¼æ¥ä½œä¸ºçº¿ç¨‹çš„æ‰§è¡Œç»“æžœã€‚
+ç»§æ‰¿ç±»é¡»è¦†ç›–è¯¥æ–¹æ³•å¹¶ç¡®ä¿åŒ…å«æˆ–ä»£ç†ä»»åŠ¡çº¿ç¨‹çš„åŸºæœ¬ä»»åŠ¡ã€‚
+ä¸è¦ç›´æŽ¥è°ƒç”¨è¯¥æ–¹æ³•ï¼Œåº”ä½¿ç”¨ä»»åŠ¡å¯¹è±¡(SwingWorkerçš„å­ç±»å¯¹è±¡)çš„execute()æ–¹æ³•æ¥è°ƒåº¦æ‰§è¡Œã€‚
 
-ÔÚ»ñµÃÖ´ÐÐ½á¹ûºóÓ¦Ê¹ÓÃSwingWorkerµÄget·½·¨»ñÈ¡doInBackground·½·¨µÄ½á¹û¡£
-¿ÉÒÔÔÙEDTÉÏµ÷ÓÃget·½·¨£¬µ«¸Ã·½·¨½«Ò»Ö±´¦ÓÚ×èÈû×´Ì¬£¬Ö±µ½ÈÎÎñÏß³ÌÍê³É¡£
-×îºÃÖ»ÓÐÔÚÖªµÀ½á¹ûÊ±²Åµ÷ÓÃget·½·¨£¬ÕâÑùÓÃ»§±ã²»ÓÃµÈ´ý¡£Îª·ÀÖ¹×èÈû£¬¿ÉÒÔÊ¹ÓÃidDone·½·¨À´¼ìÑédoInBackgroundÊÇ·ñÍê³É¡£
-»ñÈ¡ÈÎÎñ½á¹ûµÄ×îºÃµØ·½ÊÇÔÚdone·½·¨ÄÚ£º
+åœ¨èŽ·å¾—æ‰§è¡Œç»“æžœåŽåº”ä½¿ç”¨SwingWorkerçš„getæ–¹æ³•èŽ·å–doInBackgroundæ–¹æ³•çš„ç»“æžœã€‚
+å¯ä»¥å†EDTä¸Šè°ƒç”¨getæ–¹æ³•ï¼Œä½†è¯¥æ–¹æ³•å°†ä¸€ç›´å¤„äºŽé˜»å¡žçŠ¶æ€ï¼Œç›´åˆ°ä»»åŠ¡çº¿ç¨‹å®Œæˆã€‚
+æœ€å¥½åªæœ‰åœ¨çŸ¥é“ç»“æžœæ—¶æ‰è°ƒç”¨getæ–¹æ³•ï¼Œè¿™æ ·ç”¨æˆ·ä¾¿ä¸ç”¨ç­‰å¾…ã€‚ä¸ºé˜²æ­¢é˜»å¡žï¼Œå¯ä»¥ä½¿ç”¨idDoneæ–¹æ³•æ¥æ£€éªŒdoInBackgroundæ˜¯å¦å®Œæˆã€‚
+èŽ·å–ä»»åŠ¡ç»“æžœçš„æœ€å¥½åœ°æ–¹æ˜¯åœ¨doneæ–¹æ³•å†…ï¼š
 protected void done()
 
-ÔÚdoInBackgroud·½·¨Íê³ÉÖ®ºó£¬SwingWorkerµ÷ÓÃdone·½·¨¡£Èç¹ûÈÎÎñÐèÒªÔÚÍê³ÉºóÊ¹ÓÃÏß³Ì½á¹û¸üÐÂGUI×é¼þ»òÕß×öÐ©ÇåÀí¹¤×÷£¬
-¿É¸²¸Çdone·½·¨À´Íê³ÉËüÃÇ¡£Õâ¶ùÊÇµ÷ÓÃget·½·¨µÄ×îºÃµØ·½£¬ÒòÎª´ËÊ±ÒÑÖªµÀÏß³ÌÈÎÎñÍê³ÉÁË£¬
-SwingWorkerÔÚEDTÉÏ¼¤»îdone·½·¨£¬Òò´Ë¿ÉÒÔÔÚ´Ë·½·¨ÄÚ°²È«µÄºÍÈÎºÎGUI×é¼þ½»»¥¡£
+åœ¨doInBackgroudæ–¹æ³•å®Œæˆä¹‹åŽï¼ŒSwingWorkerè°ƒç”¨doneæ–¹æ³•ã€‚å¦‚æžœä»»åŠ¡éœ€è¦åœ¨å®ŒæˆåŽä½¿ç”¨çº¿ç¨‹ç»“æžœæ›´æ–°GUIç»„ä»¶æˆ–è€…åšäº›æ¸…ç†å·¥ä½œï¼Œ
+å¯è¦†ç›–doneæ–¹æ³•æ¥å®Œæˆå®ƒä»¬ã€‚è¿™å„¿æ˜¯è°ƒç”¨getæ–¹æ³•çš„æœ€å¥½åœ°æ–¹ï¼Œå› ä¸ºæ­¤æ—¶å·²çŸ¥é“çº¿ç¨‹ä»»åŠ¡å®Œæˆäº†ï¼Œ
+SwingWorkeråœ¨EDTä¸Šæ¿€æ´»doneæ–¹æ³•ï¼Œå› æ­¤å¯ä»¥åœ¨æ­¤æ–¹æ³•å†…å®‰å…¨çš„å’Œä»»ä½•GUIç»„ä»¶äº¤äº’ã€‚
 
-Ã»±ØÒªµÈµ½Ïß³ÌÍê³É¾Í¿ÉÒÔ»ñµÃÖÐ¼ä½á¹û¡£ÖÐ¼ä½á¹ûÊÇÈÎÎñÏß³ÌÔÚ²úÉú×îºó½á¹ûÖ®Ç°¾ÍÄÜ²úÉúµÄÊý¾Ý¡£
-µ±ÈÎÎñÏß³ÌÖ´ÐÐÊ±£¬Ëü¿ÉÒÔ·¢²¼ÀàÐÍÎªVµÄÖÐ¼ä½á¹û£¬¸²¸ÇprocessÀ´´¦ÀíÖÐ¼ä½á¹û¡£
+æ²¡å¿…è¦ç­‰åˆ°çº¿ç¨‹å®Œæˆå°±å¯ä»¥èŽ·å¾—ä¸­é—´ç»“æžœã€‚ä¸­é—´ç»“æžœæ˜¯ä»»åŠ¡çº¿ç¨‹åœ¨äº§ç”Ÿæœ€åŽç»“æžœä¹‹å‰å°±èƒ½äº§ç”Ÿçš„æ•°æ®ã€‚
+å½“ä»»åŠ¡çº¿ç¨‹æ‰§è¡Œæ—¶ï¼Œå®ƒå¯ä»¥å‘å¸ƒç±»åž‹ä¸ºVçš„ä¸­é—´ç»“æžœï¼Œè¦†ç›–processæ¥å¤„ç†ä¸­é—´ç»“æžœã€‚
 
-µ±ÊôÐÔ¸Ä±äÊ±£¬SwingWorkerÊµÀýÄÜÍ¨Öª´¦ÀíÆ÷£¬SwingWorkerÓÐÁ½¸öÖØÒªµÄÊôÐÔ£º×´Ì¬ºÍ½ø¶È¡£ÈÎÎñÏß³ÌÓÐ¼¸ÖÖ×´Ì¬£¬ÓÃSwingWorker.StateValueÃ¶¾ÙÀ´±íÊ¾£º
+å½“å±žæ€§æ”¹å˜æ—¶ï¼ŒSwingWorkerå®žä¾‹èƒ½é€šçŸ¥å¤„ç†å™¨ï¼ŒSwingWorkeræœ‰ä¸¤ä¸ªé‡è¦çš„å±žæ€§ï¼šçŠ¶æ€å’Œè¿›åº¦ã€‚ä»»åŠ¡çº¿ç¨‹æœ‰å‡ ç§çŠ¶æ€ï¼Œç”¨SwingWorker.StateValueæžšä¸¾æ¥è¡¨ç¤ºï¼š
 PENDING
 STARTED
 DONE
 
-ÈÎÎñÏß³ÌÒ»´´½¨¾Í´¦ÓÚPENDING×´Ì¬£¬µ±doInBackgroud·½·¨¿ªÊ¼Ê±£¬ÈÎÎñÏß³Ì¾Í½øÈëSTARTED×´Ì¬£¬
-µ±doInBackgroud·½·¨Íê³Éºó£¬ÈÎÎñÏß³Ì¾Í´¦ÓÚDONE×´Ì¬£¬Ëæ×ÅÏß³Ì½øÈë¸÷¸ö½×¶Î£¬SwingWorker³¬Àà×Ô¶¯ÉèÖÃÕâÐ©×´Ì¬Öµ¡£
-¿ÉÒÔÌí¼Ó´¦ÀíÆ÷£¬µ±ÕâÐ©ÊôÐÔ·¢Éú±ä»¯À´½ÓÊÕÍ¨Öª¡£
+ä»»åŠ¡çº¿ç¨‹ä¸€åˆ›å»ºå°±å¤„äºŽPENDINGçŠ¶æ€ï¼Œå½“doInBackgroudæ–¹æ³•å¼€å§‹æ—¶ï¼Œä»»åŠ¡çº¿ç¨‹å°±è¿›å…¥STARTEDçŠ¶æ€ï¼Œ
+å½“doInBackgroudæ–¹æ³•å®ŒæˆåŽï¼Œä»»åŠ¡çº¿ç¨‹å°±å¤„äºŽDONEçŠ¶æ€ï¼Œéšç€çº¿ç¨‹è¿›å…¥å„ä¸ªé˜¶æ®µï¼ŒSwingWorkerè¶…ç±»è‡ªåŠ¨è®¾ç½®è¿™äº›çŠ¶æ€å€¼ã€‚
+å¯ä»¥æ·»åŠ å¤„ç†å™¨ï¼Œå½“è¿™äº›å±žæ€§å‘ç”Ÿå˜åŒ–æ¥æŽ¥æ”¶é€šçŸ¥ã€‚
 
-×îºó£¬ÈÎÎñ¶ÔÏóÓÐÒ»¸ö½ø¶ÈÊôÐÔ(progress)£¬Ëæ×ÅÈÎÎñ½øÕ¹Ê±£¬¿ÉÒÔ½«Õâ¸öÊôÐÔ´Ó0¸üÐÂµ½100±êÊ¶ÈÎÎñ½ø¶È£¬µ±¸ÃÊôÐÔ·¢Éú±ä»¯Ê±£¬ÈÎÎñÍ¨Öª´¦ÀíÆ÷½øÐÐ´¦Àí¡£
+æœ€åŽï¼Œä»»åŠ¡å¯¹è±¡æœ‰ä¸€ä¸ªè¿›åº¦å±žæ€§(progress)ï¼Œéšç€ä»»åŠ¡è¿›å±•æ—¶ï¼Œå¯ä»¥å°†è¿™ä¸ªå±žæ€§ä»Ž0æ›´æ–°åˆ°100æ ‡è¯†ä»»åŠ¡è¿›åº¦ï¼Œå½“è¯¥å±žæ€§å‘ç”Ÿå˜åŒ–æ—¶ï¼Œä»»åŠ¡é€šçŸ¥å¤„ç†å™¨è¿›è¡Œå¤„ç†ã€‚
 
 
-×Ü½á
+æ€»ç»“
 
-ËùÓÐµÄGUIÊÂ¼þºÍ½»»¥¶¼ÔËÐÐÔÚEDTÉÏ£¬ÔÚEDTÉÏÔËÐÐºÄÊ±»òÕßIOÃÜ¼¯ÐÍ´¦Àí»áµ¼ÖÂ½çÃæ±äµÃ»ºÂýÊ§È¥ÏìÓ¦£¬Îª¸ÄÉÆÕâÖÖ×´¿öÓ¦Ê¹ÓÃSwingWorkerÀà½«ÕâÐ©ÈÎÎñ×ªÒÆµ½ÈÎÎñÏß³ÌÖÐ¡£
-Ê¹ÓÃSwingWorker£¬¿ÉÒÔÖ´ÐÐÏàÍ¬µÄÈÎÎñ¶ø²»»áÑÓ³ÙEDTÖ´ÐÐ£¬»áÌá¸ß³ÌÐòµÄÐÔÄÜ£¬²¢ÇÒÈÎÎñÏß³Ì¿ÉÒÔ°²È«Í¬½çÃæ×é¼þ½»»¥£¬
-ÒòÎªÓÐ»Øµ÷·½·¨¿ÉÒÔÔÚEDTÉÏÔËÐÐ£¬ÔÊÐíÈÎÎñÔËÐÐºÍÍê³ÉÊ±¸üÐÂGUI×é¼þ¡£
+æ‰€æœ‰çš„GUIäº‹ä»¶å’Œäº¤äº’éƒ½è¿è¡Œåœ¨EDTä¸Šï¼Œåœ¨EDTä¸Šè¿è¡Œè€—æ—¶æˆ–è€…IOå¯†é›†åž‹å¤„ç†ä¼šå¯¼è‡´ç•Œé¢å˜å¾—ç¼“æ…¢å¤±åŽ»å“åº”ï¼Œä¸ºæ”¹å–„è¿™ç§çŠ¶å†µåº”ä½¿ç”¨SwingWorkerç±»å°†è¿™äº›ä»»åŠ¡è½¬ç§»åˆ°ä»»åŠ¡çº¿ç¨‹ä¸­ã€‚
+ä½¿ç”¨SwingWorkerï¼Œå¯ä»¥æ‰§è¡Œç›¸åŒçš„ä»»åŠ¡è€Œä¸ä¼šå»¶è¿ŸEDTæ‰§è¡Œï¼Œä¼šæé«˜ç¨‹åºçš„æ€§èƒ½ï¼Œå¹¶ä¸”ä»»åŠ¡çº¿ç¨‹å¯ä»¥å®‰å…¨åŒç•Œé¢ç»„ä»¶äº¤äº’ï¼Œ
+å› ä¸ºæœ‰å›žè°ƒæ–¹æ³•å¯ä»¥åœ¨EDTä¸Šè¿è¡Œï¼Œå…è®¸ä»»åŠ¡è¿è¡Œå’Œå®Œæˆæ—¶æ›´æ–°GUIç»„ä»¶ã€‚

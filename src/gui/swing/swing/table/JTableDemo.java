@@ -16,11 +16,11 @@ import javax.swing.table.AbstractTableModel;
 import util.Displayer;
 
 /**
- * JTableÑİÊ¾Àà
+ * JTableæ¼”ç¤ºç±»
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-21
  */
 public class JTableDemo {
 	
@@ -35,7 +35,7 @@ public class JTableDemo {
 class JTablePanel extends JPanel {
 
 	private static final long serialVersionUID = -3699963400634725602L;
-	// ¹¹Ôì±í¸ñµÄÊı¾İ
+	// æ„é€ è¡¨æ ¼çš„æ•°æ®
 	private Object[][] data = { 
 			{ "one", "two", "three", "four" },
 			{ "five", "six", "seven", "eight" },
@@ -65,11 +65,11 @@ class JTablePanel extends JPanel {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåTableModel
+	 * è‡ªå®šä¹‰TableModel
 	 * <p>
-	 * JTableÓÃÀ´¿ØÖÆÊı¾İÈçºÎÏÔÊ¾£¬¶øTableModelÔò¿ØÖÆÊı¾İ±¾Éí¡£
-	 * ËùÒÔÒª´´½¨Ò»¸öJTable¶ÔÏó£¬¾ÍÒªÏÈ´´½¨Ò»¸öTableModel¡£
-	 * ËäÈ»¿ÉÒÔÍêÕûÊµÏÖTableModel½Ó¿Ú£¬²»¹ı´ÓAbstractTableModel¼Ì³ĞÔò¸üÈİÒ×¡£
+	 * JTableç”¨æ¥æ§åˆ¶æ•°æ®å¦‚ä½•æ˜¾ç¤ºï¼Œè€ŒTableModelåˆ™æ§åˆ¶æ•°æ®æœ¬èº«ã€‚
+	 * æ‰€ä»¥è¦åˆ›å»ºä¸€ä¸ªJTableå¯¹è±¡ï¼Œå°±è¦å…ˆåˆ›å»ºä¸€ä¸ªTableModelã€‚
+	 * è™½ç„¶å¯ä»¥å®Œæ•´å®ç°TableModelæ¥å£ï¼Œä¸è¿‡ä»AbstractTableModelç»§æ‰¿åˆ™æ›´å®¹æ˜“ã€‚
 	 */
 	class DataModel extends AbstractTableModel {
 		private static final long serialVersionUID = 1L;
@@ -92,7 +92,7 @@ class JTablePanel extends JPanel {
 
 		public void setValueAt(Object val, int row, int col) {
 			data[row][col] = val;
-			// ±í¸ñÊı¾İ±ä¸üÊÂ¼şÍ¨Öª
+			// è¡¨æ ¼æ•°æ®å˜æ›´äº‹ä»¶é€šçŸ¥
 			fireTableDataChanged();
 		}
 
@@ -102,13 +102,13 @@ class JTablePanel extends JPanel {
 	}
 	
 	/**
-	 * ¼àÌıTableModelÖĞ¸ü¸ÄµÄ¶ÔÏóµÄÀà
+	 * ç›‘å¬TableModelä¸­æ›´æ”¹çš„å¯¹è±¡çš„ç±»
 	 */
 	class DataModelListener implements TableModelListener {
-		// µ¥Ôª¸ñ¡¢ĞĞ»òÁĞµÄÄÄĞ©¾ßÌå·¶Î§·¢ÉúÁË¸ü¸Ä
+		// å•å…ƒæ ¼ã€è¡Œæˆ–åˆ—çš„å“ªäº›å…·ä½“èŒƒå›´å‘ç”Ÿäº†æ›´æ”¹
 		public void tableChanged(TableModelEvent e) {
 			getArea().setText("");
-			// ÔÚJTextAreaÖĞ¸ñÊ½»¯´òÓ¡µ±Ç°±í¸ñÊı¾İ
+			// åœ¨JTextAreaä¸­æ ¼å¼åŒ–æ‰“å°å½“å‰è¡¨æ ¼æ•°æ®
 			for (int i = 0; i < data.length; i++) {
 				for (int j = 0; j < data[0].length; j++) {
 					getArea().append(data[i][j] + " ");

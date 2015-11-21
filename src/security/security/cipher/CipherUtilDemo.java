@@ -11,11 +11,11 @@ import java.security.Key;
 import java.security.KeyPair;
 
 /**
- * ÃÜÂë¹¤¾ßÀàÑİÊ¾
+ * å¯†ç å·¥å…·ç±»æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-20
  */
 public class CipherUtilDemo {
 
@@ -36,14 +36,14 @@ public class CipherUtilDemo {
 			InputStream in2 = new FileInputStream(encryptedFileName);
 			OutputStream out2 = new FileOutputStream(decryptedFileName);
 
-			// ¼ÓÃÜÎÄ¼ş Éú³ÉÃÜÎÄ cryptograph.txt
+			// åŠ å¯†æ–‡ä»¶ ç”Ÿæˆå¯†æ–‡ cryptograph.txt
 			CipherUtil.encrypt(in1, out1, key);
-			// ½âÃÜ cryptograph.txt ÎÄ¼ş
+			// è§£å¯† cryptograph.txt æ–‡ä»¶
 			CipherUtil.decrypt(in2, out2, key);
 
-//			// ¼ÓÃÜÎÄ¼ş Éú³ÉÃÜÎÄ cryptograph.txt
+//			// åŠ å¯†æ–‡ä»¶ ç”Ÿæˆå¯†æ–‡ cryptograph.txt
 //			CipherUtil.encrypt(in1, encryptedFileName, key);
-//			// ½âÃÜ cryptograph.txt ÎÄ¼ş
+//			// è§£å¯† cryptograph.txt æ–‡ä»¶
 //			CipherUtil.decrypt(encryptedFileName, out2, key);
 
 			CipherUtil.encrypt(keyPair.getPublic(), fileName, encryptedFileName);

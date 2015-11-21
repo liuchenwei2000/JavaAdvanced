@@ -33,15 +33,15 @@ import util.Displayer;
 import util.ui.BorderFactory;
 
 /**
- * JFormattedTextField¸ñÊ½»¯ÎÄ±¾ÓòÑİÊ¾Àà
+ * JFormattedTextFieldæ ¼å¼åŒ–æ–‡æœ¬åŸŸæ¼”ç¤ºç±»
  * <p>
- * Ä¬ÈÏĞĞÎªÊÇ£º</br>
- * ÊäÈë·Ç·¨Êı¾İ£¬½¹µãÀë¿ªÖ®ºó»á×Ô¶¯½«¸ñÊ½»¯ÎÄ±¾ÓòµÄÏÔÊ¾ÖµÉèÎªÔ­Öµ£¬
- * (ÊäÈë·Ç·¨Êı¾İÇ°µÄÓĞĞ§Öµ)£¬²¢ÇÒÎÄ±¾ÓòµÄgetValue()±£³ÖÔ­Öµ¡£
+ * é»˜è®¤è¡Œä¸ºæ˜¯ï¼š</br>
+ * è¾“å…¥éæ³•æ•°æ®ï¼Œç„¦ç‚¹ç¦»å¼€ä¹‹åä¼šè‡ªåŠ¨å°†æ ¼å¼åŒ–æ–‡æœ¬åŸŸçš„æ˜¾ç¤ºå€¼è®¾ä¸ºåŸå€¼ï¼Œ
+ * (è¾“å…¥éæ³•æ•°æ®å‰çš„æœ‰æ•ˆå€¼)ï¼Œå¹¶ä¸”æ–‡æœ¬åŸŸçš„getValue()ä¿æŒåŸå€¼ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-5
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-5
  */
 public class JFormattedTextFieldDemo {
 	
@@ -100,11 +100,11 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»Ø¸ù¾İµ±Ç°Ä¬ÈÏÓïÑÔ»·¾³µÄÕûÊı¸ñÊ½×÷Îª¸ñÊ½»¯Æ÷µÄÕûÊı¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›æ ¹æ®å½“å‰é»˜è®¤è¯­è¨€ç¯å¢ƒçš„æ•´æ•°æ ¼å¼ä½œä¸ºæ ¼å¼åŒ–å™¨çš„æ•´æ•°æ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º</br>
-	 * ÊäÈë·Ç·¨Êı¾İ£¬½¹µãÀë¿ªÖ®ºó»á×Ô¶¯½«¸ñÊ½»¯ÎÄ±¾ÓòµÄÏÔÊ¾ÖµÉèÎªÔ­Öµ£¬
-	 * (ÊäÈë·Ç·¨Êı¾İÇ°µÄÓĞĞ§Öµ)£¬²¢ÇÒÎÄ±¾ÓòµÄgetValue()±£³ÖÔ­Öµ¡£
+	 * ç•Œé¢æ•ˆæœï¼š</br>
+	 * è¾“å…¥éæ³•æ•°æ®ï¼Œç„¦ç‚¹ç¦»å¼€ä¹‹åä¼šè‡ªåŠ¨å°†æ ¼å¼åŒ–æ–‡æœ¬åŸŸçš„æ˜¾ç¤ºå€¼è®¾ä¸ºåŸå€¼ï¼Œ
+	 * (è¾“å…¥éæ³•æ•°æ®å‰çš„æœ‰æ•ˆå€¼)ï¼Œå¹¶ä¸”æ–‡æœ¬åŸŸçš„getValue()ä¿æŒåŸå€¼ã€‚
 	 */
 	private JFormattedTextField getIntTextField() {
 		JFormattedTextField intField = new JFormattedTextField(NumberFormat
@@ -114,47 +114,47 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»Ø¸ù¾İµ±Ç°Ä¬ÈÏÓïÑÔ»·¾³µÄÕûÊı¸ñÊ½×÷Îª¸ñÊ½»¯Æ÷µÄÕûÊı¸ñÊ½»¯ÎÄ±¾Óò¡£
-	 * ¸ÃÎÄ±¾ÓòÔÚ½¹µã¶ªÊ§Ö®ºóµÄĞĞÎªÊÇ"Ìá½»"(JFormattedTextField.COMMIT)¡£
+	 * è¿”å›æ ¹æ®å½“å‰é»˜è®¤è¯­è¨€ç¯å¢ƒçš„æ•´æ•°æ ¼å¼ä½œä¸ºæ ¼å¼åŒ–å™¨çš„æ•´æ•°æ ¼å¼åŒ–æ–‡æœ¬åŸŸã€‚
+	 * è¯¥æ–‡æœ¬åŸŸåœ¨ç„¦ç‚¹ä¸¢å¤±ä¹‹åçš„è¡Œä¸ºæ˜¯"æäº¤"(JFormattedTextField.COMMIT)ã€‚
 	 * <p>
-	 * ½çÃæĞ§¹û£º</br>
-	 * ÊäÈë·Ç·¨Êı¾İ£¬½¹µãÀë¿ªÖ®ºó»á½«ÎÄ±¾ÓòµÄÏÔÊ¾Öµ½«±£Áô¸Ã·Ç·¨Öµ£¬
-	 * µ«ÊÇ²¢ÇÒÎÄ±¾ÓòµÄgetValue()±£³ÖÔ­Öµ(ÊäÈë·Ç·¨Êı¾İÇ°µÄÓĞĞ§Öµ)¡£
+	 * ç•Œé¢æ•ˆæœï¼š</br>
+	 * è¾“å…¥éæ³•æ•°æ®ï¼Œç„¦ç‚¹ç¦»å¼€ä¹‹åä¼šå°†æ–‡æœ¬åŸŸçš„æ˜¾ç¤ºå€¼å°†ä¿ç•™è¯¥éæ³•å€¼ï¼Œ
+	 * ä½†æ˜¯å¹¶ä¸”æ–‡æœ¬åŸŸçš„getValue()ä¿æŒåŸå€¼(è¾“å…¥éæ³•æ•°æ®å‰çš„æœ‰æ•ˆå€¼)ã€‚
 	 */
 	private JFormattedTextField getIntTextFieldWithCommitBehavior() {
 		JFormattedTextField intField = new JFormattedTextField(NumberFormat
 				.getIntegerInstance());
 		intField.setValue(new Integer(100));
 		/*
-		 * µ±¸ñÊ½»¯µÄÎÄ±¾ÓòÊ§È¥½¹µãÊ±£¬¸ñÊ½»¯Æ÷²é¿´ÓÃ»§ÊäÈëµÄÎÄ±¾×Ö·û´®¡£
-		 * Èç¹û¸ñÊ½»¯Æ÷ÖªµÀÈçºÎ°ÑÎÄ±¾×Ö·û´®×ª»»Îª¶ÔÏó£¬ÎÄ±¾¾ÍÓĞĞ§£¬·ñÔò¾ÍÎŞĞ§¡£
-		 * Ê§È¥½¹µãµÄÄ¬ÈÏĞĞÎª±»³ÆÎª"Ìá½»»ò»Ö¸´"£º
-		 * Èç¹ûÎÄ±¾×Ö·û´®ÊÇÓĞĞ§µÄ£¬Ëü½«±»Ìá½»(commit)£¬¸ñÊ½»¯Æ÷½«Ëü×ª»»Îª¶ÔÏó£¬¸Ã¶ÔÏó³ÉÎªµ±Ç°ÎÄ±¾ÓòµÄÖµ(getValue())¡£
-		 * È»ºó¸ÃÖµ±»×ª»»Îª×Ö·û´®£¬³ÉÎªÎÄ±¾ÓòÖĞ¿É¼ûµÄÎÄ±¾×Ö·û´®¡£
-		 * Èç¹ûÎÄ±¾×Ö·û´®ÎŞĞ§£¬µ±Ç°Öµ(getValue())¾Í²»»á¸Ä±ä£¬ÎÄ±¾Óò»Ö¸´(REVERT)±íÊ¾Ô­ÖµµÄ×Ö·û´®¡£
+		 * å½“æ ¼å¼åŒ–çš„æ–‡æœ¬åŸŸå¤±å»ç„¦ç‚¹æ—¶ï¼Œæ ¼å¼åŒ–å™¨æŸ¥çœ‹ç”¨æˆ·è¾“å…¥çš„æ–‡æœ¬å­—ç¬¦ä¸²ã€‚
+		 * å¦‚æœæ ¼å¼åŒ–å™¨çŸ¥é“å¦‚ä½•æŠŠæ–‡æœ¬å­—ç¬¦ä¸²è½¬æ¢ä¸ºå¯¹è±¡ï¼Œæ–‡æœ¬å°±æœ‰æ•ˆï¼Œå¦åˆ™å°±æ— æ•ˆã€‚
+		 * å¤±å»ç„¦ç‚¹çš„é»˜è®¤è¡Œä¸ºè¢«ç§°ä¸º"æäº¤æˆ–æ¢å¤"ï¼š
+		 * å¦‚æœæ–‡æœ¬å­—ç¬¦ä¸²æ˜¯æœ‰æ•ˆçš„ï¼Œå®ƒå°†è¢«æäº¤(commit)ï¼Œæ ¼å¼åŒ–å™¨å°†å®ƒè½¬æ¢ä¸ºå¯¹è±¡ï¼Œè¯¥å¯¹è±¡æˆä¸ºå½“å‰æ–‡æœ¬åŸŸçš„å€¼(getValue())ã€‚
+		 * ç„¶åè¯¥å€¼è¢«è½¬æ¢ä¸ºå­—ç¬¦ä¸²ï¼Œæˆä¸ºæ–‡æœ¬åŸŸä¸­å¯è§çš„æ–‡æœ¬å­—ç¬¦ä¸²ã€‚
+		 * å¦‚æœæ–‡æœ¬å­—ç¬¦ä¸²æ— æ•ˆï¼Œå½“å‰å€¼(getValue())å°±ä¸ä¼šæ”¹å˜ï¼Œæ–‡æœ¬åŸŸæ¢å¤(REVERT)è¡¨ç¤ºåŸå€¼çš„å­—ç¬¦ä¸²ã€‚
 		 * 
-		 * ÕâÀï½¹µã¶ªÊ§Ê¹ÓÃµÄÊÇ"Ìá½»"£º
-		 * Èç¹ûÎÄ±¾×Ö·û´®ÎŞĞ§£¬µ±Ç°Öµ(getValue())¾Í²»»á¸Ä±ä£¬ÎÄ±¾ÓòÔò½«±£ÁôÎŞĞ§Öµ¡£ 
+		 * è¿™é‡Œç„¦ç‚¹ä¸¢å¤±ä½¿ç”¨çš„æ˜¯"æäº¤"ï¼š
+		 * å¦‚æœæ–‡æœ¬å­—ç¬¦ä¸²æ— æ•ˆï¼Œå½“å‰å€¼(getValue())å°±ä¸ä¼šæ”¹å˜ï¼Œæ–‡æœ¬åŸŸåˆ™å°†ä¿ç•™æ— æ•ˆå€¼ã€‚ 
 		 */
 		intField.setFocusLostBehavior(JFormattedTextField.COMMIT);
 		return intField;
 	}
 
 	/**
-	 * ·µ»Ø´øÓĞ×Ô¶¨ÒåÎÄµµ¹ıÂËÆ÷µÄÕûÊı¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›å¸¦æœ‰è‡ªå®šä¹‰æ–‡æ¡£è¿‡æ»¤å™¨çš„æ•´æ•°æ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º</br>
-	 * ÍêÈ«½ûÖ¹ÊäÈë·Ç·¨Êı¾İ¡£
+	 * ç•Œé¢æ•ˆæœï¼š</br>
+	 * å®Œå…¨ç¦æ­¢è¾“å…¥éæ³•æ•°æ®ã€‚
 	 */
 	private JFormattedTextField getIntTextFieldWithFormatter() {
 		/*
-		 * ¸ñÊ½»¯ÎÄ±¾ÓòµÄ»ù±¾¹¦ÄÜÔÚ´ó¶àÊıÇé¿öÒÑ¾­¹»ÓÃÁË¡£
-		 * Èç¹û¿ÉÄÜÏ£ÍûÍêÈ«×èÖ¹ÓÃ»§ÊäÈë·Ç·¨Öµ£¬¾ÍÒªÓÃµ½ÎÄµµ¹ıÂËÆ÷ÁË(document filter)¡£
-		 * °²×°ÎÄµµ¹ıÂËÆ÷Ã»ÓĞÒ»¸öÖ±½ÓµÄ·½·¨£¬ĞèÒª¸²¸Ç¸ñÊ½Æ÷ÀàµÄgetDocumentFilter·½·¨£¬
-		 * ²¢´«µİÒ»¸öÎÄµµ¹ıÂËÆ÷ÀàµÄ¶ÔÏó¸øJFormattedTextField¡£
+		 * æ ¼å¼åŒ–æ–‡æœ¬åŸŸçš„åŸºæœ¬åŠŸèƒ½åœ¨å¤§å¤šæ•°æƒ…å†µå·²ç»å¤Ÿç”¨äº†ã€‚
+		 * å¦‚æœå¯èƒ½å¸Œæœ›å®Œå…¨é˜»æ­¢ç”¨æˆ·è¾“å…¥éæ³•å€¼ï¼Œå°±è¦ç”¨åˆ°æ–‡æ¡£è¿‡æ»¤å™¨äº†(document filter)ã€‚
+		 * å®‰è£…æ–‡æ¡£è¿‡æ»¤å™¨æ²¡æœ‰ä¸€ä¸ªç›´æ¥çš„æ–¹æ³•ï¼Œéœ€è¦è¦†ç›–æ ¼å¼å™¨ç±»çš„getDocumentFilteræ–¹æ³•ï¼Œ
+		 * å¹¶ä¼ é€’ä¸€ä¸ªæ–‡æ¡£è¿‡æ»¤å™¨ç±»çš„å¯¹è±¡ç»™JFormattedTextFieldã€‚
 		 * 
-		 * ¹ıÂËÆ÷µÄÁíÒ»¸öÓÃÍ¾ÊÇ°Ñ×Ö·û´®ÖĞµÄËùÓĞ×Ö·û±ä³É´óĞ´£¬ÔÚ¹ıÂËÆ÷µÄinsertStringºÍreplace·½·¨ÖĞ£¬
-		 * °ÑÒª±»²åÈëµÄ×Ö·û´®×ª»»³É´óĞ´£¬È»ºóµ÷ÓÃ³¬ÀàµÄ·½·¨¡£
+		 * è¿‡æ»¤å™¨çš„å¦ä¸€ä¸ªç”¨é€”æ˜¯æŠŠå­—ç¬¦ä¸²ä¸­çš„æ‰€æœ‰å­—ç¬¦å˜æˆå¤§å†™ï¼Œåœ¨è¿‡æ»¤å™¨çš„insertStringå’Œreplaceæ–¹æ³•ä¸­ï¼Œ
+		 * æŠŠè¦è¢«æ’å…¥çš„å­—ç¬¦ä¸²è½¬æ¢æˆå¤§å†™ï¼Œç„¶åè°ƒç”¨è¶…ç±»çš„æ–¹æ³•ã€‚
 		 */
 		JFormattedTextField intField = new JFormattedTextField(
 				new InternationalFormatter(NumberFormat.getIntegerInstance()) {
@@ -171,33 +171,33 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»Ø´øÓĞĞ£ÑéÆ÷µÄÕûÊı¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›å¸¦æœ‰æ ¡éªŒå™¨çš„æ•´æ•°æ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º</br>
-	 * ÊäÈë·Ç·¨Êı¾İºó½¹µã»áÇ¿ÖÆÉèÔÚÎÄ±¾ÓòÉÏ£¬ÆÈÊ¹ÓÃ»§½«·Ç·¨Êı¾İĞŞ¸Ä³ÉºÏ·¨µÄ¡£
+	 * ç•Œé¢æ•ˆæœï¼š</br>
+	 * è¾“å…¥éæ³•æ•°æ®åç„¦ç‚¹ä¼šå¼ºåˆ¶è®¾åœ¨æ–‡æœ¬åŸŸä¸Šï¼Œè¿«ä½¿ç”¨æˆ·å°†éæ³•æ•°æ®ä¿®æ”¹æˆåˆæ³•çš„ã€‚
 	 */
 	private JFormattedTextField getIntTextFieldWithInputVerifier() {
 		JFormattedTextField intField = new JFormattedTextField(NumberFormat
 				.getIntegerInstance());
 		intField.setValue(new Integer(100));
 		/*
-		 * ÕâÊÇÁíÍâÒ»ÖÖÇ±ÔÚµÄÊµÓÃ»úÖÆ£¬¿ÉÓÃÀ´¾¯¸æ¾¯¸æÓÃ»§ÒÔ±ÜÃâÎŞĞ§µÄÊäÈë¡£
-	     * ¿ÉÒÔ¸øÈÎºÎJComponent¸½¼ÓĞ£ÑéÆ÷(verifier)¡£Èç¹û×é¼ş¶ªÊ§½¹µã£¬¾ÍÑ¯ÎÊĞ£ÑéÆ÷¡£
-	     * Èç¹ûĞ£ÑéÆ÷±¨¸æ×é¼şÖĞµÄÄÚÈİÊÇÎŞĞ§µÄ£¬×é¼ş¾Í»áÂíÉÏÖØ»ñ½¹µã¡£
-	     * Òò´Ë£¬ÓÃ»§ÔÚÌá¹©ÆäËûÊäÈëÖ®Ç°£¬±ØĞëÏÈĞŞÕıÎŞĞ§µÄÄÚÈİ¡£
+		 * è¿™æ˜¯å¦å¤–ä¸€ç§æ½œåœ¨çš„å®ç”¨æœºåˆ¶ï¼Œå¯ç”¨æ¥è­¦å‘Šè­¦å‘Šç”¨æˆ·ä»¥é¿å…æ— æ•ˆçš„è¾“å…¥ã€‚
+	     * å¯ä»¥ç»™ä»»ä½•JComponenté™„åŠ æ ¡éªŒå™¨(verifier)ã€‚å¦‚æœç»„ä»¶ä¸¢å¤±ç„¦ç‚¹ï¼Œå°±è¯¢é—®æ ¡éªŒå™¨ã€‚
+	     * å¦‚æœæ ¡éªŒå™¨æŠ¥å‘Šç»„ä»¶ä¸­çš„å†…å®¹æ˜¯æ— æ•ˆçš„ï¼Œç»„ä»¶å°±ä¼šé©¬ä¸Šé‡è·ç„¦ç‚¹ã€‚
+	     * å› æ­¤ï¼Œç”¨æˆ·åœ¨æä¾›å…¶ä»–è¾“å…¥ä¹‹å‰ï¼Œå¿…é¡»å…ˆä¿®æ­£æ— æ•ˆçš„å†…å®¹ã€‚
 	     * 
-	     * Ğ£ÑéÆ÷²¢²»ÊÇÍòÎŞÒ»Ê§µÄ£¬Èç¹ûµã»÷°´Å¥£¬°´Å¥»áÔÚÎŞĞ§×é¼şÖØĞÂ»ñµÃ½¹µãÖ®Ç°Í¨ÖªËüµÄ¶¯×÷¼àÌıÆ÷
-	     * ¶¯×÷¼àÌıÆ÷»á´ÓÑéÖ¤Ê§°ÜµÄ×é¼şµÃµ½ÎŞĞ§µÄ½á¹û¡£
+	     * æ ¡éªŒå™¨å¹¶ä¸æ˜¯ä¸‡æ— ä¸€å¤±çš„ï¼Œå¦‚æœç‚¹å‡»æŒ‰é’®ï¼ŒæŒ‰é’®ä¼šåœ¨æ— æ•ˆç»„ä»¶é‡æ–°è·å¾—ç„¦ç‚¹ä¹‹å‰é€šçŸ¥å®ƒçš„åŠ¨ä½œç›‘å¬å™¨
+	     * åŠ¨ä½œç›‘å¬å™¨ä¼šä»éªŒè¯å¤±è´¥çš„ç»„ä»¶å¾—åˆ°æ— æ•ˆçš„ç»“æœã€‚
 		 */
 		intField.setInputVerifier(new FormattedTextFieldVerifier());
 		return intField;
 	}
 
 	/**
-	 * ·µ»Ø»õ±Ò¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›è´§å¸æ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º
-	 * Í¬getIntTextField()
+	 * ç•Œé¢æ•ˆæœï¼š
+	 * åŒgetIntTextField()
 	 */
 	private JFormattedTextField getCurrencyTextField() {
 		JFormattedTextField currencyField = new JFormattedTextField(
@@ -207,10 +207,10 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»ØÈÕÆÚ¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›æ—¥æœŸæ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º
-	 * Í¬getIntTextField()
+	 * ç•Œé¢æ•ˆæœï¼š
+	 * åŒgetIntTextField()
 	 */
 	private JFormattedTextField getDateTextField() {
 		JFormattedTextField dateField = new JFormattedTextField(DateFormat
@@ -220,10 +220,10 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»Ø¼òµ¥ÈÕÆÚ¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›ç®€å•æ—¥æœŸæ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º
-	 * Í¬getIntTextField()
+	 * ç•Œé¢æ•ˆæœï¼š
+	 * åŒgetIntTextField()
 	 */
 	private JFormattedTextField getShortDateTextField() {
 		DateFormat format = DateFormat.getDateInstance(DateFormat.SHORT);
@@ -234,19 +234,19 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»ØURL¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›URLæ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º
-	 * Í¬getIntTextField()
+	 * ç•Œé¢æ•ˆæœï¼š
+	 * åŒgetIntTextField()
 	 */
 	private JFormattedTextField getURLTextField() {
 		/*
-		 * DefaultFormatter¿ÉÒÔ¸ñÊ½»¯ÈÎºÎÀàµÄ¶ÔÏó£¬Ö»Òª¸ÃÀàÓĞÒ»¸ö×Ö·û´®ÀàĞÍ²ÎÊıµÄ¹¹ÔìÆ÷ºÍÆ¥ÅäµÄtoString·½·¨¡£
+		 * DefaultFormatterå¯ä»¥æ ¼å¼åŒ–ä»»ä½•ç±»çš„å¯¹è±¡ï¼Œåªè¦è¯¥ç±»æœ‰ä¸€ä¸ªå­—ç¬¦ä¸²ç±»å‹å‚æ•°çš„æ„é€ å™¨å’ŒåŒ¹é…çš„toStringæ–¹æ³•ã€‚
 		 * 
-		 * URLÀàÓĞÒ»¸öURL(String)¹¹ÔìÆ÷ÀûÓÃ×Ö·û´®¹¹ÔìURL£¬ËùÒÔ¿ÉÒÔÊ¹ÓÃDefaultFormatter¸ñÊ½»¯URL¶ÔÏó¡£
-		 * ¸ñÊ½Æ÷Õë¶ÔÎÄ±¾ÓòÖµµ÷ÓÃtoString·½·¨À´³õÊ¼»¯ÎÄ±¾ÓòµÄÎÄ±¾¡£
-		 * µ±ÎÄ±¾ÓòÊ§È¥½¹µãÊ±£¬¸ñÊ½Æ÷Ê¹ÓÃ´øÓĞString²ÎÊıµÄ¹¹ÔìÆ÷¹¹ÔìÏàÍ¬ÀàµÄĞÂ¶ÔÏó×÷Îªµ±Ç°Öµ¡£
-		 * Èç¹û¹¹ÔìÆ÷Å×³öÁËÒì³££¬±à¼­¾ÍÊÇÎŞĞ§µÄ¡£
+		 * URLç±»æœ‰ä¸€ä¸ªURL(String)æ„é€ å™¨åˆ©ç”¨å­—ç¬¦ä¸²æ„é€ URLï¼Œæ‰€ä»¥å¯ä»¥ä½¿ç”¨DefaultFormatteræ ¼å¼åŒ–URLå¯¹è±¡ã€‚
+		 * æ ¼å¼å™¨é’ˆå¯¹æ–‡æœ¬åŸŸå€¼è°ƒç”¨toStringæ–¹æ³•æ¥åˆå§‹åŒ–æ–‡æœ¬åŸŸçš„æ–‡æœ¬ã€‚
+		 * å½“æ–‡æœ¬åŸŸå¤±å»ç„¦ç‚¹æ—¶ï¼Œæ ¼å¼å™¨ä½¿ç”¨å¸¦æœ‰Stringå‚æ•°çš„æ„é€ å™¨æ„é€ ç›¸åŒç±»çš„æ–°å¯¹è±¡ä½œä¸ºå½“å‰å€¼ã€‚
+		 * å¦‚æœæ„é€ å™¨æŠ›å‡ºäº†å¼‚å¸¸ï¼Œç¼–è¾‘å°±æ˜¯æ— æ•ˆçš„ã€‚
 		 */
 		DefaultFormatter formatter = new DefaultFormatter();
 		formatter.setOverwriteMode(false);
@@ -260,30 +260,30 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»Øµç»°ºÅÂë¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›ç”µè¯å·ç æ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 * <p>
-	 * ½çÃæĞ§¹û£º
-	 * ·ÇÊı×Ö²»¿ÉÊäÈë£¬ÊäÈë³¤¶È¹Ì¶¨²»±ä£¬É¾³ı×Ö·û»á×Ô¶¯²¹0
+	 * ç•Œé¢æ•ˆæœï¼š
+	 * éæ•°å­—ä¸å¯è¾“å…¥ï¼Œè¾“å…¥é•¿åº¦å›ºå®šä¸å˜ï¼Œåˆ é™¤å­—ç¬¦ä¼šè‡ªåŠ¨è¡¥0
 	 */
 	private JFormattedTextField getPhoneNumberTextField() {
 		/*
-		 * MaskFormatter¶Ô°üº¬Ò»Ğ©³£Á¿ºÍÒ»Ğ©±äÁ¿×Ö·ûµÄ¹Ì¶¨´óĞ¡µÄÑùÊ½ºÜÓĞÓÃ¡£
-		 * ÀıÈçÓÊ±àºÍµç»°ºÅÂë¡£
+		 * MaskFormatterå¯¹åŒ…å«ä¸€äº›å¸¸é‡å’Œä¸€äº›å˜é‡å­—ç¬¦çš„å›ºå®šå¤§å°çš„æ ·å¼å¾ˆæœ‰ç”¨ã€‚
+		 * ä¾‹å¦‚é‚®ç¼–å’Œç”µè¯å·ç ã€‚
 		 * 
-		 * ×Ö·û           ÃèÊö
-		 *  #   ÈÎºÎÓĞĞ§Êı×Ö£¬Ê¹ÓÃ Character.isDigit¡£ 
-		 *  '   ×ªÒå×Ö·û£¬ÓÃÓÚ±Ü¿ªÈÎºÎ¾ßÓĞÌØÊâ¸ñÊ½µÄ×Ö·û¡£ 
-		 *  U   ÈÎºÎ×Ö·û (Character.isLetter)¡£½«ËùÓĞĞ¡Ğ´×ÖÄ¸Ó³ÉäÎª´óĞ´¡£ 
-		 *  L   ÈÎºÎ×Ö·û (Character.isLetter)¡£½«ËùÓĞ´óĞ´×ÖÄ¸Ó³ÉäÎªĞ¡Ğ´¡£ 
-		 *  A   ÈÎºÎ×Ö·û»òÊı×Ö£¨Character.isLetter »ò Character.isDigit£© 
-		 *  ?   ÈÎºÎ×Ö·û (Character.isLetter)¡£ 
-		 *  *   ËùÓĞ×Ö·û¡£ 
-		 *  H   ÈÎºÎÊ®Áù½øÖÆ×Ö·û£¨0-9¡¢a-f »ò A-F£©¡£ 
+		 * å­—ç¬¦           æè¿°
+		 *  #   ä»»ä½•æœ‰æ•ˆæ•°å­—ï¼Œä½¿ç”¨ Character.isDigitã€‚ 
+		 *  '   è½¬ä¹‰å­—ç¬¦ï¼Œç”¨äºé¿å¼€ä»»ä½•å…·æœ‰ç‰¹æ®Šæ ¼å¼çš„å­—ç¬¦ã€‚ 
+		 *  U   ä»»ä½•å­—ç¬¦ (Character.isLetter)ã€‚å°†æ‰€æœ‰å°å†™å­—æ¯æ˜ å°„ä¸ºå¤§å†™ã€‚ 
+		 *  L   ä»»ä½•å­—ç¬¦ (Character.isLetter)ã€‚å°†æ‰€æœ‰å¤§å†™å­—æ¯æ˜ å°„ä¸ºå°å†™ã€‚ 
+		 *  A   ä»»ä½•å­—ç¬¦æˆ–æ•°å­—ï¼ˆCharacter.isLetter æˆ– Character.isDigitï¼‰ 
+		 *  ?   ä»»ä½•å­—ç¬¦ (Character.isLetter)ã€‚ 
+		 *  *   æ‰€æœ‰å­—ç¬¦ã€‚ 
+		 *  H   ä»»ä½•åå…­è¿›åˆ¶å­—ç¬¦ï¼ˆ0-9ã€a-f æˆ– A-Fï¼‰ã€‚ 
 		 *  
-		 *  ¿ÉÒÔÍ¨¹ıµ÷ÓÃMaskFormatterÀàµÄÏÂÁĞ·½·¨ÏŞÖÆÊäÈëÎÄ±¾ÓòµÄ×Ö·û£º
-		 *  setValidCharacters()£º·µ»Ø¿ÉÒÔÊäÈëµÄÓĞĞ§×Ö·û¡£
-		 *  setInvalidCharacters()£ºÔÊĞí½øÒ»²½ÏŞÖÆ¿ÉÒÔÊäÈëµÄ×Ö·û¡£
-		 *  Ö»ÔÊĞíÊäÈëÖ¸¶¨µÄvalidCharacters¶ø²»ÊÇinvalidCharacters¡£
+		 *  å¯ä»¥é€šè¿‡è°ƒç”¨MaskFormatterç±»çš„ä¸‹åˆ—æ–¹æ³•é™åˆ¶è¾“å…¥æ–‡æœ¬åŸŸçš„å­—ç¬¦ï¼š
+		 *  setValidCharacters()ï¼šè¿”å›å¯ä»¥è¾“å…¥çš„æœ‰æ•ˆå­—ç¬¦ã€‚
+		 *  setInvalidCharacters()ï¼šå…è®¸è¿›ä¸€æ­¥é™åˆ¶å¯ä»¥è¾“å…¥çš„å­—ç¬¦ã€‚
+		 *  åªå…è®¸è¾“å…¥æŒ‡å®šçš„validCharactersè€Œä¸æ˜¯invalidCharactersã€‚
 		 */
 		MaskFormatter formatter = null;
 		try {
@@ -291,7 +291,7 @@ class JFormattedTextFieldPanel extends JPanel {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		// Èç¹ûÓÃ»§ÔÚ±à¼­¹ı³ÌÖĞÉ¾³ı×Ö·û£¬ÄÇÃ´ËüÃÇ½«±»Õ¼Î»·û(place holder character)Ìæ´ú
+		// å¦‚æœç”¨æˆ·åœ¨ç¼–è¾‘è¿‡ç¨‹ä¸­åˆ é™¤å­—ç¬¦ï¼Œé‚£ä¹ˆå®ƒä»¬å°†è¢«å ä½ç¬¦(place holder character)æ›¿ä»£
 		formatter.setPlaceholderCharacter('0');
 		JFormattedTextField field = new JFormattedTextField(formatter);
 		field.setValue("0539-2179184");
@@ -299,10 +299,10 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»ØIPµØÖ·¸ñÊ½»¯ÎÄ±¾Óò
+	 * è¿”å›IPåœ°å€æ ¼å¼åŒ–æ–‡æœ¬åŸŸ
 	 */
 	private JFormattedTextField getIPAddressTextField() {
-		/* Èç¹ûËùÓĞµÄ±ê×¼¸ñÊ½Æ÷¶¼²»ÊÊÓÃ£¬¾ÍĞèÒª¶¨Òå×Ô¼ºµÄ¸ñÊ½Æ÷ */
+		/* å¦‚æœæ‰€æœ‰çš„æ ‡å‡†æ ¼å¼å™¨éƒ½ä¸é€‚ç”¨ï¼Œå°±éœ€è¦å®šä¹‰è‡ªå·±çš„æ ¼å¼å™¨ */
 		JFormattedTextField ipField = new JFormattedTextField(
 				new IPAddressFormatter());
 		ipField.setValue(new byte[] { (byte) 130, 65, 86, 66 });
@@ -357,7 +357,7 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * ÕûÊıÎÄ±¾¹ıÂËÆ÷(Ö»ÓĞÊı×ÖºÍ¸ººÅ(-)²»»á±»¹ıÂË)
+	 * æ•´æ•°æ–‡æœ¬è¿‡æ»¤å™¨(åªæœ‰æ•°å­—å’Œè´Ÿå·(-)ä¸ä¼šè¢«è¿‡æ»¤)
 	 */
 	private class IntFilter extends DocumentFilter {
 		
@@ -388,28 +388,28 @@ class JFormattedTextFieldPanel extends JPanel {
 	}
 
 	/**
-	 * JFormattedTextFieldµÄĞ£ÑéÆ÷
+	 * JFormattedTextFieldçš„æ ¡éªŒå™¨
 	 * <p>
-	 * ¼ìÑéÆ÷±ØĞëÀ©Õ¹³éÏóÀàInputVerifier£¬²¢ÇÒ¶¨Òåverify·½·¨¡£
+	 * æ£€éªŒå™¨å¿…é¡»æ‰©å±•æŠ½è±¡ç±»InputVerifierï¼Œå¹¶ä¸”å®šä¹‰verifyæ–¹æ³•ã€‚
 	 */
 	private class FormattedTextFieldVerifier extends InputVerifier {
 		
 		public boolean verify(JComponent component) {
-			// isEditValid·½·¨µ÷ÓÃ¸ñÊ½Æ÷£¬Èç¹û¸ñÊ½Æ÷¿ÉÒÔ°ÑÎÄ±¾×Ö·û×ª»¯Îª¶ÔÏóÔò·µ»Øtrue¡£
+			// isEditValidæ–¹æ³•è°ƒç”¨æ ¼å¼å™¨ï¼Œå¦‚æœæ ¼å¼å™¨å¯ä»¥æŠŠæ–‡æœ¬å­—ç¬¦è½¬åŒ–ä¸ºå¯¹è±¡åˆ™è¿”å›trueã€‚
 			return ((JFormattedTextField) component).isEditValid();
 		}
 	}
 
 	/**
-	 * IPµØÖ·¸ñÊ½Æ÷
+	 * IPåœ°å€æ ¼å¼å™¨
 	 * <p>
-	 * ×Ô¶¨Òå¸ñÊ½Æ÷ĞèÒª¼Ì³Ğ×ÔDefaultFormatter£¬²¢ÇÒ¸²¸ÇvalueToStringºÍstringToValue·½·¨¡£
+	 * è‡ªå®šä¹‰æ ¼å¼å™¨éœ€è¦ç»§æ‰¿è‡ªDefaultFormatterï¼Œå¹¶ä¸”è¦†ç›–valueToStringå’ŒstringToValueæ–¹æ³•ã€‚
 	 */
 	private class IPAddressFormatter extends DefaultFormatter {
 		private static final long serialVersionUID = 1L;
 
 		/**
-		 * °ÑÖµ×ª»»ÎªÏÔÊ¾ÔÚÎÄ±¾ÓòÖĞµÄ×Ö·û´®
+		 * æŠŠå€¼è½¬æ¢ä¸ºæ˜¾ç¤ºåœ¨æ–‡æœ¬åŸŸä¸­çš„å­—ç¬¦ä¸²
 		 */
 		public String valueToString(Object value) throws ParseException {
 			if (!(value instanceof byte[]))
@@ -430,7 +430,7 @@ class JFormattedTextFieldPanel extends JPanel {
 		}
 
 		/**
-		 * ½âÎöÊäÈëÎÄ±¾²¢×ª»»Îª¶ÔÏó
+		 * è§£æè¾“å…¥æ–‡æœ¬å¹¶è½¬æ¢ä¸ºå¯¹è±¡
 		 */
 		public Object stringToValue(String text) throws ParseException {
 			byte[] a = new byte[4];

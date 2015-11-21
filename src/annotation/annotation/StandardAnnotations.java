@@ -8,51 +8,51 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * ±ê×¼×¢½âÊ¾Àı
+ * æ ‡å‡†æ³¨è§£ç¤ºä¾‹
  * <p>
- * JDKÌá¹©ÁËÒ»Ğ©±ê×¼×¢½â¹©Ê¹ÓÃ¡£
+ * JDKæä¾›äº†ä¸€äº›æ ‡å‡†æ³¨è§£ä¾›ä½¿ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-8
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-8
  */
 public class StandardAnnotations {
 
 	/**
 	 * @deprecated
 	 */
-	// @Deprecated×¢½â¿ÉÒÔ±»Ìí¼Óµ½ÈÎºÎ²»ÔÙ¹ÄÀøÊ¹ÓÃµÄÏîÉÏ£¬ÓëÉÏÃæµÄÎÄµµ±êÇ©@deprecated¾ßÓĞÍ¬µÈ¹¦Ğ§¡£
+	// @Deprecatedæ³¨è§£å¯ä»¥è¢«æ·»åŠ åˆ°ä»»ä½•ä¸å†é¼“åŠ±ä½¿ç”¨çš„é¡¹ä¸Šï¼Œä¸ä¸Šé¢çš„æ–‡æ¡£æ ‡ç­¾@deprecatedå…·æœ‰åŒç­‰åŠŸæ•ˆã€‚
 	@Deprecated
 	public void deprecatedMethod() {
 		// do something
 		
-		// @SuppressWarnings ×¢½â»á¸æÖª±àÒëÆ÷×èÖ¹ÌØÊâÀàĞÍµÄ¾¯¸æĞÅÏ¢¡£
+		// @SuppressWarnings æ³¨è§£ä¼šå‘ŠçŸ¥ç¼–è¯‘å™¨é˜»æ­¢ç‰¹æ®Šç±»å‹çš„è­¦å‘Šä¿¡æ¯ã€‚
 		@SuppressWarnings("unused")
 		int a = 0;
 	}
 	
-	// @Override×¢½âÖ»ÄÜÓ¦ÓÃµ½·½·¨ÉÏ£¬Èç¹û¾ßÓĞÕâÖÖ×¢½âµÄ·½·¨²¢²»ÊÇ¸²¸ÇÒ»¸ö³¬ÀàµÄ·½·¨£¬Ôò»áÓĞ±àÒë´íÎó¡£
+	// @Overrideæ³¨è§£åªèƒ½åº”ç”¨åˆ°æ–¹æ³•ä¸Šï¼Œå¦‚æœå…·æœ‰è¿™ç§æ³¨è§£çš„æ–¹æ³•å¹¶ä¸æ˜¯è¦†ç›–ä¸€ä¸ªè¶…ç±»çš„æ–¹æ³•ï¼Œåˆ™ä¼šæœ‰ç¼–è¯‘é”™è¯¯ã€‚
 	@Override
 	public String toString() {
 		return "";
 	}
 
-	// @Generated×¢½âµÄÄ¿µÄÊÇ¹©´úÂëÉú³É¹¤¾ßÀ´Ê¹ÓÃ£¬ÈÎºÎÉú³ÉµÄÔ´´úÂë¶¼¿ÉÒÔ±»×¢½â£¬´Ó¶øÓë³ÌĞòÔ±Ìá¹©µÄ´úÂëÇø·Ö¿ª¡£
+	// @Generatedæ³¨è§£çš„ç›®çš„æ˜¯ä¾›ä»£ç ç”Ÿæˆå·¥å…·æ¥ä½¿ç”¨ï¼Œä»»ä½•ç”Ÿæˆçš„æºä»£ç éƒ½å¯ä»¥è¢«æ³¨è§£ï¼Œä»è€Œä¸ç¨‹åºå‘˜æä¾›çš„ä»£ç åŒºåˆ†å¼€ã€‚
 	@Generated(value = "com.google.code", date = "2014-07-08")
 	public int hashCode() {
 		return 0;
 	}
 	
 	/**
-	 * @PostConstruct ºÍ @PreDestroy ×¢½âÓÃÓÚ¿ØÖÆ¶ÔÏóÉúÃüÖÜÆÚµÄ»·¾³ÖĞ£¬ÀıÈçWebÈİÆ÷ºÍÓ¦ÓÃ·şÎñÆ÷¡£
+	 * @PostConstruct å’Œ @PreDestroy æ³¨è§£ç”¨äºæ§åˆ¶å¯¹è±¡ç”Ÿå‘½å‘¨æœŸçš„ç¯å¢ƒä¸­ï¼Œä¾‹å¦‚Webå®¹å™¨å’Œåº”ç”¨æœåŠ¡å™¨ã€‚
 	 */
-	// @PostConstruct×¢½âµÄ·½·¨Ó¦¸ÃÔÚ¶ÔÏó±»¹¹½¨Ö®ºóµ÷ÓÃ
+	// @PostConstructæ³¨è§£çš„æ–¹æ³•åº”è¯¥åœ¨å¯¹è±¡è¢«æ„å»ºä¹‹åè°ƒç”¨
 	@PostConstruct
 	private void postInit() {
 		// so something
 	}
 
-	// @PreDestroy×¢½âµÄ·½·¨Ó¦¸ÃÔÚ¶ÔÏó±»¹¹½¨Ö®ºóµ÷ÓÃ
+	// @PreDestroyæ³¨è§£çš„æ–¹æ³•åº”è¯¥åœ¨å¯¹è±¡è¢«æ„å»ºä¹‹åè°ƒç”¨
 	@PreDestroy
 	private void preClose() {
 		// so something

@@ -18,15 +18,15 @@ import javax.swing.filechooser.FileFilter;
 import util.Displayer;
 
 /**
- * ÎÄ¼şÑ¡Ôñ¿Ø¼şÀà
+ * æ–‡ä»¶é€‰æ‹©æ§ä»¶ç±»
  * <p>
- * ¿Ø¼şÃæ°å°üÀ¨Ò»¸öTextFieldºÍÒ»¸öButton¡£
- * µ±µã»÷ButtonµÄÊ±ºòÄÜ¹»µ¯³öÒ»¸öFileChooser¶Ô»°¿ò¡£
- * Ñ¡ÔñÍêÎÄ¼şµã»÷È·¶¨ºóÄÜ¹»½«ÎÄ¼şÍê³ÉÂ·¾¶ÃûĞ´µ½TextFieldÀïÃæ¡£
+ * æ§ä»¶é¢æ¿åŒ…æ‹¬ä¸€ä¸ªTextFieldå’Œä¸€ä¸ªButtonã€‚
+ * å½“ç‚¹å‡»Buttonçš„æ—¶å€™èƒ½å¤Ÿå¼¹å‡ºä¸€ä¸ªFileChooserå¯¹è¯æ¡†ã€‚
+ * é€‰æ‹©å®Œæ–‡ä»¶ç‚¹å‡»ç¡®å®šåèƒ½å¤Ÿå°†æ–‡ä»¶å®Œæˆè·¯å¾„åå†™åˆ°TextFieldé‡Œé¢ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-13
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-13
  */
 public class FileChooserPane extends JPanel {
 
@@ -35,18 +35,18 @@ public class FileChooserPane extends JPanel {
 	 */
 	private static final long serialVersionUID = -612311745368894675L;
 	
-	/** ÊäÈë¿ò ¿í¶È */
+	/** è¾“å…¥æ¡† å®½åº¦ */
 	private static final int WIDTH = 180;
-	/** ¿Ø¼ş ¸ß¶È */
+	/** æ§ä»¶ é«˜åº¦ */
 	private static final int HEIGHT = 21;
 
-	/* °´Å¥Ä¬ÈÏÍ¼±ê */
+	/* æŒ‰é’®é»˜è®¤å›¾æ ‡ */
 	private ImageIcon icon = new ImageIcon(getClass().getResource("browse.GIF"));
 	
-	private JTextField textField;// ÎÄ¼şÂ·¾¶ À¸
-	private JButton button;// ´ò¿ª °´Å¥
+	private JTextField textField;// æ–‡ä»¶è·¯å¾„ æ 
+	private JButton button;// æ‰“å¼€ æŒ‰é’®
 
-	protected FileChooserPaneEHD ehd;// ÊÂ¼ş´¦Àí¶ÔÏó
+	protected FileChooserPaneEHD ehd;// äº‹ä»¶å¤„ç†å¯¹è±¡
 
 	public FileChooserPane() {
 		init();
@@ -65,7 +65,7 @@ public class FileChooserPane extends JPanel {
 	}
 
 	/**
-	 * ÎÄ¼şÂ·¾¶ À¸
+	 * æ–‡ä»¶è·¯å¾„ æ 
 	 */
 	private JTextField getTextField() {
 		if (textField == null) {
@@ -77,7 +77,7 @@ public class FileChooserPane extends JPanel {
 	}
 
 	/**
-	 * °´Å¥
+	 * æŒ‰é’®
 	 */
 	private JButton getButton() {
 		if (button == null) {
@@ -88,7 +88,7 @@ public class FileChooserPane extends JPanel {
 	}
 
 	/**
-	 * ÊÂ¼ş´¦Àí¶ÔÏó
+	 * äº‹ä»¶å¤„ç†å¯¹è±¡
 	 */
 	protected FileChooserPaneEHD getFileChooserPaneEHD() {
 		if (ehd == null) {
@@ -98,27 +98,27 @@ public class FileChooserPane extends JPanel {
 	}
 
 	/**
-	 * ÎÄ±¾ÓòµÄÄÚÈİ(¼´Ñ¡ÔñÎÄ¼şµÄÈ«Â·¾¶)
+	 * æ–‡æœ¬åŸŸçš„å†…å®¹(å³é€‰æ‹©æ–‡ä»¶çš„å…¨è·¯å¾„)
 	 */
 	public String getFilePath() {
 		return getTextField().getText();
 	}
 
 	/**
-	 * ÓÃ²ÎÊıÉèÖÃÎÄ±¾ÓòÄÚÈİ(¼´Ñ¡ÔñÎÄ¼şµÄÈ«Â·¾¶)
+	 * ç”¨å‚æ•°è®¾ç½®æ–‡æœ¬åŸŸå†…å®¹(å³é€‰æ‹©æ–‡ä»¶çš„å…¨è·¯å¾„)
 	 * 
 	 * @param path
-	 *            ÎÄ±¾
+	 *            æ–‡æœ¬
 	 */
 	public void setFilePath(String path) {
 		File file = new File(path);
 		if (!file.exists())
-			throw new RuntimeException("Ö¸¶¨ÎÄ¼ş²»´æÔÚ.");
+			throw new RuntimeException("æŒ‡å®šæ–‡ä»¶ä¸å­˜åœ¨.");
 		getTextField().setText(path);
 	}
 
 	/**
-	 * °´Å¥ºÍÎÄ±¾¿ò¿ÉÓÃĞÔ
+	 * æŒ‰é’®å’Œæ–‡æœ¬æ¡†å¯ç”¨æ€§
 	 * 
 	 * @see javax.swing.JComponent#setEnabled(boolean)
 	 */
@@ -129,13 +129,13 @@ public class FileChooserPane extends JPanel {
 	}
 	
 	/**
-	 * ÉèÖÃÎÄ¼şÑ¡ÔñÆ÷µÄÑ¡ÔñÄ£Ê½ 
+	 * è®¾ç½®æ–‡ä»¶é€‰æ‹©å™¨çš„é€‰æ‹©æ¨¡å¼ 
 	 * <p>
-	 * ÔÊĞíÓÃ»§Ö»Ñ¡ÔñÎÄ¼ş¡¢Ö»Ñ¡ÔñÄ¿Â¼£¬»òÕß¿ÉÑ¡ÔñÎÄ¼şºÍÄ¿Â¼ ¡£
-	 * Ä¬ÈÏÑ¡ÔñÄ£Ê½ÎªÎÄ¼ş¼ĞºÍÎÄ¼ş¶¼¿ÉÑ¡Ôñ¡£
+	 * å…è®¸ç”¨æˆ·åªé€‰æ‹©æ–‡ä»¶ã€åªé€‰æ‹©ç›®å½•ï¼Œæˆ–è€…å¯é€‰æ‹©æ–‡ä»¶å’Œç›®å½• ã€‚
+	 * é»˜è®¤é€‰æ‹©æ¨¡å¼ä¸ºæ–‡ä»¶å¤¹å’Œæ–‡ä»¶éƒ½å¯é€‰æ‹©ã€‚
 	 * 
 	 * @param mode
-	 *            Ñ¡ÔñÄ£Ê½
+	 *            é€‰æ‹©æ¨¡å¼
 	 * @see JFileChooser.FILES_ONLY 
 	 *      JFileChooser.DIRECTORIES_ONLY
 	 *      JFileChooser.FILES_AND_DIRECTORIES
@@ -145,10 +145,10 @@ public class FileChooserPane extends JPanel {
 	}
 	
 	/**
-	 * ÉèÖÃÎÄ¼şÑ¡ÔñÆ÷µÄfilter
+	 * è®¾ç½®æ–‡ä»¶é€‰æ‹©å™¨çš„filter
 	 * 
 	 * @param fileFilter
-	 *            ÎÄ¼ş¹ıÂËÆ÷
+	 *            æ–‡ä»¶è¿‡æ»¤å™¨
 	 */
 	public void setFileFilter(FileFilter fileFilter) {
 		getFileChooserPaneEHD().setFileFilter(fileFilter);

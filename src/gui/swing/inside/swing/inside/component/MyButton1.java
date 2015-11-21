@@ -14,14 +14,14 @@ import java.util.List;
 import javax.swing.JComponent;
 
 /**
- * ×Ô¶¨Òå°´Å¥1
+ * è‡ªå®šä¹‰æŒ‰é’®1
  * <p>
- * ÔÚÕâÀï²»¿¼ÂÇModelºÍUI DelegateµÄ·ÖÀë£¬ËùÒÔ°´Å¥×´Ì¬ºÍÍâ¹ÛĞĞÎª¶¼±»ÍÆµ¹ÁË±¾ÀàÖĞ(Component)ÊµÏÖ¡£
- * Êµ¼ÊÉÏÕâÊÇÎ¥·´MVCÔ­ÔòµÄ¡£
+ * åœ¨è¿™é‡Œä¸è€ƒè™‘Modelå’ŒUI Delegateçš„åˆ†ç¦»ï¼Œæ‰€ä»¥æŒ‰é’®çŠ¶æ€å’Œå¤–è§‚è¡Œä¸ºéƒ½è¢«æ¨å€’äº†æœ¬ç±»ä¸­(Component)å®ç°ã€‚
+ * å®é™…ä¸Šè¿™æ˜¯è¿åMVCåŸåˆ™çš„ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-2-24
+ * åˆ›å»ºæ—¥æœŸï¼š2011-2-24
  */
 public class MyButton1 extends JComponent implements MouseListener {
 
@@ -30,9 +30,9 @@ public class MyButton1 extends JComponent implements MouseListener {
 	 */
 	private static final long serialVersionUID = -3471383034498422967L;
 
-	private boolean isPressed;// ÊÇ·ñ±»°´ÏÂ
+	private boolean isPressed;// æ˜¯å¦è¢«æŒ‰ä¸‹
 	
-	// ÊÂ¼ş¼àÌıÆ÷ÁĞ±í£¬×é¼ş×Ô¼º¹ÜÀíÊÂ¼ş¼àÌıÆ÷
+	// äº‹ä»¶ç›‘å¬å™¨åˆ—è¡¨ï¼Œç»„ä»¶è‡ªå·±ç®¡ç†äº‹ä»¶ç›‘å¬å™¨
 	private List<ActionListener> actionListeners = new ArrayList<ActionListener>();
 	
 	public MyButton1(){
@@ -40,7 +40,7 @@ public class MyButton1 extends JComponent implements MouseListener {
 		addMouseListener(this);
 	}
 	
-	/** Ôö¼ÓºÍÉ¾³ıÊÂ¼ş¼àÌıÆ÷ */
+	/** å¢åŠ å’Œåˆ é™¤äº‹ä»¶ç›‘å¬å™¨ */
 	
 	public void addActionListener(ActionListener l){
 		actionListeners.add(l);
@@ -62,28 +62,28 @@ public class MyButton1 extends JComponent implements MouseListener {
 	}
 
 	/**
-	 * ÖØĞ´paint·½·¨£¬ÊµÏÖ¸ù¾İ°´Å¥×´Ì¬µÄÖØ»­
+	 * é‡å†™paintæ–¹æ³•ï¼Œå®ç°æ ¹æ®æŒ‰é’®çŠ¶æ€çš„é‡ç”»
 	 *
 	 * @see javax.swing.JComponent#paint(java.awt.Graphics)
 	 */
 	public void paint(Graphics g) {
 		if(isPressed){
-			// »­³ö°´Å¥±»°´ÏÂÊ±µÄÑù×Ó
+			// ç”»å‡ºæŒ‰é’®è¢«æŒ‰ä¸‹æ—¶çš„æ ·å­
 		}else {
-			// »­³ö°´Å¥Ã»±»°´ÏÂÊ±µÄÑù×Ó
+			// ç”»å‡ºæŒ‰é’®æ²¡è¢«æŒ‰ä¸‹æ—¶çš„æ ·å­
 		}
 	}
 	
-	/** ÏÂÃæÁ½¸öÊÇ·ÃÎÊ×é¼şÊôĞÔµÄ·½·¨  */
+	/** ä¸‹é¢ä¸¤ä¸ªæ˜¯è®¿é—®ç»„ä»¶å±æ€§çš„æ–¹æ³•  */
 	
 	public boolean isPressed() {
 		return isPressed;
 	}
 
 	public void setPressed(boolean isPressed) {
-		this.isPressed = isPressed;// ÊôĞÔ·¢ÉúÁË±ä»¯
-		repaint();// Í¨Öª°´Å¥ÖØ»­
-		fireActionPerformed(new ActionEvent(this, 1, null));// ´¥·¢°´Å¥¶¯×÷ÊÂ¼ş
+		this.isPressed = isPressed;// å±æ€§å‘ç”Ÿäº†å˜åŒ–
+		repaint();// é€šçŸ¥æŒ‰é’®é‡ç”»
+		fireActionPerformed(new ActionEvent(this, 1, null));// è§¦å‘æŒ‰é’®åŠ¨ä½œäº‹ä»¶
 	}
 
 	@Override

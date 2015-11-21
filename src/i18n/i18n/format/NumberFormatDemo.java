@@ -8,11 +8,11 @@ import java.text.ParseException;
 import java.util.Locale;
 
 /**
- * NumberFormatÑİÊ¾Àà
+ * NumberFormatæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-24
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-24
  */
 public class NumberFormatDemo {
 
@@ -21,7 +21,7 @@ public class NumberFormatDemo {
 	 */
 	public static void main(String[] args) {
 		String value = "123456.78";
-		// ·µ»ØËùÓĞÓïÑÔ»·¾³µÄÊı×é
+		// è¿”å›æ‰€æœ‰è¯­è¨€ç¯å¢ƒçš„æ•°ç»„
 		for (Locale locale : NumberFormat.getAvailableLocales()) {
 			print(locale, value);
 		}
@@ -29,16 +29,16 @@ public class NumberFormatDemo {
 
 	private static void print(Locale locale, String value) {
 		System.out.println(locale.getDisplayName());
-		// ·µ»ØÖ¸¶¨ÓïÑÔ»·¾³µÄÍ¨ÓÃÊı×Ö¸ñÊ½
+		// è¿”å›æŒ‡å®šè¯­è¨€ç¯å¢ƒçš„é€šç”¨æ•°å­—æ ¼å¼
 		NumberFormat nf = NumberFormat.getNumberInstance(locale);
-		// ·µ»ØÖ¸¶¨ÓïÑÔ»·¾³µÄ»õ±Ò¸ñÊ½
+		// è¿”å›æŒ‡å®šè¯­è¨€ç¯å¢ƒçš„è´§å¸æ ¼å¼
 		NumberFormat cf = NumberFormat.getCurrencyInstance(locale);
-		// ·µ»ØÖ¸¶¨ÓïÑÔ»·¾³µÄ°Ù·Ö±È¸ñÊ½
+		// è¿”å›æŒ‡å®šè¯­è¨€ç¯å¢ƒçš„ç™¾åˆ†æ¯”æ ¼å¼
 		NumberFormat pf = NumberFormat.getPercentInstance(locale);
 		try {
-			// ´Ó¸ø¶¨×Ö·û´®µÄ¿ªÊ¼´¦µÄÎÄ±¾½øĞĞ·ÖÎö£¬Éú³ÉÒ»¸öÊı×Ö
+			// ä»ç»™å®šå­—ç¬¦ä¸²çš„å¼€å§‹å¤„çš„æ–‡æœ¬è¿›è¡Œåˆ†æï¼Œç”Ÿæˆä¸€ä¸ªæ•°å­—
 			double doubleValue = nf.parse(value).doubleValue();
-			// ¶Ô²ÎÊıÊıÖµ½øĞĞ¸ñÊ½»¯²¢·µ»Ø×Ö·û´®
+			// å¯¹å‚æ•°æ•°å€¼è¿›è¡Œæ ¼å¼åŒ–å¹¶è¿”å›å­—ç¬¦ä¸²
 			System.out.println("double value = " + nf.format(doubleValue));
 			System.out.println("currency value = " + cf.format(doubleValue));
 			System.out.println("percent value = " + pf.format(doubleValue));

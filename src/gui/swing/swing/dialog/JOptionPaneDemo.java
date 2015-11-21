@@ -11,13 +11,13 @@ import java.awt.event.*;
 import java.awt.*;
 
 /**
- * JOptionPaneÑİÊ¾Àà
+ * JOptionPaneæ¼”ç¤ºç±»
  * <p>
- * JOptionPaneÓĞÖúÓÚ·½±ãµØµ¯³öÒªÇóÓÃ»§Ìá¹©Öµ»òÏòÆä·¢³öÍ¨ÖªµÄ±ê×¼¶Ô»°¿ò¡£
+ * JOptionPaneæœ‰åŠ©äºæ–¹ä¾¿åœ°å¼¹å‡ºè¦æ±‚ç”¨æˆ·æä¾›å€¼æˆ–å‘å…¶å‘å‡ºé€šçŸ¥çš„æ ‡å‡†å¯¹è¯æ¡†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-18
  */
 public class JOptionPaneDemo {
 	
@@ -55,17 +55,17 @@ class JOptionPanePanel extends JPanel {
 				public void actionPerformed(ActionEvent e) {
 					String id = ((JButton) e.getSource()).getText();
 					if (id.equals("Alert")) {
-						// ÏÔÊ¾Ò»¸ö´íÎó¶Ô»°¿ò£¬¸Ã¶Ô»°¿òÏÔÊ¾µÄ message Îª 'alert'
+						// æ˜¾ç¤ºä¸€ä¸ªé”™è¯¯å¯¹è¯æ¡†ï¼Œè¯¥å¯¹è¯æ¡†æ˜¾ç¤ºçš„ message ä¸º 'alert'
 						JOptionPane.showMessageDialog(null,
 								"There's a bug on you!", "Hey!",
 								JOptionPane.ERROR_MESSAGE);
 					} else if (id.equals("Yes/No")) {
-						// ÏÔÊ¾Ò»¸öĞÅÏ¢Ãæ°å£¬ÆäoptionsÎª "yes/no"£¬·µ»ØÖ¸Ê¾ÓÃ»§ËùÑ¡Ñ¡ÏîµÄintÖµ
+						// æ˜¾ç¤ºä¸€ä¸ªä¿¡æ¯é¢æ¿ï¼Œå…¶optionsä¸º "yes/no"ï¼Œè¿”å›æŒ‡ç¤ºç”¨æˆ·æ‰€é€‰é€‰é¡¹çš„intå€¼
 						JOptionPane.showConfirmDialog(null, "or no",
 								"choose yes", JOptionPane.YES_NO_OPTION);
 					} else if (id.equals("Color")) {
 						Object[] options = { "Red", "Green" };
-						// ÏÔÊ¾Ò»¸ö¾¯¸æ¶Ô»°¿ò£¬ÆäoptionsÎª Red¡¢Green
+						// æ˜¾ç¤ºä¸€ä¸ªè­¦å‘Šå¯¹è¯æ¡†ï¼Œå…¶optionsä¸º Redã€Green
 						int selection = JOptionPane.showOptionDialog(null,
 								"Choose a Color!", "Warning",
 								JOptionPane.DEFAULT_OPTION,
@@ -75,13 +75,13 @@ class JOptionPanePanel extends JPanel {
 							text.setText("Color Selected: "
 											+ options[selection]);
 					} else if (id.equals("Input")) {
-						// ÏÔÊ¾Ò»¸öÒªÇóÓÃ»§¼üÈëStringµÄ¶Ô»°¿ò
+						// æ˜¾ç¤ºä¸€ä¸ªè¦æ±‚ç”¨æˆ·é”®å…¥Stringçš„å¯¹è¯æ¡†
 						String value = JOptionPane
 								.showInputDialog("What did you say?");
 						text.setText(value);
 					} else if (id.equals("3 Values")) {
 						Object[] selections = { "Red", "Green", "Blue" };
-						// ÏÔÊ¾Ò»¸öÒªÇóÓÃ»§Ñ¡ÔñStringµÄ¶Ô»°¿ò
+						// æ˜¾ç¤ºä¸€ä¸ªè¦æ±‚ç”¨æˆ·é€‰æ‹©Stringçš„å¯¹è¯æ¡†
 						Object value = JOptionPane.showInputDialog(null,
 								"Choose one", "Input",
 								JOptionPane.INFORMATION_MESSAGE, null,

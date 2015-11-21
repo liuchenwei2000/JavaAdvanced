@@ -6,11 +6,11 @@ package swing.table;
 import javax.swing.table.AbstractTableModel;
 
 /**
- * TableÄ£ĞÍ
+ * Tableæ¨¡å‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-17
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-17
  */
 public class MyTableModel extends AbstractTableModel {	
 	
@@ -42,7 +42,7 @@ public class MyTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * ÉèÖÃ±í¸ñµ¥ÔªÊÇ·ñ¿ÉÒÔ±à¼­
+	 * è®¾ç½®è¡¨æ ¼å•å…ƒæ˜¯å¦å¯ä»¥ç¼–è¾‘
 	 * 
 	 * @see javax.swing.table.AbstractTableModel#isCellEditable(int, int)
 	 */
@@ -58,7 +58,7 @@ public class MyTableModel extends AbstractTableModel {
 	
 	public void setValueAt(Object value, int rowIndex, int columnIndex) {
 		data[rowIndex][columnIndex] = value;
-		// Í¨ÖªËùÓĞÕìÌıÆ÷£¬ÒÑ¸üĞÂÖ¸¶¨Î»ÖÃµÄµ¥Ôª
+		// é€šçŸ¥æ‰€æœ‰ä¾¦å¬å™¨ï¼Œå·²æ›´æ–°æŒ‡å®šä½ç½®çš„å•å…ƒ
 		fireTableCellUpdated(rowIndex, columnIndex);
 	}
 

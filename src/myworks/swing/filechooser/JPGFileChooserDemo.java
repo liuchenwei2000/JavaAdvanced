@@ -6,11 +6,11 @@ package swing.filechooser;
 import javax.swing.JFileChooser;
 
 /**
- * JPGFileChooseÑİÊ¾Àà
+ * JPGFileChooseæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class JPGFileChooserDemo {
 
@@ -19,13 +19,13 @@ public class JPGFileChooserDemo {
 	 */
 	public static void main(String[] args) {
 		JFileChooser chooser = new JFileChooser();
-		// ÉèÖÃÎÄ¼ş¹ıÂËÆ÷£¬JFileChooserÊ¹ÓÃÎÄ¼ş¹ıÂËÆ÷´ÓÓÃ»§µÄÊÓÍ¼ÖĞ¹ıÂËÎÄ¼ş
+		// è®¾ç½®æ–‡ä»¶è¿‡æ»¤å™¨ï¼ŒJFileChooserä½¿ç”¨æ–‡ä»¶è¿‡æ»¤å™¨ä»ç”¨æˆ·çš„è§†å›¾ä¸­è¿‡æ»¤æ–‡ä»¶
 		chooser.setFileFilter(new JPGFileFilter());
-		// ½ûÓÃ"È«²¿ÎÄ¼ş"µÄÑ¡ÔñÏî
+		// ç¦ç”¨"å…¨éƒ¨æ–‡ä»¶"çš„é€‰æ‹©é¡¹
 		chooser.setAcceptAllFileFilterUsed(false);
-		// ÎÄ¼ş¿ì½İ·½Ê½ÊÓÍ¼
+		// æ–‡ä»¶å¿«æ·æ–¹å¼è§†å›¾
 		chooser.setFileView(new JPGFileView());
-		// ÉèÖÃaccessory×é¼ş£¬accessoryÍ¨³£ÓÃÓÚÏÔÊ¾ÒÑÑ¡ÖĞÎÄ¼şµÄÔ¤ÀÀÊÓÍ¼
+		// è®¾ç½®accessoryç»„ä»¶ï¼Œaccessoryé€šå¸¸ç”¨äºæ˜¾ç¤ºå·²é€‰ä¸­æ–‡ä»¶çš„é¢„è§ˆè§†å›¾
 		chooser.setAccessory(new JPGPreviewer(chooser));
 		chooser.showOpenDialog(null);
 		System.exit(0);

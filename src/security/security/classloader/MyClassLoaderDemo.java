@@ -8,11 +8,11 @@ import java.io.FileOutputStream;
 import java.lang.reflect.Method;
 
 /**
- * MyClassLoader²âÊÔÀà
+ * MyClassLoaderæµ‹è¯•ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-18
  */
 public class MyClassLoaderDemo {
 
@@ -21,26 +21,26 @@ public class MyClassLoaderDemo {
 	 */
 	public static void main(String[] args) {
 		try {
-			/** ÓÃÓÚ½«classÎÄ¼ş½øĞĞ¼ÓÃÜ´¦ÀíÉú³ÉĞÂµÄÀàÎÄ¼ş */
+			/** ç”¨äºå°†classæ–‡ä»¶è¿›è¡ŒåŠ å¯†å¤„ç†ç”Ÿæˆæ–°çš„ç±»æ–‡ä»¶ */
 			
-			String filePath = "files/security.classloader/HelloWorld.class";// Ô­Ê¼classÎÄ¼ş
+			String filePath = "files/security.classloader/HelloWorld.class";// åŸå§‹classæ–‡ä»¶
 			FileInputStream in = new FileInputStream(filePath);
-			// ¼ÓÃÜºóµÄclassÎÄ¼ş
+			// åŠ å¯†åçš„classæ–‡ä»¶
 			FileOutputStream out = new FileOutputStream(
 					"files/security.classloader/HelloWorld.key.class");
 			int ch;
 			while ((ch = in.read()) != -1) {
-				// ¼ÓÃÜ´¦Àí
+				// åŠ å¯†å¤„ç†
 				byte c = (byte) (ch + MyClassLoader.KEY);
 				out.write(c);
 			}
 			in.close();
 			out.close();
 			
-			/** ½âÃÜ¼ÓÔØÀàÎÄ¼ş */
+			/** è§£å¯†åŠ è½½ç±»æ–‡ä»¶ */
 			
 			MyClassLoader loader = new MyClassLoader();
-			// ¼ÓÔØÕâ¸öÀà²¢ÇÒµ÷ÓÃÆämain·½·¨
+			// åŠ è½½è¿™ä¸ªç±»å¹¶ä¸”è°ƒç”¨å…¶mainæ–¹æ³•
 			Class<?> clazz = loader.loadClass("HelloWorld");
 			Method m = clazz.getMethod("main", args.getClass());
 			m.invoke(null, (Object) new String[] {});

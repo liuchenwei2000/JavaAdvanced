@@ -19,11 +19,11 @@ import javax.swing.tree.DefaultTreeModel;
 import util.Displayer;
 
 /**
- * JTreeÑİÊ¾Àà
+ * JTreeæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-21
  */
 public class JTreeDemo {
 	
@@ -38,7 +38,7 @@ public class JTreeDemo {
 class JTreePanel extends JPanel {
 
 	private static final long serialVersionUID = -6907995495368499098L;
-	// ¹¹ÔìÊ÷µÄÊı¾İ
+	// æ„é€ æ ‘çš„æ•°æ®
 	private String[][] data = { 
 			{ "Colors", "Red", "Blue", "Green" },
 			{ "Flavors", "Tart", "Sweet", "Bland" },
@@ -47,7 +47,7 @@ class JTreePanel extends JPanel {
 			{ "Temperature", "High", "Medium", "Low" },
 			{ "Intensity", "High", "Medium", "Low" }, };
 	
-	private static int counter = 0;// ¼ÆÊıÆ÷
+	private static int counter = 0;// è®¡æ•°å™¨
 	
 	private JTree tree;
 	
@@ -77,14 +77,14 @@ class JTreePanel extends JPanel {
 			button = new JButton("Press me");
 			button.setBackground(Color.BLUE);
 			button.setForeground(Color.WHITE);
-			// ÔÚµ±Ç°Ñ¡ÔñµÄÊ÷½ÚµãÉÏ²åÈë×ÓÊ÷
+			// åœ¨å½“å‰é€‰æ‹©çš„æ ‘èŠ‚ç‚¹ä¸Šæ’å…¥å­æ ‘
 			button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if (counter < data.length) {
-						// ĞÂ²úÉúµÄ×ÓÊ÷
+						// æ–°äº§ç”Ÿçš„å­æ ‘
 						DefaultMutableTreeNode child = new Branch(
 								data[counter++]).getRoot();
-						// µ±Ç°Ñ¡ÔñµÄ½Úµã
+						// å½“å‰é€‰æ‹©çš„èŠ‚ç‚¹
 						DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree
 								.getLastSelectedPathComponent();
 						if (selectedNode == null) {
@@ -92,9 +92,9 @@ class JTreePanel extends JPanel {
 									.getRoot();
 						}
 						/*
-						 * ·½·¨insertNodeInto(MutableTreeNode newChild, MutableTreeNode parent, int index)
-						 * Õâ¸ö·½·¨¿ÉÒÔÔÚparent½ÚµãµÄ×Ó½ÚµãÖĞµÄindexÎ»ÖÃ²åÈënewChild£¬È»ºó·¢³öÊÂ¼şÍ¨ÖªÊÓÍ¼
-						 * ÕâÊÇÌí¼Ó×Ó½ÚµãµÄÊ×Ñ¡·½·¨£¬ÒòÎªËü½«´´½¨ÊÊµ±µÄÊÂ¼ş
+						 * æ–¹æ³•insertNodeInto(MutableTreeNode newChild, MutableTreeNode parent, int index)
+						 * è¿™ä¸ªæ–¹æ³•å¯ä»¥åœ¨parentèŠ‚ç‚¹çš„å­èŠ‚ç‚¹ä¸­çš„indexä½ç½®æ’å…¥newChildï¼Œç„¶åå‘å‡ºäº‹ä»¶é€šçŸ¥è§†å›¾
+						 * è¿™æ˜¯æ·»åŠ å­èŠ‚ç‚¹çš„é¦–é€‰æ–¹æ³•ï¼Œå› ä¸ºå®ƒå°†åˆ›å»ºé€‚å½“çš„äº‹ä»¶
 						 */
 						getTreeModel().insertNodeInto(child, selectedNode, 0);
 					}
@@ -106,17 +106,17 @@ class JTreePanel extends JPanel {
 }
 
 /**
- * Ê÷Ö¦Àà
+ * æ ‘æç±»
  */
 class Branch {
 	
-	private DefaultMutableTreeNode root;// ¸ù½Úµã
+	private DefaultMutableTreeNode root;// æ ¹èŠ‚ç‚¹
 
 	/**
-	 * Ê¹ÓÃ×Ö·û´®Êı×é´´½¨Ò»¸öÊ÷Ö¦£¬½«Êı×éÊ×ÔªËØ×÷Îª¸ù½Úµã£¬Ê£ÏÂµÄËùÓĞÔªËØ¶¼×÷Îª¸ù½ÚµãµÄ×Ó½Úµã¡£
+	 * ä½¿ç”¨å­—ç¬¦ä¸²æ•°ç»„åˆ›å»ºä¸€ä¸ªæ ‘æï¼Œå°†æ•°ç»„é¦–å…ƒç´ ä½œä¸ºæ ¹èŠ‚ç‚¹ï¼Œå‰©ä¸‹çš„æ‰€æœ‰å…ƒç´ éƒ½ä½œä¸ºæ ¹èŠ‚ç‚¹çš„å­èŠ‚ç‚¹ã€‚
 	 * 
 	 * @param data
-	 *            ×Ö·û´®Êı×é
+	 *            å­—ç¬¦ä¸²æ•°ç»„
 	 */
 	public Branch(String[] data) {
 		root = new DefaultMutableTreeNode(data[0]);
@@ -126,7 +126,7 @@ class Branch {
 	}
 
 	/**
-	 * ·µ»Ø¸ù½Úµã
+	 * è¿”å›æ ¹èŠ‚ç‚¹
 	 */
 	public DefaultMutableTreeNode getRoot() {
 		return root;

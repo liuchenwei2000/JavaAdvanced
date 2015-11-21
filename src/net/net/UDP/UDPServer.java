@@ -9,21 +9,21 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 
 /**
- * UDP½ÓÊÕ¶ËÊ¾Àı
+ * UDPæ¥æ”¶ç«¯ç¤ºä¾‹
  * <p>
- * UDPĞ­Òé£¨User Datagram Protocol£©ÓëTCPĞ­ÒéÍ¬´¦ÓÚTCP/IPµÄ´«Êä²ã£¬
- * ËüÃÇ¶¼ÊÇÓÃÓÚÊı¾İ´«ÊäµÄ£¬Ö»²»¹ıËüÃ»ÓĞÌá¹©ÏñTCPÄÇÑùµÄ¿É¿¿»úÖÆ¡£
- * µ«ÊÇ£¬Ëü¾ßÓĞ¸üĞ¡µÄÏûºÄºÍ¸ü¿ìµÄËÙ¶È£¬ÊÊÓÃÓÚÒ»Ğ©µã¶Ôµã´«ÊäµÄ£¬²¢ÇÒ°²È«ĞÔÒªÇó²»¸ßµÄÍøÂçÓ¦ÓÃ³ÌĞò¡£
+ * UDPåè®®ï¼ˆUser Datagram Protocolï¼‰ä¸TCPåè®®åŒå¤„äºTCP/IPçš„ä¼ è¾“å±‚ï¼Œ
+ * å®ƒä»¬éƒ½æ˜¯ç”¨äºæ•°æ®ä¼ è¾“çš„ï¼Œåªä¸è¿‡å®ƒæ²¡æœ‰æä¾›åƒTCPé‚£æ ·çš„å¯é æœºåˆ¶ã€‚
+ * ä½†æ˜¯ï¼Œå®ƒå…·æœ‰æ›´å°çš„æ¶ˆè€—å’Œæ›´å¿«çš„é€Ÿåº¦ï¼Œé€‚ç”¨äºä¸€äº›ç‚¹å¯¹ç‚¹ä¼ è¾“çš„ï¼Œå¹¶ä¸”å®‰å…¨æ€§è¦æ±‚ä¸é«˜çš„ç½‘ç»œåº”ç”¨ç¨‹åºã€‚
  * <p>
- * JavaµÄUDPÍøÂçÓ¦ÓÃ³ÌĞòĞèÒª·ÖÎª½ÓÊÕ¶ËºÍ·¢ËÍ¶ËÁ½²¿·Ö¡£
+ * Javaçš„UDPç½‘ç»œåº”ç”¨ç¨‹åºéœ€è¦åˆ†ä¸ºæ¥æ”¶ç«¯å’Œå‘é€ç«¯ä¸¤éƒ¨åˆ†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê7ÔÂ31ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´7æœˆ31æ—¥
  */
 public class UDPServer {
 
-	/** ·şÎñ¶Ë¿ÚºÅ */
+	/** æœåŠ¡ç«¯å£å· */
 	public static final int PORT = 9999;
 	
 	/**
@@ -32,15 +32,15 @@ public class UDPServer {
 	public static void main(String[] args) {
 		DatagramSocket server = null;
 		try {
-			// 1,ÓÃÖ¸¶¨¶Ë¿ÚºÅ´´½¨socket
+			// 1,ç”¨æŒ‡å®šç«¯å£å·åˆ›å»ºsocket
 			server = new DatagramSocket(PORT);
 
 			byte[] buffer = new byte[1024];
-			// 2,´´½¨Êı¾İ±¨¹©½ÓÊÕÊı¾İÊ¹ÓÃ
+			// 2,åˆ›å»ºæ•°æ®æŠ¥ä¾›æ¥æ”¶æ•°æ®ä½¿ç”¨
 			DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
-			// 3,½ÓÊÕÊı¾İ
+			// 3,æ¥æ”¶æ•°æ®
 			server.receive(packet);
-			// 4,packet.getData()µÃµ½Êı¾İ
+			// 4,packet.getData()å¾—åˆ°æ•°æ®
 			String content = new String(packet.getData(), 0, packet.getLength());
 			
 			System.out.println(content);
@@ -50,7 +50,7 @@ public class UDPServer {
 			e.printStackTrace();
 		} finally {
 			if (server != null) {
-				// 5,ÊÍ·Å×ÊÔ´
+				// 5,é‡Šæ”¾èµ„æº
 				server.close();
 			}
 		}

@@ -15,11 +15,11 @@ import javax.swing.JLabel;
 import javax.swing.border.EtchedBorder;
 
 /**
- * JPGÔ¤ÀÀÊÓÍ¼
+ * JPGé¢„è§ˆè§†å›¾
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class JPGPreviewer extends JLabel {
 
@@ -29,16 +29,16 @@ public class JPGPreviewer extends JLabel {
 	private static final long serialVersionUID = -5299599456789847551L;
 
 	/**
-	 * JPGÎÄ¼þÔ¤ÀÀÍ¼
+	 * JPGæ–‡ä»¶é¢„è§ˆå›¾
 	 * 
 	 * @param chooser
-	 *            ¹ØÁªµÄÎÄ¼þÑ¡ÔñÆ÷
+	 *            å…³è”çš„æ–‡ä»¶é€‰æ‹©å™¨
 	 */
 	public JPGPreviewer(JFileChooser chooser) {
 		super();
 		setPreferredSize(new Dimension(100, 100));
 		setBorder(new EtchedBorder());
-		// ÎÄ¼þÑ¡Ôñ±ä¸üµÄÊ±ºò»á×Ô¶¯Ô¤ÀÀµ±Ç°Ñ¡ÔñµÄJPGÍ¼Æ¬
+		// æ–‡ä»¶é€‰æ‹©å˜æ›´çš„æ—¶å€™ä¼šè‡ªåŠ¨é¢„è§ˆå½“å‰é€‰æ‹©çš„JPGå›¾ç‰‡
 		chooser.addPropertyChangeListener(new PropertyChangeListener() {
 
 			public void propertyChange(PropertyChangeEvent e) {
@@ -49,7 +49,7 @@ public class JPGPreviewer extends JLabel {
 						return;
 					}
 					ImageIcon icon = new ImageIcon(file.getPath());
-					// Èç¹ûÍ¼Æ¬Ì«´ó£¬Ôò½øÐÐÑ¹ËõÔ¤ÀÀ
+					// å¦‚æžœå›¾ç‰‡å¤ªå¤§ï¼Œåˆ™è¿›è¡ŒåŽ‹ç¼©é¢„è§ˆ
 					if (icon.getIconWidth() > getWidth()) {
 						icon = new ImageIcon(icon.getImage().getScaledInstance(
 								getWidth(), -1, Image.SCALE_DEFAULT));

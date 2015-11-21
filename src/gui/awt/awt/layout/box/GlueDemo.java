@@ -12,11 +12,11 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * ½ºË®ÑÝÊ¾Àà
+ * èƒ¶æ°´æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-15
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-15
  */
 public class GlueDemo {
 
@@ -29,8 +29,8 @@ public class GlueDemo {
 }
 
 /**
- * Ö§¼ÜÄÜ¹»°Ñ×é¼þ¸ñ¿ª¹Ì¶¨µÄ¾àÀë£¬½ºË®(glue)ÕýºÃÏà·´¡£
- * Ëü¾¡¿ÉÄÜµØ½«×é¼þ·ÖÀë¿ª£¬ËùÒÔÓëÆäËµËüÊÇ"½ºË®"£¬²»ÈçËµËüÊÇ"µ¯»É"¡£
+ * æ”¯æž¶èƒ½å¤ŸæŠŠç»„ä»¶æ ¼å¼€å›ºå®šçš„è·ç¦»ï¼Œèƒ¶æ°´(glue)æ­£å¥½ç›¸åã€‚
+ * å®ƒå°½å¯èƒ½åœ°å°†ç»„ä»¶åˆ†ç¦»å¼€ï¼Œæ‰€ä»¥ä¸Žå…¶è¯´å®ƒæ˜¯"èƒ¶æ°´"ï¼Œä¸å¦‚è¯´å®ƒæ˜¯"å¼¹ç°§"ã€‚
  */
 class GluePanel extends JPanel {
 

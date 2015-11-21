@@ -11,19 +11,19 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * �߽粼�ֹ�����
+ * 边界布局管理器
  * <p>
- * ����JFrame�����ݴ����Ĭ�ϲ��ֹ�������BorderLayout��<p>
- * �ص㣺</br>
- * ����������ѡ��ÿ������ķ���λ�ã�����ѡ���������������ݴ�����С������ϡ�����������
- * �������ʱ���������ȷ����Ե�����ʣ��Ŀ��ÿռ����м����ռ�á�
- * ����������ʱ����Ե����ĺ�Ȳ���ı䣬���м�����Ĵ�С�ᷢ���仯��
- * ����������������ĳߴ��Ա������ÿռ�(�����ֹ�������ÿ�����������ѡ�Ĵ�С)��
- * ������Ҫ�����е�λ�ö�Ҫռ����������ṩ�κ�ֵ��ϵͳĬ��ΪCENTER��
+ * 所有JFrame的内容窗格的默认布局管理器是BorderLayout。<p>
+ * 特点：</br>
+ * 它允许我们选择每个组件的放置位置，可以选择把组件放置在内容窗格的中、北、南、东或者西。
+ * 放置组件时，管理器先放入边缘组件，剩余的可用空间由中间组件占用。
+ * 当容器缩放时，边缘组件的厚度不会改变，而中间组件的大小会发生变化。
+ * 它会扩大所有组件的尺寸以便填充可用空间(流布局管理器中每个组件都有首选的大小)。
+ * 它并不要求所有的位置都要占满，如果不提供任何值，系统默认为CENTER。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2007-8-21
+ * 创建日期：2007-8-21
  */
 public class BorderLayoutDemo {
 
@@ -43,8 +43,8 @@ class BorderLayoutPanel extends JPanel {
 		super();
 		BorderLayout border = new BorderLayout();
 		setLayout(border);
-		border.setHgap(10);// �����о�
-		border.setVgap(10);// �����о�
+		border.setHgap(10);// 设置行距
+		border.setVgap(10);// 设置列距
 		add(new JButton("one"), BorderLayout.EAST);
 		add(new JButton("two"), BorderLayout.WEST);
 		add(new JButton("three"), BorderLayout.SOUTH);

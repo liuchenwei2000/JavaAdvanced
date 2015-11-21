@@ -14,11 +14,11 @@ import javax.swing.JPanel;
 import util.ui.ComponentFactory;
 
 /**
- * ÓĞ"È·¶¨"¡¢"È¡Ïû"Á½¸ö°´Å¥µÄJFrame
+ * æœ‰"ç¡®å®š"ã€"å–æ¶ˆ"ä¸¤ä¸ªæŒ‰é’®çš„JFrame
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2008-9-11
+ * åˆ›å»ºæ—¶é—´ï¼š2008-9-11
  */
 public abstract class TwoButtonsFrame extends JFrame {
 
@@ -27,21 +27,21 @@ public abstract class TwoButtonsFrame extends JFrame {
 	 */
 	private static final long serialVersionUID = 3530466648550171765L;
 
-	private JPanel centerPanel;// ¶Ô»°¿òÖ±½Ó¼ÓÔØµÄÃæ°å
+	private JPanel centerPanel;// å¯¹è¯æ¡†ç›´æ¥åŠ è½½çš„é¢æ¿
 
-	private JPanel editorPanel;// ±à¼­Ãæ°å
-	private JPanel buttonPanel;// °´Å¥Ãæ°å
+	private JPanel editorPanel;// ç¼–è¾‘é¢æ¿
+	private JPanel buttonPanel;// æŒ‰é’®é¢æ¿
 
-	private JButton okButton;// È·¶¨°´Å¥
-	private JButton cancelButton;// È¡Ïû°´Å¥
+	private JButton okButton;// ç¡®å®šæŒ‰é’®
+	private JButton cancelButton;// å–æ¶ˆæŒ‰é’®
 
-	protected TwoButtonsFrameEHD eventHandler;// ÊÂ¼ş´¦ÀíÆ÷
+	protected TwoButtonsFrameEHD eventHandler;// äº‹ä»¶å¤„ç†å™¨
 
 	/**
-	 * ÓĞ"È·¶¨"¡¢"È¡Ïû"Á½¸ö°´Å¥µÄJFrame
+	 * æœ‰"ç¡®å®š"ã€"å–æ¶ˆ"ä¸¤ä¸ªæŒ‰é’®çš„JFrame
 	 * 
 	 * @param title
-	 *            ±êÌâ
+	 *            æ ‡é¢˜
 	 */
 	public TwoButtonsFrame(String title) {
 		super(title);
@@ -55,7 +55,7 @@ public abstract class TwoButtonsFrame extends JFrame {
 	}
 
 	/**
-	 * @return ¶Ô»°¿òÖ±½Ó¼ÓÔØµÄÃæ°å
+	 * @return å¯¹è¯æ¡†ç›´æ¥åŠ è½½çš„é¢æ¿
 	 */
 	protected JPanel getCenterPanel() {
 		if (centerPanel == null) {
@@ -68,7 +68,7 @@ public abstract class TwoButtonsFrame extends JFrame {
 	}
 
 	/**
-	 * @return ĞÅÏ¢±à¼­Ãæ°å
+	 * @return ä¿¡æ¯ç¼–è¾‘é¢æ¿
 	 */
 	protected JPanel getEditorPanel() {
 		if (editorPanel == null) {
@@ -79,12 +79,12 @@ public abstract class TwoButtonsFrame extends JFrame {
 	}
 
 	/**
-	 * ÏòĞÅÏ¢±à¼­Ãæ°åÌí¼Ó×é¼ş
+	 * å‘ä¿¡æ¯ç¼–è¾‘é¢æ¿æ·»åŠ ç»„ä»¶
 	 */
 	protected abstract void addComponentsToEditorPanel();
 
 	/**
-	 * @return °´Å¥Ãæ°å
+	 * @return æŒ‰é’®é¢æ¿
 	 */
 	private JPanel getButtonPanel() {
 		if (buttonPanel == null) {
@@ -97,28 +97,28 @@ public abstract class TwoButtonsFrame extends JFrame {
 	}
 
 	/**
-	 * @return È·¶¨ °´Å¥
+	 * @return ç¡®å®š æŒ‰é’®
 	 */
 	protected JButton getOKButton() {
 		if (okButton == null) {
-			okButton = ComponentFactory.createCommonButton("È· ¶¨");
+			okButton = ComponentFactory.createCommonButton("ç¡® å®š");
 		}
 		return okButton;
 	}
 
 	/**
-	 * @return È¡Ïû °´Å¥
+	 * @return å–æ¶ˆ æŒ‰é’®
 	 */
 	protected JButton getCancelButton() {
 		if (cancelButton == null) {
-			cancelButton = ComponentFactory.createCommonButton("È¡ Ïû");
+			cancelButton = ComponentFactory.createCommonButton("å– æ¶ˆ");
 		}
 		return cancelButton;
 	}
 
 	/**
 	 * @param eventHandler
-	 *            ÊÂ¼ş´¦ÀíÆ÷¶ÔÏó
+	 *            äº‹ä»¶å¤„ç†å™¨å¯¹è±¡
 	 */
 	protected void setEventHandler(TwoButtonsFrameEHD eventHandler) {
 		this.eventHandler = eventHandler;
@@ -126,7 +126,7 @@ public abstract class TwoButtonsFrame extends JFrame {
 	}
 
 	/**
-	 * Îª°´Å¥Ìí¼Ó¼àÌı
+	 * ä¸ºæŒ‰é’®æ·»åŠ ç›‘å¬
 	 */
 	private void addActionListener(ActionListener l) {
 		getOKButton().addActionListener(l);
@@ -134,7 +134,7 @@ public abstract class TwoButtonsFrame extends JFrame {
 	}
 
 	/**
-	 * @return ÊÂ¼ş´¦ÀíÆ÷
+	 * @return äº‹ä»¶å¤„ç†å™¨
 	 */
 	protected TwoButtonsFrameEHD getEventHandler() {
 		return eventHandler;

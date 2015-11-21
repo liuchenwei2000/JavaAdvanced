@@ -1,22 +1,22 @@
-                       HtmlÇ¶ÈëAppletµÄÎÊÌâ
-±êÇ©<Applet>µÄÊôÐÔ½éÉÜ
+                       HtmlåµŒå…¥Appletçš„é—®é¢˜
+æ ‡ç­¾<Applet>çš„å±žæ€§ä»‹ç»
 
-¡¡ÊôÐÔ    ¡¡¡¡¡¡¡¡º¬Òå
+ã€€å±žæ€§    ã€€ã€€ã€€ã€€å«ä¹‰
 
-¡¡Width    ¡¡AppletÔÚHtmlÒ³ÃæÉÏµÄ¿í¶È
-¡¡Height     AppletÔÚHtmlÒ³ÃæÉÏµÄ¸ß¶È
-¡¡Name    ¡¡ AppletÔÚHtmlÒ³ÃæÉÏµÄÃû³Æ£¬ÓÃÓÚÇøÃûÒ»¸öHtmlÒ³ÃæÉÏµÄ¶à¸öApplet
+ã€€Width    ã€€Appletåœ¨Htmlé¡µé¢ä¸Šçš„å®½åº¦
+ã€€Height     Appletåœ¨Htmlé¡µé¢ä¸Šçš„é«˜åº¦
+ã€€Name    ã€€ Appletåœ¨Htmlé¡µé¢ä¸Šçš„åç§°ï¼Œç”¨äºŽåŒºåä¸€ä¸ªHtmlé¡µé¢ä¸Šçš„å¤šä¸ªApplet
 
-¡¡Code    ¡¡ AppletÀàÃû(º¬°üÃû)£¬±ØÐë´øºó×º"class"
-Õâ¸öÊôÐÔ¸ø³ö applet ÀàÎÄ¼þµÄÃû³Æ£¬Õâ¸öÃû³Æ²»ÊÇÏà¶ÔÓÚ codebase µÄ£¬¾ÍÊÇÔÚÃ»ÓÐÖ¸¶¨ codebase µÄÊ±ºò£¬Ïà¶ÔÓÚµ±Ç°Ò³ÃæµÄ¡£
-Â·¾¶Ãû±ØÐëºÍ applet ÀàµÄ°üÏàÆ¥Åä£¬Èç "com.Applet.class"£¬µ«ÊÇÔÚÕâÀï²»ÄÜÊ¹ÓÃ¾ø¶ÔÂ·¾¶Ãû¡£
-Èç¹ûÀàÎÄ¼þ´æ·ÅÔÚÆäËûµØ·½£¬ÄÇÃ´¾ÍÓ¦¸ÃÊ¹ÓÃ codebase ÊôÐÔ£¬code ÊôÐÔ½ö½öÓÃÓÚÖ¸¶¨°üº¬appletÀàµÄÀàÃû¡£
+ã€€Code    ã€€ Appletç±»å(å«åŒ…å)ï¼Œå¿…é¡»å¸¦åŽç¼€"class"
+è¿™ä¸ªå±žæ€§ç»™å‡º applet ç±»æ–‡ä»¶çš„åç§°ï¼Œè¿™ä¸ªåç§°ä¸æ˜¯ç›¸å¯¹äºŽ codebase çš„ï¼Œå°±æ˜¯åœ¨æ²¡æœ‰æŒ‡å®š codebase çš„æ—¶å€™ï¼Œç›¸å¯¹äºŽå½“å‰é¡µé¢çš„ã€‚
+è·¯å¾„åå¿…é¡»å’Œ applet ç±»çš„åŒ…ç›¸åŒ¹é…ï¼Œå¦‚ "com.Applet.class"ï¼Œä½†æ˜¯åœ¨è¿™é‡Œä¸èƒ½ä½¿ç”¨ç»å¯¹è·¯å¾„åã€‚
+å¦‚æžœç±»æ–‡ä»¶å­˜æ”¾åœ¨å…¶ä»–åœ°æ–¹ï¼Œé‚£ä¹ˆå°±åº”è¯¥ä½¿ç”¨ codebase å±žæ€§ï¼Œcode å±žæ€§ä»…ä»…ç”¨äºŽæŒ‡å®šåŒ…å«appletç±»çš„ç±»åã€‚
 
-¡¡Codebase    AppletµÄÀàÏà¶ÔÂ·¾¶£¬Ïà¶ÔÓÚHtmlÒ³ÃæÎ»ÖÃ
-Õâ¸ö¿ÉÑ¡ÊôÐÔÖ¸³öÓÃÓÚ¶¨Î»ÀàÎÄ¼þµÄURL£¬¿ÉÒÔÊ¹ÓÃ¾ø¶ÔURL¡£±ÈÈçhtmlÎÄ¼þºÍ applet ÎÄ¼þ¼ÐÔÚÍ¬Ò»¸öÄ¿Â¼ÏÂ£¬²¢ÇÒ applet ÎÄ¼þ¼ÐÖÐº¬ÓÐApplet.classÀàÎÄ¼þ¡£
-ÄÇÃ´¿ÉÒÔÕâÑù±ê¼Çhtml£º
+ã€€Codebase    Appletçš„ç±»ç›¸å¯¹è·¯å¾„ï¼Œç›¸å¯¹äºŽHtmlé¡µé¢ä½ç½®
+è¿™ä¸ªå¯é€‰å±žæ€§æŒ‡å‡ºç”¨äºŽå®šä½ç±»æ–‡ä»¶çš„URLï¼Œå¯ä»¥ä½¿ç”¨ç»å¯¹URLã€‚æ¯”å¦‚htmlæ–‡ä»¶å’Œ applet æ–‡ä»¶å¤¹åœ¨åŒä¸€ä¸ªç›®å½•ä¸‹ï¼Œå¹¶ä¸” applet æ–‡ä»¶å¤¹ä¸­å«æœ‰Applet.classç±»æ–‡ä»¶ã€‚
+é‚£ä¹ˆå¯ä»¥è¿™æ ·æ ‡è®°htmlï¼š
 <applet code = "Applet.class" codebase = "applet"...>
 
-¡¡Archive    ¡¡AppletËùÔÚJar°üµÄÎÄ¼þÃû
-¡¡
-±êÇ©<PARAM>µÄÊôÐÔ½éÉÜ£ºName£¬Applet´«ÈëµÄ²ÎÊýÃû£»Value£¬Applet´«ÈëµÄ²ÎÊýÖµ¡£
+ã€€Archive    ã€€Appletæ‰€åœ¨JaråŒ…çš„æ–‡ä»¶å
+ã€€
+æ ‡ç­¾<PARAM>çš„å±žæ€§ä»‹ç»ï¼šNameï¼ŒAppletä¼ å…¥çš„å‚æ•°åï¼›Valueï¼ŒAppletä¼ å…¥çš„å‚æ•°å€¼ã€‚

@@ -25,9 +25,9 @@ import util.Displayer;
 /**
  * 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-8
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-8
  */
 public class DnDTest extends JPanel {
 
@@ -205,7 +205,7 @@ public class DnDTest extends JPanel {
 			if(canImport(comp,t.getTransferDataFlavors())){
 				try {
 					Student student = (Student)(t.getTransferData(STUDENT_FLAVOR));
-					getArea().setText("Student£º\n");
+					getArea().setText("Studentï¼š\n");
 					getArea().append(student.getName());
 					getArea().append("\n");
 					getArea().append(student.getSex()+"\n");

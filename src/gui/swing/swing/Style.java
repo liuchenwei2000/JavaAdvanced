@@ -10,23 +10,23 @@ import javax.swing.UIManager;
 import javax.swing.plaf.FontUIResource;
 
 /**
- * UI·ç¸ñ¹¤¾ßÀà
+ * UIé£æ ¼å·¥å…·ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-12
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-12
  */
 public class Style {
 
 	/**
-	 * Í³Ò»ÉèÖÃÏµÍ³×ÖÌå
+	 * ç»Ÿä¸€è®¾ç½®ç³»ç»Ÿå­—ä½“
 	 */
 	public static void setDefaultUIFont() {
-		setUIFont(new Font("ËÎÌå", Font.PLAIN, 12));
+		setUIFont(new Font("å®‹ä½“", Font.PLAIN, 12));
 	}
 
 	/**
-	 * Í³Ò»ÉèÖÃÏµÍ³×ÖÌå
+	 * ç»Ÿä¸€è®¾ç½®ç³»ç»Ÿå­—ä½“
 	 */
 	public static void setUIFont(Font font) {
 		FontUIResource fontRes = new FontUIResource(font);

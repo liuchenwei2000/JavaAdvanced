@@ -16,21 +16,21 @@ import javax.swing.border.Border;
 import util.Displayer;
 
 /**
- * BorderFactoryÑİÊ¾Àà
+ * BorderFactoryæ¼”ç¤ºç±»
  * <p>
- * BorderFactoryÌá¹©ÁË´´½¨³£ÓÃ±ß¿òµÄ¾²Ì¬·½·¨¡£
+ * BorderFactoryæä¾›äº†åˆ›å»ºå¸¸ç”¨è¾¹æ¡†çš„é™æ€æ–¹æ³•ã€‚
  * <p>
- * ·ç¸ñÈçÏÂ£º</br>
- * °¼Ğ±Ãæ¡¢Í¹Ğ±Ãæ¡¢Ê´¿Ì¡¢Ö±Ïß¡¢²»¹â»¬¡¢¿Õ±ß¿ò¡¢×éºÏ±ß¿ò¡£
+ * é£æ ¼å¦‚ä¸‹ï¼š</br>
+ * å‡¹æ–œé¢ã€å‡¸æ–œé¢ã€èš€åˆ»ã€ç›´çº¿ã€ä¸å…‰æ»‘ã€ç©ºè¾¹æ¡†ã€ç»„åˆè¾¹æ¡†ã€‚
  * <p>
- * ÎªJComponentÉèÖÃ±ß¿òÊ±Ò»°ãÓĞÁ½ÖÖ·½·¨£º</br>
- * <li>1£¬Ê¹ÓÃBorderFactoryÀ´´´½¨±ß¿ò¶ÔÏó
- * <li>2£¬Ö±½Ó new ±ß¿ò¶ÔÏó
- * </br>×ÜµÄÀ´Ëµ£¬Ê¹ÓÃBorderFactoryÄÜ¹»»ñµÃ¸ü¶àÑùµÄ±ß¿ò¡£
+ * ä¸ºJComponentè®¾ç½®è¾¹æ¡†æ—¶ä¸€èˆ¬æœ‰ä¸¤ç§æ–¹æ³•ï¼š</br>
+ * <li>1ï¼Œä½¿ç”¨BorderFactoryæ¥åˆ›å»ºè¾¹æ¡†å¯¹è±¡
+ * <li>2ï¼Œç›´æ¥ new è¾¹æ¡†å¯¹è±¡
+ * </br>æ€»çš„æ¥è¯´ï¼Œä½¿ç”¨BorderFactoryèƒ½å¤Ÿè·å¾—æ›´å¤šæ ·çš„è¾¹æ¡†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-25
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-25
  */
 public class BorderFactoryDemo {
 
@@ -56,31 +56,31 @@ class BorderFactoryPanel extends JPanel {
 
 	public BorderFactoryPanel() {
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
-		// °¼Ğ±Ãæ£º´´½¨Ò»¸ö¾ßÓĞ°¼ÈëĞ±Ãæ±ßÔµµÄ±ß¿ò£¬½«×é¼şµ±Ç°±³¾°É«µÄ½ÏÁÁµÄÉ«¶ÈÓÃÓÚÍ»³öÏÔÊ¾£¬½Ï°µµÄÉ«¶ÈÓÃÓÚÒõÓ°
+		// å‡¹æ–œé¢ï¼šåˆ›å»ºä¸€ä¸ªå…·æœ‰å‡¹å…¥æ–œé¢è¾¹ç¼˜çš„è¾¹æ¡†ï¼Œå°†ç»„ä»¶å½“å‰èƒŒæ™¯è‰²çš„è¾ƒäº®çš„è‰²åº¦ç”¨äºçªå‡ºæ˜¾ç¤ºï¼Œè¾ƒæš—çš„è‰²åº¦ç”¨äºé˜´å½±
 		addRadioButton("Lowered bevel", BorderFactory.createLoweredBevelBorder());
-		// Í¹Ğ±Ãæ£º´´½¨Ò»¸ö¾ßÓĞÍ¹³öĞ±Ãæ±ßÔµµÄ±ß¿ò£¬½«×é¼şµ±Ç°±³¾°É«µÄ½ÏÁÁµÄÉ«¶ÈÓÃÓÚÍ»³öÏÔÊ¾£¬½Ï°µµÄÉ«¶ÈÓÃÓÚÒõÓ°
+		// å‡¸æ–œé¢ï¼šåˆ›å»ºä¸€ä¸ªå…·æœ‰å‡¸å‡ºæ–œé¢è¾¹ç¼˜çš„è¾¹æ¡†ï¼Œå°†ç»„ä»¶å½“å‰èƒŒæ™¯è‰²çš„è¾ƒäº®çš„è‰²åº¦ç”¨äºçªå‡ºæ˜¾ç¤ºï¼Œè¾ƒæš—çš„è‰²åº¦ç”¨äºé˜´å½±
 		addRadioButton("Raised bevel", BorderFactory.createRaisedBevelBorder());
-		// Ê´¿Ì£º´´½¨Ò»¸ö¾ßÓĞ"¸¡µñ»¯"Íâ¹ÛĞ§¹ûµÄ±ß¿ò£¬½«×é¼şµÄµ±Ç°±³¾°É«ÓÃÓÚÍ»³öÏÔÊ¾ºÍÒõÓ°ÏÔÊ¾
+		// èš€åˆ»ï¼šåˆ›å»ºä¸€ä¸ªå…·æœ‰"æµ®é›•åŒ–"å¤–è§‚æ•ˆæœçš„è¾¹æ¡†ï¼Œå°†ç»„ä»¶çš„å½“å‰èƒŒæ™¯è‰²ç”¨äºçªå‡ºæ˜¾ç¤ºå’Œé˜´å½±æ˜¾ç¤º
 		addRadioButton("Etched", BorderFactory.createEtchedBorder());
-		// Ö±Ïß£º´´½¨Ò»¸ö¾ßÓĞÖ¸¶¨ÑÕÉ«µÄÏß±ß¿ò
+		// ç›´çº¿ï¼šåˆ›å»ºä¸€ä¸ªå…·æœ‰æŒ‡å®šé¢œè‰²çš„çº¿è¾¹æ¡†
 		addRadioButton("Line", BorderFactory.createLineBorder(Color.BLUE));
-		// ²»¹â»¬£ºÊ¹ÓÃ´¿É«´´½¨Ò»¸öÀàËÆ³Ä±ßµÄ±ß¿ò(Ä³¸ö·½ÏòµÄ²ÎÊıÎª0Ê±¼´´ú±íÄÇ¸ö·½ÏòµÄ±ß¿ò²»ÏÔÊ¾)
+		// ä¸å…‰æ»‘ï¼šä½¿ç”¨çº¯è‰²åˆ›å»ºä¸€ä¸ªç±»ä¼¼è¡¬è¾¹çš„è¾¹æ¡†(æŸä¸ªæ–¹å‘çš„å‚æ•°ä¸º0æ—¶å³ä»£è¡¨é‚£ä¸ªæ–¹å‘çš„è¾¹æ¡†ä¸æ˜¾ç¤º)
 		addRadioButton("Matte", BorderFactory.createMatteBorder(10, 1, 10, 0, Color.BLUE));
-		// ¿Õ±ß¿ò£º´´½¨Ò»¸ö²»Õ¼ÓÃ¿Õ¼äµÄ¿Õ±ß¿ò
+		// ç©ºè¾¹æ¡†ï¼šåˆ›å»ºä¸€ä¸ªä¸å ç”¨ç©ºé—´çš„ç©ºè¾¹æ¡†
 		addRadioButton("Empty", BorderFactory.createEmptyBorder());
-		// ×éºÏ±ß¿ò£º´´½¨Ò»¸öºÏ³É±ß¿ò£¬Ö¸¶¨ÁËÓÃÓÚÍâ²¿ºÍÄÚ²¿µÄ±ß¿ò¶ÔÏó
+		// ç»„åˆè¾¹æ¡†ï¼šåˆ›å»ºä¸€ä¸ªåˆæˆè¾¹æ¡†ï¼ŒæŒ‡å®šäº†ç”¨äºå¤–éƒ¨å’Œå†…éƒ¨çš„è¾¹æ¡†å¯¹è±¡
 		addRadioButton("Compound", BorderFactory.createCompoundBorder(
 				BorderFactory.createLineBorder(Color.BLUE), BorderFactory
 						.createEtchedBorder()));
 		
 		Border etched = BorderFactory.createEtchedBorder();
-		// ÏòÏÖÓĞ±ß¿òÌí¼ÓÒ»¸ö±êÌâ£¬²¢Ö¸¶¨ÁË±êÌâÎÄ±¾
+		// å‘ç°æœ‰è¾¹æ¡†æ·»åŠ ä¸€ä¸ªæ ‡é¢˜ï¼Œå¹¶æŒ‡å®šäº†æ ‡é¢˜æ–‡æœ¬
 		Border titled = BorderFactory.createTitledBorder(etched, "Border types");
 		getButtonPanel().setBorder(titled);
 
 		setLayout(new GridLayout(2, 1));
 		add(getButtonPanel());
-		// ÔÙÊ¹ÓÃÒ»¸öpanelÀ´¼ÓÔØÊÇÎªÁËÊ¹µÃ±ß¿òµÄĞ§¹û¸üÖ±¹Û
+		// å†ä½¿ç”¨ä¸€ä¸ªpanelæ¥åŠ è½½æ˜¯ä¸ºäº†ä½¿å¾—è¾¹æ¡†çš„æ•ˆæœæ›´ç›´è§‚
 		JPanel panel = new JPanel();
 		panel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		panel.setLayout(new BorderLayout());

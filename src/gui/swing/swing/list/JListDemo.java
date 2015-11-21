@@ -17,13 +17,13 @@ import javax.swing.event.ListSelectionListener;
 import util.Displayer;
 
 /**
- * JList��ʾ��
+ * JList演示类
  * <p>
- * ����������û����б���ѡ��һ����������
+ * 该组件允许用户从列表中选择一个或多个对象。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2007-8-29
+ * 创建日期：2007-8-29
  */
 public class JListDemo {
 	
@@ -44,31 +44,31 @@ class JListPanel extends JPanel implements ListSelectionListener{
 
 	private static final String[] VALUES = { "Andy", "Sany", "Tom", "Peter",
 			"Mosie", "Mosie2", "Mosie3" };
-	// ���������Ƕ������顢������ListModel
+	// 参数可以是对象数组、向量和ListModel
 	private JList list = new JList(VALUES);
-	private JTextField text = new JTextField("�б�ѡ����ʾ��");
+	private JTextField text = new JTextField("列表选择显示框");
 
 	public JListPanel() {
 		setLayout(new BorderLayout());
 		/*
-		 * ������������ѡ��(SINGLE_SELECTION)���Ƕ���ѡ��(SINGLE_INTERVAL_SELECTION)Ĭ���Ƕ���ѡ��
-		 * ��ס"Ctrl"���������ڶ����Ŀ�ϵ�������ôԭ�ȱ�ѡ�е���Ŀ�Ծɱ���ѡ��״̬�����Կ���ѡ����������Ŀ��
-		 * ���ѡ����ĳ����Ŀ���κΰ�ס"Shift"����������һ����Ŀ����ô��������Ŀ֮���������Ŀ������ѡ�С�
-		 * Ҫ��ѡ�е���Ŀ����ȥ��һ�������԰�ס"Ctrl"���ڴ���Ŀ�ϵ�����
+		 * 设置允许单项选择(SINGLE_SELECTION)还是多项选择(SINGLE_INTERVAL_SELECTION)默认是多项选择。
+		 * 按住"Ctrl"键，连续在多个项目上单击，那么原先被选中的项目仍旧保持选中状态，所以可以选中任意多的项目。
+		 * 如果选中了某个项目，任何按住"Shift"键并单击另一个项目，那么这两个项目之间的所有项目都将被选中。
+		 * 要从选中的项目组中去掉一个，可以按住"Ctrl"键在此项目上单击。
 		 */
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		/* 
-		 * ���ò����б���Ԫ�ķ�ʽ
-		 * VERTICAL ָʾĬ�ϲ��֣�һ�е�Ԫ
-		 * HORIZONTAL_WRAP ��Ԫ���Ⱥ�������򲼾�
-		 * VERTICAL_WRAP ��Ԫ�����������򲼾�
+		 * 设置布局列表单元的方式
+		 * VERTICAL 指示默认布局：一列单元
+		 * HORIZONTAL_WRAP 单元按先横向后纵向布局
+		 * VERTICAL_WRAP 单元按先纵向后横向布局
 		 */
 		list.setLayoutOrientation(JList.VERTICAL);
-		// ���ò�ʹ�ù������������б�����ʾ����ѡ����
-		// ��һ���������JViewport����(�����)ȷ��
-		// ������JScrollPane��viewport������������������û��ʵ������
+		// 设置不使用滚动条可以在列表中显示的首选行数
+		// 这一点由最近的JViewport祖先(如果有)确定
+		// 本例由JScrollPane的viewport所决定，所以这个语句没有实际作用
 		list.setVisibleRowCount(1);
-		// ʵ��ListSelectionListener�ӿ�����Ӧѡ����仯���¼�
+		// 实现ListSelectionListener接口以响应选择项变化的事件
 		list.addListSelectionListener(this);
 		
 		JScrollPane scroll = new JScrollPane(list);
@@ -80,12 +80,12 @@ class JListPanel extends JPanel implements ListSelectionListener{
 	}
 
 	/**
-	 * Listѡ����仯���¼�����
+	 * List选择项变化的事件处理
 	 */
 	public void valueChanged(ListSelectionEvent e) {
 		/*
-		 * ���ǵ�ѡ����getSelectedValue()���ض���
-		 * ���Ƕ�ѡ����getSelectedValues()���ض������顣
+		 * 若是单选则用getSelectedValue()返回对象；
+		 * 若是多选则用getSelectedValues()返回对象数组。
 		 */
 		text.setText(list.getSelectedValue().toString());
 	}

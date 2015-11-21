@@ -13,15 +13,15 @@ import swing.frame.BasicFrame;
 import util.Displayer;
 
 /**
- * MnemonicKeyÑİÊ¾
+ * MnemonicKeyæ¼”ç¤º
  * <p>
- * Mnemonic Key(¼üÅÌÖú¼Ç·û)£º</br>
- * Í¨³£ÊÇ²Ëµ¥£¬°´Å¥£¬ÎÄ±¾±êÇ©µÈ¿Ø¼şµÄÎÄ±¾ÖĞ´øÏÂ»®ÏßµÃÒ»¸ö×Ö·û£¬
- * ÓÃÀ´ÌáÊ¾ÓÃ»§¿ÉÒÔÍ¬Ê±°´ÏÂAlt¼üºÍÕâ¸ö×Ö·û¶ÔÓ¦µÃ¼üÀ´´¥·¢ÏàÓ¦µÄ¶¯×÷¡£
+ * Mnemonic Key(é”®ç›˜åŠ©è®°ç¬¦)ï¼š</br>
+ * é€šå¸¸æ˜¯èœå•ï¼ŒæŒ‰é’®ï¼Œæ–‡æœ¬æ ‡ç­¾ç­‰æ§ä»¶çš„æ–‡æœ¬ä¸­å¸¦ä¸‹åˆ’çº¿å¾—ä¸€ä¸ªå­—ç¬¦ï¼Œ
+ * ç”¨æ¥æç¤ºç”¨æˆ·å¯ä»¥åŒæ—¶æŒ‰ä¸‹Alté”®å’Œè¿™ä¸ªå­—ç¬¦å¯¹åº”å¾—é”®æ¥è§¦å‘ç›¸åº”çš„åŠ¨ä½œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-20
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-20
  */
 public class MnemonicKeyDemo {
 
@@ -59,7 +59,7 @@ class MnemonicKeyFrame extends BasicFrame {
 	private JLabel getLabel() {
 		if (label == null) {
 			label = new JLabel("JLabel");
-			label.setDisplayedMnemonicIndex(1);// ÉèÖÃµÚÒ»¸ö'L'Îª¼üÅÌÖú¼Ç·û
+			label.setDisplayedMnemonicIndex(1);// è®¾ç½®ç¬¬ä¸€ä¸ª'L'ä¸ºé”®ç›˜åŠ©è®°ç¬¦
 		}
 		return label;
 	}
@@ -67,8 +67,8 @@ class MnemonicKeyFrame extends BasicFrame {
 	private JButton getButton() {
 		if (button == null) {
 			button = new JButton("JButton");
-			button.setMnemonic('B');// ÉèÖÃ'B'Îª¼üÅÌÖú¼Ç·û
-			// Alt+B ½«»á´¥·¢ÏÂÃæµÄ¶¯×÷
+			button.setMnemonic('B');// è®¾ç½®'B'ä¸ºé”®ç›˜åŠ©è®°ç¬¦
+			// Alt+B å°†ä¼šè§¦å‘ä¸‹é¢çš„åŠ¨ä½œ
 			button.addActionListener(new ActionListener() {
 
 				@Override
@@ -99,15 +99,15 @@ class MnemonicKeyFrame extends BasicFrame {
 
 	private JMenu createMenu() {
 		JMenu menu = new JMenu("File");
-		// ¿ÉÒÔÍ¬Ê±°´ÏÂAlt+FÔÚ²Ëµ¥À¸ÖĞÑ¡ÔñÒ»¸ö¶¥²ã²Ëµ¥
-		menu.setMnemonic('F');// Ö»ÄÜÍ¨¹ıÕâÖÖ·½Ê½Îª²Ëµ¥ÉèÖÃ¼üÅÌÖú¼Ç·û
+		// å¯ä»¥åŒæ—¶æŒ‰ä¸‹Alt+Fåœ¨èœå•æ ä¸­é€‰æ‹©ä¸€ä¸ªé¡¶å±‚èœå•
+		menu.setMnemonic('F');// åªèƒ½é€šè¿‡è¿™ç§æ–¹å¼ä¸ºèœå•è®¾ç½®é”®ç›˜åŠ©è®°ç¬¦
 		menu.add(createOpenMenuItem());
 		menu.add(createSaveMenuItem());
 		return menu;
 	}
 
 	private JMenuItem createOpenMenuItem() {
-		// Ö»ÄÜÔÚ²Ëµ¥ÏîµÄ¹¹ÔìÆ÷ÖĞÉè¶¨¼üÅÌÖú¼Ç·û×ÖÄ¸
+		// åªèƒ½åœ¨èœå•é¡¹çš„æ„é€ å™¨ä¸­è®¾å®šé”®ç›˜åŠ©è®°ç¬¦å­—æ¯
 		JMenuItem menuItem = new JMenuItem("Open File", 'O');
 		menuItem.addActionListener(new ActionListener() {
 
@@ -134,7 +134,7 @@ class MnemonicKeyFrame extends BasicFrame {
 
 		private void initAction() {
 			putValue(NAME, "Save File");
-			// ¿ÉÒÔ°Ñ¼üÅÌÖú¼Ç·ûµÄ¼üÖµÌí¼Óµ½Action¶ÔÏóÖĞ
+			// å¯ä»¥æŠŠé”®ç›˜åŠ©è®°ç¬¦çš„é”®å€¼æ·»åŠ åˆ°Actionå¯¹è±¡ä¸­
 			putValue(MNEMONIC_KEY, new Integer('S'));
 		}
 

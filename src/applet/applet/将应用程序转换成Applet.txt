@@ -1,18 +1,18 @@
-                                                            ½«Ó¦ÓÃ³ÌÐò(Application)×ª»»³ÉÐ¡³ÌÐò(Applet)
+                                                            å°†åº”ç”¨ç¨‹åº(Application)è½¬æ¢æˆå°ç¨‹åº(Applet)
 
 
-1£¬´´½¨Ò»¸ö HTML Ò³Ãæ£¬²¢ÓÃÊÊµ±µÄ±ê¼Ç¼ÓÔØ applet ´úÂë¡£
+1ï¼Œåˆ›å»ºä¸€ä¸ª HTML é¡µé¢ï¼Œå¹¶ç”¨é€‚å½“çš„æ ‡è®°åŠ è½½ applet ä»£ç ã€‚
 
-2£¬´´½¨Ò»¸ö JApplet µÄ×ÓÀà£¬½«¸Ã×ÓÀà±ê¼ÇÎª public¡£
+2ï¼Œåˆ›å»ºä¸€ä¸ª JApplet çš„å­ç±»ï¼Œå°†è¯¥å­ç±»æ ‡è®°ä¸º publicã€‚
 
-3£¬É¾³ýÓ¦ÓÃ³ÌÐòÖÐµÄ main ·½·¨£¬²»ÒªÎªÓ¦ÓÃ³ÌÐò¹¹Ôì¿ò¼Ü´°¿Ú£¬Ó¦ÓÃ³ÌÐò½«ÏÔÊ¾ÔÚä¯ÀÀÆ÷ÖÐ¡£
+3ï¼Œåˆ é™¤åº”ç”¨ç¨‹åºä¸­çš„ main æ–¹æ³•ï¼Œä¸è¦ä¸ºåº”ç”¨ç¨‹åºæž„é€ æ¡†æž¶çª—å£ï¼Œåº”ç”¨ç¨‹åºå°†æ˜¾ç¤ºåœ¨æµè§ˆå™¨ä¸­ã€‚
 
-4£¬½«ËùÓÐ³õÊ¼»¯´úÂë´Ó¿ò¼Ü´°¿ÚµÄ¹¹ÔìÆ÷ÖÐÒÆµ½ applet µÄ init ·½·¨ÖÐ£¬²»ÐèÒªÃ÷È·µØ¹¹Ôìapplet¶ÔÏó£¬ä¯ÀÀÆ÷¸ºÔðÊµÀý»¯²¢µ÷ÓÃinit·½·¨¡£
+4ï¼Œå°†æ‰€æœ‰åˆå§‹åŒ–ä»£ç ä»Žæ¡†æž¶çª—å£çš„æž„é€ å™¨ä¸­ç§»åˆ° applet çš„ init æ–¹æ³•ä¸­ï¼Œä¸éœ€è¦æ˜Žç¡®åœ°æž„é€ appletå¯¹è±¡ï¼Œæµè§ˆå™¨è´Ÿè´£å®žä¾‹åŒ–å¹¶è°ƒç”¨initæ–¹æ³•ã€‚
 
-5£¬É¾³ý¶Ô setSize µÄµ÷ÓÃ£¬¶ÔÓÚ applet À´Ëµ£¬È·¶¨´óÐ¡ÊÇÍ¨¹ý HTML ÖÐµÄ width ºÍ height ²ÎÊýÍê³ÉµÄ¡£
+5ï¼Œåˆ é™¤å¯¹ setSize çš„è°ƒç”¨ï¼Œå¯¹äºŽ applet æ¥è¯´ï¼Œç¡®å®šå¤§å°æ˜¯é€šè¿‡ HTML ä¸­çš„ width å’Œ height å‚æ•°å®Œæˆçš„ã€‚
 
-6£¬É¾³ý setDefaultCloseOperation µÄµ÷ÓÃ£¬applet ²»ÄÜ±»¹Ø±Õ£¬µ±ä¯ÀÀÆ÷ÍË³öÊ±£¬Ëü½«ÖÕÖ¹ÔËÐÐ¡£
+6ï¼Œåˆ é™¤ setDefaultCloseOperation çš„è°ƒç”¨ï¼Œapplet ä¸èƒ½è¢«å…³é—­ï¼Œå½“æµè§ˆå™¨é€€å‡ºæ—¶ï¼Œå®ƒå°†ç»ˆæ­¢è¿è¡Œã€‚
 
-7£¬É¾³ý setTitle µÄµ÷ÓÃ£¬applet Ã»ÓÐ±êÌâÀ¸£¬¿ÉÒÔÔÚ HTML µÄ title ±ê¼ÇÖÐÀ´ÎªÍøÒ³ÉèÖÃ±êÌâ¡£
+7ï¼Œåˆ é™¤ setTitle çš„è°ƒç”¨ï¼Œapplet æ²¡æœ‰æ ‡é¢˜æ ï¼Œå¯ä»¥åœ¨ HTML çš„ title æ ‡è®°ä¸­æ¥ä¸ºç½‘é¡µè®¾ç½®æ ‡é¢˜ã€‚
 
-8£¬²»Òªµ÷ÓÃsetVisible·½·¨£¬applet»á×Ô¶¯ÏÔÊ¾¡£
+8ï¼Œä¸è¦è°ƒç”¨setVisibleæ–¹æ³•ï¼Œappletä¼šè‡ªåŠ¨æ˜¾ç¤ºã€‚

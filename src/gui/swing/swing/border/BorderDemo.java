@@ -22,13 +22,13 @@ import javax.swing.border.TitledBorder;
 import util.Displayer;
 
 /**
- * ±ß¿òÑİÊ¾Àà
+ * è¾¹æ¡†æ¼”ç¤ºç±»
  * <p>
- * JComponentÓĞÒ»¸ösetBorder()·½·¨£¬ÔÊĞíÎªÈÎºÎ¿ÉÊÓ×é¼şÉèÖÃ¸÷ÖÖ±ß¿ò¡£
+ * JComponentæœ‰ä¸€ä¸ªsetBorder()æ–¹æ³•ï¼Œå…è®¸ä¸ºä»»ä½•å¯è§†ç»„ä»¶è®¾ç½®å„ç§è¾¹æ¡†ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-17
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-17
  */
 public class BorderDemo {
 	
@@ -46,21 +46,21 @@ class BorderPanel extends JPanel {
 
 	public BorderPanel() {
 		setLayout(getGridLayout());
-		// TitledBorderÊµÏÖÔÚÖ¸¶¨Î»ÖÃÒÔÖ¸¶¨¶ÔÆë·½Ê½ÏÔÊ¾×Ö·û´®±êÌâµÄÈÎÒâ±ß¿ò
+		// TitledBorderå®ç°åœ¨æŒ‡å®šä½ç½®ä»¥æŒ‡å®šå¯¹é½æ–¹å¼æ˜¾ç¤ºå­—ç¬¦ä¸²æ ‡é¢˜çš„ä»»æ„è¾¹æ¡†
 		add(makeBorderPanel(new TitledBorder("Title")));
-		// EtchedBorderÊµÏÖ¼òµ¥µÄ¸¡µñ»¯±ß¿ò£¬Ëü¼È¿ÉÒÔÊÇÒõ¿Ì¸¡µñ»¯±ß¿ò£¬Ò²¿ÉÒÔÊÇÑô¿Ì¸¡µñ»¯±ß¿ò
+		// EtchedBorderå®ç°ç®€å•çš„æµ®é›•åŒ–è¾¹æ¡†ï¼Œå®ƒæ—¢å¯ä»¥æ˜¯é˜´åˆ»æµ®é›•åŒ–è¾¹æ¡†ï¼Œä¹Ÿå¯ä»¥æ˜¯é˜³åˆ»æµ®é›•åŒ–è¾¹æ¡†
 		add(makeBorderPanel(new EtchedBorder()));
 		add(makeBorderPanel(new EtchedBorder(EtchedBorder.RAISED)));
-		// LineBorderÊµÏÖµ¥É«¡¢ÈÎÒâºñ¶ÈÏß±ß¿òµÄÀà
+		// LineBorderå®ç°å•è‰²ã€ä»»æ„åšåº¦çº¿è¾¹æ¡†çš„ç±»
 		add(makeBorderPanel(new LineBorder(Color.BLUE)));
-		// MatteBorderÌá¹©ÀàËÆ³Ä±ßµÄ±ß¿ò£¬³Ä±ßÍ¼°¸¼È¿ÉÒÔÊÇ´¿É«Ò²¿ÉÒÔÊÇÆ½ÆÌµÄÍ¼±ê
+		// MatteBorderæä¾›ç±»ä¼¼è¡¬è¾¹çš„è¾¹æ¡†ï¼Œè¡¬è¾¹å›¾æ¡ˆæ—¢å¯ä»¥æ˜¯çº¯è‰²ä¹Ÿå¯ä»¥æ˜¯å¹³é“ºçš„å›¾æ ‡
 		add(makeBorderPanel(new MatteBorder(5, 5, 30, 30, Color.GREEN)));
-		// BevelBorderÊµÏÖ¼òµ¥µÄË«ÏßĞ±Ãæ±ß¿ò¡£ 
+		// BevelBorderå®ç°ç®€å•çš„åŒçº¿æ–œé¢è¾¹æ¡†ã€‚ 
 		add(makeBorderPanel(new BevelBorder(BevelBorder.RAISED)));
-		// SoftBevelBorderÊµÏÖÄ³ÖÖĞ±ÃæµÄÀà£¬ÕâÖÖĞ±ÃæÒªÃ´Í¹³öÒªÃ´°¼ÈëÇÒ¹Õ½ÇÔ²»¬
+		// SoftBevelBorderå®ç°æŸç§æ–œé¢çš„ç±»ï¼Œè¿™ç§æ–œé¢è¦ä¹ˆå‡¸å‡ºè¦ä¹ˆå‡¹å…¥ä¸”æ‹è§’åœ†æ»‘
 		add(makeBorderPanel(new SoftBevelBorder(BevelBorder.LOWERED)));
-		// CompoundBorderÊÇ¸´ºÏBorderÀà£¬Í¨¹ı½«ÄÚ²¿Border¶ÔÏóÇ¶Ì×µ½
-		// Íâ²¿Border¶ÔÏóÖĞÊµÏÖ½«Á½¸öBorder¶ÔÏóºÏ²¢ÎªÒ»¸öµ¥¸ö±ß¿ò
+		// CompoundBorderæ˜¯å¤åˆBorderç±»ï¼Œé€šè¿‡å°†å†…éƒ¨Borderå¯¹è±¡åµŒå¥—åˆ°
+		// å¤–éƒ¨Borderå¯¹è±¡ä¸­å®ç°å°†ä¸¤ä¸ªBorderå¯¹è±¡åˆå¹¶ä¸ºä¸€ä¸ªå•ä¸ªè¾¹æ¡†
 		Border outsideBorder = new EtchedBorder();
 		Border insideBorder = new LineBorder(Color.RED);
 		add(makeBorderPanel(new CompoundBorder(outsideBorder, insideBorder)));

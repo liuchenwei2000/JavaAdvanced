@@ -1,8 +1,8 @@
 2009-7-1 10:30:26 log.handler.FileHandlerDemo main
-信息: A message logged to the file
+淇℃伅: A message logged to the file
 2009-7-1 10:30:26 log.handler.FileHandlerDemo main
-信息: Wed Jul 01 10:30:26 CST 2009
-三月 24, 2015 2:38:45 下午 log.handler.FileHandlerDemo main
-信息: A message logged to the file
-三月 24, 2015 2:38:45 下午 log.handler.FileHandlerDemo main
-信息: Tue Mar 24 14:38:45 CST 2015
+淇℃伅: Wed Jul 01 10:30:26 CST 2009
+涓夋湀 24, 2015 2:38:45 涓嬪崍 log.handler.FileHandlerDemo main
+淇℃伅: A message logged to the file
+涓夋湀 24, 2015 2:38:45 涓嬪崍 log.handler.FileHandlerDemo main
+淇℃伅: Tue Mar 24 14:38:45 CST 2015

@@ -8,15 +8,15 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * DateFormatÑİÊ¾Àà
+ * DateFormatæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-27
  */
 public class DateFormatDemo {
 
-	/** ¸ñÊ½»¯·ç¸ñ Êı×é */
+	/** æ ¼å¼åŒ–é£æ ¼ æ•°ç»„ */
 	private static final int[] STYLES = { DateFormat.DEFAULT, DateFormat.FULL,
 			DateFormat.LONG, DateFormat.MEDIUM, DateFormat.SHORT };
 
@@ -31,9 +31,9 @@ public class DateFormatDemo {
 	private static void print(Locale locale, Date date) {
 		System.out.println(locale.getDisplayName());
 		for (int style : STYLES) {
-			// ¸ù¾İÓïÑÔ»·¾³ºÍ¸ñÊ½»¯·ç¸ñ·µ»ØÈÕÆÚ¸ñÊ½»¯Æ÷
+			// æ ¹æ®è¯­è¨€ç¯å¢ƒå’Œæ ¼å¼åŒ–é£æ ¼è¿”å›æ—¥æœŸæ ¼å¼åŒ–å™¨
 			DateFormat df1 = DateFormat.getDateInstance(style, locale);
-			// ¸ù¾İÓïÑÔ»·¾³ºÍ¸ñÊ½»¯·ç¸ñ·µ»ØÊ±¼ä¸ñÊ½»¯Æ÷
+			// æ ¹æ®è¯­è¨€ç¯å¢ƒå’Œæ ¼å¼åŒ–é£æ ¼è¿”å›æ—¶é—´æ ¼å¼åŒ–å™¨
 			DateFormat df2 = DateFormat.getTimeInstance(style, locale);
 			System.out.println("date : " + df1.format(date));
 			System.out.println("time : " + df2.format(date));

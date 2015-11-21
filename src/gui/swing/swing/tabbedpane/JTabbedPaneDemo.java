@@ -17,13 +17,13 @@ import javax.swing.event.ChangeListener;
 import util.Displayer;
 
 /**
- * JTabbedPaneÑİÊ¾Àà
+ * JTabbedPaneæ¼”ç¤ºç±»
  * <p>
- * ÔÊĞíÓÃ»§Í¨¹ıµ¥»÷¾ßÓĞ¸ø¶¨±êÌâºÍ(»ò)Í¼±êµÄÑ¡Ïî¿¨£¬ÔÚÒ»×é×é¼şÖ®¼ä½øĞĞÇĞ»»¡£
+ * å…è®¸ç”¨æˆ·é€šè¿‡å•å‡»å…·æœ‰ç»™å®šæ ‡é¢˜å’Œ(æˆ–)å›¾æ ‡çš„é€‰é¡¹å¡ï¼Œåœ¨ä¸€ç»„ç»„ä»¶ä¹‹é—´è¿›è¡Œåˆ‡æ¢ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-5-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-18
  */
 public class JTabbedPaneDemo {
 	
@@ -48,12 +48,12 @@ class JTabbedPanePanel extends JPanel {
 	public JTabbedPanePanel() {
 		setLayout(new BorderLayout());
 		for (int i = 0; i < NAMES.length; i++) {
-			// Ìí¼ÓÒ»¸öÓÉtitle±íÊ¾£¬ÇÒÃ»ÓĞÍ¼±êµÄ×é¼ş
+			// æ·»åŠ ä¸€ä¸ªç”±titleè¡¨ç¤ºï¼Œä¸”æ²¡æœ‰å›¾æ ‡çš„ç»„ä»¶
 			tabs.addTab(NAMES[i], makeTabPanel(" in TabbedPane " + i));
 		}
-		// ½«Ò»¸öChangeListenerÌí¼Óµ½´ËÑ¡Ïî¿¨´°¸ñÖĞ
+		// å°†ä¸€ä¸ªChangeListeneræ·»åŠ åˆ°æ­¤é€‰é¡¹å¡çª—æ ¼ä¸­
 		tabs.addChangeListener(new ChangeListener() {
-			// Ñ¡Ïî¿¨Ñ¡Ôñ¸Ä±äÊ±µÄÊÂ¼ş´¦Àí
+			// é€‰é¡¹å¡é€‰æ‹©æ”¹å˜æ—¶çš„äº‹ä»¶å¤„ç†
 			public void stateChanged(ChangeEvent e) {
 				txt.setText("Tab selected: " + tabs.getSelectedIndex());
 			}
@@ -64,7 +64,7 @@ class JTabbedPanePanel extends JPanel {
 	}
 
 	/**
-	 * ¸ù¾İÖÆ¶¨Ãû³Æ´´½¨Ò»¸öÑ¡Ïî¿¨Ò³Ç©
+	 * æ ¹æ®åˆ¶å®šåç§°åˆ›å»ºä¸€ä¸ªé€‰é¡¹å¡é¡µç­¾
 	 */
 	private static JPanel makeTabPanel(String name) {
 		JPanel panel = new JPanel();

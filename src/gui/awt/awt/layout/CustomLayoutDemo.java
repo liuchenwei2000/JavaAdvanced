@@ -12,11 +12,11 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * ×Ô¶¨Òå²¼¾ÖÑİÊ¾Àà
+ * è‡ªå®šä¹‰å¸ƒå±€æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-14
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-14
  */
 public class CustomLayoutDemo {
 
@@ -46,7 +46,7 @@ class CircleLayoutPanel extends JPanel {
 }
 
 /**
- * ×Ô¶¨Òå²¼¾Ö¹ÜÀíÆ÷±ØĞëÒªÊµÏÖLayoutManager½Ó¿Ú
+ * è‡ªå®šä¹‰å¸ƒå±€ç®¡ç†å™¨å¿…é¡»è¦å®ç°LayoutManageræ¥å£
  */
 class CircleLayout implements LayoutManager {
 
@@ -58,13 +58,13 @@ class CircleLayout implements LayoutManager {
 	private int maxComponentHeight = 0;
 
 	/**
-	 * ½«×é¼şÌí¼Óµ½²¼¾ÖÖĞ
+	 * å°†ç»„ä»¶æ·»åŠ åˆ°å¸ƒå±€ä¸­
 	 */
 	public void addLayoutComponent(String name, Component comp) {
 	}
 
 	/**
-	 * ´Ó²¼¾ÖÖĞÉ¾³ıÒ»¸ö×é¼ş
+	 * ä»å¸ƒå±€ä¸­åˆ é™¤ä¸€ä¸ªç»„ä»¶
 	 */
 	public void removeLayoutComponent(Component comp) {
 	}
@@ -98,7 +98,7 @@ class CircleLayout implements LayoutManager {
 	}
 
 	/**
-	 * ·µ»Ø²¼¾ÖÖĞÈİÆ÷µÄÊ×Ñ¡³ß´ç´óĞ¡
+	 * è¿”å›å¸ƒå±€ä¸­å®¹å™¨çš„é¦–é€‰å°ºå¯¸å¤§å°
 	 */
 	public Dimension preferredLayoutSize(Container parent) {
 		Dimension dim = new Dimension(0, 0);
@@ -110,7 +110,7 @@ class CircleLayout implements LayoutManager {
 	}
 
 	/**
-	 * ·µ»Ø²¼¾ÖÖĞÈİÆ÷µÄ×îĞ¡³ß´ç´óĞ¡
+	 * è¿”å›å¸ƒå±€ä¸­å®¹å™¨çš„æœ€å°å°ºå¯¸å¤§å°
 	 */
 	public Dimension minimumLayoutSize(Container parent) {
 		Dimension dim = new Dimension(0, 0);
@@ -122,7 +122,7 @@ class CircleLayout implements LayoutManager {
 	}
 
 	/**
-	 * ²¼¾ÖÈİÆ÷ÖĞµÄ×é¼ş£¬ÕæÕıµÄÊµÊ©²Ù×÷
+	 * å¸ƒå±€å®¹å™¨ä¸­çš„ç»„ä»¶ï¼ŒçœŸæ­£çš„å®æ–½æ“ä½œ
 	 */
 	public void layoutContainer(Container parent) {
 		Insets insets = parent.getInsets();

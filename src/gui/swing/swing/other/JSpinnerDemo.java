@@ -24,15 +24,15 @@ import util.Displayer;
 import util.ui.BorderFactory;
 
 /**
- * JSpinnerÑİÊ¾Àà
+ * JSpinneræ¼”ç¤ºç±»
  * <p>
- * JSpinner(Î¢µ÷¿ØÖÆÆ÷)ÊÇ´øÓĞÁ½¸öĞ¡°´Å¥µÄÎÄ±¾Óò£¬µ±µã»÷ËüÊ±£¬¿ÉÒÔÔö¼Ó»ò¼õÉÙÎÄ±¾ÓòµÄÖµ¡£
- * Î¢µ÷¿ØÖÆÆ÷ÖĞµÄÖµ¿ÉÒÔÊÇÊı×Ö¡¢ÈÕÆÚ¡¢À´×ÔÁĞ±íµÄÖµÒÔ¼°ÈÎºÎ¿ÉÒÔÓÃÉÏÒ»¸öÏÂÒ»¸ö¾ö¶¨ÖµµÄĞòÁĞ¡£
- * JSpinnerÀàÎªÇ°ÈıÖÖÇé¿ö¶¨ÒåÁË±ê×¼µÄÊı¾İÄ£ĞÍ£¬»¹¿ÉÒÔ×Ô¶¨ÒåÊı¾İÄ£ĞÍÀ´ÃèÊöÈÎÒâµÄĞòÁĞ¡£
+ * JSpinner(å¾®è°ƒæ§åˆ¶å™¨)æ˜¯å¸¦æœ‰ä¸¤ä¸ªå°æŒ‰é’®çš„æ–‡æœ¬åŸŸï¼Œå½“ç‚¹å‡»å®ƒæ—¶ï¼Œå¯ä»¥å¢åŠ æˆ–å‡å°‘æ–‡æœ¬åŸŸçš„å€¼ã€‚
+ * å¾®è°ƒæ§åˆ¶å™¨ä¸­çš„å€¼å¯ä»¥æ˜¯æ•°å­—ã€æ—¥æœŸã€æ¥è‡ªåˆ—è¡¨çš„å€¼ä»¥åŠä»»ä½•å¯ä»¥ç”¨ä¸Šä¸€ä¸ªä¸‹ä¸€ä¸ªå†³å®šå€¼çš„åºåˆ—ã€‚
+ * JSpinnerç±»ä¸ºå‰ä¸‰ç§æƒ…å†µå®šä¹‰äº†æ ‡å‡†çš„æ•°æ®æ¨¡å‹ï¼Œè¿˜å¯ä»¥è‡ªå®šä¹‰æ•°æ®æ¨¡å‹æ¥æè¿°ä»»æ„çš„åºåˆ—ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-8
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-8
  */
 public class JSpinnerDemo {
 	
@@ -77,39 +77,39 @@ class JSpinnerPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»ØÒ»¸ö±à¼­ÕûÊıµÄÎ¢µ÷¿ØÖÆÆ÷£¬³õÊ¼ÖµÎª0£¬ÔöÁ¿Îª1£¬Ã»ÓĞ±ß½ç
+	 * è¿”å›ä¸€ä¸ªç¼–è¾‘æ•´æ•°çš„å¾®è°ƒæ§åˆ¶å™¨ï¼Œåˆå§‹å€¼ä¸º0ï¼Œå¢é‡ä¸º1ï¼Œæ²¡æœ‰è¾¹ç•Œ
 	 */
 	private JSpinner getSpinner() {
 		return new JSpinner();
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃÊı×ÖĞòÁĞÊı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨æ•°å­—åºåˆ—æ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
 	 */
 	private JSpinner getNumberSpinner() {
 		/*
-		 * ¹¹ÔìÒ»¸ö¾ßÓĞÖ¸¶¨value¡¢minimum/maximum±ß½çºÍstepSizeµÄSpinnerNumberModel 
-		 * value - ¸ÃÄ£ĞÍµÄµ±Ç°Öµ
-		 * minimum - ¸ÃĞòÁĞÖĞµÄµÚÒ»¸öÊı
-		 * maximum - ¸ÃĞòÁĞÖĞµÄ×îºóÒ»¸öÊı
-		 * stepSize - ¸ÃĞòÁĞÖĞÔªËØÖ®¼äµÄ²î 
+		 * æ„é€ ä¸€ä¸ªå…·æœ‰æŒ‡å®švalueã€minimum/maximumè¾¹ç•Œå’ŒstepSizeçš„SpinnerNumberModel 
+		 * value - è¯¥æ¨¡å‹çš„å½“å‰å€¼
+		 * minimum - è¯¥åºåˆ—ä¸­çš„ç¬¬ä¸€ä¸ªæ•°
+		 * maximum - è¯¥åºåˆ—ä¸­çš„æœ€åä¸€ä¸ªæ•°
+		 * stepSize - è¯¥åºåˆ—ä¸­å…ƒç´ ä¹‹é—´çš„å·® 
 		 */
 		return new JSpinner(new SpinnerNumberModel(5, 0, 10, 0.5));
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃÁĞ±íÊı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨åˆ—è¡¨æ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
 	 */
 	private JSpinner getListSpinner() {
 		/* 
-		 * ¹¹ÔìÒ»¸öÓÉÖ¸¶¨Êı×é¶¨ÒåÆäÖµĞòÁĞµÄSpinnerModel
-		 * ¸ÃÄ£ĞÍµÄ³õÊ¼Öµ½«Îª values[0]
+		 * æ„é€ ä¸€ä¸ªç”±æŒ‡å®šæ•°ç»„å®šä¹‰å…¶å€¼åºåˆ—çš„SpinnerModel
+		 * è¯¥æ¨¡å‹çš„åˆå§‹å€¼å°†ä¸º values[0]
 		 */
 		return new JSpinner(new SpinnerListModel(getFonts()));
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃÄæ×ªË³ĞòºóµÄÁĞ±íÊı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨é€†è½¬é¡ºåºåçš„åˆ—è¡¨æ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
 	 */
 	private JSpinner getReverseListSpinner() {
 		return new JSpinner(new SpinnerListModel(getFonts()) {
@@ -131,43 +131,43 @@ class JSpinnerPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃÈÕÆÚÊı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨æ—¥æœŸæ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
 	 */
 	private JSpinner getDateSpinner() {
 		/*
-		 * ¹¹ÔìÒ»¸öSpinnerDateModel
-		 * ³õÊ¼ÖµÎªµ±Ç°ÈÕÆÚ£¬Ã»ÓĞÉÏ±ß½çºÍÏÂ±ß½ç£¬ÔöÁ¿ÎªCalendar.DAY_OF_MONTH
+		 * æ„é€ ä¸€ä¸ªSpinnerDateModel
+		 * åˆå§‹å€¼ä¸ºå½“å‰æ—¥æœŸï¼Œæ²¡æœ‰ä¸Šè¾¹ç•Œå’Œä¸‹è¾¹ç•Œï¼Œå¢é‡ä¸ºCalendar.DAY_OF_MONTH
 		 */
 		return new JSpinner(new SpinnerDateModel());
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃÈÕÆÚÊı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
-	 * ²¢ÇÒÎ¢µ÷¿ØÖÆÆ÷Ê¹ÓÃÁËÌØ¶¨µÄÖµ±à¼­Æ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨æ—¥æœŸæ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
+	 * å¹¶ä¸”å¾®è°ƒæ§åˆ¶å™¨ä½¿ç”¨äº†ç‰¹å®šçš„å€¼ç¼–è¾‘å™¨
 	 */
 	private JSpinner getFormattedDateSpinner() {
 		JSpinner spinner = new JSpinner(new SpinnerDateModel());
 		String pattern = ((SimpleDateFormat) DateFormat.getDateInstance())
 				.toPattern();
 		/*
-		 * ÎªÎ¢µ÷¿ØÖÆÆ÷¹¹ÔìÒ»¸öÈÕÆÚ±à¼­Æ÷£¬±à¼­Æ÷Ê¹ÓÃÌØ¶¨¸ñÊ½
+		 * ä¸ºå¾®è°ƒæ§åˆ¶å™¨æ„é€ ä¸€ä¸ªæ—¥æœŸç¼–è¾‘å™¨ï¼Œç¼–è¾‘å™¨ä½¿ç”¨ç‰¹å®šæ ¼å¼
 		 */
 		spinner.setEditor(new JSpinner.DateEditor(spinner, pattern));
 		return spinner;
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃÈÕÆÚ(Ê±¼ä)Êı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨æ—¥æœŸ(æ—¶é—´)æ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
 	 */
 	private JSpinner getTimeSpinner() {
 		/*
-		 * ¹¹ÔìÒ»¸öSpinnerDateModel
-		 * ³õÊ¼ÖµÎªµÚÒ»¸ö²ÎÊı£¬Ã»ÓĞÉÏ±ß½çºÍÏÂ±ß½ç£¬ÔöÁ¿ÎªCalendar.HOUR
+		 * æ„é€ ä¸€ä¸ªSpinnerDateModel
+		 * åˆå§‹å€¼ä¸ºç¬¬ä¸€ä¸ªå‚æ•°ï¼Œæ²¡æœ‰ä¸Šè¾¹ç•Œå’Œä¸‹è¾¹ç•Œï¼Œå¢é‡ä¸ºCalendar.HOUR
 		 * 
-		 * value - ¸ÃÄ£ĞÍµÄµ±Ç°Öµ
-		 * start - ¸ÃĞòÁĞÖĞµÄµÚÒ»¸öÈÕÆÚ
-		 * end - ¸ÃĞòÁĞÖĞµÄ×îºóÒ»¸öÈÕÆÚ
-		 * calendarField - ÔöÁ¿Öµ
+		 * value - è¯¥æ¨¡å‹çš„å½“å‰å€¼
+		 * start - è¯¥åºåˆ—ä¸­çš„ç¬¬ä¸€ä¸ªæ—¥æœŸ
+		 * end - è¯¥åºåˆ—ä¸­çš„æœ€åä¸€ä¸ªæ—¥æœŸ
+		 * calendarField - å¢é‡å€¼
 		 */
 		return new JSpinner(new SpinnerDateModel(new GregorianCalendar(2000,
 				Calendar.JANUARY, 1, 12, 0, 0).getTime(), null, null,
@@ -175,7 +175,7 @@ class JSpinnerPanel extends JPanel {
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÊ¹ÓÃ×Ô¶¨ÒåÊı¾İÄ£ĞÍµÄÎ¢µ÷¿ØÖÆÆ÷
+	 * è¿”å›ä¸€ä¸ªä½¿ç”¨è‡ªå®šä¹‰æ•°æ®æ¨¡å‹çš„å¾®è°ƒæ§åˆ¶å™¨
 	 */
 	private JSpinner getWordPermutationsSpinner() {
 		return new JSpinner(new PermutationSpinnerModel("meat"));
@@ -218,9 +218,9 @@ class JSpinnerPanel extends JPanel {
 }
 
 /**
- * Î¢µ÷¿ØÖÆÆ÷µÄ×Ô¶¨ÒåÊı¾İÄ£ĞÍ
+ * å¾®è°ƒæ§åˆ¶å™¨çš„è‡ªå®šä¹‰æ•°æ®æ¨¡å‹
  * <p>
- * ÓÃÓÚ¶Ô×Ö·û´®½øĞĞ×ÖÄ¸Ë³Ğò×ª»»£¬¼Ì³Ğ×ÔAbstractSpinnerModel¡£
+ * ç”¨äºå¯¹å­—ç¬¦ä¸²è¿›è¡Œå­—æ¯é¡ºåºè½¬æ¢ï¼Œç»§æ‰¿è‡ªAbstractSpinnerModelã€‚
  */
 class PermutationSpinnerModel extends AbstractSpinnerModel {
 
@@ -231,20 +231,20 @@ class PermutationSpinnerModel extends AbstractSpinnerModel {
 	}
 	
 	/**
-	 * ·µ»Ø´æ´¢ÔÚÄ£ĞÍÖĞµÄÖµ
+	 * è¿”å›å­˜å‚¨åœ¨æ¨¡å‹ä¸­çš„å€¼
 	 */
 	public Object getValue() {
 		return word;
 	}
 
 	/**
-	 * ÉèÖÃÒ»¸öĞÂÖµ
+	 * è®¾ç½®ä¸€ä¸ªæ–°å€¼
 	 */
 	public void setValue(Object value) {
 		if (!(value instanceof String))
 			throw new IllegalArgumentException();
 		word = (String) value;
-		// ±ØĞëµ÷ÓÃfireStateChanged·½·¨£¬·ñÔòÎ¢µ÷¿ØÖÆÆ÷²»»á¸üĞÂ
+		// å¿…é¡»è°ƒç”¨fireStateChangedæ–¹æ³•ï¼Œå¦åˆ™å¾®è°ƒæ§åˆ¶å™¨ä¸ä¼šæ›´æ–°
 		fireStateChanged();
 	}
 

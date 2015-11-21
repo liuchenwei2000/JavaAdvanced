@@ -9,21 +9,21 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
- * ÈÕÖ¾ÎÄ¼þ´¦ÀíÆ÷ÑÝÊ¾Àà
+ * æ—¥å¿—æ–‡ä»¶å¤„ç†å™¨æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-18
  */
 public class FileHandlerDemo {
 
 	private static Logger logger = Logger.getLogger("FileHandlerDemo");
 
 	/**
-	 * ¼´Ê¹ÕýÔÚ°ÑÊä³ö·¢ËÍ¸øÒ»¸öÎÄ¼þ£¬ÈÔ»á¿´µ½¿ØÖÆÌ¨Êä³ö¡£
-	 * ÕâÊÇÒòÎªÃ¿ÌõÏûÏ¢±»×ª»»³É LogRecord£¬ËüÊ×ÏÈÓÉ±¾µØµÄ logger ¶ÔÏóÊ¹ÓÃ£¬Õâ¸ö¶ÔÏó½«Ëü´«µÝ¸øËü×Ô¼ºµÄ´¦ÀíÆ÷¡£
-	 * ´ËÊ±£¬LogRecord ±»´«µÝ¸ø¸¸¶ÔÏó£¬¸¸¶ÔÏóÓµÓÐ×Ô¼ºµÄ´¦ÀíÆ÷¡£Õâ¸ö¹ý³Ì½«³ÖÐøÏÂÈ¥£¬Ö±µ½´ïµ½¸ùÈÕÖ¾¼ÇÂ¼Æ÷ÎªÖ¹¡£
-	 * ¸ùÈÕÖ¾¼ÇÂ¼Æ÷ÓÐÒ»¸öÈ±Ê¡µÄ ConsoleHandler£¬Òò´ËÏûÏ¢¼ÈÔÚÏÔÊ¾Æ÷ÉÏ³öÏÖ£¬Ò²ÔÚÈÕÖ¾ÎÄ¼þÖÐ³öÏÖ£¨¿ÉÒÔÍ¨¹ýµ÷ÓÃ setUseParentHandlers(false) À´¹Ø±ÕÕâ¸ö¶¯×÷£©¡£
+	 * å³ä½¿æ­£åœ¨æŠŠè¾“å‡ºå‘é€ç»™ä¸€ä¸ªæ–‡ä»¶ï¼Œä»ä¼šçœ‹åˆ°æŽ§åˆ¶å°è¾“å‡ºã€‚
+	 * è¿™æ˜¯å› ä¸ºæ¯æ¡æ¶ˆæ¯è¢«è½¬æ¢æˆ LogRecordï¼Œå®ƒé¦–å…ˆç”±æœ¬åœ°çš„ logger å¯¹è±¡ä½¿ç”¨ï¼Œè¿™ä¸ªå¯¹è±¡å°†å®ƒä¼ é€’ç»™å®ƒè‡ªå·±çš„å¤„ç†å™¨ã€‚
+	 * æ­¤æ—¶ï¼ŒLogRecord è¢«ä¼ é€’ç»™çˆ¶å¯¹è±¡ï¼Œçˆ¶å¯¹è±¡æ‹¥æœ‰è‡ªå·±çš„å¤„ç†å™¨ã€‚è¿™ä¸ªè¿‡ç¨‹å°†æŒç»­ä¸‹åŽ»ï¼Œç›´åˆ°è¾¾åˆ°æ ¹æ—¥å¿—è®°å½•å™¨ä¸ºæ­¢ã€‚
+	 * æ ¹æ—¥å¿—è®°å½•å™¨æœ‰ä¸€ä¸ªç¼ºçœçš„ ConsoleHandlerï¼Œå› æ­¤æ¶ˆæ¯æ—¢åœ¨æ˜¾ç¤ºå™¨ä¸Šå‡ºçŽ°ï¼Œä¹Ÿåœ¨æ—¥å¿—æ–‡ä»¶ä¸­å‡ºçŽ°ï¼ˆå¯ä»¥é€šè¿‡è°ƒç”¨ setUseParentHandlers(false) æ¥å…³é—­è¿™ä¸ªåŠ¨ä½œï¼‰ã€‚
 	 */
 	public static void main(String[] args) throws Exception {
 		String fileName = "files/log.handler/LogToFile.xml";
@@ -35,14 +35,14 @@ public class FileHandlerDemo {
 		logger.info(new Date().toString());
 		
 		/* 
-		 * ´´½¨Ò»¸ö½«ÈÕÖ¾×·¼Óµ½Ö¸¶¨ÎÄ¼þÎ²²¿µÄÎÄ¼þ´¦ÀíÆ÷ ¡£
-		 * µÚ¶þ¸ö²ÎÊýÈç¹ûÊÇfalse£¬ÔòÐÂµÄÈÕÖ¾»áÍêÈ«¸²¸Ç¾ÉµÄÄÚÈÝ£¬Ä¬ÈÏÊÇfalse¡£
+		 * åˆ›å»ºä¸€ä¸ªå°†æ—¥å¿—è¿½åŠ åˆ°æŒ‡å®šæ–‡ä»¶å°¾éƒ¨çš„æ–‡ä»¶å¤„ç†å™¨ ã€‚
+		 * ç¬¬äºŒä¸ªå‚æ•°å¦‚æžœæ˜¯falseï¼Œåˆ™æ–°çš„æ—¥å¿—ä¼šå®Œå…¨è¦†ç›–æ—§çš„å†…å®¹ï¼Œé»˜è®¤æ˜¯falseã€‚
 		 */
 		FileHandler txtHandler = new FileHandler(txtFileName, true);
 		
 		/*
-		 * FileHandlerµÄÈ±Ê¡Êä³ö¸ñÊ½ÊÇXML£¬Èç¹ûÏë¸Ä±äÕâÖÖ¸ñÊ½£¬±ØÐë¸ø´¦ÀíÆ÷¸½¼ÓÉÏÒ»¸ö²»Í¬µÄFormatter¶ÔÏó¡£
-		 * ¸ÃÎÄ¼þÊ¹ÓÃÁËÒ»¸ö SimpleFormatter ¶ÔÏó£¬ÒÔÊ¹Êä³öÎª´¿ÎÄ±¾¸ñÊ½¡£
+		 * FileHandlerçš„ç¼ºçœè¾“å‡ºæ ¼å¼æ˜¯XMLï¼Œå¦‚æžœæƒ³æ”¹å˜è¿™ç§æ ¼å¼ï¼Œå¿…é¡»ç»™å¤„ç†å™¨é™„åŠ ä¸Šä¸€ä¸ªä¸åŒçš„Formatterå¯¹è±¡ã€‚
+		 * è¯¥æ–‡ä»¶ä½¿ç”¨äº†ä¸€ä¸ª SimpleFormatter å¯¹è±¡ï¼Œä»¥ä½¿è¾“å‡ºä¸ºçº¯æ–‡æœ¬æ ¼å¼ã€‚
 		 */
 		txtHandler.setFormatter(new SimpleFormatter());
 		logger.addHandler(txtHandler);

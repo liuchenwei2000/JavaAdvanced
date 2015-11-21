@@ -1,28 +1,28 @@
-                                  Swing����
+                                  Swing概述
 
-Swing�ṩJFrame��Ϊ��Ҫ����֧��"��׼"Ӧ�ó���
+Swing提供JFrame作为主要类来支持"标准"应用程序。
 
-JFrame��һ�����������࣬��ҪĿ�����ṩһ����������Swing����ĵط�
-(�����������������JDialog������ʾ�Ի���JApplet������ʾappletСӦ�ó���)��
+JFrame是一个顶层容器类，主要目的是提供一个放置其他Swing组件的地方
+(另外两个顶层组件是JDialog用来显示对话框，JApplet用来显示applet小应用程序)。
 
-JFrame��ʾһ���б������Ĵ��塣
-��ֻ��һ�������ΪJRootPane��JRootPane������һ���˵�(JMenuBar����)��һ����������(ͨ���ɿͻ��������JPanel֮������)��
+JFrame显示一个有标题栏的窗体。
+它只有一个组件称为JRootPane，JRootPane里面有一个菜单(JMenuBar对象)、一个内容区域(通常由客户程序放置JPanel之类的组件)。
 
 
-Swing��MVC
+Swing与MVC
 
-Swing������MVC(model-view-controller)���ģʽ��ʵ������ģʽ��Ҫ�����������ࣺ
-ģ��(Model)���洢���ݡ�
-��ͼ(View)����ʾ���ݡ�
-������(Controller)�������û����롣
+Swing采用了MVC(model-view-controller)设计模式，实现这种模式需要三个独立的类：
+模型(Model)：存储内容。
+视图(View)：显示内容。
+控制器(Controller)：处理用户输入。
 
-���ģʽ��ȷ�Ĺ涨������������ν��н�����
-ģ�ʹ洢���ݣ���û���û����棬������ʵ�ָı����ݺͲ������ݵİ취��������ȫ���ɼ��ģ���ʾ�洢��ģ���е���������ͼ�Ĺ�����
-һ��ģ�Ϳ����ж����ͼ������ÿ����ͼ������ʾȫ�����ݵĲ�ͬ���ֻ�ͬ���档��ͨ��һ����ͼ�Ŀ�������ģ�ͽ��и���ʱ��ģ�ͻ�����ָı�֪ͨ��������ͼ����ͼ�õ�֪ͨ��ͻ��Զ���ˢ�¡�
-�������������û������¼������������û����̣�Ȼ������Ƿ����Щ�¼�ת���ɶ�ģ�ͻ���ͼ�ĸı䡣
+这个模式明确的规定了三个对象如何进行交互：
+模型存储内容，它没有用户界面，它必须实现改变内容和查找内容的办法，它是完全不可见的，显示存储在模型中的数据是视图的工作。
+一个模型可以有多个视图，其中每个视图可以显示全部内容的不同部分或不同方面。当通过一个视图的控制器对模型进行更新时，模型会把这种改变通知给两个视图，视图得到通知后就会自动的刷新。
+控制器负责处理用户输入事件，如点击鼠标和敲击键盘，然后决定是否把这些事件转化成对模型或视图的改变。
 
-����Աʹ��Swing�����ͨ������Ҫ�������ǵ�MVC��ϵ�ṹ��ÿ���û�����Ԫ�ض���һ����װ����(��JButton)������ģ�ͺ���ͼ������Ҫ��ѯ����ʱ����װ�������ģ��ѯ�ʲ����ؽ��������ı���ͼʱ����װ�����Ѵ�����ת������ͼ��
+程序员使用Swing组件，通常不需要考虑它们的MVC体系结构。每个用户界面元素都有一个包装器类(如JButton)来保存模型和视图。当需要查询内容时，包装器类会向模型询问并返回结果；当想改变视图时，包装器类会把此请求转发给视图。
 
-���ڴ���������˵��ģ����ʵ�������ֽ�βΪModel�Ľӿ�(��ButtonModel)����ʹ��Metal�й�ʱ��JButton����BasicButtonUI��Ϊ����ͼ����һЩListener��Ϊ��������һ��˵����ÿ��Swing�������һ����غ�׺ΪUI����ͼ���󣬵����������е�Swing�������ר�ŵĿ���������
+对于大多数组件来说，模型类实现了名字结尾为Model的接口(如ButtonModel)，当使用Metal感观时，JButton类用BasicButtonUI作为其视图，用一些Listener作为控制器。一般说来，每个Swing组件都有一个相关后缀为UI的视图对象，但并不是所有的Swing组件都有专门的控制器对象。
 
-JButton�����Ǽ̳���JComponent�İ�װ���࣬��������һ��DefaultButtonModel����һЩ��ͼ����(��ͼ��)�Լ�һ������ť��ͼ��BasicButtonUI����
+JButton仅仅是继承了JComponent的包装器类，它包含了一个DefaultButtonModel对象，一些视图数据(如图标)以及一个负责按钮视图的BasicButtonUI对象。

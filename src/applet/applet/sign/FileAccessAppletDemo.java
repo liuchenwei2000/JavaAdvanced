@@ -15,16 +15,16 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * �����ļ�ϵͳ��Applet��ʾ��
+ * 访问文件系统的Applet演示类
  * <p>
- * ����Javaɳ�а�ȫģ�͵����ƣ���ҳ�е�Applet�ǲ������������ļ�ϵͳ�ġ�
- * ������Ϊ��ʾ�࣬�鿴����Ч��Ҫ���� FileAccessAppletDemo.html������ҳ����� applet ���ܴ򿪺͹رտͻ���ϵͳ�ϵ��ļ���
+ * 由于Java沙盒安全模型的限制，网页中的Applet是不被允许访问文件系统的。
+ * 本例作为演示类，查看本例效果要运行 FileAccessAppletDemo.html，在网页中这个 applet 不能打开和关闭客户机系统上的文件。
  * <p>
- * ������������ΪApplet�ڿ�������������ʱ�ǲ�����ɳ�а�ȫģ�����Ƶġ�
+ * 当本例单独作为Applet在开发环境中运行时是不会受沙盒安全模型限制的。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-5-24
+ * 创建日期：2009-5-24
  */
 public class FileAccessAppletDemo extends JApplet {
 

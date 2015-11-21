@@ -10,16 +10,16 @@ import javax.swing.JPanel;
 import util.Displayer;
 
 /**
- * ��㴫��(multicast)��ʾ
+ * 多点传送(multicast)演示
  * <p>
- * ���е�AWT�¼�Դ��֧�ּ������Ķ�㴫��ģ�ͣ�����ζ��ͬһ���¼����Է��͸��������������
- * ������ڶ෽���ܶ�һ���¼�����Ȥ����ô����Ҫʹ�ö�㴫�͡�
- * ��������������ӵ�һ���¼�Դ�оͿ���ʹ������ע��ļ��������ܹ��л�����Ӧ����¼���
- * <strong>JDK���ܱ�֤һ�������¼�Դע���һ������������¼���˳��</strong>
+ * 所有的AWT事件源都支持监听器的多点传送模型，这意味着同一个事件可以发送给多个监听器对象。
+ * 如果存在多方可能对一个事件感兴趣，那么就需要使用多点传送。
+ * 将多个监听器添加到一个事件源中就可以使得所有注册的监听器都能够有机会相应这个事件。
+ * <strong>JDK不能保证一个给定事件源注册的一组监听器传送事件的顺序。</strong>
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2009-6-24
+ * 创建日期：2009-6-24
  */
 public class MulticastDemo {
 
@@ -68,10 +68,10 @@ class BlankFrame extends JFrame {
 		setTitle("Frame " + counter);
 		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 		setLocation(SPACING * counter, SPACING * counter);
-		// ÿ����һ���µ�BlankFrame����ΪcloseButton����һ��������
-		// ��closeButton�����ʱ��ÿһ��BlankFrame������Ӧ��
-		// ���Լ��ļ�������closeButton�ļ������б����Ƴ�
-		// Ȼ�������Լ�������
+		// 每创建一个新的BlankFrame都会为closeButton添加一个监听器
+		// 当closeButton被点击时，每一个BlankFrame都会响应：
+		// 将自己的监听器从closeButton的监听器列表中移除
+		// 然后隐藏自己并销毁
 		closeListener = new ActionListener() {
 
 			public void actionPerformed(ActionEvent event) {

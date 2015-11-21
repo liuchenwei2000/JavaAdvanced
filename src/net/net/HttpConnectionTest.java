@@ -11,15 +11,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * HttpConnectionÊ¾Àı
+ * HttpConnectionç¤ºä¾‹
  * <p>
- * ÑİÊ¾ÓÃJavaµÄÍøÂçAPI·ÃÎÊWebÕ¾µã¡£
- * URL£¨Uniform Resource Locator£¬Í³Ò»×ÊÔ´¶¨Î»·û£©£¬Ò²±»³ÆÎªÍøÒ³µØÖ·£¬
- * ÊÇÒòÌØÍøÉÏ±ê×¼µÄ×ÊÔ´µØÖ·£¬ËüÎ¨Ò»±êÊ¾ÁËÍøÂçÉÏµÄÒ»¸ö×ÊÔ´¡£
+ * æ¼”ç¤ºç”¨Javaçš„ç½‘ç»œAPIè®¿é—®Webç«™ç‚¹ã€‚
+ * URLï¼ˆUniform Resource Locatorï¼Œç»Ÿä¸€èµ„æºå®šä½ç¬¦ï¼‰ï¼Œä¹Ÿè¢«ç§°ä¸ºç½‘é¡µåœ°å€ï¼Œ
+ * æ˜¯å› ç‰¹ç½‘ä¸Šæ ‡å‡†çš„èµ„æºåœ°å€ï¼Œå®ƒå”¯ä¸€æ ‡ç¤ºäº†ç½‘ç»œä¸Šçš„ä¸€ä¸ªèµ„æºã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ1ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ1æ—¥
  */
 public class HttpConnectionTest {
 
@@ -28,24 +28,24 @@ public class HttpConnectionTest {
 	 */
 	public static void main(String[] args) {
 		try {
-			// java.net.URLÀàÀ´Ö§³ÖËü£¬¿ÉÒÔÍ¨¹ıËüÀ´·ÃÎÊÍøÂç×ÊÔ´¡£
+			// java.net.URLç±»æ¥æ”¯æŒå®ƒï¼Œå¯ä»¥é€šè¿‡å®ƒæ¥è®¿é—®ç½‘ç»œèµ„æºã€‚
 			URL url = new URL("http://www.baidu.com");
 			/*
-			 * HttpURLConnectionÊÇ±íÊ¾HTTPÍøÂçÁ¬½ÓµÄÀà£¬ÓÉÏÂÃæµÄ·½Ê½»ñµÃ¡£
+			 * HttpURLConnectionæ˜¯è¡¨ç¤ºHTTPç½‘ç»œè¿æ¥çš„ç±»ï¼Œç”±ä¸‹é¢çš„æ–¹å¼è·å¾—ã€‚
 			 * <p>
-			 * HttpURLConnection¿ÉÒÔÄ£ÄâÒ»¸öä¯ÀÀÆ÷£¬ÔÚ·¢³öÇëÇóµÄÊ±ºò£¬ÉèÖÃ¸÷ÖÖÇëÇóÍ·²ÎÊı£¬ÉèÖÃÇëÇó²ÎÊı£¬´«ÊäÇëÇóÊı¾İ£»
-			 * ÔÚÊÕµ½ÏìÓ¦½á¹ûµÄÊ±ºò£¬Ò²¿ÉÒÔ»ñµÃÏìÓ¦Í·Êı¾İºÍÏàÓ¦ÄÚÈİ£¬ËüÒ²ÊÇ¶ÔTCP´«ÊäÁ÷µÄÒ»ÖÖ°ü×°¡£
+			 * HttpURLConnectionå¯ä»¥æ¨¡æ‹Ÿä¸€ä¸ªæµè§ˆå™¨ï¼Œåœ¨å‘å‡ºè¯·æ±‚çš„æ—¶å€™ï¼Œè®¾ç½®å„ç§è¯·æ±‚å¤´å‚æ•°ï¼Œè®¾ç½®è¯·æ±‚å‚æ•°ï¼Œä¼ è¾“è¯·æ±‚æ•°æ®ï¼›
+			 * åœ¨æ”¶åˆ°å“åº”ç»“æœçš„æ—¶å€™ï¼Œä¹Ÿå¯ä»¥è·å¾—å“åº”å¤´æ•°æ®å’Œç›¸åº”å†…å®¹ï¼Œå®ƒä¹Ÿæ˜¯å¯¹TCPä¼ è¾“æµçš„ä¸€ç§åŒ…è£…ã€‚
 			 */
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.connect();// Á¬½Ó
+			connection.connect();// è¿æ¥
 
-			// ´òÓ¡ÏàÓ¦µÄÍ·²¿ĞÅÏ¢
+			// æ‰“å°ç›¸åº”çš„å¤´éƒ¨ä¿¡æ¯
 			Map<String, List<String>> headerFields = connection.getHeaderFields();
 			for (String key : headerFields.keySet()) {
 				System.out.println(key + "=" + headerFields.get(key));
 			}
 			
-			// ´òÓ¡ÏàÓ¦ÄÚÈİ
+			// æ‰“å°ç›¸åº”å†…å®¹
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					connection.getInputStream(), "UTF-8"));
 			
@@ -53,7 +53,7 @@ public class HttpConnectionTest {
 			while (((s = br.readLine()) == null)) {
 				System.out.println(s);
 			}
-			connection.disconnect();// ¶Ï¿ªÁ¬½Ó
+			connection.disconnect();// æ–­å¼€è¿æ¥
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

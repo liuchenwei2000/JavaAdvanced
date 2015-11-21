@@ -8,29 +8,29 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * ×Ô¶¨ÒåÀà¼ÓÔØÆ÷
+ * è‡ªå®šä¹‰ç±»åŠ è½½å™¨
  * <p>
- * ±àĞ´×Ô¶¨ÒåµÄÀà¼ÓÔØÆ÷£¬Ö»ĞèÒª¼Ì³ĞClassLoaderÀà£¬È»ºó¸²¸ÇÏÂÃæµÄ·½·¨£º</br><p>
+ * ç¼–å†™è‡ªå®šä¹‰çš„ç±»åŠ è½½å™¨ï¼Œåªéœ€è¦ç»§æ‰¿ClassLoaderç±»ï¼Œç„¶åè¦†ç›–ä¸‹é¢çš„æ–¹æ³•ï¼š</br><p>
  * findClass(String className)</br><p>
- * ClassLoader³¬ÀàµÄloadClass·½·¨ÓÃÓÚ½«ÀàµÄ¼ÓÔØ²Ù×÷Î¯ÍĞ¸øÆä¸¸Àà¼ÓÔØÆ÷È¥ÔËĞĞ¡£
- * Ö»ÓĞµ±¸ÃÀàÉĞÎ´¼ÓÔØ²¢ÇÒ¸¸Àà¼ÓÔØÆ÷Ò²ÎŞ·¨¼ÓÔØ¸ÃÀàÊ±£¬²Åµ÷ÓÃfindClass·½·¨¡£</br>
- * Èç¹ûÒªÊµÏÖ¸Ã·½·¨£¬±ØĞë×öµ½ÒÔÏÂ¼¸µã£º</br>
- * 1£¬ÎªÀ´×Ô±¾µØÎÄ¼şÏµÍ³»òÕßÆäËûÀ´Ô´µÄÀà¼ÓÔØÆä×Ö½ÚÂë¡£</br>
- * 2£¬µ÷ÓÃClassLoader³¬ÀàµÄdefineClass·½·¨£¬ÏòĞéÄâ»úÌá¹©×Ö½ÚÂë¡£
+ * ClassLoaderè¶…ç±»çš„loadClassæ–¹æ³•ç”¨äºå°†ç±»çš„åŠ è½½æ“ä½œå§”æ‰˜ç»™å…¶çˆ¶ç±»åŠ è½½å™¨å»è¿è¡Œã€‚
+ * åªæœ‰å½“è¯¥ç±»å°šæœªåŠ è½½å¹¶ä¸”çˆ¶ç±»åŠ è½½å™¨ä¹Ÿæ— æ³•åŠ è½½è¯¥ç±»æ—¶ï¼Œæ‰è°ƒç”¨findClassæ–¹æ³•ã€‚</br>
+ * å¦‚æœè¦å®ç°è¯¥æ–¹æ³•ï¼Œå¿…é¡»åšåˆ°ä»¥ä¸‹å‡ ç‚¹ï¼š</br>
+ * 1ï¼Œä¸ºæ¥è‡ªæœ¬åœ°æ–‡ä»¶ç³»ç»Ÿæˆ–è€…å…¶ä»–æ¥æºçš„ç±»åŠ è½½å…¶å­—èŠ‚ç ã€‚</br>
+ * 2ï¼Œè°ƒç”¨ClassLoaderè¶…ç±»çš„defineClassæ–¹æ³•ï¼Œå‘è™šæ‹Ÿæœºæä¾›å­—èŠ‚ç ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-2-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-2-18
  */
 public class MyClassLoader extends ClassLoader {
 
 	public static final int KEY = (int) (Math.random()*100);
 	
 	/**
-	 * ²éÕÒÀàµÄ×Ö½ÚÂë£¬²¢Í¨¹ıdefineClass·½·¨½«×Ö½ÚÂë´«¸øĞéÄâ»ú
+	 * æŸ¥æ‰¾ç±»çš„å­—èŠ‚ç ï¼Œå¹¶é€šè¿‡defineClassæ–¹æ³•å°†å­—èŠ‚ç ä¼ ç»™è™šæ‹Ÿæœº
 	 * 
 	 * @param name
-	 *            ÀàÃû£»Ê¹ÓÃ.×÷Îª°üÃû·Ö¸ô·û£¬²¢ÇÒ²»Ê¹ÓÃ".class"ºó×º
+	 *            ç±»åï¼›ä½¿ç”¨.ä½œä¸ºåŒ…ååˆ†éš”ç¬¦ï¼Œå¹¶ä¸”ä¸ä½¿ç”¨".class"åç¼€
 	 * @see java.lang.ClassLoader#findClass(java.lang.String)
 	 */
 	@Override
@@ -44,11 +44,11 @@ public class MyClassLoader extends ClassLoader {
 		/*
 		 * defineClass(String name,byte[] data,int offset,int length)
 		 * <p>
-		 * ½«Ò»¸öĞÂµÄÀàÌí¼Óµ½ĞéÄâ»úÖĞ
-		 * name ÀàÃû£»Ê¹ÓÃ.×÷Îª°üÃû·Ö¸ô·û£¬²¢ÇÒ²»Ê¹ÓÃ".class"ºó×º
-		 * data ÓÃÓÚ´æ·Å¸ÃÀà×Ö½ÚÂëµÄÊı×é
-		 * offset Êı×éÖĞ×Ö½âÂëµÄÆğÊ¼Î»ÖÃ
-		 * length Êı×éÖĞ×Ö½âÂëµÄ³¤¶È
+		 * å°†ä¸€ä¸ªæ–°çš„ç±»æ·»åŠ åˆ°è™šæ‹Ÿæœºä¸­
+		 * name ç±»åï¼›ä½¿ç”¨.ä½œä¸ºåŒ…ååˆ†éš”ç¬¦ï¼Œå¹¶ä¸”ä¸ä½¿ç”¨".class"åç¼€
+		 * data ç”¨äºå­˜æ”¾è¯¥ç±»å­—èŠ‚ç çš„æ•°ç»„
+		 * offset æ•°ç»„ä¸­å­—è§£ç çš„èµ·å§‹ä½ç½®
+		 * length æ•°ç»„ä¸­å­—è§£ç çš„é•¿åº¦
 		 */
 		Class<?> clazz = defineClass(name, classBytes, 0, classBytes.length);
 		if (clazz == null)
@@ -57,13 +57,13 @@ public class MyClassLoader extends ClassLoader {
 	}
 
 	/**
-	 * ·µ»Ø¼ÓÔØ²ÎÊı¶ÔÓ¦classÎÄ¼şµÄbyteÊı×é(¼´¼ÓÔØ×Ö½ÚÂë)
+	 * è¿”å›åŠ è½½å‚æ•°å¯¹åº”classæ–‡ä»¶çš„byteæ•°ç»„(å³åŠ è½½å­—èŠ‚ç )
 	 * 
 	 * @param name
-	 *            classÎÄ¼şÃû
+	 *            classæ–‡ä»¶å
 	 */
 	private byte[] loadClassBytes(String name) throws IOException {
-		// ¶ÔÓ¦µÄ¼ÓÃÜºóµÄclassÎÄ¼ş
+		// å¯¹åº”çš„åŠ å¯†åçš„classæ–‡ä»¶
 		String fileName = "files/security.classloader/" + name + ".key.class";
 		System.out.println("loading " + fileName);
 		FileInputStream in = null;
@@ -72,7 +72,7 @@ public class MyClassLoader extends ClassLoader {
 			ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 			int ch;
 			while ((ch = in.read()) != -1) {
-				// ½âÃÜ²Ù×÷
+				// è§£å¯†æ“ä½œ
 				buffer.write((byte) (ch - KEY));
 			}
 			return buffer.toByteArray();

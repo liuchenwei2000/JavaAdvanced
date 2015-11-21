@@ -27,17 +27,17 @@ import javax.swing.SwingUtilities;
 import util.Displayer;
 
 /**
- * ÁÄÌìÈí¼şÊ¾Àı
+ * èŠå¤©è½¯ä»¶ç¤ºä¾‹
  * <p>
- * ¼´Ê±ÁÄÌìÈí¼ş¶Ô°²È«µÄÒªÇó²»ÊÇÌ«¸ß£¬Ò»°ã¶¼»á²ÉÓÃUDPµÄÍ¨ĞÅÄ£Ê½¡£
+ * å³æ—¶èŠå¤©è½¯ä»¶å¯¹å®‰å…¨çš„è¦æ±‚ä¸æ˜¯å¤ªé«˜ï¼Œä¸€èˆ¬éƒ½ä¼šé‡‡ç”¨UDPçš„é€šä¿¡æ¨¡å¼ã€‚
  * <p>
- * ÁÄÌì½çÃæÖÁÉÙÓĞÁ½¸ö²¿·Ö£º½ÓÊÕÓÃ»§ÊäÈëºÍ´òÓ¡ÁÄÌì¼ÇÂ¼¡£ËüÃÇ¼ÈÈ»ĞèÒªÍ¬Ê±´æÔÚÓÚÒ»¸ö½ø³ÌÖĞ£¬ÄÇ¿Ï¶¨ÊÇ¶àÏß³ÌµÄ¡£
- * ÁíÍâ£¬UDPµÄÍ¨ĞÅÊÇµã¶ÔµãµÄ£¬Ã»ÓĞË­ÊÇ·şÎñÆ÷¶Ë£¬Ò²Ã»ÓĞË­ÊÇ¿Í»§¶Ë£¬
- * Òò´ËUDPµÄ¶àÏß³ÌÄ£ĞÍ¾Í²»ÓÃÓĞÖ÷Ïß³ÌÀ´¼àÌıÇëÇóÁË£¬Ö»ĞèÒªÔÚÏß³ÌÖĞ·Ö±ğÊ¹ÓÃDatagramPacketÍ¨ĞÅ¼´¿É¡£
+ * èŠå¤©ç•Œé¢è‡³å°‘æœ‰ä¸¤ä¸ªéƒ¨åˆ†ï¼šæ¥æ”¶ç”¨æˆ·è¾“å…¥å’Œæ‰“å°èŠå¤©è®°å½•ã€‚å®ƒä»¬æ—¢ç„¶éœ€è¦åŒæ—¶å­˜åœ¨äºä¸€ä¸ªè¿›ç¨‹ä¸­ï¼Œé‚£è‚¯å®šæ˜¯å¤šçº¿ç¨‹çš„ã€‚
+ * å¦å¤–ï¼ŒUDPçš„é€šä¿¡æ˜¯ç‚¹å¯¹ç‚¹çš„ï¼Œæ²¡æœ‰è°æ˜¯æœåŠ¡å™¨ç«¯ï¼Œä¹Ÿæ²¡æœ‰è°æ˜¯å®¢æˆ·ç«¯ï¼Œ
+ * å› æ­¤UDPçš„å¤šçº¿ç¨‹æ¨¡å‹å°±ä¸ç”¨æœ‰ä¸»çº¿ç¨‹æ¥ç›‘å¬è¯·æ±‚äº†ï¼Œåªéœ€è¦åœ¨çº¿ç¨‹ä¸­åˆ†åˆ«ä½¿ç”¨DatagramPacketé€šä¿¡å³å¯ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê8ÔÂ1ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´8æœˆ1æ—¥
  */
 public class ChatFrame extends JFrame {
 
@@ -46,26 +46,26 @@ public class ChatFrame extends JFrame {
 	 */
 	private static final long serialVersionUID = 4678152379795505698L;
 	
-	private JTextArea areaOutput;// ÁÄÌì¼ÇÂ¼
-	private JTextArea areaInput;// ÓÃ»§ÊäÈë
+	private JTextArea areaOutput;// èŠå¤©è®°å½•
+	private JTextArea areaInput;// ç”¨æˆ·è¾“å…¥
 	
 	private JButton buttonSend;
 	
-	private String ipTarget;// ·¢ËÍÄ¿±êµÄIP
+	private String ipTarget;// å‘é€ç›®æ ‡çš„IP
 	
-	private int portSend;// ±¾»ú·¢ËÍÏûÏ¢¶Ë¿ÚºÅ
-	private int portReceive;// ±¾»ú ½ÓÊÕÏûÏ¢¶Ë¿ÚºÅ
-	private int portTarget;// Ä¿±ê½ÓÊÕÏûÏ¢¶Ë¿ÚºÅ
+	private int portSend;// æœ¬æœºå‘é€æ¶ˆæ¯ç«¯å£å·
+	private int portReceive;// æœ¬æœº æ¥æ”¶æ¶ˆæ¯ç«¯å£å·
+	private int portTarget;// ç›®æ ‡æ¥æ”¶æ¶ˆæ¯ç«¯å£å·
 	
 	public ChatFrame(int portSend, int portReceive, String ipTarget, int portTarget) {
-		super("Óë ¶Ô·½ ÁÄÌìÖĞ");
+		super("ä¸ å¯¹æ–¹ èŠå¤©ä¸­");
 		this.portSend = portSend;
 		this.portReceive = portReceive;
 		this.ipTarget = ipTarget;
 		this.portTarget = portTarget;
 		
 		initUI();
-		// Æô¶¯Ò»¸ö ÏûÏ¢½ÓÊÕ¼àÌı Ïß³Ì
+		// å¯åŠ¨ä¸€ä¸ª æ¶ˆæ¯æ¥æ”¶ç›‘å¬ çº¿ç¨‹
 		new Thread(new ReceiveTask(), "receive-thread").start();
 	}
 
@@ -108,21 +108,21 @@ public class ChatFrame extends JFrame {
 
 	private JTextArea getAreaInput() {
 		if(areaInput == null) {
-			areaInput = new JTextArea("ÇëÊäÈë...");
+			areaInput = new JTextArea("è¯·è¾“å…¥...");
 		} 
 		return areaInput;
 	}
 	
 	private JButton getButtonSend() {
 		if(buttonSend == null) {
-			buttonSend = new JButton("·¢  ËÍ");
+			buttonSend = new JButton("å‘  é€");
 			buttonSend.addActionListener(new SendAction());
 		}
 		return buttonSend;
 	}
 	
 	/**
-	 * ·¢ËÍÏûÏ¢
+	 * å‘é€æ¶ˆæ¯
 	 */
 	private class SendAction implements ActionListener {
 		
@@ -141,14 +141,14 @@ public class ChatFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			String message = getAreaInput().getText();
 			if(message != null) {
-				getAreaInput().setText("");// Çå¿ÕÊäÈë´°¿Ú
-				getAreaOutput().append("\n" + formatMessageSend(message));// ÔÚ±¾»úÁÄÌì¼ÇÂ¼´°¿ÚÏÔÊ¾
-				sendMessage(message);// ·¢ËÍÏûÏ¢
+				getAreaInput().setText("");// æ¸…ç©ºè¾“å…¥çª—å£
+				getAreaOutput().append("\n" + formatMessageSend(message));// åœ¨æœ¬æœºèŠå¤©è®°å½•çª—å£æ˜¾ç¤º
+				sendMessage(message);// å‘é€æ¶ˆæ¯
 			}
 		}
 
 		private void sendMessage(String message) {
-			// ÁíÆğÒ»¸öÏß³ÌÖ´ĞĞ·¢ËÍÏûÏ¢µÄÈÎÎñ
+			// å¦èµ·ä¸€ä¸ªçº¿ç¨‹æ‰§è¡Œå‘é€æ¶ˆæ¯çš„ä»»åŠ¡
 			executor.execute(new SendTask(getSender(), message));
 		}
 
@@ -165,7 +165,7 @@ public class ChatFrame extends JFrame {
 	}
 
 	/**
-	 * ·¢ËÍÏûÏ¢ÈÎÎñ
+	 * å‘é€æ¶ˆæ¯ä»»åŠ¡
 	 */
 	private class SendTask implements Runnable {
 
@@ -190,21 +190,21 @@ public class ChatFrame extends JFrame {
 	}
 	
 	/**
-	 * ½ÓÊÕÏûÏ¢ÈÎÎñ
+	 * æ¥æ”¶æ¶ˆæ¯ä»»åŠ¡
 	 */
 	private class ReceiveTask implements Runnable {
 
 		private DatagramSocket receiver;
 		
 		public void run() {
-			// ºãÕæ£¬Ê±¿Ì¼àÌıÊÇ·ñÓĞÏûÏ¢µ½À´
+			// æ’çœŸï¼Œæ—¶åˆ»ç›‘å¬æ˜¯å¦æœ‰æ¶ˆæ¯åˆ°æ¥
 			while (true) {
 				try {
 					byte[] buffer = new byte[1024];
 					DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
-					getReceiver().receive(packet);// Ò»Ö±×èÈûÖ±µ½ÓĞÏûÏ¢µ½À´
+					getReceiver().receive(packet);// ä¸€ç›´é˜»å¡ç›´åˆ°æœ‰æ¶ˆæ¯åˆ°æ¥
 					final String message = new String(packet.getData(), packet.getOffset(), packet.getLength());
-					// Ê¹ÓÃEDTÏß³Ì²Ù×÷½çÃæ¿Ø¼ş£¬ÔÚÁÄÌì¼ÇÂ¼´°¿ÚÕ¹ÏÖÏûÏ¢
+					// ä½¿ç”¨EDTçº¿ç¨‹æ“ä½œç•Œé¢æ§ä»¶ï¼Œåœ¨èŠå¤©è®°å½•çª—å£å±•ç°æ¶ˆæ¯
 					SwingUtilities.invokeLater(new Runnable() {
 
 						@Override
@@ -239,11 +239,11 @@ public class ChatFrame extends JFrame {
 	}
 	
 	private static String formatMessageSend(String message){
-		return "ÄãËµ:\n" + message;
+		return "ä½ è¯´:\n" + message;
 	}
 	
 	private static String formatMessageReceived(String message){
-		return "¶Ô·½Ëµ:\n" + message;
+		return "å¯¹æ–¹è¯´:\n" + message;
 	}
 	
 	public void setVisible(boolean b) {

@@ -11,13 +11,13 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
- * Applet´ò°ü³ÉjarÑİÊ¾Àà
+ * Appletæ‰“åŒ…æˆjaræ¼”ç¤ºç±»
  * 
- * @see applet.jar.applet´ò°ü³Éjar.txt
+ * @see applet.jar.appletæ‰“åŒ…æˆjar.txt
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-23
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-23
  */
 public class AppletInJarDemo extends JApplet {
 

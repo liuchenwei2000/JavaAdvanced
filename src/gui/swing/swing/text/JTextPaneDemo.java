@@ -17,13 +17,13 @@ import util.Displayer;
 import util.ui.BorderFactory;
 
 /**
- * JTextPaneÑİÊ¾Àà
+ * JTextPaneæ¼”ç¤ºç±»
  * <p>
- * JTextPaneµÄÄ¿µÄÊÇÌá¹©¼´Ê±±à¼­ÎÄ±¾µÄ¹¦ÄÜ£¬»¹ÓĞÖîÈç×Ô¶¯»»ĞĞµÄÄÚÖÃ¹¦ÄÜ¡£
+ * JTextPaneçš„ç›®çš„æ˜¯æä¾›å³æ—¶ç¼–è¾‘æ–‡æœ¬çš„åŠŸèƒ½ï¼Œè¿˜æœ‰è¯¸å¦‚è‡ªåŠ¨æ¢è¡Œçš„å†…ç½®åŠŸèƒ½ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-17
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-17
  */
 public class JTextPaneDemo {
 	
@@ -39,14 +39,14 @@ class JTextPanePanel extends JPanel {
 
 	private static final long serialVersionUID = -3768557605463168935L;
 	
-	private JButton button = new JButton("´ò Ó¡");
+	private JButton button = new JButton("æ‰“ å°");
 	private JTextPane textPane = new JTextPane();
 
 	public JTextPanePanel() {
 		setLayout(new BorderLayout());
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// »ñÈ¡±à¼­Æ÷ÎÄ±¾µÄ·½·¨getText()
+				// è·å–ç¼–è¾‘å™¨æ–‡æœ¬çš„æ–¹æ³•getText()
 				System.out.println(textPane.getText());
 			}
 		});

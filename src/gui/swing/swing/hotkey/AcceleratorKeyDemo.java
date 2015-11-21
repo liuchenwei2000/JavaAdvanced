@@ -12,18 +12,18 @@ import swing.frame.BasicFrame;
 import util.Displayer;
 
 /**
- * AcceleratorKeyÑİÊ¾
+ * AcceleratorKeyæ¼”ç¤º
  * <p>
- * AcceleratorKey(¼ÓËÙ¼ü)£º¾ÍÊÇÍ¨¹ı¼üÅÌµÄ¼¸¸ö¼ü×éºÏ£¬´¥·¢Ò»¸öActionµÄÖ´ĞĞ¡£
+ * AcceleratorKey(åŠ é€Ÿé”®)ï¼šå°±æ˜¯é€šè¿‡é”®ç›˜çš„å‡ ä¸ªé”®ç»„åˆï¼Œè§¦å‘ä¸€ä¸ªActionçš„æ‰§è¡Œã€‚
  * <p>
- * ºÍMnemonicKeyµÄÖ÷ÒªÇø±ğ£º</br>
- * <li>1£¬AcceleratorKeyÖ»ÓĞ²Ëµ¥²ÅÓĞ£¬MnemonicKey¿ÉÒÔÓ¦ÓÃÔÚ²Ëµ¥¡¢°´Å¥ºÍ±êÇ©µÈ¿Ø¼şÉÏ¡£
- * <li>2£¬MnemonicKeyÓÃÀ´´Óµ±Ç°´ò¿ªµÄ²Ëµ¥ÖĞÑ¡ÔñÒ»¸ö×Ó²Ëµ¥»òÕß²Ëµ¥Ïî£¬
- * ¶øAcceleratorKeyÊÇÔÚ²»´ò¿ª²Ëµ¥µÄÇé¿öÏÂÑ¡Ôñ²Ëµ¥ÏîµÄ¿ì½İ¼ü¡£
+ * å’ŒMnemonicKeyçš„ä¸»è¦åŒºåˆ«ï¼š</br>
+ * <li>1ï¼ŒAcceleratorKeyåªæœ‰èœå•æ‰æœ‰ï¼ŒMnemonicKeyå¯ä»¥åº”ç”¨åœ¨èœå•ã€æŒ‰é’®å’Œæ ‡ç­¾ç­‰æ§ä»¶ä¸Šã€‚
+ * <li>2ï¼ŒMnemonicKeyç”¨æ¥ä»å½“å‰æ‰“å¼€çš„èœå•ä¸­é€‰æ‹©ä¸€ä¸ªå­èœå•æˆ–è€…èœå•é¡¹ï¼Œ
+ * è€ŒAcceleratorKeyæ˜¯åœ¨ä¸æ‰“å¼€èœå•çš„æƒ…å†µä¸‹é€‰æ‹©èœå•é¡¹çš„å¿«æ·é”®ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-20
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-20
  */
 public class AcceleratorKeyDemo {
 
@@ -61,7 +61,7 @@ class AcceleratorKeyFrame extends BasicFrame {
 			ButtonAction buttonAction = new ButtonAction();
 			button = new JButton(buttonAction);
 			
-			// ·Ç²Ëµ¥ÏîµÄJComponentÒªÍ¨¹ıÏÂÃæµÄ·½Ê½Ìí¼Ó¿ì½İ¼ü
+			// éèœå•é¡¹çš„JComponentè¦é€šè¿‡ä¸‹é¢çš„æ–¹å¼æ·»åŠ å¿«æ·é”®
 			InputMap inputMap = getButton().getInputMap(
 					JComponent.WHEN_IN_FOCUSED_WINDOW);
 			inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_B,
@@ -110,19 +110,19 @@ class AcceleratorKeyFrame extends BasicFrame {
 
 	private JMenu createMenu() {
 		JMenu menu = new JMenu("File");
-		// ¿ÉÒÔÍ¬Ê±°´ÏÂAlt+FÔÚ²Ëµ¥À¸ÖĞÑ¡ÔñÒ»¸ö¶¥²ã²Ëµ¥
-		menu.setMnemonic('F');// Ö»ÄÜÍ¨¹ıÕâÖÖ·½Ê½Îª²Ëµ¥ÉèÖÃ¼üÅÌÖú¼Ç·û
+		// å¯ä»¥åŒæ—¶æŒ‰ä¸‹Alt+Fåœ¨èœå•æ ä¸­é€‰æ‹©ä¸€ä¸ªé¡¶å±‚èœå•
+		menu.setMnemonic('F');// åªèƒ½é€šè¿‡è¿™ç§æ–¹å¼ä¸ºèœå•è®¾ç½®é”®ç›˜åŠ©è®°ç¬¦
 		menu.add(createOpenMenuItem());
 		menu.add(createSaveMenuItem());
 		return menu;
 	}
 
 	private JMenuItem createOpenMenuItem() {
-		// Ö»ÄÜÔÚ²Ëµ¥ÏîµÄ¹¹ÔìÆ÷ÖĞÉè¶¨¼üÅÌÖú¼Ç·û×ÖÄ¸
+		// åªèƒ½åœ¨èœå•é¡¹çš„æ„é€ å™¨ä¸­è®¾å®šé”®ç›˜åŠ©è®°ç¬¦å­—æ¯
 		JMenuItem menuItem = new JMenuItem("Open File", 'O');
-		// ½«Ctrl+BÉèÖÃÎª¼ÓËÙ¼ü£¬µ±ÓÃ»§°´ÏÂ¼ÓËÙÆ÷×éºÏ¼üÊ±£¬¾Í×Ô¶¯µÄÑ¡ÔñÁËÏàÓ¦µÄ²Ëµ¥Ïî£¬Í¬Ê±¼¤»îÒ»¸ö¶¯×÷ÊÂ¼ş
-		// ¼ÓËÙÆ÷Ö»ÄÜ¹ØÁªµ½²Ëµ¥ÏîÉÏ£¬¶ø²»ÄÜ¹ØÁªµ½²Ëµ¥ÉÏ£¬¼ÓËÙÆ÷²¢²»Êµ¼Ê´ò¿ª²Ëµ¥£¬Ö»ÊÇÖ±½Ó¼¤»î²Ëµ¥¹ØÁªµÄ¶¯×÷
-		// µ±¼ÓËÙÆ÷Ìí¼Óµ½²Ëµ¥ÏîÊ±£¬¶ÔÓ¦µÄ×éºÏ¼ü¾Í»á×Ô¶¯µÄÏÔÊ¾ÔÚ¸Ã²Ëµ¥ÉÏ
+		// å°†Ctrl+Bè®¾ç½®ä¸ºåŠ é€Ÿé”®ï¼Œå½“ç”¨æˆ·æŒ‰ä¸‹åŠ é€Ÿå™¨ç»„åˆé”®æ—¶ï¼Œå°±è‡ªåŠ¨çš„é€‰æ‹©äº†ç›¸åº”çš„èœå•é¡¹ï¼ŒåŒæ—¶æ¿€æ´»ä¸€ä¸ªåŠ¨ä½œäº‹ä»¶
+		// åŠ é€Ÿå™¨åªèƒ½å…³è”åˆ°èœå•é¡¹ä¸Šï¼Œè€Œä¸èƒ½å…³è”åˆ°èœå•ä¸Šï¼ŒåŠ é€Ÿå™¨å¹¶ä¸å®é™…æ‰“å¼€èœå•ï¼Œåªæ˜¯ç›´æ¥æ¿€æ´»èœå•å…³è”çš„åŠ¨ä½œ
+		// å½“åŠ é€Ÿå™¨æ·»åŠ åˆ°èœå•é¡¹æ—¶ï¼Œå¯¹åº”çš„ç»„åˆé”®å°±ä¼šè‡ªåŠ¨çš„æ˜¾ç¤ºåœ¨è¯¥èœå•ä¸Š
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
 		menuItem.addActionListener(new ActionListener() {
 
@@ -149,9 +149,9 @@ class AcceleratorKeyFrame extends BasicFrame {
 
 		private void initAction() {
 			putValue(NAME, "Save File");
-			// ¿ÉÒÔ°Ñ¼üÅÌÖú¼Ç·ûµÄ¼üÖµÌí¼Óµ½Action¶ÔÏóÖĞ
+			// å¯ä»¥æŠŠé”®ç›˜åŠ©è®°ç¬¦çš„é”®å€¼æ·»åŠ åˆ°Actionå¯¹è±¡ä¸­
 			putValue(MNEMONIC_KEY, new Integer('S'));
-			// ¿ÉÒÔ°Ñ¼ÓËÙ¼üµÄ¼üÖµ(Ctrl+S)Ìí¼Óµ½Action¶ÔÏóÖĞ
+			// å¯ä»¥æŠŠåŠ é€Ÿé”®çš„é”®å€¼(Ctrl+S)æ·»åŠ åˆ°Actionå¯¹è±¡ä¸­
 			putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
 		}
 

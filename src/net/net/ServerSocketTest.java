@@ -11,20 +11,20 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * ·þÎñÆ÷¶ËÊ¾Àý
+ * æœåŠ¡å™¨ç«¯ç¤ºä¾‹
  * <p>
- * JDKÌá¹©ÁËÏàÓ¦µÄ¿ª·¢½Ó¿Ú¡ª¡ª¡ª¡ªjava.net°ü¾ÍÊÇÎª´Ë×¼±¸µÄ£¬³£ÓÃµÄ½Ó¿ÚºÍÀà°üÀ¨£ºServerSocket¡¢Socket¡¢URLµÈ¡£
- * TCPÒ»°ãÓÃÓÚC/SÄ£Ê½µÄÓ¦ÓÃ³ÌÐò£¬ËüÃÇ¶¼»á´æÔÚ¿Í»§¶ËºÍ·þÎñÆ÷¶ËÁ½²¿·Ö¡£
+ * JDKæä¾›äº†ç›¸åº”çš„å¼€å‘æŽ¥å£â€”â€”â€”â€”java.netåŒ…å°±æ˜¯ä¸ºæ­¤å‡†å¤‡çš„ï¼Œå¸¸ç”¨çš„æŽ¥å£å’Œç±»åŒ…æ‹¬ï¼šServerSocketã€Socketã€URLç­‰ã€‚
+ * TCPä¸€èˆ¬ç”¨äºŽC/Sæ¨¡å¼çš„åº”ç”¨ç¨‹åºï¼Œå®ƒä»¬éƒ½ä¼šå­˜åœ¨å®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨ç«¯ä¸¤éƒ¨åˆ†ã€‚
  * <p>
- * Í¨¹ýServerSocket½¨Á¢Ò»¸öÄÜ½ÓÊÜ¿Í»§¶ËÇëÇóµÄ·þÎñÆ÷¡£<p>
- * Ã¿Ò»¸ö·þÎñÆ÷³ÌÐò£¬±ÈÈçÒ»¸öHTTP Web·þÎñÆ÷£¬¶¼²»¼ä¶ÏµØÖ´ÐÐÏÂÃæµÄÑ­»·²Ù×÷£º</br>
- * <li>1£¬Í¨¹ýÊäÈëÊý¾ÝÁ÷´Ó¿Í»§¶Ë½ÓÊÕµ½Ò»¸öÃüÁî
- * <li>2£¬Í¨¹ýÄ³ÖÖ·½Ê½»ñÈ¡ÐÅÏ¢
- * <li>3£¬Í¨¹ýÊä³öÊý¾ÝÁ÷¸ø¿Í»§¶Ë·¢ËÍÐÅÏ¢
+ * é€šè¿‡ServerSocketå»ºç«‹ä¸€ä¸ªèƒ½æŽ¥å—å®¢æˆ·ç«¯è¯·æ±‚çš„æœåŠ¡å™¨ã€‚<p>
+ * æ¯ä¸€ä¸ªæœåŠ¡å™¨ç¨‹åºï¼Œæ¯”å¦‚ä¸€ä¸ªHTTP WebæœåŠ¡å™¨ï¼Œéƒ½ä¸é—´æ–­åœ°æ‰§è¡Œä¸‹é¢çš„å¾ªçŽ¯æ“ä½œï¼š</br>
+ * <li>1ï¼Œé€šè¿‡è¾“å…¥æ•°æ®æµä»Žå®¢æˆ·ç«¯æŽ¥æ”¶åˆ°ä¸€ä¸ªå‘½ä»¤
+ * <li>2ï¼Œé€šè¿‡æŸç§æ–¹å¼èŽ·å–ä¿¡æ¯
+ * <li>3ï¼Œé€šè¿‡è¾“å‡ºæ•°æ®æµç»™å®¢æˆ·ç«¯å‘é€ä¿¡æ¯
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-1-21
+ * åˆ›å»ºæ—¥æœŸï¼š2009-1-21
  */
 public class ServerSocketTest {
 
@@ -33,19 +33,19 @@ public class ServerSocketTest {
 	 */
 	public static void main(String[] args) {
 		try {
-			// ´´½¨Ò»¸ö¼àÌý 8189 ¶Ë¿ÚµÄ·þÎñÆ÷Ì×½Ó×Ö
+			// åˆ›å»ºä¸€ä¸ªç›‘å¬ 8189 ç«¯å£çš„æœåŠ¡å™¨å¥—æŽ¥å­—
 			ServerSocket server = new ServerSocket(8189);
 			
 			/**
-			 * ÒòÎªÊÇ¸öÊ¾Àý³ÌÐò£¬ÕâÀïÃ»ÓÐÊ¹ÓÃÑ­»·¼àÌý£¬ËùÒÔµ±Ò»¸ö¿Í»§¶ËÖÕÖ¹Á¬½ÓÊ±£¬·þÎñÆ÷¾Í»á×Ô¶¯Í£Ö¹¡£
+			 * å› ä¸ºæ˜¯ä¸ªç¤ºä¾‹ç¨‹åºï¼Œè¿™é‡Œæ²¡æœ‰ä½¿ç”¨å¾ªçŽ¯ç›‘å¬ï¼Œæ‰€ä»¥å½“ä¸€ä¸ªå®¢æˆ·ç«¯ç»ˆæ­¢è¿žæŽ¥æ—¶ï¼ŒæœåŠ¡å™¨å°±ä¼šè‡ªåŠ¨åœæ­¢ã€‚
 			 */
 			
-			// µÈ´ýÁ¬½Ó¡£¸Ã·½·¨×èÈûµ±Ç°Ïß³ÌÖ±µ½½¨Á¢Á¬½ÓÎªÖ¹£¬·µ»ØÒ»¸ö±íÊ¾Á¬½ÓÒÑ¾­½¨Á¢µÄSocket¶ÔÏó
+			// ç­‰å¾…è¿žæŽ¥ã€‚è¯¥æ–¹æ³•é˜»å¡žå½“å‰çº¿ç¨‹ç›´åˆ°å»ºç«‹è¿žæŽ¥ä¸ºæ­¢ï¼Œè¿”å›žä¸€ä¸ªè¡¨ç¤ºè¿žæŽ¥å·²ç»å»ºç«‹çš„Socketå¯¹è±¡
 			Socket client = server.accept();
 			try {
 				/*
-				 * ·þÎñÆ÷ºÍ¿Í»§¶ËÍ¨¹ýÁ÷½øÐÐÍ¨ÐÅ£º
-				 * ·þÎñÆ÷Êä³öÁ÷µÄËùÓÐÐÅÏ¢¶¼»á³ÉÎª¿Í»§¶Ë³ÌÐòµÄÊäÈë£¬Í¬Ê±À´×Ô¿Í»§¶Ë³ÌÐòµÄËùÓÐÊä³ö¶¼»á±»°üº¬ÔÚ·þÎñÆ÷ÊäÈëÁ÷ÖÐ¡£
+				 * æœåŠ¡å™¨å’Œå®¢æˆ·ç«¯é€šè¿‡æµè¿›è¡Œé€šä¿¡ï¼š
+				 * æœåŠ¡å™¨è¾“å‡ºæµçš„æ‰€æœ‰ä¿¡æ¯éƒ½ä¼šæˆä¸ºå®¢æˆ·ç«¯ç¨‹åºçš„è¾“å…¥ï¼ŒåŒæ—¶æ¥è‡ªå®¢æˆ·ç«¯ç¨‹åºçš„æ‰€æœ‰è¾“å‡ºéƒ½ä¼šè¢«åŒ…å«åœ¨æœåŠ¡å™¨è¾“å…¥æµä¸­ã€‚
 				 */
 				OutputStream out = client.getOutputStream();
 				InputStream in = client.getInputStream();
@@ -58,7 +58,7 @@ public class ServerSocketTest {
 
 				while ((!done) && scanner.hasNextLine()) {
 					String line = scanner.nextLine();
-					// ·þÎñÆ÷¶Ô¿Í»§¶ËµÄÊäÈë½øÐÐ»ØÏÔ
+					// æœåŠ¡å™¨å¯¹å®¢æˆ·ç«¯çš„è¾“å…¥è¿›è¡Œå›žæ˜¾
 					writer.println("This is server echo: " + line);
 					if (line.trim().equals("8")) {
 						done = true;

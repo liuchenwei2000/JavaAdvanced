@@ -18,13 +18,13 @@ import javax.swing.JComponent;
 import javax.swing.border.Border;
 
 /**
- * ×Ô¶¨Òå°´Å¥2
+ * è‡ªå®šä¹‰æŒ‰é’®2
  * <p>
- * ¸Ä½ø°æµÄ×Ô¶¨Òå°´Å¥£¬Ö÷ÒªÌåÏÖÔÚ»æÖÆ×é¼şÉÏ¡£
+ * æ”¹è¿›ç‰ˆçš„è‡ªå®šä¹‰æŒ‰é’®ï¼Œä¸»è¦ä½“ç°åœ¨ç»˜åˆ¶ç»„ä»¶ä¸Šã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-2-24
+ * åˆ›å»ºæ—¥æœŸï¼š2011-2-24
  */
 public class MyButton2 extends JComponent implements MouseListener {
 
@@ -33,9 +33,9 @@ public class MyButton2 extends JComponent implements MouseListener {
 	 */
 	private static final long serialVersionUID = -3471383034498422967L;
 
-	private boolean isPressed;// ÊÇ·ñ±»°´ÏÂ
+	private boolean isPressed;// æ˜¯å¦è¢«æŒ‰ä¸‹
 	
-	// ÊÂ¼ş¼àÌıÆ÷ÁĞ±í£¬×é¼ş×Ô¼º¹ÜÀíÊÂ¼ş¼àÌıÆ÷
+	// äº‹ä»¶ç›‘å¬å™¨åˆ—è¡¨ï¼Œç»„ä»¶è‡ªå·±ç®¡ç†äº‹ä»¶ç›‘å¬å™¨
 	private List<ActionListener> actionListeners = new ArrayList<ActionListener>();
 	
 	public MyButton2(){
@@ -44,7 +44,7 @@ public class MyButton2 extends JComponent implements MouseListener {
 		addMouseListener(this);
 	}
 	
-	/** Ôö¼ÓºÍÉ¾³ıÊÂ¼ş¼àÌıÆ÷ */
+	/** å¢åŠ å’Œåˆ é™¤äº‹ä»¶ç›‘å¬å™¨ */
 	
 	public void addActionListener(ActionListener l){
 		actionListeners.add(l);
@@ -66,11 +66,11 @@ public class MyButton2 extends JComponent implements MouseListener {
 	}
 
 	/**
-	 * ÖØĞ´paintComponent·½·¨Íê³É¶Ô×é¼ş×ÔÉíµÄÖØ»­
+	 * é‡å†™paintComponentæ–¹æ³•å®Œæˆå¯¹ç»„ä»¶è‡ªèº«çš„é‡ç”»
 	 *
 	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	 * 
-	 * ÏÂÃæÊÇJComponent.paintComponent(java.awt.Graphics)µÄÊµÏÖ£º
+	 * ä¸‹é¢æ˜¯JComponent.paintComponent(java.awt.Graphics)çš„å®ç°ï¼š
 	 
 	 protected void paintComponent(Graphics g) {
         if (ui != null) {
@@ -83,9 +83,9 @@ public class MyButton2 extends JComponent implements MouseListener {
             }
         }
     }
-     * Õâ¸ö·½·¨Ê×ÏÈ¼ì²â×é¼şÊÇ·ñ°²×°ÁËUI Delegate£¬Èç¹û°²×°ÁË¾Í½«äÖÈ¾¹ı³Ì´úÀí¸øUI Delegate£¬Õâ¶ùÊÇÇ¶ÈëÆ¤·ôµÄµØ·½¡£
+     * è¿™ä¸ªæ–¹æ³•é¦–å…ˆæ£€æµ‹ç»„ä»¶æ˜¯å¦å®‰è£…äº†UI Delegateï¼Œå¦‚æœå®‰è£…äº†å°±å°†æ¸²æŸ“è¿‡ç¨‹ä»£ç†ç»™UI Delegateï¼Œè¿™å„¿æ˜¯åµŒå…¥çš®è‚¤çš„åœ°æ–¹ã€‚
      * 
-     * ÏÂÃæÊÇJComponent¶ÔÓ¦µÄUI DelegateµÄupdate·½·¨µÄÄ¬ÈÏÊµÏÖ£º
+     * ä¸‹é¢æ˜¯JComponentå¯¹åº”çš„UI Delegateçš„updateæ–¹æ³•çš„é»˜è®¤å®ç°ï¼š
      
      public void update(Graphics g, JComponent c) {
 	   if (c.isOpaque()) {
@@ -95,30 +95,30 @@ public class MyButton2 extends JComponent implements MouseListener {
 	   paint(g, c);
      }
      
-     * Ê×ÏÈÅĞ¶ÏJComponentÊÇ·ñ±³¾°Í¸Ã÷µÄ£¬Èç¹û²»Í¸Ã÷ÔòÊ¹ÓÃ±³¾°É«Ìî³äÕû¸ö×é¼şÇøÓò£»
-     * È»ºóµ÷ÓÃpaint(g, c)À´Íê³É×é¼şÔÚÕâÖÖLookAndFeelÏÂµÄäÖÈ¾¡£
-     * ¿ÉÒÔ¿´µ½±³¾°Í¸Ã÷»úÖÆºÍÇĞ»»Æ¤·ôÔÚÕâÀïÊµÏÖ¡£
+     * é¦–å…ˆåˆ¤æ–­JComponentæ˜¯å¦èƒŒæ™¯é€æ˜çš„ï¼Œå¦‚æœä¸é€æ˜åˆ™ä½¿ç”¨èƒŒæ™¯è‰²å¡«å……æ•´ä¸ªç»„ä»¶åŒºåŸŸï¼›
+     * ç„¶åè°ƒç”¨paint(g, c)æ¥å®Œæˆç»„ä»¶åœ¨è¿™ç§LookAndFeelä¸‹çš„æ¸²æŸ“ã€‚
+     * å¯ä»¥çœ‹åˆ°èƒŒæ™¯é€æ˜æœºåˆ¶å’Œåˆ‡æ¢çš®è‚¤åœ¨è¿™é‡Œå®ç°ã€‚
 	 */
 	public void paintComponent(Graphics g) {
-		// ÊµÏÖ±³¾°Í¸Ã÷»úÖÆ
+		// å®ç°èƒŒæ™¯é€æ˜æœºåˆ¶
 		if (isOpaque()) {
 			g.setColor(getBackground());
 			g.fillRect(0, 0, getWidth(), getHeight());
 		}
 		if (isPressed) {
-			// »­³ö°´Å¥±»°´ÏÂÊ±µÄÑù×Ó
+			// ç”»å‡ºæŒ‰é’®è¢«æŒ‰ä¸‹æ—¶çš„æ ·å­
 		} else {
-			// »­³ö°´Å¥Ã»±»°´ÏÂÊ±µÄÑù×Ó
+			// ç”»å‡ºæŒ‰é’®æ²¡è¢«æŒ‰ä¸‹æ—¶çš„æ ·å­
 		}
 	}
 	
 	/**
-	 * paintBorderÒâË¼ÊÇ»­³ö×é¼şµÄ±ß¿ò¡£
-	 * SwingËùÓĞ×é¼ş¶¼ÓĞ±ß¿òµÄ¸ÅÄî£¬¾ÍÊÇËµ¿ÉÒÔÎªÈÎºÎ×é¼şÌí¼Ó¸÷ÖÖ±ß¿ò£¬°üÀ¨×Ô¶¨Òå±ß¿ò¡£
+	 * paintBorderæ„æ€æ˜¯ç”»å‡ºç»„ä»¶çš„è¾¹æ¡†ã€‚
+	 * Swingæ‰€æœ‰ç»„ä»¶éƒ½æœ‰è¾¹æ¡†çš„æ¦‚å¿µï¼Œå°±æ˜¯è¯´å¯ä»¥ä¸ºä»»ä½•ç»„ä»¶æ·»åŠ å„ç§è¾¹æ¡†ï¼ŒåŒ…æ‹¬è‡ªå®šä¹‰è¾¹æ¡†ã€‚
 	 * 
 	 * @see javax.swing.JComponent#paintBorder(java.awt.Graphics)
 	 * 
-	 * ÏÂÃæÊÇJComponent.paintBorder(java.awt.Graphics)µÄÊµÏÖ£º
+	 * ä¸‹é¢æ˜¯JComponent.paintBorder(java.awt.Graphics)çš„å®ç°ï¼š
 	 
 	 protected void paintBorder(Graphics g) {
         Border border = getBorder();
@@ -127,31 +127,31 @@ public class MyButton2 extends JComponent implements MouseListener {
         }
      }
 	 
-	 * ·Ç³£Ö±½Ó£¬Èç¹û×é¼şÓĞ±ß¿ò£¬Ôò½«»­±ß¿òµÄÈÎÎñ´úÀí¸øÕâ¸öborder¡£
-	 * Èç¹ûÒª×Ô¶¨Òå±ß¿ò£¬ĞèÒªÊµÏÖjavax.swing.border.Border½Ó¿Ú¡£
+	 * éå¸¸ç›´æ¥ï¼Œå¦‚æœç»„ä»¶æœ‰è¾¹æ¡†ï¼Œåˆ™å°†ç”»è¾¹æ¡†çš„ä»»åŠ¡ä»£ç†ç»™è¿™ä¸ªborderã€‚
+	 * å¦‚æœè¦è‡ªå®šä¹‰è¾¹æ¡†ï¼Œéœ€è¦å®ç°javax.swing.border.Borderæ¥å£ã€‚
 	 */
 	protected void paintBorder(Graphics g) {
 		super.paintBorder(g);
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÒ»¸öºìÏß±ß¿ò
+	 * è‡ªå®šä¹‰ä¸€ä¸ªçº¢çº¿è¾¹æ¡†
 	 */
 	static class RedLineBorder implements Border {
 
 		/**
-		 * »­³ö×é¼ş±ß¿ò
+		 * ç”»å‡ºç»„ä»¶è¾¹æ¡†
 		 * 
 		 * @see javax.swing.border.Border#paintBorder(java.awt.Component, java.awt.Graphics, int, int, int, int)
 		 */
 		public void paintBorder(Component c, Graphics g, int x, int y,
 				int width, int height) {
 			g.setColor(Color.RED);
-			g.drawRect(x, y, width, height);// »­³öºìÏß±ß¿ò
+			g.drawRect(x, y, width, height);// ç”»å‡ºçº¢çº¿è¾¹æ¡†
 		}
 
 		/**
-		 * ¶¨Òå±ß¿ò±ß½ç
+		 * å®šä¹‰è¾¹æ¡†è¾¹ç•Œ
 		 * 
 		 * @see javax.swing.border.Border#getBorderInsets(java.awt.Component)
 		 */
@@ -160,28 +160,28 @@ public class MyButton2 extends JComponent implements MouseListener {
 		}
 
 		/**
-		 * ±ß¿òµÄ±³¾°ÊÇ²»ÊÇÍ¸Ã÷µÄ
+		 * è¾¹æ¡†çš„èƒŒæ™¯æ˜¯ä¸æ˜¯é€æ˜çš„
 		 * 
-		 * <li>²»ÊÇÍ¸Ã÷µÄÒª¸ºÔğ»­³ö±ß¿òµÄ¶ø±³¾°¡£
-		 * <li>ÊÇÍ¸Ã÷µÄÊ¹ÓÃ×é¼şµÄ±³¾°¡£
+		 * <li>ä¸æ˜¯é€æ˜çš„è¦è´Ÿè´£ç”»å‡ºè¾¹æ¡†çš„è€ŒèƒŒæ™¯ã€‚
+		 * <li>æ˜¯é€æ˜çš„ä½¿ç”¨ç»„ä»¶çš„èƒŒæ™¯ã€‚
 		 * 
 		 * @see javax.swing.border.Border#isBorderOpaque()
 		 */
 		public boolean isBorderOpaque() {
-			return false;// ±³¾°Í¸Ã÷
+			return false;// èƒŒæ™¯é€æ˜
 		}
 	}
 
-	/** ÏÂÃæÁ½¸öÊÇ·ÃÎÊ×é¼şÊôĞÔµÄ·½·¨  */
+	/** ä¸‹é¢ä¸¤ä¸ªæ˜¯è®¿é—®ç»„ä»¶å±æ€§çš„æ–¹æ³•  */
 	
 	public boolean isPressed() {
 		return isPressed;
 	}
 
 	public void setPressed(boolean isPressed) {
-		this.isPressed = isPressed;// ÊôĞÔ·¢ÉúÁË±ä»¯
-		repaint();// Í¨Öª°´Å¥ÖØ»­
-		fireActionPerformed(new ActionEvent(this, 1, null));// ´¥·¢°´Å¥¶¯×÷ÊÂ¼ş
+		this.isPressed = isPressed;// å±æ€§å‘ç”Ÿäº†å˜åŒ–
+		repaint();// é€šçŸ¥æŒ‰é’®é‡ç”»
+		fireActionPerformed(new ActionEvent(this, 1, null));// è§¦å‘æŒ‰é’®åŠ¨ä½œäº‹ä»¶
 	}
 
 	@Override

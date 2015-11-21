@@ -15,11 +15,11 @@ import javax.swing.JTextArea;
 import util.Displayer;
 
 /**
- * ÎÄ±¾ÇøÑİÊ¾
+ * æ–‡æœ¬åŒºæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-25
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-25
  */
 public class JTextAreaDemo {
 
@@ -53,7 +53,7 @@ class JTextAreaPanel extends JPanel {
 
 	private JTextArea getTextArea() {
 		if (textArea == null) {
-			// ´´½¨Ò»¸öÖ¸¶¨ĞĞÊıºÍÁĞÊıµÄÎÄ±¾Çø
+			// åˆ›å»ºä¸€ä¸ªæŒ‡å®šè¡Œæ•°å’Œåˆ—æ•°çš„æ–‡æœ¬åŒº
 			textArea = new JTextArea(8, 20);
 		}
 		return textArea;
@@ -65,7 +65,7 @@ class JTextAreaPanel extends JPanel {
 			insertButton.addActionListener(new ActionListener() {
 
 				public void actionPerformed(ActionEvent e) {
-					// ½«¸ø¶¨µÄÎÄ±¾¸½¼Óµ½ÎÄ±¾ÇøÖĞÒÑÓĞÎÄ±¾µÄµ×²¿
+					// å°†ç»™å®šçš„æ–‡æœ¬é™„åŠ åˆ°æ–‡æœ¬åŒºä¸­å·²æœ‰æ–‡æœ¬çš„åº•éƒ¨
 					getTextArea().append(
 							"The quick brown fox jumps over the lazy dog.");
 				}
@@ -81,12 +81,12 @@ class JTextAreaPanel extends JPanel {
 
 				public void actionPerformed(ActionEvent e) {
 					boolean wrap = !getTextArea().getLineWrap();
-					// ´ò¿ª»òÕß¹Ø±Õ×Ô¶¯»»ĞĞ¹¦ÄÜ
-					// »»ĞĞÖ»ÊÇÊÓÍ¼·¢ÉúÁË±ä»¯£¬¶ø²»ÊÇÔÚÎÄ±¾ÖĞÌí¼ÓÁË"\n"
+					// æ‰“å¼€æˆ–è€…å…³é—­è‡ªåŠ¨æ¢è¡ŒåŠŸèƒ½
+					// æ¢è¡Œåªæ˜¯è§†å›¾å‘ç”Ÿäº†å˜åŒ–ï¼Œè€Œä¸æ˜¯åœ¨æ–‡æœ¬ä¸­æ·»åŠ äº†"\n"
 					getTextArea().setLineWrap(wrap);
-					// ÉèÖÃ»»ĞĞ·½Ê½(Èç¹ûÎÄ±¾ÇøÒª»»ĞĞ)£¬´ËÊôĞÔÄ¬ÈÏÎªfalse
-					// Èç¹ûÉèÖÃÎªtrue£¬Ôòµ±ĞĞµÄ³¤¶È´óÓÚËù·ÖÅäµÄ¿í¶ÈÊ±£¬½«ÔÚµ¥´Ê±ß½ç(¿Õ°×)´¦»»ĞĞ
-					// Èç¹ûÉèÖÃÎªfalse£¬Ôò½«ÔÚ×Ö·û±ß½ç´¦»»ĞĞ(²»»á¿¼ÂÇµ¥´ÊÍêÕûĞÔ)
+					// è®¾ç½®æ¢è¡Œæ–¹å¼(å¦‚æœæ–‡æœ¬åŒºè¦æ¢è¡Œ)ï¼Œæ­¤å±æ€§é»˜è®¤ä¸ºfalse
+					// å¦‚æœè®¾ç½®ä¸ºtrueï¼Œåˆ™å½“è¡Œçš„é•¿åº¦å¤§äºæ‰€åˆ†é…çš„å®½åº¦æ—¶ï¼Œå°†åœ¨å•è¯è¾¹ç•Œ(ç©ºç™½)å¤„æ¢è¡Œ
+					// å¦‚æœè®¾ç½®ä¸ºfalseï¼Œåˆ™å°†åœ¨å­—ç¬¦è¾¹ç•Œå¤„æ¢è¡Œ(ä¸ä¼šè€ƒè™‘å•è¯å®Œæ•´æ€§)
 					getTextArea().setWrapStyleWord(true);
 					wrapButton.setText(wrap ? "no wrap" : "wrap");
 				}

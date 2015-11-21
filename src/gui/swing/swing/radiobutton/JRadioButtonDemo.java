@@ -14,16 +14,16 @@ import javax.swing.JTextField;
 import util.Displayer;
 
 /**
- * JRadioButton��ѡ��ť��ʾ��
+ * JRadioButton单选按钮演示类
  * <p>
- * ��ѡ��ť����ǿ���ڶ��ѡ����ֻ��ѡ��һ����
- * Ҫ����һ������ĵ�ѡ��ť����Ҫ�����Ǽ��뵽һ��ButtonGroup�С�
- * �����������е�һ����ť״̬Ϊѡ��(true)(�ڹ������ĵڶ�������������)��
- * ����Ѷ����ѡ��ť��״̬������Ϊѡ�У���ôֻ��������õ��Ǹ���Ч��
+ * 单选按钮用来强制在多个选项中只能选择一个。
+ * 要设置一组关联的单选按钮，需要把它们加入到一个ButtonGroup中。
+ * 可以设置其中的一个按钮状态为选中(true)(在构造器的第二个参数中设置)。
+ * 如果把多个单选按钮的状态都设置为选中，那么只有最后设置的那个有效。
  *
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-5-17
+ * 创建日期：2009-5-17
  */
 public class JRadioButtonDemo {
 	
@@ -69,7 +69,7 @@ class JRadioButtonPanel extends JPanel {
 				JRadioButton radioButton = (JRadioButton) e.getSource();
 				textField.setText("Radio button " + radioButton.getText()
 						+ " is selected");
-				// ����JRadioButton�Ƿ�ѡ��
+				// 返回JRadioButton是否被选中
 				if(radioButton.isSelected()){
 					// ...
 				}

@@ -12,14 +12,14 @@ import javax.swing.UIManager;
 import util.Displayer;
 
 /**
- * ¸Ğ¹Û¶¯Ì¬ÉèÖÃÑİÊ¾Àà
+ * æ„Ÿè§‚åŠ¨æ€è®¾ç½®æ¼”ç¤ºç±»
  * <p>
- * <li>1£¬ÏÈµ÷ÓÃUIManager.setLookAndFeel()·½·¨ÉèÖÃ¸Ğ¹Û¡£
- * <li>2£¬ÔÙµ÷ÓÃSwingUtilities.updateComponentTreeUI()·½·¨Ë¢ĞÂËùÓĞ×é¼ş¡£
+ * <li>1ï¼Œå…ˆè°ƒç”¨UIManager.setLookAndFeel()æ–¹æ³•è®¾ç½®æ„Ÿè§‚ã€‚
+ * <li>2ï¼Œå†è°ƒç”¨SwingUtilities.updateComponentTreeUI()æ–¹æ³•åˆ·æ–°æ‰€æœ‰ç»„ä»¶ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-27
  */
 public class LookAndFeelDynamicSettingDemo {
 
@@ -27,7 +27,7 @@ public class LookAndFeelDynamicSettingDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Displayer.createAndShowGUI("¶¯Ì¬¸Ğ¹ÛÉèÖÃÑİÊ¾",
+		Displayer.createAndShowGUI("åŠ¨æ€æ„Ÿè§‚è®¾ç½®æ¼”ç¤º",
 				new LookAndFeelDynamicSettingPanel());
 	}
 }
@@ -42,7 +42,7 @@ class LookAndFeelDynamicSettingPanel extends JPanel {
 	}
 
 	private void addButtons() {
-		// ·µ»Ø°²×°µÄËùÓĞ¸Ğ¹ÛÀà
+		// è¿”å›å®‰è£…çš„æ‰€æœ‰æ„Ÿè§‚ç±»
 		UIManager.LookAndFeelInfo[] infos = UIManager
 				.getInstalledLookAndFeels();
 		for (UIManager.LookAndFeelInfo info : infos) {
@@ -51,23 +51,23 @@ class LookAndFeelDynamicSettingPanel extends JPanel {
 	}
 
 	/**
-	 * ¸ù¾İ¸Ğ¹ÛÀà´´½¨°´Å¥
+	 * æ ¹æ®æ„Ÿè§‚ç±»åˆ›å»ºæŒ‰é’®
 	 * <p>
-	 * °´Å¥±»µã»÷Ö®ºó»á×Ô¶¯Ê¹ÓÃ¸Ğ¹ÛÀàÉèÖÃµ±Ç°µÄÍâ¹Û
+	 * æŒ‰é’®è¢«ç‚¹å‡»ä¹‹åä¼šè‡ªåŠ¨ä½¿ç”¨æ„Ÿè§‚ç±»è®¾ç½®å½“å‰çš„å¤–è§‚
 	 * 
 	 * @param name
-	 *            °´Å¥Ãû³Æ
+	 *            æŒ‰é’®åç§°
 	 * @param plafName
-	 *            ¸Ğ¹ÛÈ«ÀàÃû
+	 *            æ„Ÿè§‚å…¨ç±»å
 	 */
 	private JButton makeButton(String name, final String plafName) {
 		JButton button = new JButton(name);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				try {
-					// ÉèÖÃ¸Ğ¹Û
+					// è®¾ç½®æ„Ÿè§‚
 					UIManager.setLookAndFeel(plafName);
-					// Ë¢ĞÂÈ«²¿×é¼ş¼¯
+					// åˆ·æ–°å…¨éƒ¨ç»„ä»¶é›†
 					SwingUtilities
 							.updateComponentTreeUI(LookAndFeelDynamicSettingPanel.this);
 				} catch (Exception e) {

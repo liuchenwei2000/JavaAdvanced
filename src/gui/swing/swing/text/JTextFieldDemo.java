@@ -13,11 +13,11 @@ import javax.swing.JTextField;
 import util.Displayer;
 
 /**
- * JTextFieldÎÄ±¾ÓòÑİÊ¾Àà
+ * JTextFieldæ–‡æœ¬åŸŸæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-24
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-24
  */
 public class JTextFieldDemo {
 
@@ -43,7 +43,7 @@ class JTextFieldPanel extends JPanel {
 
 	private JTextField getTextField() {
 		if (textField == null) {
-			// Ä¬ÈÏ³¤¶ÈÎª20ÁĞ
+			// é»˜è®¤é•¿åº¦ä¸º20åˆ—
 			textField = new JTextField("20", 20);
 		}
 		return textField;
@@ -51,15 +51,15 @@ class JTextFieldPanel extends JPanel {
 
 	private JButton getButton() {
 		if (button == null) {
-			button = new JButton("È·¶¨");
+			button = new JButton("ç¡®å®š");
 			button.addActionListener(new ActionListener() {
 				
 				public void actionPerformed(ActionEvent e) {
 					int columns = Integer.parseInt(getTextField().getText());
-					// setColumns¿ÉÒÔÔÚÔËĞĞÊ±ÉèÖÃÎÄ±¾ÓòµÄ³¤¶È
+					// setColumnså¯ä»¥åœ¨è¿è¡Œæ—¶è®¾ç½®æ–‡æœ¬åŸŸçš„é•¿åº¦
 					getTextField().setColumns(columns);
-					// ĞèÒªµ÷ÓÃ°üº¬Õâ¸öÎÄ±¾ÓòÈİÆ÷µÄrevalidate·½·¨
-					// revalidate»áÖØĞÂ¼ÆËãÈİÆ÷ÄÚËùÓĞ×é¼şµÄ´óĞ¡£¬²¢ÇÒ¶ÔËüÃÇÖØĞÂ½øĞĞ²¼¾Ö
+					// éœ€è¦è°ƒç”¨åŒ…å«è¿™ä¸ªæ–‡æœ¬åŸŸå®¹å™¨çš„revalidateæ–¹æ³•
+					// revalidateä¼šé‡æ–°è®¡ç®—å®¹å™¨å†…æ‰€æœ‰ç»„ä»¶çš„å¤§å°ï¼Œå¹¶ä¸”å¯¹å®ƒä»¬é‡æ–°è¿›è¡Œå¸ƒå±€
 					revalidate();
 				}
 			});

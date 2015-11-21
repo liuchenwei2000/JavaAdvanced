@@ -26,18 +26,18 @@ import javax.swing.KeyStroke;
 import util.Displayer;
 
 /**
- * ¸´ÔÓ²Ëµ¥ÑİÊ¾Àà
+ * å¤æ‚èœå•æ¼”ç¤ºç±»
  * <p>
- * JMenuItem´ÓAbstractButton¼Ì³Ğ¶øÀ´£¬ËùÒÔËü¾ßÓĞÀàËÆ°´Å¥µÄĞĞÎª¡£
- * ËüÌá¹©ÁËÒ»¸ö¿ÉÒÔµ¥¶À·ÅÖÃÔÚÏÂÀ­²Ëµ¥ÉÏµÄÌõÄ¿¡£</br>
- * »¹ÓĞÈıÖÖÀàĞÍ¼Ì³Ğ×ÔJMenuItem:</br>
- * <li>JMenuÓÃÀ´³ÖÓĞÆäËüµÄJMenuItem(ÕâÑù²ÅÄÜÊµÏÖ²ãµşÊ½²Ëµ¥)¡£
- * <li>JCheckBoxMenuItemÌá¹©ÁËÒ»¸ö¼ì²é±ê¼Ç£¬ÓÃÀ´±íÃ÷²Ëµ¥ÏîÊÇ·ñ±»Ñ¡ÖĞ¡£
- * <li>JRadioButtonMenuItem°üº¬ÁËÒ»¸öµ¥Ñ¡°´Å¥¡£
+ * JMenuItemä»AbstractButtonç»§æ‰¿è€Œæ¥ï¼Œæ‰€ä»¥å®ƒå…·æœ‰ç±»ä¼¼æŒ‰é’®çš„è¡Œä¸ºã€‚
+ * å®ƒæä¾›äº†ä¸€ä¸ªå¯ä»¥å•ç‹¬æ”¾ç½®åœ¨ä¸‹æ‹‰èœå•ä¸Šçš„æ¡ç›®ã€‚</br>
+ * è¿˜æœ‰ä¸‰ç§ç±»å‹ç»§æ‰¿è‡ªJMenuItem:</br>
+ * <li>JMenuç”¨æ¥æŒæœ‰å…¶å®ƒçš„JMenuItem(è¿™æ ·æ‰èƒ½å®ç°å±‚å å¼èœå•)ã€‚
+ * <li>JCheckBoxMenuItemæä¾›äº†ä¸€ä¸ªæ£€æŸ¥æ ‡è®°ï¼Œç”¨æ¥è¡¨æ˜èœå•é¡¹æ˜¯å¦è¢«é€‰ä¸­ã€‚
+ * <li>JRadioButtonMenuItemåŒ…å«äº†ä¸€ä¸ªå•é€‰æŒ‰é’®ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-5-18
+ * åˆ›å»ºæ—¥æœŸï¼š2009-5-18
  */
 public class MenusDemo {
 	
@@ -57,37 +57,37 @@ class MenusFrame extends JFrame {
 			"Eagle", "Pigeon" };
 
 	private JTextField text = new JTextField("No animal", 30);
-	// µÚÒ»¸ö²Ëµ¥À¸
+	// ç¬¬ä¸€ä¸ªèœå•æ 
 	private JMenuBar menuBar1 = new JMenuBar();
-	// File²Ëµ¥
+	// Fileèœå•
 	private JMenu fileMenu = new JMenu("File");
-	// File²Ëµ¥³ÖÓĞµÄ²Ëµ¥Ïî
+	// Fileèœå•æŒæœ‰çš„èœå•é¡¹
 	private JMenuItem openItem = new JMenuItem("Open");
 	private JMenuItem exitItem = new JMenuItem("Exit");
-	// Animal²Ëµ¥
+	// Animalèœå•
 	private JMenu animalMenu = new JMenu("Animal");
-	// Safety²Ëµ¥
+	// Safetyèœå•
 	private JMenu safetyMenu = new JMenu("Safety");
-	// Safety²Ëµ¥³ÖÓĞµÄ²Ëµ¥Ïî
+	// Safetyèœå•æŒæœ‰çš„èœå•é¡¹
 	private JCheckBoxMenuItem readOnlyItem = new JCheckBoxMenuItem("Read-Only");
 	private JCheckBoxMenuItem hiddenItem = new JCheckBoxMenuItem("Hidden");
-	// Language²Ëµ¥
+	// Languageèœå•
 	private JMenu languageMenu = new JMenu("Language");
-	// Language²Ëµ¥³ÖÓĞµÄ²Ëµ¥Ïî
+	// Languageèœå•æŒæœ‰çš„èœå•é¡¹
 	private JRadioButtonMenuItem englishItem = new JRadioButtonMenuItem("English");
 	private JRadioButtonMenuItem chineseItem = new JRadioButtonMenuItem("Chinese");
 
-	// µÚ¶ş¸ö²Ëµ¥À¸
+	// ç¬¬äºŒä¸ªèœå•æ 
 	private JMenuBar menuBar2 = new JMenuBar();
-	// Sport²Ëµ¥À¸
+	// Sportèœå•æ 
 	private JMenu sportMenu = new JMenu("Sport");
-	// Sport²Ëµ¥À¸³ÖÓĞµÄ²Ëµ¥Ïî
+	// Sportèœå•æ æŒæœ‰çš„èœå•é¡¹
 	private JMenuItem footballItem = new JMenuItem("Football", KeyEvent.VK_F);
 	private JMenuItem basketballItem = new JMenuItem("Basketball",
 			KeyEvent.VK_A);
 	private JMenuItem volleyballItem = new JMenuItem("Volleyball");
 
-	private JButton button = new JButton("ÇĞ»»²Ëµ¥À¸");
+	private JButton button = new JButton("åˆ‡æ¢èœå•æ ");
 
 	public MenusFrame(String title) {
 		super(title);
@@ -97,10 +97,10 @@ class MenusFrame extends JFrame {
 	}
 
 	/**
-	 * ³õÊ¼»¯½çÃæ£¬¼ÓÔØ¸÷¸ö×é¼ş
+	 * åˆå§‹åŒ–ç•Œé¢ï¼ŒåŠ è½½å„ä¸ªç»„ä»¶
 	 */
 	private void initUI() {
-		// ÉèÖÃ´Ë´°ÌåµÄ²Ëµ¥À¸
+		// è®¾ç½®æ­¤çª—ä½“çš„èœå•æ 
 		setJMenuBar(menuBar1);
 		text.setEditable(false);
 		getContentPane().add(text, BorderLayout.CENTER);
@@ -110,7 +110,7 @@ class MenusFrame extends JFrame {
 	}
 
 	/**
-	 * ³õÊ¼»¯²Ëµ¥À¸
+	 * åˆå§‹åŒ–èœå•æ 
 	 */
 	private void initMenuBars() {
 		initMenuBar1();
@@ -128,7 +128,7 @@ class MenusFrame extends JFrame {
 	}
 
 	/**
-	 * ³õÊ¼»¯²Ëµ¥
+	 * åˆå§‹åŒ–èœå•
 	 */
 	private void initMenus() {
 		initSafetyMenu();
@@ -141,30 +141,30 @@ class MenusFrame extends JFrame {
 	private void initSafetyMenu() {
 		CheckMenuItemListener listener = new CheckMenuItemListener();
 		/*
-		 * ÒòÎªÔÚÃ¿ÖÖÇé¿öÏÂµÄ"¶¯×÷ÃüÁî"(action command)Óë²Ëµ¥ÉÏµÄ±êÇ©¶¼ÍêÈ«ÏàÍ¬
-		 * ÎªÊ²Ã´²»Ö±½ÓÊ¹ÓÃ±êÇ©¶øÊÇÕâÖÖ¶îÍâµÄ×Ö·û´®ÄØ£¿ÎÊÌâÔÚÓÚ¶Ô¹ú¼Ê»¯µÄÖ§³Ö
-		 * Èç¹ûÒª°Ñ³ÌĞòÒÔÁíÒ»ÖÖÓïÑÔ·¢²¼£¬×îºÃÊÇÏ£ÍûÖ»¸Ä±ä²Ëµ¥ÉÏµÄ±êÇ©£¬¶ø²»ÓÃĞŞ¸Ä´úÂë
-		 * ÎªÁËÊ¹´úÂëÄÜ¸üÈİÒ×µØÅĞ¶ÏÓë²Ëµ¥¹ØÁªµÄ×Ö·û´®£¬¿ÉÒÔ°Ñ"¶¯×÷ÃüÁî"×÷Îª²»±äÁ¿£¬¶ø°Ñ²Ëµ¥ÉÏµÄ±êÇ©×÷Îª¿É±äÁ¿
-		 * ËùÓĞµÄ´úÂëÔÚÔËĞĞÊ±¶¼Ê¹ÓÃ"¶¯×÷ÃüÁî"£¬ÕâÑù¸Ä±ä²Ëµ¥±êÇ©µÄÊ±ºò¾Í²»»áÓ°Ïì´úÂë
+		 * å› ä¸ºåœ¨æ¯ç§æƒ…å†µä¸‹çš„"åŠ¨ä½œå‘½ä»¤"(action command)ä¸èœå•ä¸Šçš„æ ‡ç­¾éƒ½å®Œå…¨ç›¸åŒ
+		 * ä¸ºä»€ä¹ˆä¸ç›´æ¥ä½¿ç”¨æ ‡ç­¾è€Œæ˜¯è¿™ç§é¢å¤–çš„å­—ç¬¦ä¸²å‘¢ï¼Ÿé—®é¢˜åœ¨äºå¯¹å›½é™…åŒ–çš„æ”¯æŒ
+		 * å¦‚æœè¦æŠŠç¨‹åºä»¥å¦ä¸€ç§è¯­è¨€å‘å¸ƒï¼Œæœ€å¥½æ˜¯å¸Œæœ›åªæ”¹å˜èœå•ä¸Šçš„æ ‡ç­¾ï¼Œè€Œä¸ç”¨ä¿®æ”¹ä»£ç 
+		 * ä¸ºäº†ä½¿ä»£ç èƒ½æ›´å®¹æ˜“åœ°åˆ¤æ–­ä¸èœå•å…³è”çš„å­—ç¬¦ä¸²ï¼Œå¯ä»¥æŠŠ"åŠ¨ä½œå‘½ä»¤"ä½œä¸ºä¸å˜é‡ï¼Œè€ŒæŠŠèœå•ä¸Šçš„æ ‡ç­¾ä½œä¸ºå¯å˜é‡
+		 * æ‰€æœ‰çš„ä»£ç åœ¨è¿è¡Œæ—¶éƒ½ä½¿ç”¨"åŠ¨ä½œå‘½ä»¤"ï¼Œè¿™æ ·æ”¹å˜èœå•æ ‡ç­¾çš„æ—¶å€™å°±ä¸ä¼šå½±å“ä»£ç 
 		 */
 		readOnlyItem.setActionCommand("Read-Only");
 		/* 
-		 * SwingÖ§³ÖÖú¼Ç¼ü£¬»òÕß³ÆÎª"¼üÅÌ¿ì½İ¼ü"£¬ËùÒÔ¿ÉÒÔÊ¹ÓÃ¼üÅÌ¶ø²»ÊÇÊó±ê
-		 * À´Ñ¡ÔñÈÎºÎ´ÓAbstractButton(°´Å¥£¬²Ëµ¥ÏîµÈµÈ)¼Ì³Ğ¶øÀ´µÄ×é¼ş
-		 * ×öµ½ÕâÒ»µãºÜ¼òµ¥:Ö»ÒªÊ¹ÓÃÖØÔØµÄ¹¹ÔìÆ÷£¬Ê¹ËüµÄµÚ¶ş¸ö²ÎÊı½ÓÊÜ¿ì½İ¼üµÄ±êÊ¶·û¼´¿É
-		 * ²»¹ı£¬´ó¶àÊıAbstractButtonÃ»ÓĞÕâÑùµÄ¹¹ÔìÆ÷£¬ËùÒÔ¸üÍ¨ÓÃ×÷·¨µÄÊÇ
-		 * Ê¹ÓÃsetMnemonic()·½·¨£¬¿ì½İÖ¸Ê¾·û»á×Ô¶¯µØ³öÏÖÔÚ×é¼şÉÏ
+		 * Swingæ”¯æŒåŠ©è®°é”®ï¼Œæˆ–è€…ç§°ä¸º"é”®ç›˜å¿«æ·é”®"ï¼Œæ‰€ä»¥å¯ä»¥ä½¿ç”¨é”®ç›˜è€Œä¸æ˜¯é¼ æ ‡
+		 * æ¥é€‰æ‹©ä»»ä½•ä»AbstractButton(æŒ‰é’®ï¼Œèœå•é¡¹ç­‰ç­‰)ç»§æ‰¿è€Œæ¥çš„ç»„ä»¶
+		 * åšåˆ°è¿™ä¸€ç‚¹å¾ˆç®€å•:åªè¦ä½¿ç”¨é‡è½½çš„æ„é€ å™¨ï¼Œä½¿å®ƒçš„ç¬¬äºŒä¸ªå‚æ•°æ¥å—å¿«æ·é”®çš„æ ‡è¯†ç¬¦å³å¯
+		 * ä¸è¿‡ï¼Œå¤§å¤šæ•°AbstractButtonæ²¡æœ‰è¿™æ ·çš„æ„é€ å™¨ï¼Œæ‰€ä»¥æ›´é€šç”¨ä½œæ³•çš„æ˜¯
+		 * ä½¿ç”¨setMnemonic()æ–¹æ³•ï¼Œå¿«æ·æŒ‡ç¤ºç¬¦ä¼šè‡ªåŠ¨åœ°å‡ºç°åœ¨ç»„ä»¶ä¸Š
 		 */
 		readOnlyItem.setMnemonic(KeyEvent.VK_R);
 		/*
-		 * ¿ì½İ¼üÊÇÓÃÀ´´Óµ±Ç°´ò¿ªµÄ²Ëµ¥ÖĞÑ¡ÔñÒ»¸ö×Ó²Ëµ¥»òÕß²Ëµ¥Ïî
-		 * ¶ø¼ÓËÙÆ÷ÊÇÔÚ²»´ò¿ª²Ëµ¥µÄÇé¿öÏÂÑ¡Ôñ²Ëµ¥ÏîµÄ¿ì½İ¼ü
-		 * µ±ÓÃ»§°´ÏÂ¼ÓËÙÆ÷×éºÏ¼üÊ±£¬¾Í×Ô¶¯µØÑ¡ÔñÁËÒ»¸öÏàÓ¦µÄ²Ëµ¥Ïî
-		 * Í¬Ê±¼¤»îÒ»¸ö¶¯×÷ÊÂ¼ş£¬ÕâºÍÊÖ¹¤Ñ¡ÔñÕâ¸ö²Ëµ¥ÏîÒ»Ñù
-		 * ¼ÓËÙÆ÷Ö»ÄÜ¹ØÁªµ½²Ëµ¥ÏîÉÏ£¬¶ø²»ÄÜ¹ØÁªµ½²Ëµ¥ÉÏ
-		 * ¼ÓËÙÆ÷²¢²»Êµ¼Ê´ò¿ª²Ëµ¥£¬ËüÖ»ÊÇÖ±½Ó¼¤»î²Ëµ¥¹ØÁªµÄ¶¯×÷ÊÂ¼ş
-		 * µ«ÊÇ»áÔÚ¸Ã²Ëµ¥ÏîºóÏÔÊ¾¼ÓËÙÆ÷¶ÔÓ¦µÄ×Ö·û´®(Èç Ctrl-R)
-		 * setAccelerator·½·¨¿ÉÒÔ½«¼ÓËÙÆ÷¼ü¹ØÁªµ½Ò»¸ö²Ëµ¥Ïî 
+		 * å¿«æ·é”®æ˜¯ç”¨æ¥ä»å½“å‰æ‰“å¼€çš„èœå•ä¸­é€‰æ‹©ä¸€ä¸ªå­èœå•æˆ–è€…èœå•é¡¹
+		 * è€ŒåŠ é€Ÿå™¨æ˜¯åœ¨ä¸æ‰“å¼€èœå•çš„æƒ…å†µä¸‹é€‰æ‹©èœå•é¡¹çš„å¿«æ·é”®
+		 * å½“ç”¨æˆ·æŒ‰ä¸‹åŠ é€Ÿå™¨ç»„åˆé”®æ—¶ï¼Œå°±è‡ªåŠ¨åœ°é€‰æ‹©äº†ä¸€ä¸ªç›¸åº”çš„èœå•é¡¹
+		 * åŒæ—¶æ¿€æ´»ä¸€ä¸ªåŠ¨ä½œäº‹ä»¶ï¼Œè¿™å’Œæ‰‹å·¥é€‰æ‹©è¿™ä¸ªèœå•é¡¹ä¸€æ ·
+		 * åŠ é€Ÿå™¨åªèƒ½å…³è”åˆ°èœå•é¡¹ä¸Šï¼Œè€Œä¸èƒ½å…³è”åˆ°èœå•ä¸Š
+		 * åŠ é€Ÿå™¨å¹¶ä¸å®é™…æ‰“å¼€èœå•ï¼Œå®ƒåªæ˜¯ç›´æ¥æ¿€æ´»èœå•å…³è”çš„åŠ¨ä½œäº‹ä»¶
+		 * ä½†æ˜¯ä¼šåœ¨è¯¥èœå•é¡¹åæ˜¾ç¤ºåŠ é€Ÿå™¨å¯¹åº”çš„å­—ç¬¦ä¸²(å¦‚ Ctrl-R)
+		 * setAcceleratoræ–¹æ³•å¯ä»¥å°†åŠ é€Ÿå™¨é”®å…³è”åˆ°ä¸€ä¸ªèœå•é¡¹ 
 		 */
 		readOnlyItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R,
 				InputEvent.CTRL_MASK));
@@ -198,8 +198,8 @@ class MenusFrame extends JFrame {
 			}
 		}
 		animalMenu.setMnemonic(KeyEvent.VK_A);
-		// Ìá¹©¹ØÓÚÓ¦¸Ã×°ÊÎÎÄ±¾ÖĞÄÄÒ»¸ö×Ö·ûÀ´±íÊ¾Öú¼Ç·ûµÄÍâ¹ÛÌáÊ¾
-		// ±¾ÀıÖĞ½«"animal"µÄµÚ¶ş¸ö'a'×÷ÎªÌáÊ¾×Ö·û(¼´ÆäÏÂÓĞÏÂ»®Ïß)
+		// æä¾›å…³äºåº”è¯¥è£…é¥°æ–‡æœ¬ä¸­å“ªä¸€ä¸ªå­—ç¬¦æ¥è¡¨ç¤ºåŠ©è®°ç¬¦çš„å¤–è§‚æç¤º
+		// æœ¬ä¾‹ä¸­å°†"animal"çš„ç¬¬äºŒä¸ª'a'ä½œä¸ºæç¤ºå­—ç¬¦(å³å…¶ä¸‹æœ‰ä¸‹åˆ’çº¿)
 		animalMenu.setDisplayedMnemonicIndex("animal".lastIndexOf('a'));
 	}
 
@@ -229,14 +229,14 @@ class MenusFrame extends JFrame {
 
 	class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			// ·µ»Ø´Ë´°ÌåÉÏÉèÖÃµÄ²Ëµ¥À¸
+			// è¿”å›æ­¤çª—ä½“ä¸Šè®¾ç½®çš„èœå•æ 
 			JMenuBar currentMenuBar = getJMenuBar();
-			// ¶¯Ì¬Ìæ»»²Ëµ¥À¸
+			// åŠ¨æ€æ›¿æ¢èœå•æ 
 			setJMenuBar(currentMenuBar == menuBar1 ? menuBar2 : menuBar1);
 			/*
-			 * ÑéÖ¤´ËÈİÆ÷¼°ÆäËùÓĞ×Ó×é¼ş£¬Ê¹ÓÃ±¼·½·¨»áÊ¹ÈİÆ÷ÔÙ´Î²¼ÖÃÆä×Ó×é¼ş
-			 * ÒÑ¾­²¼ÖÃÈİÆ÷ºó£¬ÔÚĞŞ¸Ä´ËÈİÆ÷µÄ×Ó×é¼şµÄÊ±ºò(Ìí¼Ó¡¢ÒÆ³ı×é¼ş£¬»ò¸ü¸ÄÓë²¼¾ÖÏà¹ØµÄĞÅÏ¢) 
-			 * Ó¦¸Ãµ÷ÓÃ±¾·½·¨
+			 * éªŒè¯æ­¤å®¹å™¨åŠå…¶æ‰€æœ‰å­ç»„ä»¶ï¼Œä½¿ç”¨å¥”æ–¹æ³•ä¼šä½¿å®¹å™¨å†æ¬¡å¸ƒç½®å…¶å­ç»„ä»¶
+			 * å·²ç»å¸ƒç½®å®¹å™¨åï¼Œåœ¨ä¿®æ”¹æ­¤å®¹å™¨çš„å­ç»„ä»¶çš„æ—¶å€™(æ·»åŠ ã€ç§»é™¤ç»„ä»¶ï¼Œæˆ–æ›´æ”¹ä¸å¸ƒå±€ç›¸å…³çš„ä¿¡æ¯) 
+			 * åº”è¯¥è°ƒç”¨æœ¬æ–¹æ³•
 			 */
 			validate();
 		}
@@ -265,7 +265,7 @@ class MenusFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource().equals(exitItem)) {
 				int result = JOptionPane.showConfirmDialog(MenusFrame.this,
-						"È·¶¨ÍË³ö£¿");
+						"ç¡®å®šé€€å‡ºï¼Ÿ");
 				if (result == JOptionPane.YES_OPTION) {
 					MenusFrame.this.dispose();
 				}
