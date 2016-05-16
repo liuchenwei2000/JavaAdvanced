@@ -21,7 +21,7 @@ public class StandardAnnotations {
 	/**
 	 * @deprecated
 	 */
-	// @Deprecated注解可以被添加到任何不再鼓励使用的项上，与上面的文档标签@deprecated具有同等功效。
+	// @Deprecated 注解可以被添加到任何不再鼓励使用的项上，与上面的文档标签 @deprecated 具有同等功效。
 	@Deprecated
 	public void deprecatedMethod() {
 		// do something
@@ -31,13 +31,13 @@ public class StandardAnnotations {
 		int a = 0;
 	}
 	
-	// @Override注解只能应用到方法上，如果具有这种注解的方法并不是覆盖一个超类的方法，则会有编译错误。
+	// @Override 注解只能应用到方法上，如果具有这种注解的方法并不是覆盖一个超类的方法，则会有编译错误。
 	@Override
 	public String toString() {
 		return "";
 	}
 
-	// @Generated注解的目的是供代码生成工具来使用，任何生成的源代码都可以被注解，从而与程序员提供的代码区分开。
+	// @Generated 注解的目的是供代码生成工具来使用，任何生成的源代码都可以被注解，从而与程序员提供的代码区分开。
 	@Generated(value = "com.google.code", date = "2014-07-08")
 	public int hashCode() {
 		return 0;
@@ -46,13 +46,13 @@ public class StandardAnnotations {
 	/**
 	 * @PostConstruct 和 @PreDestroy 注解用于控制对象生命周期的环境中，例如Web容器和应用服务器。
 	 */
-	// @PostConstruct注解的方法应该在对象被构建之后调用
+	// @PostConstruct 注解的方法应该在对象被构建之后调用
 	@PostConstruct
 	private void postInit() {
 		// so something
 	}
 
-	// @PreDestroy注解的方法应该在对象被构建之后调用
+	// @PreDestroy 注解的方法应该在对象被构建之后调用
 	@PreDestroy
 	private void preClose() {
 		// so something

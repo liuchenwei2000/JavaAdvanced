@@ -1,11 +1,10 @@
-								JavaBean规范
-
+## JavaBean 规范 ##
 
 JavaBean 是 Java 开发语言中一个可以重复使用、基于“一次编写，到处运行”理念的Java组件。
 特点是序列化机制，有无参构造器，每个属性都被private修饰，访问属性时需使用public修饰的getter和setter方法。
 
 
-具体规范
+### 具体规范
 
 1、JavaBean类必须是一个公共类（public修饰）。
 2、JavaBean类必须有一个空的构造函数。
@@ -13,7 +12,7 @@ JavaBean 是 Java 开发语言中一个可以重复使用、基于“一次编�
 4、属性值应该通过一组存取方法（getXxx 和 setXxx）来访问：对于每个属性，应该有匹配的公用 getter和setter方法。
 
 
-命名规则
+### 命名规则
                   
 1、对于一个名称为 xxx的属性，通常要写两个方法：getXxx()和 setXxx()。
 注意，把"get"或"set"后面的第一个字母换成小写就能得到属性的名称。"get"方法返回的类型要与"set"方法里参数的类型相同。
@@ -25,8 +24,7 @@ addXxxListener(XxxListener)和removeXxxListener(XxxListener)。
 倘若不这样写，也会通过编译，但bean在使用的时候可能会出现故障，因为自省机制无法识别出你的事件。
 
 
-
-将JavaBean打包
+### 将JavaBean打包
                       
 在把JavaBean加入到某个支持Bean的可视化构建工具之前，必须把它打包进一个标准的Bean容器，也就是一个JAR文件，
 它里面包含了Bean的所有.class文件以及能表明"这是一个Bean"的清单(manifest)文件。
@@ -40,7 +38,7 @@ Java-Bean: True
 一旦把Bean正确地打包成JAR文件，就可以把它导入支持Bean的程序构建环境中，导入的方式根据不同的工具可能会有所不同。
 
 
-JavaBean与可视化编程
+### JavaBean与可视化编程
 
 组件只不过就是一段代码，通常以类的形式出现。对于组件来说，关键在于要具有"能够被应用程序构建工具侦测其属性和事件的"能力。
 引入JavaBean，Java把可视化组件的创建带到了最高的层次，因为Bean就是一个类。

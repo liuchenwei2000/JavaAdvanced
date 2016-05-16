@@ -1,4 +1,4 @@
-              				国 际 化 internationalization(i18n)
+## 国际化 internationalization(i18n) ##
                
 Java编程语言是第一个被设计成全面支持国际化的语言，从一开始，它就具备了进行有效地国际化所必需的一个特性：使用Unicode来处理所有的字符串。
 支持Unicode使得在Java编程语言下，编写程序来操作多种语言的字符串变得异常方便。国际化一个程序所要做的事情绝不仅仅是提供Unicode的支持

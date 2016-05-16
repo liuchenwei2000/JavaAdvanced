@@ -6,7 +6,7 @@ package annotation.custom;
 /**
  * 注解接口语法示例
  * <p>
- * 所有的注解接口都直接扩展自java.lang.annotation.Annotation。
+ * 所有的注解接口都直接扩展自 java.lang.annotation.Annotation。
  * 
  * @author 刘晨伟
  * 
@@ -16,7 +16,7 @@ public @interface AnnotationSytax {
 
 	enum Color {
 		RED, BLUE, YELLOW
-	};
+	}
 	
 	/**
 	 * 注解接口中的方法可以没有任何参数，没有任何throws语句，并且也不能是泛型的。

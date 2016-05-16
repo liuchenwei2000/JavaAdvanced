@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 /**
  * 元注解示例
  * <p>
- * 注解其他Annotation的Annotation叫做元注解。
+ * 注解其他 Annotation 的 Annotation 叫做元注解。
  * 
  * @author 刘晨伟
  * 
@@ -32,7 +32,7 @@ import java.lang.annotation.Target;
  * ElementType.PARAMETER - 方法或构造器参数
  * ElementType.LOCAL_VARIABLE - 本地变量
  * 
- * 没有@Target限制的注解可以应用到任何项上。
+ * 没有 @Target 限制的注解可以应用到任何项上。
  */
 @Target({ ElementType.TYPE, ElementType.METHOD })
 
@@ -47,12 +47,13 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 
 /*
- * @Documented 元注解为像Javadoc这样的文档工具提供了一些提示。
+ * @Documented 元注解为像 Javadoc 这样的文档工具提供了一些提示。
  */
 @Documented
 
 /*
- * @Inherited 元注解只能应用于对类的注解，如果一个类标注了继承注解，那么它的所有子类都自动具有同样的注解。
+ * @Inherited 元注解只能应用于对类的注解，
+ * 如果一个类标注了继承注解，那么它的所有子类都自动具有同样的注解。
  */
 @Inherited
 public @interface MetaAnnotations {
