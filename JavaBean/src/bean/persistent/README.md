@@ -1,4 +1,4 @@
-							JavaBean持久化
+## JavaBean持久化 ##
 
 JavaBean持久化是指以流的形式，用JavaBean的属性来保存bean，并在之后的某个时刻，或者在另一个虚拟机中再将它们读回来。
 在这一点上，JavaBean持久化与对象序列化类似。然而，它们有一个非常重要的区别：JavaBean持久化适合于长期存储。
